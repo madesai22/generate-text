@@ -1,2 +1,2 @@
 # generate-text
-Infrastructure for generating text using LLMs
+Infrastructure for generating text using LLMs!
