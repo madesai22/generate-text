@@ -14,5 +14,5 @@ from transformers import pipeline
 #output = model(**encoded_input
 
 unmasker = pipeline('fill-mask', model='bert-base-cased')
-unmasker("Hello I'm a [MASK] model.")
-print(unmasker)
+example = unmasker("Hello I'm a [MASK] model.")
+print(example)
