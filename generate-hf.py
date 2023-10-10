@@ -17,6 +17,6 @@ from transformers import pipeline
 #example = unmasker("Hello I'm a [MASK] model.")
 
 generate = pipeline('text-generation', model='bert-base-cased')
-gen_example = unmasker("When I went there it was")
+gen_example = generate("When I went there it was")
 
 print(gen_example)
