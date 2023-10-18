@@ -1,5 +1,6 @@
 import wikipediaapi
 import re
+import random
 
 def print_categories(page):
         categories = page.categories
@@ -44,6 +45,18 @@ def get_people_who_died_in_year(year):
     cat = wiki_wiki.page("Category:"+str(year)+" deaths")
     return get_category_members(cat.categorymembers)
 
+def get_random_sample(group, nsamples):
+    return random.sample(group, nsamples)
+
+def make_dictionary(group, death_year=None, birth_year=None):
+    sample_dict = {}
+    for item in group:
+        if not birth_year: birth_year = get_birth_year(item)
+        if not death_year: death_year = get_death_year(item)
+        sample_dict[item] = {"birth_year": birth_year, "death_year": death_year}
+    return sample_dict
+
+
 
 wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
 #page_py = wiki_wiki.page('Dennis Adams_(boxer)')
@@ -56,7 +69,11 @@ wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
 
 
 people_died_in_1931 = get_people_who_died_in_year(1930)
-print(len(people_died_in_1931))
+random_sample = get_random_sample(people_died_in_1931,10)
+sample_dict = make_dictionary(random_sample, death_year=1930)
+print(sample_dict)
+#print(len(people_died_in_1931))
+
 
 
 
