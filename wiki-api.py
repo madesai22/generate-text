@@ -1,5 +1,5 @@
 import wikipediaapi
-
+import re
 
 def print_categories(page):
         categories = page.categories
