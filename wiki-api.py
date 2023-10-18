@@ -75,5 +75,5 @@ print(sample_dict)
 #print(len(people_died_in_1931))
 
 
-
+prompt = "{} was born in the year [MASK]."
 
