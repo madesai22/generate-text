@@ -42,7 +42,7 @@ def flant5_text_to_text(prompt):
 
     tokenizer = T5Tokenizer.from_pretrained("google/flan-t5-base")
     model = T5ForConditionalGeneration.from_pretrained("google/flan-t5-base")
-    input_ids = tokenizer(prompt, return_tensors="pt").input_ids
+    input_ids = tokenizer(prompt, return_tensors="pt").input_ids.to("cuda")
     outputs = model.generate(input_ids)
     return(tokenizer.decode(outputs[0]))
 
