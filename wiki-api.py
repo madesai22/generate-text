@@ -1,6 +1,10 @@
 import wikipediaapi
 import re
 import random
+from transformers import pipeline, set_seed
+from transformers import T5Tokenizer, T5ForConditionalGeneration
+import pandas as pd
+
 
 def print_categories(page):
         categories = page.categories
@@ -56,24 +60,39 @@ def make_dictionary(group, death_year=None, birth_year=None):
         sample_dict[item] = {"birth_year": birth_year, "death_year": death_year}
     return sample_dict
 
+def initiate_flan5_text_to_text():
+    tokenizer = T5Tokenizer.from_pretrained("google/flan-t5-base")
+    model = T5ForConditionalGeneration.from_pretrained("google/flan-t5-base", device_map="auto")
+    return model, toknizer
+
+def flant5_text_to_text(prompt, model,tokenizer):
+    # text2text_generator = pipeline("text2text-generation",model ="google/flan-t5-base")
+    # response = text2text_generator(prompt)
+    input_ids = tokenizer(prompt, return_tensors="pt").input_ids.to("cuda")
+    outputs = model.generate(input_ids)
+    return(tokenizer.decode(outputs[0]))
+
 
 
 wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
-#page_py = wiki_wiki.page('Dennis Adams_(boxer)')
-
-
-#birth_year = get_birth_year(page_py)
-#death_year = get_death_year(page_py)
-
-#print("birth year: {}, death year: {}".format(birth_year,death_year))
-
 
 people_died_in_1931 = get_people_who_died_in_year(1930)
 random_sample = get_random_sample(people_died_in_1931,10)
 sample_dict = make_dictionary(random_sample, death_year=1930)
 print(sample_dict)
-#print(len(people_died_in_1931))
+
+model,tokenizer = initiate_flan5_text_to_text()
+for person in sample_dict.keys:
+     prompt = "What year was {} born?".format(person)
+     response = flant5_text_to_text(prompt,model,tokenizer)
+     years = re.findall("\d{4}",response)
+     if years: 
+          response_year = int(years[0])
+          true_birth_year = sample_dict[person]["birth_year"]
+          difference = true_birth_year-response_year
 
 
-prompt = "{} was born in the year [MASK]."
+    
+# possibly useful: page_py.summary[0:60]
+
 
