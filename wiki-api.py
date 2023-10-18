@@ -15,6 +15,14 @@ def print_categorymembers(categorymembers, level=0, max_level=1):
             print("%s: %s (ns: %d)" % ("*" * (level + 1), c.title, c.ns))
             if c.ns == wikipediaapi.Namespace.CATEGORY and level < max_level:
                 print_categorymembers(c.categorymembers, level=level + 1, max_level=max_level)
+
+def get_category_members(category, level = 0, max_level = 1, category_set = {}):
+    for c in categorymembers.values():
+            category_set.add(c.title)
+            if c.ns == wikipediaapi.Namespace.CATEGORY and level < max_level:
+                get_category_members(c.categorymembers, level=level + 1, max_level=max_level,category_set=category_set)
+    return category_set
+
 def YEAR_NOT_FOUND():
     return -1999
 
@@ -39,8 +47,8 @@ cat = wiki_wiki.page("Category:1971 deaths")
 birth_year = get_birth_year(page_py)
 death_year = get_death_year(page_py)
 
-print("birth year: {}, death year: {}")
+print("birth year: {}, death year: {}".format(birth_year,death_year))
 
-print_categorymembers(cat.categorymembers)
+#print_categorymembers(cat.categorymembers)
 
 
