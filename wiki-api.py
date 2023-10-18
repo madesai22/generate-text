@@ -34,12 +34,13 @@ def get_death_year(page):
 
 wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
 page_py = wiki_wiki.page('Dennis Adams_(boxer)')
+cat = wiki_wiki.page("Category:1971 deaths")
 
 birth_year = get_birth_year(page_py)
 death_year = get_death_year(page_py)
 
 print("birth year: {}, death year: {}")
 
-print_categorymembers("Category:1971 deaths")
+print_categorymembers(cat.categorymembers)
 
 
