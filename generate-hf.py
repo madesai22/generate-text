@@ -7,7 +7,7 @@ from transformers import pipeline
 
 #prompt = "Theodore Roosevelet was born in the year [MASK]."
 prompt = "The Milky Way [MASK] a small galaxy."
-unmasker = pipeline('fill-mask', model='bert-base-uncased')
+unmasker = pipeline('fill-mask', model='bert-base-cased')
 response = unmasker(prompt)
 print(response)
 #fill_mask(prompt)
