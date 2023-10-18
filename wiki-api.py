@@ -37,6 +37,7 @@ def get_death_year(page):
     death_year = YEAR_NOT_FOUND()
     categories = page.categories
     for title in sorted(categories.keys()):
+        print(title)
         if re.findall("Category:\d{4}\sdeaths",title): year = int(re.findall("\d{4}", title)[0])
     return death_year
 
