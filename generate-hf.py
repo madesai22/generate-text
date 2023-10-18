@@ -1,37 +1,24 @@
-from transformers import pipeline
+from transformers import pipeline, set_seed
 
-# def fill_mask(prompt, model='bert-base-uncased'):
-#     unmasker = pipeline('fill-mask', model=model)
-#     response = unmasker(prompt)
-#     print(response)
 
 #prompt = "Theodore Roosevelet was born in the year [MASK]." # BERT uses these kinds of mask tokens
-#prompt = "The Milky Way [MASK] a small galaxy."
-#unmasker = pipeline('fill-mask', model='bert-base-cased')
+def bert_fill_mask(prompt):
+     unmasker = pipeline('fill-mask', model='bert-base-cased')
+     response = unmasker(prompt)
+     return response
 
-prompt = "Theodore Roosevelet was born in the year <mask>."
-unmasker = pipeline('fill-mask', model='roberta-base')
-response = unmasker(prompt)
+#prompt = "Theodore Roosevelet was born in the year <mask>."
+def roberta_fill_mask(prompt):
+    unmasker = pipeline('fill-mask', model='roberta-base')
+    response = unmasker(prompt)
+    return(response)
+
+def gpt_2_generate(prompt):
+    generator = pipeline('text-generation', model='gpt2')
+    set_seed(42)
+    response = generator(prompt, max_length=100, num_return_sequences = 3)
+    return response
+     
+prompt = "Fill in the prompt. Theodore Roosevelet was born in the year <mask>."
+response = gpt_2_generate(prompt)
 print(response)
-#fill_mask(prompt)
-
-#from transformers import BertTokenizer, BertModel
-
-# preprocess prompt text 
-#tokenizer = BertTokenizer.from_pretrained('bert-base-cased')
-
-
-# get model 
-#model = BertModel.from_pretrained("bert-base-cased")
-
-#text = "Replace me by any text you'd like."
-#encoded_input = tokenizer(text, return_tensors='pt')
-#output = model(**encoded_input
-
-#unmasker = pipeline('fill-mask', model='bert-base-cased')
-#example = unmasker("Hello I'm a [MASK] model.")
-
-#generate = pipeline('text-generation', model='bert-base-cased',is_decoder=True)
-#gen_example = generate("When I went there it was")
-
-#print(gen_example)
