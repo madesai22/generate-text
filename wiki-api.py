@@ -63,7 +63,7 @@ def make_dictionary(group, death_year=None, birth_year=None):
 def initiate_flan5_text_to_text():
     tokenizer = T5Tokenizer.from_pretrained("google/flan-t5-base")
     model = T5ForConditionalGeneration.from_pretrained("google/flan-t5-base", device_map="auto")
-    return model, toknizer
+    return model, tokenizer
 
 def flant5_text_to_text(prompt, model,tokenizer):
     # text2text_generator = pipeline("text2text-generation",model ="google/flan-t5-base")
