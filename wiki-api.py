@@ -51,6 +51,4 @@ death_year = get_death_year(page_py)
 print("birth year: {}, death year: {}".format(birth_year,death_year))
 
 print_categorymembers(cat.categorymembers)
-print(get_birth_year)
-
-
+print(get_category_members(cat.categorymembers))
