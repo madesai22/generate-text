@@ -37,8 +37,14 @@ Output:
 # prompt = "What year was Theodore Roosevelt born?"
 prompt = "translate English to German: How old are you?"
 def flant5_text_to_text(prompt):
-    text2text_generator = pipeline("text2text-generation",model ="google/flan-t5-base")
-    response = text2text_generator(prompt)
+    # text2text_generator = pipeline("text2text-generation",model ="google/flan-t5-base")
+    # response = text2text_generator(prompt)
+
+    tokenizer = T5Tokenizer.from_pretrained("google/flan-t5-base")
+    model = T5ForConditionalGeneration.from_pretrained("google/flan-t5-base")
+    input_ids = tokenizer(prompt, return_tensors="pt").input_ids
+    outputs = model.generate(input_ids)
+    return(tokenizer.decode(outputs[0]))
 
 response = flant5_text_to_text(prompt)
 print(response)
