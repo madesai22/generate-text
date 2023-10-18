@@ -1,11 +1,12 @@
 from transformers import pipeline
 
-def fill_mask(prompt, model='bert-base-uncased'):
-    unmasker = pipeline('fill-mask', model=model)
-    response = unmasker(prompt)
-    print(response)
+# def fill_mask(prompt, model='bert-base-uncased'):
+#     unmasker = pipeline('fill-mask', model=model)
+#     response = unmasker(prompt)
+#     print(response)
 
-prompt = "Theodore Roosevelet was born in the year [MASK]."
+#prompt = "Theodore Roosevelet was born in the year [MASK]."
+prompt = "The Milky Way [MASK] a small galaxy."
 unmasker = pipeline('fill-mask', model='bert-base-uncased')
 response = unmasker(prompt)
 print(response)
