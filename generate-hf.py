@@ -29,5 +29,7 @@ Input: Theodore Roosevelet was born in the year <mask>.
 Output: 
 
 """
+
+prompt = "What year was Theodore Roosevelt born?"
 response = gpt_2_generate(prompt)
 print(response)
