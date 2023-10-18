@@ -18,6 +18,8 @@ def gpt_2_generate(prompt):
     set_seed(42)
     response = generator(prompt, max_length=100, num_return_sequences = 3)
     return response
+
+
      
 prompt = "Fill in the prompt. Theodore Roosevelet was born in the year <mask>."
 prompt = """Fill in the prompt. Example: 
@@ -31,5 +33,10 @@ Output:
 """
 
 prompt = "What year was Theodore Roosevelt born?"
-response = gpt_2_generate(prompt)
+
+def flant5_text_to_text(prompt):
+    text2text_generator = pipeline("text2text-generation", model='flan-t5-base')
+    text2text_generator(prompt)
+
+response = flant5_text_to_text(prompt)
 print(response)
