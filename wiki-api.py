@@ -82,7 +82,7 @@ sample_dict = make_dictionary(random_sample, death_year=1930)
 print(sample_dict)
 
 model,tokenizer = initiate_flan5_text_to_text()
-for person in sample_dict.keys:
+for person in sample_dict:
      prompt = "What year was {} born?".format(person)
      response = flant5_text_to_text(prompt,model,tokenizer)
      years = re.findall("\d{4}",response)
