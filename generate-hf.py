@@ -38,7 +38,7 @@ Output:
 prompt = "translate English to German: How old are you?"
 def flant5_text_to_text(prompt):
     text2text_generator = pipeline("text2text-generation",model ="google/flan-t5-base")
-    text2text_generator(prompt)
+    response = text2text_generator(prompt)
 
 response = flant5_text_to_text(prompt)
 print(response)
