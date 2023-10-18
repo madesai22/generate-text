@@ -22,14 +22,14 @@ def get_birth_year(page):
     birth_year = YEAR_NOT_FOUND()
     categories = page.categories
     for title in sorted(categories.keys()):
-        if re.findall("Category:\d{4}\sbirths",text): year = int(re.findall("\d{4}", text)[0])
+        if re.findall("Category:\d{4}\sbirths",title): year = int(re.findall("\d{4}", title)[0])
     return birth_year
 
 def get_death_year(page):
     death_year = YEAR_NOT_FOUND()
     categories = page.categories
     for title in sorted(categories.keys()):
-        if re.findall("Category:\d{4}\sdeaths",text): year = int(re.findall("\d{4}", text)[0])
+        if re.findall("Category:\d{4}\sdeaths",title): year = int(re.findall("\d{4}", title)[0])
     return death_year
 
 wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
