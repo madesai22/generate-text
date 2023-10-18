@@ -5,7 +5,7 @@ def print_categories(page):
         categories = page.categories
         for title in sorted(categories.keys()):
             print(title)
-            print("%s: %s" % (title, categories[title]))
+         #   print("%s: %s" % (title, categories[title]))
 
 def check_exists(page):
     print("Page - Exists: %s" % page.exists())
