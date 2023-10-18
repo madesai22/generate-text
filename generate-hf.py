@@ -34,8 +34,8 @@ Output:
 
 """
 
-prompt = "What year was Theodore Roosevelt born?"
-
+# prompt = "What year was Theodore Roosevelt born?"
+prompt = "translate English to German: How old are you?"
 def flant5_text_to_text(prompt):
     text2text_generator = pipeline("text2text-generation",model ="google/flan-t5-base")
     text2text_generator(prompt)
