@@ -51,8 +51,8 @@ def get_random_sample(group, nsamples):
 def make_dictionary(group, death_year=None, birth_year=None):
     sample_dict = {}
     for item in group:
-        if not birth_year: birth_year = get_birth_year(item)
-        if not death_year: death_year = get_death_year(item)
+        if not birth_year: birth_year = get_birth_year(wiki_wiki.page(item))
+        if not death_year: death_year = get_death_year(wiki_wiki.page(item))
         sample_dict[item] = {"birth_year": birth_year, "death_year": death_year}
     return sample_dict
 
