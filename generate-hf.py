@@ -1,14 +1,15 @@
-# import relevant stuff
 from transformers import pipeline
 
-def fill_mask(prompt, model='bert-base-cased'):
+def fill_mask(prompt, model='bert-base-uncased'):
     unmasker = pipeline('fill-mask', model=model)
     response = unmasker(prompt)
     print(response)
 
-prompt = "Theodore Roosevelet was born in the year [MASK]"
-
-fill_mask(prompt)
+prompt = "Theodore Roosevelet was born in the year [MASK]."
+unmasker = pipeline('fill-mask', model='bert-base-uncased')
+response = unmasker(prompt)
+print(response)
+#fill_mask(prompt)
 
 #from transformers import BertTokenizer, BertModel
 
