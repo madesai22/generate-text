@@ -5,9 +5,11 @@ from transformers import pipeline
 #     response = unmasker(prompt)
 #     print(response)
 
-#prompt = "Theodore Roosevelet was born in the year [MASK]."
-prompt = "The Milky Way [MASK] a small galaxy."
+#prompt = "Theodore Roosevelet was born in the year [MASK]." # BERT uses these kinds of mask tokens
+#prompt = "The Milky Way [MASK] a small galaxy."
 #unmasker = pipeline('fill-mask', model='bert-base-cased')
+
+prompt = "Theodore Roosevelet was born in the year <mask>."
 unmasker = pipeline('fill-mask', model='roberta-base')
 response = unmasker(prompt)
 print(response)
