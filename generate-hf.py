@@ -1,4 +1,6 @@
 from transformers import pipeline, set_seed
+from transformers import T5Tokenizer, T5ForConditionalGeneration
+
 
 
 #prompt = "Theodore Roosevelet was born in the year [MASK]." # BERT uses these kinds of mask tokens
@@ -35,7 +37,7 @@ Output:
 prompt = "What year was Theodore Roosevelt born?"
 
 def flant5_text_to_text(prompt):
-    text2text_generator = pipeline("text2text-generation", model='flan-t5-base')
+    text2text_generator = pipeline("text2text-generation")
     text2text_generator(prompt)
 
 response = flant5_text_to_text(prompt)
