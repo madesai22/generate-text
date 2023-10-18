@@ -50,5 +50,5 @@ cat = wiki_wiki.page("Category:1930 deaths")
 #print("birth year: {}, death year: {}".format(birth_year,death_year))
 
 
-print(get_category_members(cat.categorymembers))
-print(len(get_category_members))
+people_died_in_1931: get_category_members(cat.categorymembers)
+print(len(people_died_in_1931:))
