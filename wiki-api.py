@@ -17,7 +17,7 @@ def print_categorymembers(categorymembers, level=0, max_level=1):
             if c.ns == wikipediaapi.Namespace.CATEGORY and level < max_level:
                 print_categorymembers(c.categorymembers, level=level + 1, max_level=max_level)
 
-def get_category_members(category, level = 0, max_level = 1, category_set = {}):
+def get_category_members(categorymembers, level = 0, max_level = 1, category_set = {}):
     for c in categorymembers.values():
             category_set.add(c.title)
             if c.ns == wikipediaapi.Namespace.CATEGORY and level < max_level:
