@@ -20,5 +20,14 @@ def gpt_2_generate(prompt):
     return response
      
 prompt = "Fill in the prompt. Theodore Roosevelet was born in the year <mask>."
+prompt = """Fill in the prompt. Example: 
+
+Input: Martin Luther King was born in the year <mask>.
+Output: 1929
+
+Input: Theodore Roosevelet was born in the year <mask>.
+Output: 
+
+"""
 response = gpt_2_generate(prompt)
 print(response)
