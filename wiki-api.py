@@ -46,13 +46,14 @@ def get_death_year(page):
     return death_year
 
 def get_summary(page):
-     long_summary = page.summary
-     bio_pattern = re.findall("was an?.*\.",long_summary)
+     first_sentence = page.summary.partition('.')[0] + '.'
+     bio_pattern = re.findall("was an?.*\.",first_sentence)
      if bio_pattern:
           summary = ' '.join(bio_pattern[0].split()[2:])
+          return summary
      else: 
-          summary = long_summary.partition('.')[0] + '.'
-     return summary
+          return first_sentence
+     
 
 def get_people_who_died_in_year(year):
     cat = wiki_wiki.page("Category:"+str(year)+" deaths")
