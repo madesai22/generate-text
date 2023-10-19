@@ -64,6 +64,7 @@ def get_random_sample(group, nsamples):
 
 
 def make_dictionary(group, death_year=None, birth_year=None):
+    # dictionary of name: dictionaries
     sample_dict = {}
     for item in group:
         item_page = wiki_wiki.page(item)
@@ -76,8 +77,6 @@ def make_dictionary(group, death_year=None, birth_year=None):
         sample_dict[item] = {"birth_year": birth_year, "death_year": death_year, "summary": summary}
     return sample_dict
 
-
-
 def initiate_flan5_text_to_text():
     tokenizer = T5Tokenizer.from_pretrained("google/flan-t5-base")
     model = T5ForConditionalGeneration.from_pretrained("google/flan-t5-base", device_map="auto")
@@ -88,13 +87,23 @@ def flant5_text_to_text(prompt, model,tokenizer):
     outputs = model.generate(input_ids)
     return(tokenizer.decode(outputs[0]))
 
-
+def get_sample_dict_by_death_year(death_year, sample_size):
+     people_who_died_in_X_year = get_people_who_died_in_year(death_year)
+     random_sample = get_random_sample(people_who_died_in_X_year,sample_size)
+     sample_dict = make_dictionary(random_sample, death_year=death_year)
+     return sample_dict
 
 wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
 
-people_died_in_1931 = get_people_who_died_in_year(1930)
-random_sample = get_random_sample(people_died_in_1931,10)
-sample_dict = make_dictionary(random_sample, death_year=1930)
+# people_died_in_1931 = get_people_who_died_in_year(1930)
+# random_sample = get_random_sample(people_died_in_1931,10)
+# sample_dict = make_dictionary(random_sample, death_year=1930)
+
+sample_1 = get_sample_dict_by_death_year(1900,75)
+sample_2 = get_sample_dict_by_death_year(1950,75)
+sample_3 = get_sample_dict_by_death_year(2000,75)
+
+sample_dict = sample_1+sample_2+sample_3
 
 df_dict = {'Name':[],'Summary':[],'True birth year': [], 'Predicted birth year':[], "Years off": []}
 model,tokenizer = initiate_flan5_text_to_text()
@@ -105,7 +114,7 @@ for person in sample_dict:
      true_birth_year = sample_dict[person]["birth_year"]
     
      # prompt model
-     prompt_name = re.sub(r'\([^)]*\)', '', person)
+     prompt_name = re.sub(r'\([^)]*\)', '', person) # strip parentheses and contents
      prompt = "What year was {} born?".format(prompt_name)
      response = flant5_text_to_text(prompt,model,tokenizer)
 
@@ -129,13 +138,3 @@ for person in sample_dict:
 
 df = pd.DataFrame(df_dict)
 df.to_csv("./birth_year_predictions.csv")
-
-     
-     
-        
-
-
-    
-# possibly useful: page_py.summary[0:60]
-
-
