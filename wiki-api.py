@@ -104,7 +104,8 @@ for person in sample_dict:
      true_birth_year = sample_dict[person]["birth_year"]
     
      # prompt model
-     prompt = "What year was {} born?".format(person)
+     prompt_name = re.sub(r'\([^)]*\)', '', person)
+     prompt = "What year was {} born?".format(prompt_name)
      response = flant5_text_to_text(prompt,model,tokenizer)
 
      # get prediction 
