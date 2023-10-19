@@ -73,7 +73,6 @@ def get_random_sample(group, nsamples):
     random_sample = set()
     group_list = list(group)
     random.shuffle(group_list)
-    print("\n\nGroup list \n\n{}".format(list(group)))
     index = 0
     nchosen = 0
     while nchosen <= nsamples:
