@@ -129,9 +129,10 @@ wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
 
 
 
-sample_1 = get_sample_dict_by_category("Category:Activists", 100)
-sample_2 = get_sample_dict_by_category("Category:Chief executives in the technology industry",100)
-sample_3 = get_sample_dict_by_category("Category:Scientists",100)
+sample_1 = get_sample_dict_by_category("Category:Activists", 500)
+sample_2 = get_sample_dict_by_category("Category:Chief executives in the technology industry",500)
+sample_3 = get_sample_dict_by_category("Category:Scientists",500)
+
 
 sample_dict = dict(sample_1,**sample_2)
 sample_dict.update(sample_3)
