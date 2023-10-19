@@ -108,6 +108,7 @@ def get_sample_dict_by_category(category, sample_size):
      category_string = category.partition(':')[2]
      uncleaned_category_members = get_category_members(cat.categorymembers)
      category_members = clean_category_members(uncleaned_category_members)
+     print(category_string, category_members)
      random_sample = get_random_sample(category_members, sample_size)
      sample_dict = make_dictionary(random_sample, death_year = YEAR_NOT_FOUND(),category=category_string)
      return sample_dict
