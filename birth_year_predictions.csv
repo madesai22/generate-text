@@ -1,90 +1,90 @@
 ,Name,Summary,Category,True birth year,Predicted birth year,Years off,Full response
-0,Blanca Chancoso,María Blanca Chancoso Sánchez (born 1955) is an Ecuadorian educator and indigenous leader of the Otavalo people.,Activists,1955,1903,52,<pad> 1903</s>
-1,Dorothy Hardisty,English civil servant and humanitarian,Activists,1881,1903,22,<pad> 1903</s>
-2,Leonel Grave de Peralta,"Leonel Grave de Peralta (born May 30, 1976) is a Cuban activist and dissident.",Activists,1976,1903,73,<pad> 1903</s>
-3,Honcques Laus,"Honcques Laus (Chinese: 劉康; born 10 October 2001) is a Hong Kong pro-independence activist, utilitarian, and author.",Activists,2001,1903,98,<pad> 1903</s>
-4,Evelyn Scott (activist),Indigenous Australian social activist and educator,Scientists,1935,1939,4,<pad> 1939</s>
-5,Antonio Augusto Villarreal Acosta,"Antonio Augusto Villarreal Acosta (born 1 September 1950, Morón, Cuba) is an economist, librarian, and Varela project coordinator.",Activists,1950,1903,47,<pad> 1903</s>
-6,Nujeen Mustafa,Nujeen Mustafa (Arabic: نوجين مصطفى Nūjjayn Muṣṭafā; also transliterated Noujain Mustaffa)  is a Kurdish Syrian refugee and activist with cerebral palsy.,Activists,1999,1903,96,<pad> 1903</s>
-7,Maisie Shiell,Maisie Shiell (1916–2008) became involved in anti-nuclear issues in 1976 when public concern developed about a new uranium mine in Saskatchewan.,Chief executives in the technology industry,1916,1939,23,<pad> 1939</s>
-8,Mitra Farazandeh,Mitra Farazandeh (born c.,Activists,1976,1939,37,<pad> 1939</s>
-9,Olga Paterova,Olga Paterova (Cyrillic:  Ольга Патерова) is a politician in Transnistria.,Activists,1984,1921,63,<pad> 1921</s>
-10,Travis Alabanza,"Travis Alabanza (born 15 November 1995) is a British performance artist, writer and theatre maker.",Activists,1996,1939,57,<pad> 1939</s>
-11,Cyrus Grace Dunham,"Cyrus Dunham ( DUN-əm; born January 28, 1992) is an American writer, actor, and activist.",Activists,1992,1939,53,<pad> 1939</s>
-12,Gore Vidal,American writer and public intellectual known for his epigrammatic wit,Activists,1925,1967,42,<pad> 1967</s>
-13,John Brunner (author),British author of science fiction novels and stories,Activists,1934,1865,69,<pad> 1865</s>
-14,Ashley Leggat,"Ashley Leggat (born September 26, 1986) is a Canadian actress.",Activists,1986,1939,47,<pad> 1939</s>
-15,Max Weber,"German sociologist, historian, jurist and political economist, who is regarded as among the most important theorists of the development of modern Western society",Activists,1864,1939,75,<pad> 1939</s>
-16,Bell hooks,"American author, theorist, educator, and social critic who was a Distinguished Professor in Residence at Berea College",Activists,1952,1939,13,<pad> 1939</s>
-17,Leah Purcell,"Leah Maree Purcell  (born 14 August 1970) is an Aboriginal Australian stage and film actress, playwright, film director, and novelist.",Activists,1970,1939,31,<pad> 1939</s>
-18,Alex Jürgen,"Alex Jürgen (born September 7, 1976) is an Austrian intersex activist.",Activists,1976,1939,37,<pad> 1939</s>
-19,Evan Greer,"Evan Greer (born May 18, 1985) is an American activist, writer, and musician from Boston, Massachusetts.",Activists,1985,1939,46,<pad> 1939</s>
-20,Aliénor Rougeot,Aliénor Rougeot (born January 1999) is a Canadian-French climate justice activist.,Activists,1999,1892,107,<pad> 1892</s>
-21,Keshav Rao Jadhav,activist for separate state of Telangana,Scientists,1933,1931,2,<pad> 1931</s>
-22,Dana Zzyym,Dana Alix Zzyym (born 1958) is an intersex activist and veteran of the U.,Activists,1958,1903,55,<pad> 1903</s>
-23,Leon Wolff,American historian who wrote In Flanders Fields: The 1917 Campaign,Activists,1914,1903,11,<pad> 1903</s>
-24,Farid Ahmed Naik,Farid Ahmed Naik is a social activist and journalist in the Doda district of Jammu and Kashmir.,Activists,1996,1903,93,<pad> 1903</s>
-25,Delia Giovanola,Argentine human rights activist,Activists,1926,1903,23,<pad> 1903</s>
-26,Stalin González,Iván Stalin González Montaño (born 13 November 1980) is a Venezuelan lawyer and politician.,Activists,1980,1903,77,<pad> 1903</s>
-27,Charles Kay Ogden,"English linguist, philosopher, and writer",Chief executives in the technology industry,1889,1892,3,<pad> 1892</s>
-28,Ed Lange (photographer),"nudist photographer, and a publisher of many nudist pamphlets and magazines showing the nudist lifestyle",Activists,1920,1903,17,<pad> 1903</s>
-29,William Gibson,"William Ford Gibson (born March 17, 1948) is an American-Canadian speculative fiction writer and essayist widely credited with pioneering the science fiction subgenre known as cyberpunk.",Activists,1948,1865,83,<pad> 1865</s>
-30,Michelle Dilhara,Hatharasinghege Michelle Dilhara (Sinhala: මිෂෙල් දිල්හාරා; born 1 May 1996) is a Sri Lankan actress and an Environmentalist.,Activists,1996,1939,57,<pad> 1939</s>
-31,Hilligje Kok-Bisschop,Hilligje Kok-Bisschop (born 1948) is a Dutch activist from Staphorst for emancipation of orthodox Christian women.,Chief executives in the technology industry,1948,1903,45,<pad> 1903</s>
-32,Alok Vaid-Menon,"Alok Vaid-Menon (born July 1, 1991, stylized ALOK) is an American writer, performance artist, and media personality.",Chief executives in the technology industry,1991,1939,52,<pad> 1939</s>
-33,Michael Brooks (political commentator),"American talk show host, writer, political commentator, and comedian",Chief executives in the technology industry,1983,1939,44,<pad> 1939</s>
-34,Sam Harris,"Samuel Benjamin Harris (born April 9, 1967) is an American philosopher, neuroscientist,  author, and podcast host.",Chief executives in the technology industry,1967,1967,0,<pad> 1967</s>
-35,Chiara Sacchi,Chiara Sacchi (born 2002) is an Argentinian climate activist from Buenos Aires.,Chief executives in the technology industry,2002,1903,99,<pad> 1903</s>
-36,James A. Michener,American writer,Chief executives in the technology industry,1907,1892,15,<pad> 1892</s>
-37,Muzoon Almellehan,Muzoon Almellehan (Arabic: مزون المليحان; born 1999) is a Syrian activist and refugee resettled in the United Kingdom.,Chief executives in the technology industry,1999,1939,60,<pad> 1939</s>
-38,Lin Fei-fan,"Lin Fei-fan (Chinese: 林飛帆; pinyin: Lín Fēifán; born 19 May 1988) is a Taiwanese activist who led the Sunflower Student Movement in 2014, against the Cross-Strait Service Trade Agreement.",Chief executives in the technology industry,1988,1931,57,<pad> 1931</s>
-39,Jorge Saavedra,"Jorge Saavedra López (born May 13, 1958) is a Mexican who was general director of the Centro Nacional para la Prevencion y el Control del VIH/SIDA (CENSIDA), an agency of the Mexican Ministry of Health.",Chief executives in the technology industry,1958,1903,55,<pad> 1903</s>
-40,Nada al-Ahdal,"Nada Al-Ahdal (Arabic: ندى الأهدل; born March 3, 2003) is a human rights activist and resident of Yemen known for escaping two different child marriage pacts her parents had made for her.",Chief executives in the technology industry,2003,1903,100,<pad> 1903</s>
-41,Tim Marshall (journalist),"Timothy John Marshall (born 1 May 1959) is a British journalist, author, and broadcaster, specialising in foreign affairs and international diplomacy.",Chief executives in the technology industry,1959,1903,56,<pad> 1903</s>
-42,Tony Cuesta,anti-Castro Cuban activist,Chief executives in the technology industry,1926,1903,23,<pad> 1903</s>
-43,Sayed Ihsanuddin Taheri,2012 World Vision International PeaceMaker Prize nominee,Chief executives in the technology industry,1984,1903,81,<pad> 1903</s>
-44,Hazel Henderson,British American futurist and environmental activist,Chief executives in the technology industry,1933,1939,6,<pad> 1939</s>
-45,Elena Quinteros,Uruguayan anarchist and school teacher,Chief executives in the technology industry,1945,1903,42,<pad> 1903</s>
-46,Joshua Wong,Joshua Wong Chi-fung (Chinese: 黃之鋒; Cantonese Yale: Wòhng Jīfūng; born 13 October 1996) is a Hong Kong activist and politician.,Chief executives in the technology industry,1996,1939,57,<pad> 1939</s>
-47,Charles Dickens,"English novelist and social critic who created some of the world's best-known fictional characters, and is regarded by many as the greatest novelist of the Victorian era",Chief executives in the technology industry,1812,1851,39,<pad> 1851</s>
-48,Pierre-Joseph Proudhon,"French socialist, politician, philosopher, and economist who founded mutualist philosophy and is considered by many to be the ""father of anarchism""",Chief executives in the technology industry,1809,1892,83,<pad> 1892</s>
-49,Michel Onfray,"Michel Onfray (French: [miʃɛl ɔ̃fʁɛ]; born 1 January 1959) is a French writer and philosopher with a hedonistic, epicurean and atheist worldview.",Chief executives in the technology industry,1959,1903,56,<pad> 1903</s>
-50,Rose Montoya,"Rosalynne Montoya, known professionally as Rose Montoya (born October 10, 1995), is an American model, social media content creator, and transgender rights activist.",Chief executives in the technology industry,1995,1903,92,<pad> 1903</s>
-51,Kalle Könkkölä,Finnish politician and human rights activist,Chief executives in the technology industry,1950,1903,47,<pad> 1903</s>
-52,Eylem Tuncaelli,Eylem Tuncaelli is a Turkish political activist and co-chair and spokesperson for the Green Left Party.,Chief executives in the technology industry,1975,1903,72,<pad> 1903</s>
-53,Michael Albert,"Michael Albert (born April 8, 1947) is an American economist, speaker, writer, and political critic.",Chief executives in the technology industry,1947,1903,44,<pad> 1903</s>
-54,Margarita Mbywangi,the Minister of Indigenous Affairs in Paraguay,Chief executives in the technology industry,1962,1931,31,<pad> 1931</s>
-55,George Monbiot,George Joshua Richard Monbiot ( MON-bee-oh; born 27 January 1963) is a British writer known for his environmental and political activism.,Chief executives in the technology industry,1963,1892,71,<pad> 1892</s>
-56,Voltaire,"François-Marie Arouet (French: [fʁɑ̃swa maʁi aʁwɛ]; 21 November 1694 – 30 May 1778), known by his nom de plume M.",Chief executives in the technology industry,1694,1891,197,<pad> 1891</s>
-57,Dinesh Paliwal,Dinesh C.,Chief executives in the technology industry,1957,1947,10,<pad> 1947</s>
-58,Paul Vallée,Paul Vallée (born 1972) is a Canadian data specialist and businessperson.,Chief executives in the technology industry,1972,1903,69,<pad> 1903</s>
-59,Moji Solar-Wilson,"Moji Solar-Wilson (born in 1964) from Ijero-Ekiti in Ekiti State, is a Nigerian US-based real estate broker, LGBTQIA+ activist, social commentator, and the CEO of Solar Worldwide Realty Inc.",Chief executives in the technology industry,1968,1939,29,<pad> 1939</s>
-60,Anders Gustaf Ekeberg,Swedish analytical chemist who discovered tantalum in 1802,Scientists,1767,1903,136,<pad> 1903</s>
-61,Pablo Echenique,"Pablo Echenique Robba (born 28 August 1978 in Rosario, Santa Fe, Argentina) is an Argentine-born Spanish physicist and politician.",Scientists,1978,1903,75,<pad> 1903</s>
-62,Kingsley Amis,"English novelist, poet, critic and teacher",Scientists,1922,1903,19,<pad> 1903</s>
-63,Xiang Li (activist),Xiang Li (向莉) (born 1976) is an activist for human rights causes in China.,Scientists,1976,1908,68,<pad> 1908</s>
-64,Satya Nadella,"Satya Narayana Nadella (Telugu: నాదెళ్ల సత్యనారాయణ, ; born 19 August 1967) is an Indian-American business executive.",Scientists,1967,1931,36,<pad> 1931</s>
-65,Luis Favre,"Luis Favre Argentine (born in Buenos Aires, Argentina 1949) is the pseudonym of Argentine-born Brazilian journalist and political activist Felipe Belisario Wermus.",Scientists,1949,1903,46,<pad> 1903</s>
-66,Robert Boyle,"Anglo-Irish natural philosopher, chemist, physicist, alchemist and inventor",Scientists,1627,1903,276,<pad> 1903</s>
-67,Ruth Baldacchino,"Ruth Baldacchino (born 1979) is an LGBT and intersex activist, former Co-Secretary General of the International Lesbian, Gay, Bisexual, Trans and Intersex Association (ILGA World), and Senior Program Officer for the first intersex human rights fund.",Scientists,1979,1903,76,<pad> 1903</s>
-68,Alfred Rehder,German-American botanical taxonomist and dendrologist who worked at the Arnold Arboretum of Harvard University,Scientists,1863,1903,40,<pad> 1903</s>
-69,Justin Yerbury,Australian molecular biologist who was spurred to follow a career in biological research when he discovered his family has the genetic form of motor neurone disease (MND),Scientists,1974,1939,35,<pad> 1939</s>
-70,Anthony Trollope,English novelist and civil servant of the Victorian era,Scientists,1815,1892,77,<pad> 1892</s>
-71,Francis Anderson (philosopher),Scottish-born Australian philosopher and educator,Scientists,1858,1892,34,<pad> 1892</s>
-72,Catarina Lorenzo,"Catarina Lorenzo (born March 30, 2007) is Brazilian climate activist from Salvador, Bahia.",Scientists,2007,1903,104,<pad> 1903</s>
-73,René Descartes,"French philosopher, scientist, and mathematician, widely considered a seminal figure in the emergence of modern philosophy and science",Scientists,1596,1892,296,<pad> 1892</s>
-74,Antonio Escohotado,"Spanish philosopher, jurist, essayist and university professor",Scientists,1941,1892,49,<pad> 1892</s>
-75,Carlo Fornasini,Italian micropalaeontologist who specialised in Foraminifera ('forams'),Scientists,1854,1903,49,<pad> 1903</s>
-76,John Shelby Spong,"American bishop of the Episcopal Church, born in Charlotte, North Carolina",Scientists,1931,1903,28,<pad> 1903</s>
-77,Peter Gabriel,"Peter Brian Gabriel (born 13 February 1950) is an English singer, songwriter, record producer, and activist.",Scientists,1950,1903,47,<pad> 1903</s>
-78,Ángela Jiménez,soldadera (woman fighter) during the Mexican Revolution,Scientists,1886,1903,17,<pad> 1903</s>
-79,Rashid Domingo,Rashid Domingo MBE (1937-2018) was born in Cape Town and grew up in District Six.,Scientists,1937,1903,34,<pad> 1903</s>
-80,Ulugh Beg,"Timurid sultan, as well as an astronomer and mathematician",Scientists,1394,1892,498,<pad> 1892</s>
-81,Wahab Goodluck,Wahab Omorilewa Goodluck (11 July 1923 – 10 September 1991) was the founding President of the Nigeria Labour Congress (NLC).,Scientists,1923,1903,20,<pad> 1903</s>
-82,Carlo Carretto,"Italian writer, Catholic priest, and member of the Little Brothers of the Gospel",Scientists,1910,1903,7,<pad> 1903</s>
-83,Del LaGrace Volcano,"Del LaGrace Volcano (born July 26, 1957) is an American artist, performer, and activist from California.",Scientists,1957,1892,65,<pad> 1892</s>
-84,Macarena Gelman,"María Macarena Gelman García (born 1 November 1976, in Montevideo) is an Uruguayan activist and politician.",Scientists,1976,1903,73,<pad> 1903</s>
-85,Timothy Binkley,"Timothy Binkley (born Timothy Glenn Binkley on September 14, 1943, in Baltimore, MD), is an American philosopher, artist, and teacher, known for his radical writings about conceptual art and aesthetics, as well as several essays that help define computer art.",Scientists,1943,1903,40,<pad> 1903</s>
-86,Ernest Hemingway,"American novelist, short-story writer, and journalist",Scientists,1899,1892,7,<pad> 1892</s>
-87,Trishneet Arora,"Trishneet Arora was born on 2 November 1993 in Ludhiana, Punjab, India.",Scientists,1993,1931,62,<pad> 1931</s>
-88,Ellen Mitchell (philosopher),Ellen M.,Scientists,1838,1903,65,<pad> 1903</s>
+0,George Johnson (writer),"George Johnson (born January 20, 1952) is an American journalist and science writer.",Activists,1952,1897,55,<pad> 1897</s>
+1,Eylem Tuncaelli,Eylem Tuncaelli is a Turkish political activist and co-chair and spokesperson for the Green Left Party.,Chief executives in the technology industry,1975,1897,78,<pad> 1897</s>
+2,George Orwell,"English novelist, essayist, journalist, and critic",Activists,1903,1897,6,<pad> 1897</s>
+3,Flora Gionest-Roussy,"Flora Gionest-Roussy is a French Canadian actor, photographer, singer, and songwriter.",Activists,1995,1894,101,<pad> 1894</s>
+4,Yves Bonnardel,"Yves Bonnardel (born 1967) is a French philosopher, essayist and editor, libertarian, egalitarian and antispeciesist activist.",Activists,1967,1897,70,<pad> 1897</s>
+5,Ezra Pound,"expatriate American poet and critic, a major figure in the early modernist poetry movement, and a collaborator in Fascist Italy and the Salò Republic during World War II",Activists,1885,1892,7,<pad> 1892</s>
+6,George Lakey,"George Russell Lakey (born November 2, 1937) is an activist, sociologist, and writer who added academic underpinning to the concept of nonviolent revolution.",Activists,1937,1897,40,<pad> 1897</s>
+7,Bertrand Russell,"British mathematician, philosopher, logician, and public intellectual",Chief executives in the technology industry,1872,1903,31,<pad> 1903</s>
+8,Luc Nkulula,Congolese political activist and leader of the pro-democracy movement lutte pour le changement (LUCHA),Activists,1985,1897,88,<pad> 1897</s>
+9,Jean Le Bitoux,French journalist and gay activist,Activists,1948,1890,58,<pad> 1890</s>
+10,George Monbiot,George Joshua Richard Monbiot ( MON-bee-oh; born 27 January 1963) is a British writer known for his environmental and political activism.,Activists,1963,1897,66,<pad> 1897</s>
+11,Satta Sheriff,"Satta Fatumata Sheriff is a Liberian human rights activist, founder and executive director Action for Justice and Human Rights (AJHR) - an NGO working to demand access to justice and respect for human rights in Liberia.",Activists,1998,1897,101,<pad> 1897</s>
+12,Marek Plura,"Polish politician, social activist, and psychotherapist",Activists,1970,1892,78,<pad> 1892</s>
+13,Dana Zzyym,Dana Alix Zzyym (born 1958) is an intersex activist and veteran of the U.,Activists,1958,1903,55,<pad> 1903</s>
+14,Lamin Jusu Jarka,Alhaji Lamin Jusu Jarka is a Sierra Leonean former businessman and current chairman of the victims' right's organization Amputees and War Wounded Association (AWWA).,Activists,1958,1903,55,<pad> 1903</s>
+15,Moshe Decter,"New York intellectual, and a prominent activist for Israel and Jewish causes",Activists,1921,1903,18,<pad> 1903</s>
+16,Masood Khadarpoosh,"bureaucrat, Pakistan movement activist, agricultural reformist and a champion of the Punjabi language",Activists,1916,1897,19,<pad> 1897</s>
+17,Shaneel Lal,"Shaneel Shavneel Lal (born 22 January 2000) is a Fijian-New Zealand LGBT rights activist, columnist and political commentator.",Activists,2000,1956,44,<pad> 1956</s>
+18,Jerônima Mesquita,Brazilian feminist,Activists,1880,1892,12,<pad> 1892</s>
+19,Amos Yee,"Amos Yee Pang Sang (Chinese: 余澎杉; pinyin: Yú Péngshān, born 31 October 1998) is a Singaporean convicted sex offender and former blogger, YouTuber, and child actor.",Activists,1998,1897,101,<pad> 1897</s>
+20,Anuna De Wever,Anuna De Wever Van Der Heyden (born 16 June 2001) is a Belgian climate activist and was one of the leading figures in the School strike for climate movement in Belgium.,Activists,2001,1896,105,<pad> 1896</s>
+21,Demi Lovato,"Demetria Devonne ""Demi""  Lovato ( DEM-ee lə-VAH-toh; born August 20, 1992) is an American singer, songwriter, and actress.",Activists,1992,1967,25,<pad> 1967</s>
+22,Leonel Grave de Peralta,"Leonel Grave de Peralta (born May 30, 1976) is a Cuban activist and dissident.",Scientists,1976,1894,82,<pad> 1894</s>
+23,Charles Dickens,"English novelist and social critic who created some of the world's best-known fictional characters, and is regarded by many as the greatest novelist of the Victorian era",Activists,1812,1833,21,<pad> 1833</s>
+24,Aliénor Rougeot,Aliénor Rougeot (born January 1999) is a Canadian-French climate justice activist.,Activists,1999,1894,105,<pad> 1894</s>
+25,Umme Rubab Chandio,"Umme Rubab Chandio (Sindhi: اُمِ رباب چانڍيو); (Urdu: أم رباب چانڈیو) (born ؟ 31 April 1999) is a Pakistani lawyer and activist, born in Dadu.",Activists,1999,1897,102,<pad> 1897</s>
+26,Jean-Luc Romero,"Jean-Luc Romero (born 30 June 1959) is a French politician, writer and NGO leader.",Activists,1959,1891,68,<pad> 1891</s>
+27,Zanele Muholi,"Zanele Muholi  (born 19 July 1972) is a South African artist and visual activist working in photography, video, and installation.",Scientists,1972,1894,78,<pad> 1894</s>
+28,John Neal (writer),"American writer, critic, editor, lecturer, and activist",Activists,1793,1897,104,<pad> 1897</s>
+29,Karl Popper,"Austrian–British philosopher, academic and social commentator",Activists,1902,1891,11,<pad> 1891</s>
+30,Olga Paterova,Olga Paterova (Cyrillic:  Ольга Патерова) is a politician in Transnistria.,Activists,1984,1896,88,<pad> 1896</s>
+31,Ekaterina Sokirianskaia,"Ekaterina Sokirianskaia (Russian: Екатерина Леонидовна Сокирянская; December 19, 1975) is a Russian human rights researcher, journalist, writer, professor of political science.",Chief executives in the technology industry,1975,1896,79,<pad> 1896</s>
+32,Ahed Tamimi,"Ahed Tamimi (Arabic: عهد التميمي, romanized: ‘Ahad at-Tamīmī, also romanized Ahd; born 31 January 2001) is a Palestinian activist from the village of Nabi Salih in the occupied West Bank in Palestine.",Chief executives in the technology industry,2001,1967,34,<pad> 1967</s>
+33,Hein Vos,Dutch politician of the defunct Social Democratic Workers' Party (SDAP) and later the Labour Party (PvdA) and economist,Chief executives in the technology industry,1903,1897,6,<pad> 1897</s>
+34,Piergiorgio Welby,"Italian poet, painter and activist whose three-month-long battle to establish his right to die led to a debate about euthanasia in his country",Chief executives in the technology industry,1945,1894,51,<pad> 1894</s>
+35,Rickard Deasy (campaigner),"prominent farmers' rights campaigner in Ireland, Captain with the Irish army, and a member of the Labour Party",Chief executives in the technology industry,1919,1903,16,<pad> 1903</s>
+36,Demian Dinéyazhi',Demian Dinéyazhi' (born 1983) is a Native American artist and activist.,Chief executives in the technology industry,1983,1903,80,<pad> 1903</s>
+37,William MacAskill,"William David MacAskill (né Crouch; born 24 March 1987) is a Scottish philosopher and author, as well as one of the originators of the effective altruism movement.",Chief executives in the technology industry,1987,1865,122,<pad> 1865</s>
+38,Dumitru Coroamă,"Romanian soldier and fascist activist, who held the rank of major general of the Romanian Army during World War II",Chief executives in the technology industry,1885,1939,54,<pad> 1939.</s>
+39,David Marr (journalist),"David Ewan Marr FAHA (born 13 July 1947) is an Australian journalist, author and progressive political and social commentator.",Chief executives in the technology industry,1947,1897,50,<pad> 1897</s>
+40,Iain Banks,"Scottish author, writing mainstream fiction as Iain Banks and science fiction as Iain M",Chief executives in the technology industry,1954,1892,62,<pad> 1892</s>
+41,John Irving,John Winslow Irving (born John Wallace Blunt Jr.,Chief executives in the technology industry,1942,1897,45,<pad> 1897</s>
+42,Phiwa Nkambule,"Phiwa Nkambule (born 24 January 1992) is a technology entrepreneur, technology businessperson and internet activist best known for co-founding Riovic and leading it as its CEO.",Chief executives in the technology industry,1992,1897,95,<pad> 1897</s>
+43,Amey Daldy,"Amey Daldy (née Hamerton, c.",Chief executives in the technology industry,1829,1897,68,<pad> 1897</s>
+44,The Lady with the Lamp,"English social reformer, statistician and the founder of modern nursing",Chief executives in the technology industry,1820,1886,66,<pad> 1886.</s>
+45,Vinod Khosla,Vinod Khosla (born 28 January 1955) is an Indian-American businessman and venture capitalist.,Chief executives in the technology industry,1955,1897,58,<pad> 1897</s>
+46,George Eliot,"English novelist, poet, journalist, translator, and one of the leading writers of the Victorian era",Chief executives in the technology industry,1819,1897,78,<pad> 1897</s>
+47,Willem Drees,Willem Drees Sr.,Chief executives in the technology industry,1886,1897,11,<pad> 1897</s>
+48,Donatella Di Cesare,"Donatella Ester Di Cesare (Rome, 29 April 1956) is an Italian political philosopher, essayist, and editorialist.",Chief executives in the technology industry,1956,1894,62,<pad> 1894</s>
+49,Janna Jihad,"Janna Jihad Ayyad Al-Tamimi (Arabic: جنى جهاد عياد التميمي; born April 6, 2006), also just Janna Tamimi, is a Palestinian youth activist and amateur journalist who blogs on Facebook and Twitter under the name or handle of ""Janna Jihad"".",Chief executives in the technology industry,2006,1924,82,<pad> 1924</s>
+50,Ed van Thijn,Dutch politician of the Labour Party (PvdA) and historian,Chief executives in the technology industry,1934,1897,37,<pad> 1897</s>
+51,Max van der Stoel,"Dutch politician and diplomat, member of the Labour Party (PvdA) and activist who served as High Commissioner on National Minorities of the OSCE from 1 January 1993 until 1 July 2001",Chief executives in the technology industry,1924,1897,27,<pad> 1897</s>
+52,Charles Armstrong (ethnographer),"Charles Armstrong (born 14 September 1971) is a British ethnographer, entrepreneur and author.",Chief executives in the technology industry,1971,1865,106,<pad> 1865</s>
+53,Celeste Lecesne,"James Celeste Lecesne (born November 24, 1954) is an American actor, author, screenwriter, and LGBT rights activist, best known for the Academy-award-winning short film Trevor.",Chief executives in the technology industry,1954,1892,62,<pad> 1892</s>
+54,María Ester Gatti,Uruguayan teacher and human rights activist,Chief executives in the technology industry,1918,1892,26,<pad> 1892</s>
+55,Gabriel García Márquez,Gabriel José de la Concordia García Márquez (Latin American Spanish: [ɡaˈβɾjel ɣaɾˈsi.,Chief executives in the technology industry,1927,1894,33,<pad> 1894</s>
+56,Justin Clemens,"Justin Clemens (born 22 April 1969) is an Australian academic known for his work on Alain Badiou, psychoanalysis, European philosophy, and contemporary Australian art and literature.",Chief executives in the technology industry,1969,1939,30,<pad> 1939</s>
+57,Peter Roberts (activist),"animal welfare activist and the founder of Compassion in World Farming, which he led from 1967 – 1991",Chief executives in the technology industry,1924,1897,27,<pad> 1897</s>
+58,Clara Ant,Clara Levin Ant (born 7 February 1948) is a Bolivian architect and political activist in Brazil.,Chief executives in the technology industry,1948,1892,56,<pad> 1892</s>
+59,Georg Uecker,Georg Uecker (born 6 November 1962 in Munich) is a German actor.,Chief executives in the technology industry,1962,1894,68,<pad> 1894</s>
+60,Mel Baggs,American non-binary blogger who predominantly wrote on the subject of autism and disability,Scientists,1980,1897,83,<pad> 1897</s>
+61,Eugen Relgis,Eugen D.,Scientists,1895,1894,1,<pad> 1894</s>
+62,Henri Landwirth,"hotelier, philanthropist, and a Holocaust survivor",Scientists,1927,1894,33,<pad> 1894</s>
+63,J. F. Hodgson,British socialist activist,Scientists,1867,1897,30,<pad> 1897</s>
+64,Lily Marinho,"Brazilian television arts patron, philanthropist and socialite",Scientists,1921,1892,29,<pad> 1892</s>
+65,Berit Moore,Norwegian born activist for sex education and disability rights,Scientists,1937,1897,40,<pad> 1897</s>
+66,Parit Chiwarak,"Parit Chiwarak (Thai: พริษฐ์ ชิวารักษ์; RTGS: Pharit Chiwarak, nicknamed Penguin; born 27 July 1998) is a Thai political activist, Thammasat University student at the Faculty of Political Science, and one of the leaders of the 2020 Thai protests, via the United Front of Thammasat and Demonstration group.",Scientists,1998,1931,67,<pad> 1931</s>
+67,Bana al-Abed,"Bana al-Abed (Arabic: بانا العبد; born 7 June 2009) is a Syrian girl from Aleppo, Syria who, with assistance from her English-speaking mother, sent messages through Twitter documenting the siege of the city.",Scientists,2009,1897,112,<pad> 1897</s>
+68,Vinny Lingham,Vinny Lingham (born Vinodan Lingham) is a South African-born American Internet entrepreneur who is the co-founder & CEO of an identity protection and management startup based in California called Civic.,Scientists,1979,1897,82,<pad> 1897</s>
+69,Nilesh Naik,Indian environmental activist and farmworker belonging to the scheduled tribe community,Scientists,1970,1931,39,<pad> 1931</s>
+70,Moji Solar-Wilson,"Moji Solar-Wilson (born in 1964) from Ijero-Ekiti in Ekiti State, is a Nigerian US-based real estate broker, LGBTQIA+ activist, social commentator, and the CEO of Solar Worldwide Realty Inc.",Scientists,1968,1897,71,<pad> 1897</s>
+71,Toni Reis,"founding president in 1995, and a member of the international council of the Hirschfeld Eddy Foundation",Scientists,1964,1903,61,<pad> 1903</s>
+72,Natascha McNamara,"Natascha Duschene McNamara  (born 1935 in Clare, South Australia) is an Ngarrindjeri Australian academic, activist, and researcher.",Scientists,1935,1892,43,<pad> 1892</s>
+73,Alex Jürgen,"Alex Jürgen (born September 7, 1976) is an Austrian intersex activist.",Scientists,1976,1897,79,<pad> 1897</s>
+74,Viviana Díaz,"Viviana Elisa Díaz Caro (born October 26, 1950) is a Chilean human rights campaigner who became widely known in the struggle for human rights in Chile as the president of the Agrupación de Familiars de Detenidos Desaparecidos (Association of the Relatives of the Disappeared).",Scientists,1950,1892,58,<pad> 1892</s>
+75,Del LaGrace Volcano,"Del LaGrace Volcano (born July 26, 1957) is an American artist, performer, and activist from California.",Scientists,1957,1886,71,<pad> 1886</s>
+76,Jacques Rousseau (secular activist),"Jacques André Rousseau (born 3 December 1971) is a South African academic, secular activist and social commentator.",Scientists,1971,1890,81,<pad> 1890</s>
+77,Jan Andersen-Gott,"Jan Andersen-Gott (born 5 October 1941 in Vågå, Oppland) is a Norwegian naval officer and trade unionist.",Scientists,1941,1903,38,<pad> 1903</s>
+78,Ruth Baldacchino,"Ruth Baldacchino (born 1979) is an LGBT and intersex activist, former Co-Secretary General of the International Lesbian, Gay, Bisexual, Trans and Intersex Association (ILGA World), and Senior Program Officer for the first intersex human rights fund.",Scientists,1979,1892,87,<pad> 1892</s>
+79,Kalle Könkkölä,Finnish politician and human rights activist,Scientists,1950,1894,56,<pad> 1894</s>
+80,Seven Graham,"Seven Graham is a British intersex activist, comedian, filmmaker and playwright, and drug addiction counsellor.",Scientists,1969,1897,72,<pad> 1897</s>
+81,Gore Vidal,American writer and public intellectual known for his epigrammatic wit,Scientists,1925,1939,14,<pad> 1939</s>
+82,Francis Galton,British polymath and the originator of the eugenics movement during the Victorian era,Scientists,1822,1891,69,<pad> 1891</s>
+83,Monique de Saint-Martin,Monique de Saint-Martin (born 1940) is a sociologist born in France.,Scientists,1940,1892,48,<pad> 1892</s>
+84,Luis Yanza,"Luis Yanza (born 1962 in Gualaceo) is an environmental activist from Ecuador, of Cofán descent.",Scientists,1962,1894,68,<pad> 1894</s>
+85,Eric Corley,"Eric Gordon Corley (born December 16, 1959), also frequently referred to by his pen name of Emmanuel Goldstein, is a figure in the hacker community.",Scientists,1959,1897,62,<pad> 1897</s>
+86,Antonio Augusto Villarreal Acosta,"Antonio Augusto Villarreal Acosta (born 1 September 1950, Morón, Cuba) is an economist, librarian, and Varela project coordinator.",Scientists,1950,1894,56,<pad> 1894</s>
+87,François Huber,Swiss entomologist who specialized in honey bees,Scientists,1750,1894,144,<pad> 1894</s>
+88,Friendlyjordies,"Jordan Shanks-Markovina (born 18 August 1989), also known online as friendlyjordies, is an Australian political commentator, journalist, stand-up comedian and YouTuber.",Scientists,1989,no prediction,n/a,<pad> <unk></s>
