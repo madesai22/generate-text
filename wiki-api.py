@@ -111,7 +111,12 @@ for person in sample_dict:
      df_dict['Name'].append(person)
      df_dict['Summary'].append(summary)
      df_dict['True birth year'].append(true_birth_year)
-     df_dict['Predicted birth year'].append
+     df_dict['Predicted birth year'].append(response_year)
+     df_dict['Years off'].append(difference)
+
+     print(person, summary,true_birth_year,response_year,difference)
+
+     
 
 df = pd.DataFrame(df_dict)
 df.to_csv("./birth_year_predictions.csv")
