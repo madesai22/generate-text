@@ -89,6 +89,10 @@ df_dict = {'Name':[],'Summary':[],'True birth year': [], 'Predicted birth year':
 #df = pd.DataFrame(columns=['Name','Summary','True birth year', 'Predicted birth year', 'Years off'])
 model,tokenizer = initiate_flan5_text_to_text()
 for person in sample_dict:
+     
+     # get summary and true birth year
+     summary = sample_dict[person]['summary']
+     true_birth_year = sample_dict[person]["birth_year"]
     
      # prompt model
      prompt = "What year was {} born?".format(person)
@@ -102,12 +106,6 @@ for person in sample_dict:
      else: 
           response_year = "no prediction"
           difference = "n/a"
-    
-    
-
-     # get summary and true birth year
-     summary = sample_dict[person]['summary']
-     true_birth_year = sample_dict[person]["birth_year"]
      
      # add to dataframe dict
      df_dict['Name'].append(person)
