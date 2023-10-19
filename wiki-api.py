@@ -56,6 +56,9 @@ def make_dictionary(group, death_year=None, birth_year=None):
     sample_dict = {}
     for item in group:
         item_page = wiki_wiki.page(item)
+        print("{}\n{}\n".format(item,item_page.summary[0:100],))
+        print_categories(item_page)
+        print("\n****\n\n")
         if not birth_year: birth_year = get_birth_year(item_page)
         if not death_year: death_year = get_death_year(item_page)
         summmary = item_page.summary[0:60]
@@ -83,43 +86,39 @@ wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
 people_died_in_1931 = get_people_who_died_in_year(1930)
 random_sample = get_random_sample(people_died_in_1931,10)
 sample_dict = make_dictionary(random_sample, death_year=1930)
-print(sample_dict)
 
-df_dict = {'Name':[],'Summary':[],'True birth year': [], 'Predicted birth year':[], "Years off": []}
-#df = pd.DataFrame(columns=['Name','Summary','True birth year', 'Predicted birth year', 'Years off'])
-model,tokenizer = initiate_flan5_text_to_text()
-for person in sample_dict:
+# df_dict = {'Name':[],'Summary':[],'True birth year': [], 'Predicted birth year':[], "Years off": []}
+# model,tokenizer = initiate_flan5_text_to_text()
+# for person in sample_dict:
      
-     # get summary and true birth year
-     summary = sample_dict[person]['summary']
-     true_birth_year = sample_dict[person]["birth_year"]
+#      # get summary and true birth year
+#      summary = sample_dict[person]['summary']
+#      true_birth_year = sample_dict[person]["birth_year"]
     
-     # prompt model
-     prompt = "What year was {} born?".format(person)
-     response = flant5_text_to_text(prompt,model,tokenizer)
+#      # prompt model
+#      prompt = "What year was {} born?".format(person)
+#      response = flant5_text_to_text(prompt,model,tokenizer)
 
-     # get prediction 
-     years = re.findall("\d{4}",response)
-     if years: 
-          response_year = int(years[0])
-          difference = true_birth_year-response_year
-     else: 
-          response_year = "no prediction"
-          difference = "n/a"
+#      # get prediction 
+#      years = re.findall("\d{4}",response)
+#      if years: 
+#           response_year = int(years[0])
+#           difference = true_birth_year-response_year
+#      else: 
+#           response_year = "no prediction"
+#           difference = "n/a"
      
-     # add to dataframe dict
-     df_dict['Name'].append(person)
-     df_dict['Summary'].append(summary)
-     df_dict['True birth year'].append(true_birth_year)
-     df_dict['Predicted birth year'].append(response_year)
-     df_dict['Years off'].append(difference)
+#      # add to dataframe dict
+#      df_dict['Name'].append(person)
+#      df_dict['Summary'].append(summary)
+#      df_dict['True birth year'].append(true_birth_year)
+#      df_dict['Predicted birth year'].append(response_year)
+#      df_dict['Years off'].append(difference)
 
-     print(person, summary,true_birth_year,response_year,difference)
+#      print(person, summary,true_birth_year,response_year,difference)
 
-     
-
-df = pd.DataFrame(df_dict)
-df.to_csv("./birth_year_predictions.csv")
+# df = pd.DataFrame(df_dict)
+# df.to_csv("./birth_year_predictions.csv")
 
      
      
