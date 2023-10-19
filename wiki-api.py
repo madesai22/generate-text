@@ -69,6 +69,7 @@ def make_dictionary(group, death_year=None, birth_year=None):
         item_page = wiki_wiki.page(item)
         #print("{}\n{}\n".format(item,item_page.summary[0:200],))
         summmary = get_summary(item_page)
+        print(item, summary)
         if not birth_year: birth_year = get_birth_year(item_page)
         if not death_year: death_year = get_death_year(item_page)
         summmary = item_page.summary[0:60]
