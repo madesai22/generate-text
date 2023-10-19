@@ -1,30 +1,168 @@
 ,Name,Summary,Category,True birth year,Predicted birth year,Years off
-0,Kevin Reynolds (unionist),"Kevin Reynolds was the Western Australian state secretary for the Construction, Forestry, Mining and Energy Union (CFMEU).",Activists,-1999,1967,-3966
-1,Gilles Lipovetsky,"Gilles Lipovetsky (born September 24, 1944) is a French philosopher, writer, and sociologist, professor at Stendhal University in Grenoble, Auvergne-Rhône-Alpes, France.",Activists,1944,1903,41
-2,Mel Baggs,American non-binary blogger who predominantly wrote on the subject of autism and disability,Activists,1980,1903,77
-3,Étienne Gilson,French philosopher and historian of philosophy,Chief executives in the technology industry,1884,1892,-8
-4,Jide Macaulay,Jide Macaulay is a 53 years -old (born 4 November 1966) is an openly gay Bristish - Nigerian man.,Activists,1966,1903,63
-5,Peter Gabriel,"Peter Brian Gabriel (born 13 February 1950) is an English singer, songwriter, record producer, and activist.",Activists,1950,1903,47
-6,Ellen Mitchell (philosopher),Ellen M.,Activists,1838,1903,-65
-7,Joyce Carol Oates,"Joyce Carol Oates (born June 16, 1938) is an American writer.",Activists,1938,1903,35
-8,Nevo Zisin,Nevo Zisin is an Australian writer and transgender rights activist.,Activists,-1999,1903,-3902
-9,Laila Woozeer,"Laila Woozeer is a British author, performer, musician, and activist.",Activists,-1999,1939,-3938
-10,Renée Slotopolsky de Epelbaum,Argentine human rights activist,Chief executives in the technology industry,1920,1903,17
-11,Aurélie Marie-Lisette Talate,Chagossian activist and emblematic figure of the Chagossian struggle to regain their islands; which they were forcibly exiled from by the occupying US military with permission from the UK in order to establish the Diego Garcia military base,Chief executives in the technology industry,1941,1903,38
-12,Chris Lilik,Chris Lilik is a political activist from the U.,Chief executives in the technology industry,-1999,1939,-3938
-13,Francisco Soberón,Francisco Ricardo Soberón Garrido is a human rights leftist activist in Peru.,Chief executives in the technology industry,-1999,1903,-3902
-14,Thiago Amparo,"Thiago de Souza Amparo is a Brazilian lawyer, law and human rights scholar and professor, as well as journalist.",Chief executives in the technology industry,-1999,1903,-3902
-15,Terri Worman,Terri Worman is an American feminist and LGBT advocate.,Chief executives in the technology industry,-1999,1939,-3938
-16,Michael Scott Peters,Michael Scott Peters was the 7th United States Youth Observer to the United Nations.,Chief executives in the technology industry,1994,1903,91
-17,Sonja Bernhardt,Sonja Bernhardt  is an Australian information technology industry figure involved in mentoring and role model programs for women in IT.,Chief executives in the technology industry,1959,1939,20
-18,Marika Mitsotakis,"Marika Mitsotakis (née Giannoukou; November 29, 1930 – May 6, 2012) was the wife of the former Prime Minister of Greece Konstantinos Mitsotakis.",Chief executives in the technology industry,1930,1931,-1
-19,Elphaba,"Elphaba Thropp  is the protagonist in Wicked: The Life and Times of the Wicked Witch of the West by Gregory Maguire, and in its musical theatre adaptation Wicked.",Scientists,-1999,1903,-3902
-20,Sharmus Outlaw,"American advocate for transgender rights, sex workers' rights, and HIV patient rights",Scientists,-1999,1939,-3938
-21,Constantin Dobrescu-Argeș,Constantin I.,Scientists,1856,1903,-47
-22,Konstantin Markov,Soviet geomorphologist and Quaternary geologist,Scientists,1905,1931,-26
-23,Template:Chile-activist-stub,.,Scientists,-1999,2002,-4001
-24,Tomlinson D. Todd,Tomlinson D.,Scientists,-1999,1903,-3902
-25,Margarita Mbywangi,the Minister of Indigenous Affairs in Paraguay,Scientists,1962,1931,31
-26,Flora Gionest-Roussy,"Flora Gionest-Roussy is a French Canadian actor, photographer, singer, and songwriter.",Scientists,1995,1903,92
-27,William Wagner (philanthropist),"gentleman scientist, philanthropist, and merchant from Pennsylvania who founded the Wagner Free Institute of Science",Scientists,1796,1865,-69
-28,Maarten Rudelsheim,flamingant of Jewish-Dutch descent,Scientists,1873,1903,-30
+0,Candace Gingrich,"Candace Gingrich (; born June 2, 1966) is an American LGBT rights activist at the Human Rights Campaign.",Chief executives in the technology industry,1966,1939,27
+1,David Williamson,David Keith Williamson  (born 24 February 1942) is an Australian playwright.,Activists,1942,1903,39
+2,Jagmati Sangwan,"Jagmati Sangwan, born 2 January 1960 in Butana village in Sonipat, Haryana, is an Indian activist and a former Central Committee member of the CPI(M).",Chief executives in the technology industry,1960,1903,57
+3,Jeffrey Eugenides,"Jeffrey Kent Eugenides (born March 8, 1960) is an American author.",Activists,1960,1903,57
+4,H. G. Wells,English writer,Activists,1866,1865,1
+5,The Lady with the Lamp,"English social reformer, statistician and the founder of modern nursing",Chief executives in the technology industry,1820,1939,-119
+6,Georg Uecker,Georg Uecker (born 6 November 1962 in Munich) is a German actor.,Activists,1962,1903,59
+7,Friedrich Schleiermacher,"German Reformed theologian, philosopher, and biblical scholar known for his attempt to reconcile the criticisms of the Enlightenment with traditional Protestant Christianity",Activists,1768,1903,-135
+8,David Marr (journalist),"David Ewan Marr FAHA (born 13 July 1947) is an Australian journalist, author and progressive political and social commentator.",Activists,1947,1903,44
+9,Karl Marx,"German-born philosopher, economist, political theorist, historian, sociologist, journalist, and revolutionary socialist",Activists,1818,1903,-85
+10,Nikoli Edwards,Nikoli Edwards (born 16 October 1991) is a politician and political activist from Trinidad and Tobago.,Activists,1991,1939,52
+11,Benjamin Crisp,"New Zealand carrier, temperance reformer, and character",Activists,1808,1892,-84
+12,J. G. Ballard,"English novelist and short story writer, satirist and essayist known for psychologically provocative works of fiction that explore the relations among human psychology, technology, sex, and the mass media",Scientists,1930,1903,27
+13,Peter Gabriel,"Peter Brian Gabriel (born 13 February 1950) is an English singer, songwriter, record producer, and activist.",Activists,1950,1903,47
+14,Eylem Tuncaelli,Eylem Tuncaelli is a Turkish political activist and co-chair and spokesperson for the Green Left Party.,Activists,1975,1903,72
+15,Immanuel Kant,German philosopher and one of the central Enlightenment thinkers,Activists,1724,1854,-130
+16,Ahmad Alhendawi,Ahmad Alhendawi (أحمد الهنداوي) (born 20 May 1984) is a Jordanian activist and United Nations official.,Scientists,1984,1903,81
+17,Demi Lovato,"Demetria Devonne ""Demi""  Lovato ( DEM-ee lə-VAH-toh; born August 20, 1992) is an American singer, songwriter, and actress.",Activists,1992,1987,5
+18,Leah Purcell,"Leah Maree Purcell  (born 14 August 1970) is an Aboriginal Australian stage and film actress, playwright, film director, and novelist.",Scientists,1970,1939,31
+19,E. B. White,American writer,Chief executives in the technology industry,1899,1903,-4
+20,Susan Haack,"Susan Haack (born 1945) is a distinguished professor in the humanities, Cooper Senior Scholar in Arts and Sciences, professor of philosophy, and professor of law at the University of Miami in Coral Gables, Florida.",Activists,1945,1903,42
+21,José D'Elía,Uruguayan labor leader and politician,Activists,1916,1892,24
+22,Tony Cuesta,anti-Castro Cuban activist,Scientists,1926,1903,23
+23,Dominique Provost-Chalkley,"Dominique Provost-Chalkley (born 24 March 1990) is a British-Canadian actor, best known for their role as Waverly Earp on the television series Wynonna Earp.",Activists,1990,1903,87
+24,Nazha El Khalidi,"Nazha El-Khalidi (Laayoune, Western Sahara, 27 December 1991) is a Sahrawi journalist and activist.",Activists,1991,1903,88
+25,Dumitru Coroamă,"Romanian soldier and fascist activist, who held the rank of major general of the Romanian Army during World War II",Activists,1885,1903,-18
+26,Hadiqa Bashir,Hadiqa Bashir (born 2002) is a Pakistani activist with a goal to end child marriages.,Chief executives in the technology industry,2002,1903,99
+27,Donald Horne,"Australian journalist, writer, social critic, and academic who became one of Australia's best known public intellectuals, from the 1960s until his death",Activists,1921,1903,18
+28,Ajith C. S. Perera,"Ajith Chrysantha Stephen Perera, JP, CChem.",Activists,1956,1971,-15
+29,Howard Richards (academic),"Howard Richards (born June 10, 1938) is a philosopher of Social Science who works with the concepts of basic cultural structures and constitutive rules.",Activists,1938,1903,35
+30,Ruth Russell,"Ruth Elizabeth Russell (born 6 March 1946) is an Australian peace activist, and one of five Australian citizens who travelled to Iraq in 2003 to function as a human shield, and for some of the eight weeks was located at the Taji food silo.",Scientists,1946,1903,43
+31,Tim Minchin,"Timothy David Minchin AM (born 7 October 1975) is a British-born Australian comedian, actor, writer, musician, poet, composer, and songwriter.",Activists,1975,1939,36
+32,John Sinclair (environmentalist),"Australian environmentalist who received the Global 500 Roll of Honour award in 1990, and was awarded the Goldman Environmental Prize in 1993",Activists,1939,1892,47
+33,Stephen King,"Stephen Edwin King (born September 21, 1947) is an American author of horror, supernatural fiction, suspense, crime, science-fiction, and fantasy novels.",Activists,1947,1939,8
+34,Axel Honneth,Axel Honneth (; German: [aksl̩ ˈhɔnɛt]; born 18 July 1949) is a German philosopher who is the Professor for Social Philosophy at Goethe University Frankfurt and the Jack B.,Activists,1949,1903,46
+35,Shakina Nayfack,"Shakina Nayfack (born December 8, 1980) is an American actress and transgender activist.",Activists,1980,1939,41
+36,Charles Bukowski,"American poet, novelist, and short story writer",Activists,1920,1903,17
+37,Herman Melville,"American novelist, short story writer, and poet of the American Renaissance period",Activists,1819,1865,-46
+38,Peter Joseph,Peter Joseph is an American independent filmmaker and activist.,Activists,1979,1892,87
+39,Jacques Derrida,Algerian-born French philosopher,Activists,1930,1903,27
+40,Muzoon Almellehan,Muzoon Almellehan (Arabic: مزون المليحان; born 1999) is a Syrian activist and refugee resettled in the United Kingdom.,Chief executives in the technology industry,1999,1939,60
+41,Sybil Joyce Hylton,Caymanian community volunteer and social advocate who became involved with the juvenile justice system in the 1950s,Activists,1913,1903,10
+42,Ekaterina Sokirianskaia,"Ekaterina Sokirianskaia (Russian: Екатерина Леонидовна Сокирянская; December 19, 1975) is a Russian human rights researcher, journalist, writer, professor of political science.",Chief executives in the technology industry,1975,1921,54
+43,Elsa Alvarez,"Elsa Alvarez (born 1950), along with her husband Carlos Alvarez, is accused of spying on Cuban exile groups in the United States on behalf of the Cuban government.",Activists,1950,1939,11
+44,Jamila Afghani,Jamila Afghani (Persian: جمیله افغانی; born 1976 in Kabul) is a feminist and an activist for women's rights and education in Afghanistan.,Activists,1974,1903,71
+45,Marcel Proust,"French novelist, literary critic, and essayist who wrote the monumental novel À la recherche du temps perdu (in French - translated in English as Remembrance of Things Past and more recently as In Search of Lost Time) which was published in seven volumes between 1913 and 1927",Activists,1871,1892,-21
+46,Lily Marinho,"Brazilian television arts patron, philanthropist and socialite",Activists,1921,1939,-18
+47,Rafael del Pino (pilot),"Rafael del Pino (born September 22, 1938, in Pinar del Río and also known as Rafael del Pino Diaz) is a former Cuban General of the Air Force and political dissident who defected to the United States by flying a civilian airplane from Cuba to Key West, Florida.",Activists,1938,1903,35
+48,Busby Noble,New Zealand Māori activist and Antarctic adventurer,Activists,1960,1903,57
+49,Mercedes Colás de Meroño,Argentine human rights activist,Chief executives in the technology industry,1925,1903,22
+50,Marcel Mauss,"French sociologist and anthropologist known as the ""father of French ethnology""",Chief executives in the technology industry,1872,1903,-31
+51,Vera Sharav,"Vera Sharav, a medical activist, is the founder of the Alliance for Human Research Protection and an activist against some practices of the biomedical industry, particularly in matters of patient consent and children.",Chief executives in the technology industry,1937,1939,-2
+52,Toni Reis,"founding president in 1995, and a member of the international council of the Hirschfeld Eddy Foundation",Activists,1964,1939,25
+53,Corliss Lamont,American socialist and humanist philosopher and advocate of various left-wing and civil liberties causes,Activists,1902,1931,-29
+54,Arat Dink,"Arat Dink (born 1979) is a Turkish journalist and the executive editor of Agos, a bilingual Turkish-Armenian weekly newspaper published in Istanbul.",Activists,1979,1903,76
+55,Carolyn Gomes,"The Honourable Carolyn Gomes, O.",Activists,1958,1903,55
+56,Ernest Hemingway,"American novelist, short-story writer, and journalist",Activists,1899,1892,7
+57,Axel Strand,Swedish trade union organizer,Chief executives in the technology industry,1893,1903,-10
+58,Nancy Fraser,"Nancy Fraser (; born May 20, 1947) is an American philosopher, critical theorist, feminist, and the Henry A.",Activists,1947,1939,8
+59,Bana al-Abed,"Bana al-Abed (Arabic: بانا العبد; born 7 June 2009) is a Syrian girl from Aleppo, Syria who, with assistance from her English-speaking mother, sent messages through Twitter documenting the siege of the city.",Activists,2009,1903,106
+60,Jane McAlevey,Jane F.,Activists,1964,1892,72
+61,Torstein Tranøy,Torstein Tranøy (8.,Activists,1964,1903,61
+62,Carlos Luis Fallas,Costa Rican author and communist political activist,Activists,1909,1903,6
+63,Sarah Elago,"Sarah Jane Ibañez Elago (born October 18, 1989) is a Filipino activist and politician.",Activists,1989,1892,97
+64,Margaret Baba Diri,Margaret Baba Diri is a Ugandan politician who was first elected into the Ugandan Parliament as a representative of people with disabilities in 1996 where she has been to date.,Activists,1954,1903,51
+65,Xiang Li (activist),Xiang Li (向莉) (born 1976) is an activist for human rights causes in China.,Activists,1976,1908,68
+66,Mwaura Isaac Maigua,"Isaac Maigua Mwaura (born May 29, 1982) is the current Government Spokesman of Kenya, a former Senator and a former Cabinet Administrative Secretary (CAS) - Deputy Minister in the Office of Prime Cainet Secretary.",Activists,1982,1892,90
+67,Yves Bonnardel,"Yves Bonnardel (born 1967) is a French philosopher, essayist and editor, libertarian, egalitarian and antispeciesist activist.",Chief executives in the technology industry,1967,1903,64
+68,Max Weber,"German sociologist, historian, jurist and political economist, who is regarded as among the most important theorists of the development of modern Western society",Activists,1864,1939,-75
+69,Jean-Luc Godard,"Franco-Swiss film director, screenwriter, and film critic",Activists,1930,1892,38
+70,Lin Fei-fan,"Lin Fei-fan (Chinese: 林飛帆; pinyin: Lín Fēifán; born 19 May 1988) is a Taiwanese activist who led the Sunflower Student Movement in 2014, against the Cross-Strait Service Trade Agreement.",Activists,1988,1931,57
+71,Nujeen Mustafa,Nujeen Mustafa (Arabic: نوجين مصطفى Nūjjayn Muṣṭafā; also transliterated Noujain Mustaffa)  is a Kurdish Syrian refugee and activist with cerebral palsy.,Activists,1999,1903,96
+72,Christine Jackson,"Christine Jackson (1942 – 11 October 2013), was the Chairperson of the Civil Liberties Trust and a lifetime campaigner for human rights.",Chief executives in the technology industry,1942,1939,3
+73,Mel Baggs,American non-binary blogger who predominantly wrote on the subject of autism and disability,Chief executives in the technology industry,1980,1903,77
+74,Maarten Rudelsheim,flamingant of Jewish-Dutch descent,Scientists,1873,1903,-30
+75,Mohamed Ali El Hammi,early twentieth-century Tunisian labor organizer during the era of the French protectorate over Tunisia,Chief executives in the technology industry,1890,1967,-77
+76,Pauline Stansfield,New Zealand disability rights advocate,Scientists,1939,1903,36
+77,Susan Howe,"Susan Howe (born June 10, 1937) is an American poet, scholar, essayist, and critic, who has been closely associated with the Language poets, among other poetry movements.",Chief executives in the technology industry,1937,1903,34
+78,Pradeep Sindhu,Pradeep Sindhu is an Indian-American business executive.,Chief executives in the technology industry,1953,1931,22
+79,John Shelby Spong,"American bishop of the Episcopal Church, born in Charlotte, North Carolina",Chief executives in the technology industry,1931,1903,28
+80,Nikkita Oliver,Nikkita R.,Chief executives in the technology industry,1986,1939,47
+81,Qiyun Woo,"Qiyun Woo is a Singaporean environmental activist, content creator, climate activist and artist.",Chief executives in the technology industry,1997,1980,17
+82,Felipe Heusser,"Felipe Heusser (born 1980) is a Chilean activist and social entrepreneur, co-founder of Ciudadano Inteligente, a Latin American civic technology organization based in Santiago-Chile, awarded with the  2011 Golden Nica for 'Digital Communities' and the 2013 Omidyar Network Award.",Chief executives in the technology industry,1980,1903,77
+83,Albert Manent,Catalan writer and cultural activist,Scientists,1930,1903,27
+84,Frances Fox Piven,"Frances Fox Piven (born October 10, 1932) is an American professor of political science and sociology at The Graduate Center, City University of New York, where she has taught since 1982.",Chief executives in the technology industry,1932,1903,29
+85,Gigi Raven Wilbur,Gigi Raven Wilbur is an American bisexual rights activist and writer.,Chief executives in the technology industry,1955,1939,16
+86,Gabriela Brimmer,Mexican writer and activist for people with disabilities,Chief executives in the technology industry,1947,1939,8
+87,Randy Shaw,"Randy Shaw is an attorney, author, and activist who lives in Berkeley, California.",Chief executives in the technology industry,1956,1967,-11
+88,Kingsley Amis,"English novelist, poet, critic and teacher",Chief executives in the technology industry,1922,1903,19
+89,Vinod Khosla,Vinod Khosla (born 28 January 1955) is an Indian-American businessman and venture capitalist.,Chief executives in the technology industry,1955,1903,52
+90,Arthur Miller,"American playwright, essayist and screenwriter in the 20th-century American theater",Chief executives in the technology industry,1915,1892,23
+91,Sadat Rahman,Sadat Rahman (Bengali: সাদাত রহমান) is a Bangladeshi social entrepreneur.,Chief executives in the technology industry,2003,1947,56
+92,Jon Manteca,person elevated to media icon in the late 1980s in Spain after the publication of photographs and videos that showed him smashing street furniture in a student demonstration in January 1987,Chief executives in the technology industry,1967,1903,64
+93,Tully Satre,"Tully Meehan Satre (born 17 May 1989 in Dover, Delaware) is an American artist, writer and former gay rights youth activist based in Chicago and London.",Scientists,1989,1903,86
+94,Oswald Spengler,"German polymath, whose areas of interest included history, philosophy, mathematics, science, and art, as well as their relation to his organic theory of history",Chief executives in the technology industry,1880,1903,-23
+95,Hazel Henderson,British American futurist and environmental activist,Chief executives in the technology industry,1933,1939,-6
+96,A. J. Baker,"Allan James ""Jim"" Baker (22 July 1922 – 3 March 2017), usually cited as A.",Chief executives in the technology industry,1922,1903,19
+97,Jason Stanley,Jason Stanley (born 1969) is an American philosopher who is the Jacob Urowsky Professor of Philosophy at Yale University.,Chief executives in the technology industry,1969,1967,2
+98,Noga Levy-Rapoport,"Noga Levy-Rapoport (born 25 November 2001) is an Israeli-born British climate activist, speaker, and volunteer within British climate strikes at the UK Student Climate Network.",Chief executives in the technology industry,2001,1939,62
+99,Pierre-Joseph Proudhon,"French socialist, politician, philosopher, and economist who founded mutualist philosophy and is considered by many to be the ""father of anarchism""",Chief executives in the technology industry,1809,1892,-83
+100,Étienne Gilson,French philosopher and historian of philosophy,Chief executives in the technology industry,1884,1892,-8
+101,Travis Alabanza,"Travis Alabanza (born 15 November 1995) is a British performance artist, writer and theatre maker.",Chief executives in the technology industry,1996,1939,57
+102,George Johnson (writer),"George Johnson (born January 20, 1952) is an American journalist and science writer.",Chief executives in the technology industry,1952,1865,87
+103,Teruaki Masumoto,"Teruaki Masumoto (増元照明, b.",Chief executives in the technology industry,1955,1903,52
+104,Stephen Boreham,New Zealand shearer and trade unionist,Chief executives in the technology industry,1857,1892,-35
+105,Carlo Carretto,"Italian writer, Catholic priest, and member of the Little Brothers of the Gospel",Chief executives in the technology industry,1910,1903,7
+106,Adam Curtis,Adam Curtis (born 26 May 1955) is an English documentary filmmaker.,Chief executives in the technology industry,1955,1903,52
+107,George Eliot,"English novelist, poet, journalist, translator, and one of the leading writers of the Victorian era",Chief executives in the technology industry,1819,1897,-78
+108,Melo Dominguez,"Melquiades Dominguez (born October 14, 1978) is an American  muralist, painter, visual artist, feminist, and activist, who has lived in the city of South Tucson, Arizona since 2007.",Chief executives in the technology industry,1978,1903,75
+109,Masood Khadarpoosh,"bureaucrat, Pakistan movement activist, agricultural reformist and a champion of the Punjabi language",Scientists,1916,1903,13
+110,Flossie Donnelly,Flossie Donnelly (born 2007) is an Irish marine environmentalist.,Chief executives in the technology industry,2007,1903,104
+111,Hein Vos,Dutch politician of the defunct Social Democratic Workers' Party (SDAP) and later the Labour Party (PvdA) and economist,Chief executives in the technology industry,1903,1903,0
+112,Helene S. Coleman,Helene S.,Chief executives in the technology industry,1925,1903,22
+113,Jean Le Bitoux,French journalist and gay activist,Scientists,1948,1892,56
+114,Gabriel García Márquez,Gabriel José de la Concordia García Márquez (Latin American Spanish: [ɡaˈβɾjel ɣaɾˈsi.,Chief executives in the technology industry,1927,1903,24
+115,John Zerzan,"John Edward Zerzan ( ZUR-zən; born August 10, 1943) is an American anarchist and primitivist author.",Chief executives in the technology industry,1943,1892,51
+116,Aurélie Marie-Lisette Talate,Chagossian activist and emblematic figure of the Chagossian struggle to regain their islands; which they were forcibly exiled from by the occupying US military with permission from the UK in order to establish the Diego Garcia military base,Chief executives in the technology industry,1941,1903,38
+117,Michael Brooks (political commentator),"American talk show host, writer, political commentator, and comedian",Chief executives in the technology industry,1983,1939,44
+118,Honey Davenport,"James Heath-Clark (born August 13, 1985), known professionally as Honey Davenport, is an American drag performer, singer, songwriter, actor and activist.",Chief executives in the technology industry,1985,1903,82
+119,Friedrich Nietzsche,German philosopher,Chief executives in the technology industry,1844,1891,-47
+120,Jessy Marcelin,Jessy Marcelin (born 1934) is a Chagossian musician and activist who was born in the Chagos Islands and forced to leave as part of Britain's displacement of the Chagossian people.,Chief executives in the technology industry,1934,1939,-5
+121,Nick Levay,American computer security expert and hacker,Chief executives in the technology industry,1977,1939,38
+122,Keshav Rao Jadhav,activist for separate state of Telangana,Chief executives in the technology industry,1933,1931,2
+123,Mindy Thompson Fullilove,"Mindy Thompson Fullilove (born October 15, 1950) is an American social psychiatrist who focuses on the ways social and environmental factors affect the mental health of communities.",Chief executives in the technology industry,1950,1967,-17
+124,Alexandra Benado,"Alexandra ""Ale"" Benado Vergara (born 11 May 1976) is a Chilean politician, LGBT rights activist and former football player and manager.",Scientists,1976,1939,37
+125,Joanna Macy,"Joanna Rogers Macy (born May 2, 1929) is an environmental activist, author, and scholar of Buddhism, general systems theory, and deep ecology.",Chief executives in the technology industry,1929,1939,-10
+126,Thomas Oxley (neurologist),Thomas J.,Chief executives in the technology industry,1980,1892,88
+127,Carl Anthony,"Carl Anthony (born February 8, 1939) is an American architect, regional planner, social justice activist, and author.",Scientists,1939,1903,36
+128,Matthew Buckland,"South African Internet entrepreneur and businessman who founded and exited digital agency and publisher Creative Spark, acquired in 2015 by UK firm M&C Saatchi PLC (LSE: SAA), the holding group of M&C Saatchi",Scientists,1974,1903,71
+129,Boyd E. Payton,"labor organizer born in Bobbin, West Virginia",Scientists,1908,1903,5
+130,Hezârfen Ahmed Çelebi,"Hezârfen Ahmed Çelebi (Ottoman Turkish: هزارفنّ أحمد چلبی,, lit.",Scientists,1609,1903,-294
+131,Richard Leakey,"Kenyan paleoanthropologist, conservationist and politician",Scientists,1944,1892,52
+132,Baruch Kimmerling,Israeli scholar and professor of sociology at the Hebrew University of Jerusalem,Scientists,1939,1903,36
+133,Bolu Okupe,"Bolu Okupe (born 20 January 1994) is an openly gay Nigerian LGBTQ rights activist, model, and son of former Nigerian presidential aide Doyin Okupe.",Scientists,1994,1903,91
+134,Rudolf Otto,"eminent German Lutheran theologian, philosopher, and comparative religionist",Scientists,1869,1903,-34
+135,Alexander von Humboldt,"German polymath, geographer, naturalist, explorer, and proponent of Romantic philosophy and science",Scientists,1769,1871,-102
+136,Galileo Galilei,"Italian astronomer, physicist and engineer, sometimes described as a polymath",Scientists,1564,1854,-290
+137,Hilary Greaves,"Hilary Greaves (born 1978) is a British philosopher, currently serving as professor of philosophy at the University of Oxford.",Scientists,1978,1939,39
+138,Charles Chilton (zoologist),"New Zealand zoologist, the first rector to be appointed in Australasia, and the first person to be awarded a D",Scientists,1860,1871,-11
+139,Leo Tolstoy,"Count Lev Nikolayevich Tolstoy (; Russian: Лев Николаевич Толстой, IPA: [ˈlʲef nʲɪkɐˈla(j)ɪvʲɪtɕ tɐlˈstoj] ; 9 September [O.",Scientists,1828,1939,-111
+140,Marsilio Ficino,Italian scholar and Catholic priest who was one of the most influential humanist philosophers of the early Italian Renaissance,Scientists,1433,1903,-470
+141,Ella Polyakova,"Ella Mikhaylovna Polyakova (Russian: Элла Михайловна Полякова; born 7 February 1941) is a Russian human rights activist, a member of President Vladimir Putin's advisory council on human rights.",Scientists,1941,1939,2
+142,António Egas Moniz,Portuguese neurologist and the developer of cerebral angiography,Scientists,1874,1892,-18
+143,Burkhard Heim,German theoretical physicist known for the creation of a unified field theory called Heim theory,Scientists,1925,1903,22
+144,György Marx,"Hungarian physicist, astrophysicist, science historian and professor",Scientists,1927,1903,24
+145,Vinny Lingham,Vinny Lingham (born Vinodan Lingham) is a South African-born American Internet entrepreneur who is the co-founder & CEO of an identity protection and management startup based in California called Civic.,Scientists,1979,1939,40
+146,Farid Ahmed Naik,Farid Ahmed Naik is a social activist and journalist in the Doda district of Jammu and Kashmir.,Scientists,1996,1903,93
+147,René Descartes,"French philosopher, scientist, and mathematician, widely considered a seminal figure in the emergence of modern philosophy and science",Scientists,1596,1892,-296
+148,André van der Louw,Dutch politician of the Labour Party (PvdA) and journalist,Scientists,1933,1903,30
+149,James A. Michener,American writer,Scientists,1907,1892,15
+150,L. Frank,L.,Scientists,1952,1903,49
+151,Nicole Notat,"Nicole Notat, born 26 July 1947 in Châtrices, Marne, is the former secretary general of the union CFDT.",Scientists,1947,1903,44
+152,Margaret Harrison (peace campaigner),Scottish peace campaigner active in the anti-nuclear weapons movement who was arrested at least 14 times,Scientists,1918,1892,26
+153,Otto Buchsbaum,"Otto Buchsbaum (May 2, 1920 – August 5, 2000) was born in Vienna, Austria.",Scientists,1920,1903,17
+154,Gilles Lipovetsky,"Gilles Lipovetsky (born September 24, 1944) is a French philosopher, writer, and sociologist, professor at Stendhal University in Grenoble, Auvergne-Rhône-Alpes, France.",Scientists,1944,1903,41
+155,Mildred K. Nobles,Canadian mycologist,Scientists,1903,1903,0
+156,Joe the Plumber,American conservative activist and commentator,Scientists,1973,1903,70
+157,John Milton,English poet and intellectual,Scientists,1608,1852,-244
+158,Gustaf Dalén,"Swedish Nobel laureate and industrialist, engineer, inventor and long-term CEO of the AGA company and inventor of the AGA cooker and the Dalén light",Scientists,1869,1903,-34
+159,Paul Rogat Loeb,"Paul Rogat Loeb (born July 4, 1952) is an American social and political activist.",Scientists,1952,1903,49
+160,Ángela Jiménez,soldadera (woman fighter) during the Mexican Revolution,Scientists,1886,1903,-17
+161,Lucianne Walkowicz,"Lucianne Walkowicz ( WAW-kə-witch; born 1979) is an American astronomer, artist, and activist.",Scientists,1979,1903,76
+162,T. V. Raman,T.,Scientists,1965,1931,34
+163,Jarosław Lipszyc,"Jarosław Lipszyc (born 1975) - Polish poet and journalist, president of the board of Fundacja Nowoczesna Polska (Modern Poland Foundation) and of the Koalicja Otwartej Edukacji (Open Education Coalition), free culture activist.",Scientists,1975,1903,72
+164,Ruth A. David,Ruth A.,Scientists,1953,1903,50
+165,John Wilkinson (chemist),"John Wilkinson (born 1961) is an English independent scientist specialising primarily in organic chemistry, phytochemistry, pharmacognosy, and synergism in botanical medicines, botanical foods and ecological biochemistry, and who led the first European degree course (Bachelor of Science with Honours) for herbal medicine, at Middlesex University in the United Kingdom in 1994.",Scientists,1961,1865,96
+166,Élisabeth Moreno,"Élisabeth Moreno (born 20 September 1970) is a French-Cape Verdean businesswoman and politician who served as Minister Delegate for Gender Equality, Diversity and Equal Opportunities at the Prime Minister's Office in the government of Prime Minister Jean Castex from 2020 to 2022.",Scientists,1970,1903,67
