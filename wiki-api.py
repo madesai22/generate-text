@@ -79,7 +79,7 @@ def get_random_sample(group, nsamples):
     while nchosen <= nsamples:
          item = group_list[index]
          index +=1
-         if not re.findall("^(Category|List|Template)") and get_birth_year(wiki_wiki.page(item)) != YEAR_NOT_FOUND():
+         if not re.findall("^(Category|List|Template)",item) and get_birth_year(wiki_wiki.page(item)) != YEAR_NOT_FOUND():
               random_sample.add(item)
               nchosen += 1       
     return random_sample
