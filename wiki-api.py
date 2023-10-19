@@ -28,6 +28,14 @@ def get_category_members(categorymembers, level = 0, max_level = 1, category_set
                 get_category_members(c.categorymembers, level=level + 1, max_level=max_level,category_set=category_set)
     return category_set
 
+def clean_category_members(category_set):
+     clean_set = set()
+     for item in set:
+          if item[:9] != "Category:":
+               clean_set.add(item)
+     return clean_set
+     
+
 def YEAR_NOT_FOUND():
     return -1999
 
@@ -98,7 +106,8 @@ def get_sample_dict_by_death_year(death_year, sample_size):
 def get_sample_dict_by_category(category, sample_size):
      cat = wiki_wiki.page(category)
      category_string = category.partition(':')[2]
-     category_members = get_category_members(cat.categorymembers)
+     uncleaned_category_members = get_category_members(cat.categorymembers)
+     category_members = clean_category_members(uncleaned_category_members)
      random_sample = get_random_sample(category_members, sample_size)
      sample_dict = make_dictionary(random_sample, death_year = YEAR_NOT_FOUND(),category=category_string)
      return sample_dict
