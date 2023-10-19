@@ -72,6 +72,7 @@ def get_people_who_died_in_year(year):
 def get_random_sample(group, nsamples):
     random_sample = set()
     group_list = random.shuffle(list(group))
+    print("\n\nGroup list \n\n{}".format(group_list))
     index = 0
     nchosen = 0
     while nchosen <= nsamples:
@@ -114,7 +115,7 @@ def get_sample_dict_by_category(category, sample_size):
      cat = wiki_wiki.page(category)
      category_string = category.partition(':')[2] 
      category_members = get_category_members(cat.categorymembers)
-     print(category_members)
+     #print(category_members)
      #category_members = clean_category_members(uncleaned_category_members)
      print(category_string, category_members)
      random_sample = get_random_sample(category_members, sample_size)
