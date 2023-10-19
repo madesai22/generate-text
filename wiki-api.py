@@ -31,6 +31,7 @@ def get_category_members(categorymembers, level = 0, max_level = 1, category_set
 def clean_category_members(category_set):
      clean_set = set()
      for item in clean_set:
+          print(item)
           if item[:9] != "Category:" and item[:4] != "List":
                clean_set.add(item)
      return clean_set
