@@ -150,7 +150,7 @@ for person in sample_dict:
      # add to dataframe dict
      df_dict['Name'].append(person)
      df_dict['Summary'].append(summary)
-     df_dict['Category'].append(true_death_year)
+     df_dict['Category'].append(category)
      df_dict['True birth year'].append(true_birth_year)
      df_dict['Predicted birth year'].append(response_year)
      df_dict['Years off'].append(difference)
