@@ -99,14 +99,16 @@ wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
 # random_sample = get_random_sample(people_died_in_1931,10)
 # sample_dict = make_dictionary(random_sample, death_year=1930)
 
-sample_1 = get_sample_dict_by_death_year(1900,75)
-sample_2 = get_sample_dict_by_death_year(1950,75)
-sample_3 = get_sample_dict_by_death_year(2000,75)
+sample_1 = get_sample_dict_by_death_year(1900,10)
+sample_2 = get_sample_dict_by_death_year(1950,10)
+sample_3 = get_sample_dict_by_death_year(2000,10)
 
 sample_dict = dict(sample_1,**sample_2)
 sample_dict.update(sample_3)
 #sample_1+sample_2+sample_3
 #'d4 = dict(d1, **d2); d4.update(d3)'
+
+print(sample_dict)
 
 df_dict = {'Name':[],'Summary':[],'True birth year': [], 'Predicted birth year':[], "Years off": []}
 model,tokenizer = initiate_flan5_text_to_text()
