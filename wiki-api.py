@@ -56,7 +56,11 @@ def make_dictionary(group, death_year=None, birth_year=None):
     sample_dict = {}
     for item in group:
         item_page = wiki_wiki.page(item)
-        print("{}\n{}\n".format(item,item_page.summary[0:200],))
+        #print("{}\n{}\n".format(item,item_page.summary[0:200],))
+        long_summary = item_page.summary
+        short_summary = long_summary.partition('.')[0] + '.'
+        print("{}\n{}\n".format(item,short_summary,))
+
         print_categories(item_page)
         print("\n****\n\n")
         if not birth_year: birth_year = get_birth_year(item_page)
