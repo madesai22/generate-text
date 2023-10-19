@@ -70,7 +70,7 @@ def make_dictionary(group, death_year=None, birth_year=None):
         item_page = wiki_wiki.page(item)
         #print("{}\n{}\n".format(item,item_page.summary[0:200],))
         summary = get_summary(item_page)
-        print(item, summary)
+        #print(item, summary)
         if not birth_year: birth_year = get_birth_year(item_page)
         if not death_year: death_year = get_death_year(item_page)
         #summmary = item_page.summary[0:60]
@@ -103,7 +103,10 @@ sample_1 = get_sample_dict_by_death_year(1900,75)
 sample_2 = get_sample_dict_by_death_year(1950,75)
 sample_3 = get_sample_dict_by_death_year(2000,75)
 
-sample_dict = sample_1+sample_2+sample_3
+sample_dict = dict(sample_1,**sample_2)
+sample_dict.update(sample_3)
+#sample_1+sample_2+sample_3
+#'d4 = dict(d1, **d2); d4.update(d3)'
 
 df_dict = {'Name':[],'Summary':[],'True birth year': [], 'Predicted birth year':[], "Years off": []}
 model,tokenizer = initiate_flan5_text_to_text()
