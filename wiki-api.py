@@ -28,13 +28,13 @@ def get_category_members(categorymembers, level = 0, max_level = 1, category_set
                 get_category_members(c.categorymembers, level=level + 1, max_level=max_level,category_set=category_set)
     return category_set
 
-def clean_category_members(category_set):
-     clean_set = set()
-     for item in category_set:
-          print(item)
-          if item[:9] != "Category:" and item[:4] != "List" and item[:8] != "Template":
-               clean_set.add(item)
-     return clean_set
+# def clean_category_members(category_set):
+#      clean_set = set()
+#      for item in category_set:
+#           print(item)
+#           if item[:9] != "Category:" and item[:4] != "List" and item[:8] != "Template":
+#                clean_set.add(item)
+#      return clean_set
      
 
 def YEAR_NOT_FOUND():
@@ -70,7 +70,17 @@ def get_people_who_died_in_year(year):
     return get_category_members(cat.categorymembers)
 
 def get_random_sample(group, nsamples):
-    return random.sample(group, nsamples)
+    random_sample = set()
+    group_list = random.shuffle(list(group))
+    index = 0
+    nchosen = 0
+    while nchosen <= nsamples:
+         item = group_list[index]
+         index +=1
+         if not re.findall("^(Category|List|Template)") and get_birth_year(wiki_wiki.page(item)) != YEAR_NOT_FOUND():
+              random_sample.add(item)
+              nchosen += 1       
+    return random_sample
 
 
 def make_dictionary(group, death_year=None, birth_year=None, category=None):
@@ -78,13 +88,8 @@ def make_dictionary(group, death_year=None, birth_year=None, category=None):
     sample_dict = {}
     for item in group:
         item_page = wiki_wiki.page(item)
-        #print("{}\n{}\n".format(item,item_page.summary[0:200],))
         summary = get_summary(item_page)
-        #print(item, summary)
         birth_year = get_birth_year(item_page)
-        #if not birth_year: birth_year = get_birth_year(item_page)
-        #if not death_year: death_year = get_death_year(item_page)
-        #summmary = item_page.summary[0:60]
         sample_dict[item] = {"birth_year": birth_year, "death_year": death_year, "summary": summary, "category":category}
         
     return sample_dict
@@ -107,9 +112,9 @@ def get_sample_dict_by_death_year(death_year, sample_size):
 
 def get_sample_dict_by_category(category, sample_size):
      cat = wiki_wiki.page(category)
-     category_string = category.partition(':')[2]
-     uncleaned_category_members = get_category_members(cat.categorymembers)
-     category_members = clean_category_members(uncleaned_category_members)
+     category_string = category.partition(':')[2] 
+     category_members = get_category_members(cat.categorymembers)
+     #category_members = clean_category_members(uncleaned_category_members)
      print(category_string, category_members)
      random_sample = get_random_sample(category_members, sample_size)
      sample_dict = make_dictionary(random_sample, death_year = YEAR_NOT_FOUND(),category=category_string)
@@ -129,9 +134,9 @@ wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
 
 
 
-sample_1 = get_sample_dict_by_category("Category:Activists", 500)
-sample_2 = get_sample_dict_by_category("Category:Chief executives in the technology industry",500)
-sample_3 = get_sample_dict_by_category("Category:Scientists",500)
+sample_1 = get_sample_dict_by_category("Category:Activists", 30)
+sample_2 = get_sample_dict_by_category("Category:Chief executives in the technology industry",30)
+sample_3 = get_sample_dict_by_category("Category:Scientists",30)
 
 
 sample_dict = dict(sample_1,**sample_2)
@@ -139,7 +144,7 @@ sample_dict.update(sample_3)
 
 
 
-df_dict = {'Name':[],'Summary':[],'Category':[],'True birth year': [], 'Predicted birth year':[], "Years off": []}
+df_dict = {'Name':[],'Summary':[],'Category':[],'True birth year': [], 'Predicted birth year':[], "Years off": [], "Full response": []}
 model,tokenizer = initiate_flan5_text_to_text()
 for person in sample_dict:
      
@@ -159,7 +164,7 @@ for person in sample_dict:
         years = re.findall("\d{4}",response)
         if years: 
             response_year = int(years[0])
-            difference = true_birth_year-response_year
+            difference = abs(true_birth_year-response_year)
         else: 
             response_year = "no prediction"
             difference = "n/a"
@@ -171,6 +176,7 @@ for person in sample_dict:
         df_dict['True birth year'].append(true_birth_year)
         df_dict['Predicted birth year'].append(response_year)
         df_dict['Years off'].append(difference)
+        df_dict['Full response'].append(response)
 
         # print(person, summary,true_birth_year,response_year,difference)
 
