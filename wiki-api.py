@@ -123,7 +123,7 @@ wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
 # sample_2 = get_sample_dict_by_death_year(1950,10)
 # sample_3 = get_sample_dict_by_death_year(2000,10)
 
-print_categorymembers(wiki_wiki.page("Category:Activists"))
+print_categorymembers(wiki_wiki.page("Category:Activists").categorymembers)
 
 print("\n\n\n******\n")
 cat = wiki_wiki.page("Category:Activists")
