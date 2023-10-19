@@ -122,16 +122,24 @@ wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
 # sample_1 = get_sample_dict_by_death_year(1900,10)
 # sample_2 = get_sample_dict_by_death_year(1950,10)
 # sample_3 = get_sample_dict_by_death_year(2000,10)
-sample_1 = get_sample_dict_by_category("Category:Activists", 10)
-sample_2 = get_sample_dict_by_category("Category:Chief executives in the technology industry",10)
-sample_3 = get_sample_dict_by_category("Category:Scientists",10)
 
-sample_dict = dict(sample_1,**sample_2)
-sample_dict.update(sample_3)
-#sample_1+sample_2+sample_3
-#'d4 = dict(d1, **d2); d4.update(d3)'
+print_categorymembers(wiki_wiki.page("Category:Activists"))
 
-#print(sample_dict)
+print("\n\n\n******\n")
+cat = wiki_wiki.page("Category:Activists")
+category_string = "Activists"
+uncleaned_category_members = get_category_members(cat.categorymembers)
+for item in uncleaned_category_members:
+     print(item)
+
+#sample_1 = get_sample_dict_by_category("Category:Activists", 10)
+#sample_2 = get_sample_dict_by_category("Category:Chief executives in the technology industry",10)
+#sample_3 = get_sample_dict_by_category("Category:Scientists",10)
+
+#sample_dict = dict(sample_1,**sample_2)
+#sample_dict.update(sample_3)
+
+
 
 df_dict = {'Name':[],'Summary':[],'Category':[],'True birth year': [], 'Predicted birth year':[], "Years off": []}
 model,tokenizer = initiate_flan5_text_to_text()
