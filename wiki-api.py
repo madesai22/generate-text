@@ -28,18 +28,8 @@ def get_category_members(categorymembers, level = 0, max_level = 1, category_set
                 get_category_members(c.categorymembers, level=level + 1, max_level=max_level,category_set=category_set)
     return category_set
 
-# def clean_category_members(category_set):
-#      clean_set = set()
-#      for item in category_set:
-#           print(item)
-#           if item[:9] != "Category:" and item[:4] != "List" and item[:8] != "Template":
-#                clean_set.add(item)
-#      return clean_set
-     
-
 def YEAR_NOT_FOUND():
     return -1999
-
 
 def get_birth_year(page):
     birth_year = YEAR_NOT_FOUND()
@@ -59,7 +49,8 @@ def get_summary(page):
      first_sentence = page.summary.partition('.')[0] + '.'
      bio_pattern = re.findall("was an?.*\.",first_sentence)
      if bio_pattern:
-          summary = ' '.join(bio_pattern[0].split()[2:])[:-1]
+          # take first sentence after "was an"
+          summary = ' '.join(bio_pattern[0].split()[2:])[:-1] 
           return summary
      else: 
           return first_sentence
@@ -115,9 +106,6 @@ def get_sample_dict_by_category(category, sample_size):
      cat = wiki_wiki.page(category)
      category_string = category.partition(':')[2] 
      category_members = get_category_members(cat.categorymembers)
-     #print(category_members)
-     #category_members = clean_category_members(uncleaned_category_members)
-     print(category_string, category_members)
      random_sample = get_random_sample(category_members, sample_size)
      sample_dict = make_dictionary(random_sample, death_year = YEAR_NOT_FOUND(),category=category_string)
      return sample_dict
@@ -159,7 +147,8 @@ for person in sample_dict:
         
         # prompt model
         prompt_name = re.sub(r'\([^)]*\)', '', person) # strip parentheses and contents
-        prompt = "What year was {} born?".format(prompt_name)
+       # prompt1 = "What year was {} born?".format(prompt_name)
+        prompt = "{} was born in the year".format(prompt_name)
         response = flant5_text_to_text(prompt,model,tokenizer)
 
         # get prediction 
