@@ -45,6 +45,15 @@ def get_death_year(page):
         if re.findall("Category:\d{4}\sdeaths",title): death_year = int(re.findall("\d{4}", title)[0])
     return death_year
 
+def get_summary(page):
+     long_summary = page.summary
+     bio_pattern = re.findall("was an?.*\.",long_summary)
+     if bio_pattern:
+          summary = ' '.join(bio_pattern[0].split()[2:])
+     else: 
+          summary = long_summary.partition('.')[0] + '.'
+     return summary
+
 def get_people_who_died_in_year(year):
     cat = wiki_wiki.page("Category:"+str(year)+" deaths")
     return get_category_members(cat.categorymembers)
@@ -52,14 +61,14 @@ def get_people_who_died_in_year(year):
 def get_random_sample(group, nsamples):
     return random.sample(group, nsamples)
 
+
 def make_dictionary(group, death_year=None, birth_year=None):
     sample_dict = {}
     for item in group:
         item_page = wiki_wiki.page(item)
         #print("{}\n{}\n".format(item,item_page.summary[0:200],))
-        long_summary = item_page.summary
-        short_summary = long_summary.partition('.')[0] + '.'
-        print("{}\n{}\n".format(item,short_summary,))
+        summmary = get_summary(item_page)
+        print("{}\n{}\n".format(item,summmary))
 
         print_categories(item_page)
         print("\n****\n\n")
