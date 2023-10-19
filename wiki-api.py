@@ -31,7 +31,7 @@ def get_category_members(categorymembers, level = 0, max_level = 1, category_set
 def clean_category_members(category_set):
      clean_set = set()
      for item in clean_set:
-          if item[:9] != "Category:":
+          if item[:9] != "Category:" and item[:4] != "List":
                clean_set.add(item)
      return clean_set
      
@@ -123,21 +123,15 @@ wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
 # sample_2 = get_sample_dict_by_death_year(1950,10)
 # sample_3 = get_sample_dict_by_death_year(2000,10)
 
-print_categorymembers(wiki_wiki.page("Category:Activists").categorymembers)
 
-print("\n\n\n******\n")
-cat = wiki_wiki.page("Category:Activists")
-category_string = "Activists"
-uncleaned_category_members = get_category_members(cat.categorymembers)
-for item in uncleaned_category_members:
-     print(item)
 
-#sample_1 = get_sample_dict_by_category("Category:Activists", 10)
-#sample_2 = get_sample_dict_by_category("Category:Chief executives in the technology industry",10)
-#sample_3 = get_sample_dict_by_category("Category:Scientists",10)
 
-#sample_dict = dict(sample_1,**sample_2)
-#sample_dict.update(sample_3)
+sample_1 = get_sample_dict_by_category("Category:Activists", 10)
+sample_2 = get_sample_dict_by_category("Category:Chief executives in the technology industry",10)
+sample_3 = get_sample_dict_by_category("Category:Scientists",10)
+
+sample_dict = dict(sample_1,**sample_2)
+sample_dict.update(sample_3)
 
 
 
