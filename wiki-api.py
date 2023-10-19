@@ -55,10 +55,14 @@ def get_random_sample(group, nsamples):
 def make_dictionary(group, death_year=None, birth_year=None):
     sample_dict = {}
     for item in group:
-        if not birth_year: birth_year = get_birth_year(wiki_wiki.page(item))
-        if not death_year: death_year = get_death_year(wiki_wiki.page(item))
-        sample_dict[item] = {"birth_year": birth_year, "death_year": death_year}
+        item_page = wiki_wiki.page(item)
+        if not birth_year: birth_year = get_birth_year(item_page)
+        if not death_year: death_year = get_death_year(item_page)
+        summmary = item_page.summary[0:60]
+        sample_dict[item] = {"birth_year": birth_year, "death_year": death_year, "summary": summmary}
     return sample_dict
+
+
 
 def initiate_flan5_text_to_text():
     tokenizer = T5Tokenizer.from_pretrained("google/flan-t5-base")
@@ -81,15 +85,42 @@ random_sample = get_random_sample(people_died_in_1931,10)
 sample_dict = make_dictionary(random_sample, death_year=1930)
 print(sample_dict)
 
+df_dict = {'Name':[],'Summary':[],'True birth year': [], 'Predicted birth year':[], "Years off": []}
+#df = pd.DataFrame(columns=['Name','Summary','True birth year', 'Predicted birth year', 'Years off'])
 model,tokenizer = initiate_flan5_text_to_text()
 for person in sample_dict:
+    
+     # prompt model
      prompt = "What year was {} born?".format(person)
      response = flant5_text_to_text(prompt,model,tokenizer)
+
+     # get prediction 
      years = re.findall("\d{4}",response)
      if years: 
           response_year = int(years[0])
-          true_birth_year = sample_dict[person]["birth_year"]
           difference = true_birth_year-response_year
+     else: 
+          response_year = "no prediction"
+          difference = "n/a"
+    
+    
+
+     # get summary and true birth year
+     summary = sample_dict[person]['summary']
+     true_birth_year = sample_dict[person]["birth_year"]
+     
+     # add to dataframe dict
+     df_dict['Name'].append(person)
+     df_dict['Summary'].append(summary)
+     df_dict['True birth year'].append(true_birth_year)
+     df_dict['Predicted birth year'].append
+
+df = pd.DataFrame(df_dict)
+df.to_csv("./birth_year_predictions.csv")
+
+     
+     
+        
 
 
     
