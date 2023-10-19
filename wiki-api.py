@@ -122,40 +122,40 @@ sample_dict.update(sample_3)
 #sample_1+sample_2+sample_3
 #'d4 = dict(d1, **d2); d4.update(d3)'
 
-print(sample_dict)
+#print(sample_dict)
 
-# df_dict = {'Name':[],'Summary':[],'Category':[],'True birth year': [], 'Predicted birth year':[], "Years off": []}
-# model,tokenizer = initiate_flan5_text_to_text()
-# for person in sample_dict:
+df_dict = {'Name':[],'Summary':[],'Category':[],'True birth year': [], 'Predicted birth year':[], "Years off": []}
+model,tokenizer = initiate_flan5_text_to_text()
+for person in sample_dict:
      
-#      # get summary and true birth year
-#      summary = sample_dict[person]['summary']
-#      true_birth_year = sample_dict[person]["birth_year"]
-#      category = sample_dict[person]["category"]
+     # get summary and true birth year
+     summary = sample_dict[person]['summary']
+     true_birth_year = sample_dict[person]["birth_year"]
+     category = sample_dict[person]["category"]
     
-#      # prompt model
-#      prompt_name = re.sub(r'\([^)]*\)', '', person) # strip parentheses and contents
-#      prompt = "What year was {} born?".format(prompt_name)
-#      response = flant5_text_to_text(prompt,model,tokenizer)
+     # prompt model
+     prompt_name = re.sub(r'\([^)]*\)', '', person) # strip parentheses and contents
+     prompt = "What year was {} born?".format(prompt_name)
+     response = flant5_text_to_text(prompt,model,tokenizer)
 
-#      # get prediction 
-#      years = re.findall("\d{4}",response)
-#      if years: 
-#           response_year = int(years[0])
-#           difference = true_birth_year-response_year
-#      else: 
-#           response_year = "no prediction"
-#           difference = "n/a"
+     # get prediction 
+     years = re.findall("\d{4}",response)
+     if years: 
+          response_year = int(years[0])
+          difference = true_birth_year-response_year
+     else: 
+          response_year = "no prediction"
+          difference = "n/a"
      
-#      # add to dataframe dict
-#      df_dict['Name'].append(person)
-#      df_dict['Summary'].append(summary)
-#      df_dict['Category'].append(true_death_year)
-#      df_dict['True birth year'].append(true_birth_year)
-#      df_dict['Predicted birth year'].append(response_year)
-#      df_dict['Years off'].append(difference)
+     # add to dataframe dict
+     df_dict['Name'].append(person)
+     df_dict['Summary'].append(summary)
+     df_dict['Category'].append(true_death_year)
+     df_dict['True birth year'].append(true_birth_year)
+     df_dict['Predicted birth year'].append(response_year)
+     df_dict['Years off'].append(difference)
 
-#     # print(person, summary,true_birth_year,response_year,difference)
+    # print(person, summary,true_birth_year,response_year,difference)
 
-# df = pd.DataFrame(df_dict)
-# df.to_csv("./birth_year_predictions.csv")
+df = pd.DataFrame(df_dict)
+df.to_csv("./birth_year_predictions.csv")
