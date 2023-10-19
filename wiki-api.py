@@ -71,10 +71,12 @@ def make_dictionary(group, death_year=None, birth_year=None):
         #print("{}\n{}\n".format(item,item_page.summary[0:200],))
         summary = get_summary(item_page)
         #print(item, summary)
-        if not birth_year: birth_year = get_birth_year(item_page)
-        if not death_year: death_year = get_death_year(item_page)
+        birth_year = get_birth_year(item_page)
+        #if not birth_year: birth_year = get_birth_year(item_page)
+        #if not death_year: death_year = get_death_year(item_page)
         #summmary = item_page.summary[0:60]
         sample_dict[item] = {"birth_year": birth_year, "death_year": death_year, "summary": summary}
+        
     return sample_dict
 
 def initiate_flan5_text_to_text():
@@ -139,7 +141,7 @@ for person in sample_dict:
      df_dict['Predicted birth year'].append(response_year)
      df_dict['Years off'].append(difference)
 
-     print(person, summary,true_birth_year,response_year,difference)
+    # print(person, summary,true_birth_year,response_year,difference)
 
 df = pd.DataFrame(df_dict)
 df.to_csv("./birth_year_predictions.csv")
