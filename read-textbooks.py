@@ -1,17 +1,27 @@
 from PyPDF2 import PdfReader
 import preprocess as pp
+import os
 
-reader = PdfReader("/data/madesai/history-llm-data/mi-open-textbooks/HSWorldChapter4.pdf")
+path = "/data/madesai/history-llm-data/mi-open-textbooks/"
+out_file = open(path + "questions.csv","w")
+out_file.write("question,file,page")
 question_list = []
 
-for page in reader.pages[:93]:
-    raw_text = page.extract_text()
-    clean_text = pp.remove_whitespaces(raw_text)
-    questions = pp.find_questions(clean_text)
-    if questions:
-        question_list += questions
-
-print(question_list)
+for reader in os.listdir(path):
+    print(reader)
+    if reader.endswith(".pdf"):
+        page_number = 1
+        for page in reader.pages[:93]:
+            raw_text = page.extract_text()
+            clean_text = pp.remove_whitespaces(raw_text)
+            questions = pp.find_questions(clean_text)
+            for q in question_list:
+                out_file.write("{},{},{}\n".format(q,reader,page_number))
+ #           if questions:
+ #               question_list += questions
+            page_number += 1 
+out_file.close()
+#print(question_list)
 
 
 
