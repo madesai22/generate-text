@@ -6,7 +6,8 @@ def remove_whitespaces(text,paragraph=False):
     if paragraph:
        return re.sub(' +|\t+', ' ', text)
     else:
-       return re.sub(' +|\n+|\t+', ' ', text)
+       end_chars = re.sub('\n','',text)
+       return re.sub(' +|\t+', ' ', end_chars)
 
 def strip_punctuation(text):
     text =  unidecode(text)
