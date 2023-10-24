@@ -6,4 +6,4 @@ page = reader.pages[8]
 raw_text = page.extract_text()
 pp.remove_whitespaces(raw_text)
 
-print(pp.remove_whitespaces(raw_text))
+print(repr(raw_text))
