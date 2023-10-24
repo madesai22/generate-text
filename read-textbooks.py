@@ -9,7 +9,7 @@ out_file.write("question,file,page\n")
 question_list = []
 
 reader = PdfReader(path+"HSWorld.pdf")
-page = reader.pages[32].extract_text()
+page = reader.pages[30].extract_text()
 print(page)
 
 # for f in os.listdir(path):
