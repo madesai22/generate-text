@@ -3,7 +3,8 @@ import preprocess as pp
 import os
 
 path = "/data/madesai/history-llm-data/mi-open-textbooks/"
-out_file = open(path + "questions.csv","w")
+#out_file = open(path + "questions.csv","w")
+out_file = open("./questions.csv","w")
 out_file.write("question,file,page")
 question_list = []
 
@@ -16,6 +17,7 @@ for f in os.listdir(path):
             raw_text = page.extract_text()
             clean_text = pp.remove_whitespaces(raw_text)
             questions = pp.find_questions(clean_text)
+            print(questions)
             for q in question_list:
                 out_file.write("{},{},{}\n".format(q,reader,page_number))
  #           if questions:
