@@ -10,9 +10,9 @@ question_list = []
 for f in os.listdir(path):
     print(f)
     if f.endswith(".pdf"):
-        PdfReader(path+f)
+        reader = PdfReader(path+f)
         page_number = 1
-        for page in reader.pages[:93]:
+        for page in reader.pages[25:93]:
             raw_text = page.extract_text()
             clean_text = pp.remove_whitespaces(raw_text)
             questions = pp.find_questions(clean_text)
