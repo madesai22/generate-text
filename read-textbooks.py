@@ -8,7 +8,8 @@ for page in reader.pages[:93]:
     raw_text = page.extract_text()
     clean_text = pp.remove_whitespaces(raw_text)
     questions = pp.find_questions(clean_text)
-    question_list += questions
+    if questions:
+        question_list += questions
 
 print(question_list)
 
