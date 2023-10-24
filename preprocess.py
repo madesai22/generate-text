@@ -25,6 +25,7 @@ def find_questions(text):
     test = re.findall("QUESTIONS TO GUIDE INQUIRY",text)
     if test:
         print("test!!:{}".format(test))
+        print("text:{}".format(text))
         question_area = re.findall("QUESTIONS TO GUIDE INQUIRY\s[0-9]\.\s.*\?",text)[0]
         question_area = re.sub("QUESTIONS TO GUIDE INQUIRY\s","",question_area) # remove header
 

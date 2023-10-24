@@ -6,6 +6,7 @@ from transformers import T5Tokenizer, T5ForConditionalGeneration
 import pandas as pd
 
 
+
 def print_categories(page):
         categories = page.categories
         for title in sorted(categories.keys()):
