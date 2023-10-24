@@ -7,9 +7,10 @@ out_file = open(path + "questions.csv","w")
 out_file.write("question,file,page")
 question_list = []
 
-for reader in os.listdir(path):
-    print(reader)
-    if reader.endswith(".pdf"):
+for f in os.listdir(path):
+    print(f)
+    if f.endswith(".pdf"):
+        PdfReader(path+f)
         page_number = 1
         for page in reader.pages[:93]:
             raw_text = page.extract_text()
