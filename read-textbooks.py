@@ -10,7 +10,7 @@ question_list = []
 
 reader = PdfReader(path+"HSWorld.pdf")
 page = reader.pages[30].extract_text()
-print(page)
+print(pp.remove_whitespaces(page))
 
 # for f in os.listdir(path):
 #     print(f)
