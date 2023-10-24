@@ -18,7 +18,7 @@ for f in os.listdir(path):
             clean_text = pp.remove_whitespaces(raw_text)
             questions = pp.find_questions(clean_text)
             print(questions)
-            for q in question_list:
+            for q in questions:
                 out_file.write("{},{},{}\n".format(q,reader,page_number))
  #           if questions:
  #               question_list += questions

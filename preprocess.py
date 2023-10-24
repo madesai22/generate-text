@@ -27,7 +27,7 @@ def find_questions(text):
         print("test!!:{}".format(test))
         print("text:{}".format(text))
         question_area = re.findall("QUESTIONS TO GUIDE INQUIRY\s*.*[0-9]\.\s.*\?",text)[0]
-        question_area = re.sub("QUESTIONS TO GUIDE INQUIRY\s","",question_area) # remove header
+        question_area = re.sub("QUESTIONS TO GUIDE INQUIRY\s*","",question_area) # remove header
 
         # split questions:
         question_list = re.split("\s?[0-9]+\.\s", question_area)
