@@ -5,7 +5,7 @@ import os
 path = "/data/madesai/history-llm-data/mi-open-textbooks/"
 #out_file = open(path + "questions.csv","w")
 out_file = open("./questions.csv","w")
-out_file.write("question,file,page")
+out_file.write("question,file,page\n")
 question_list = []
 
 for f in os.listdir(path):
@@ -20,7 +20,7 @@ for f in os.listdir(path):
             print(questions)
             if questions: 
                 for q in questions:
-                    out_file.write("{},{},{}\n".format(q,reader,page_number))
+                    out_file.write("{},{},{}\n".format(q,f,page_number))
  #           if questions:
  #               question_list += questions
             page_number += 1 
