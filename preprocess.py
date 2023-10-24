@@ -22,13 +22,16 @@ def tokenize(text, stopwords=None):
 
 def find_questions(text):
     # find question area:
-    question_area = re.findall("QUESTIONS TO GUIDE INQUIRY\s[0-9]\.\s.*\?",text)[0]
-    question_area = re.sub("QUESTIONS TO GUIDE INQUIRY\s","",question_area) # remove header
+    if re.findall("QUESTIONS TO GUIDE INQUIRY",text):
+        question_area = re.findall("QUESTIONS TO GUIDE INQUIRY\s[0-9]\.\s.*\?",text)[0]
+        question_area = re.sub("QUESTIONS TO GUIDE INQUIRY\s","",question_area) # remove header
 
-    # split questions:
-    question_list = re.split("\s?[0-9]+\.\s", question_area)
-    question_list = list(filter(None, question_list)) # remove empty items
-    return question_list
+        # split questions:
+        question_list = re.split("\s?[0-9]+\.\s", question_area)
+        question_list = list(filter(None, question_list)) # remove empty items
+        return question_list
+    else:
+        return None
 
 
 
