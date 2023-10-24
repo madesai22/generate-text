@@ -69,7 +69,8 @@ def get_random_sample(group, nsamples):
     while nchosen <= nsamples:
          item = group_list[index]
          index +=1
-         if not re.findall("^(Category|List|Template)",item) and get_birth_year(wiki_wiki.page(item)) != YEAR_NOT_FOUND():
+         item_page = wiki_wiki.page(item)
+         if not re.findall("^(Category|List|Template)",item) and (get_birth_year(item_page) != YEAR_NOT_FOUND()) :
               random_sample.add(item)
               nchosen += 1       
     return random_sample
@@ -82,8 +83,8 @@ def make_dictionary(group, death_year=None, birth_year=None, category=None):
         item_page = wiki_wiki.page(item)
         summary = get_summary(item_page)
         birth_year = get_birth_year(item_page)
+        death_year = get_death_year(item_page)
         sample_dict[item] = {"birth_year": birth_year, "death_year": death_year, "summary": summary, "category":category}
-        
     return sample_dict
 
 def initiate_flan5_text_to_text():
@@ -120,9 +121,6 @@ wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
 # sample_1 = get_sample_dict_by_death_year(1900,10)
 # sample_2 = get_sample_dict_by_death_year(1950,10)
 # sample_3 = get_sample_dict_by_death_year(2000,10)
-
-
-
 
 sample_1 = get_sample_dict_by_category("Category:Activists", 30)
 sample_2 = get_sample_dict_by_category("Category:Chief executives in the technology industry",30)
