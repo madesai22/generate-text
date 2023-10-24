@@ -22,7 +22,9 @@ def tokenize(text, stopwords=None):
 
 def find_questions(text):
     # find question area:
-    if re.findall("QUESTIONS TO GUIDE INQUIRY",text):
+    test = re.findall("QUESTIONS TO GUIDE INQUIRY",text)
+    if test:
+        print("test!!:{}".format(test))
         question_area = re.findall("QUESTIONS TO GUIDE INQUIRY\s[0-9]\.\s.*\?",text)[0]
         question_area = re.sub("QUESTIONS TO GUIDE INQUIRY\s","",question_area) # remove header
 
