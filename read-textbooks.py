@@ -13,7 +13,7 @@ reader = PdfReader(path+"HSWorld.pdf")
 for page in reader.pages:
     raw_text = page.extract_text()
     cleaned = pp.remove_whitespaces(raw_text)
-    questions = re.findall("\s[1-9]\.\s*.*\?",cleaned)
+    questions = re.findall("\s[1-9]\.\D*.*\?",cleaned)
     print(questions)
     
 
