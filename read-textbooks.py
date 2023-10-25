@@ -1,6 +1,7 @@
 from PyPDF2 import PdfReader
 import preprocess as pp
 import os
+import re
 
 path = "/data/madesai/history-llm-data/mi-open-textbooks/"
 #out_file = open(path + "questions.csv","w")
@@ -9,8 +10,12 @@ out_file.write("question,file,page\n")
 question_list = []
 
 reader = PdfReader(path+"HSWorld.pdf")
-page = reader.pages[30].extract_text()
-print(pp.remove_whitespaces(page))
+for page in reader.pages:
+    raw_text = reader.pages.extract_text()
+    cleaned = pp.remove_whitespaces(raw_text)
+    questions = re.findall("[1-9]\.\s*.*\?",cleaned)
+    print(questions)
+    
 
 # for f in os.listdir(path):
 #     print(f)
