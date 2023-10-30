@@ -33,7 +33,7 @@ def flant5_text_to_text(prompt):
     for tok, score in zip(generated_tokens[0], transition_scores[0]):
         # | token | token string | logits | probability
         print(f"| {tok:5d} | {tokenizer.decode(tok):8s} | {score.numpy():.4f} | {np.exp(score.numpy()):.2%}")
-    return(tokenizer.decode(outputs[0]))
+    return "done"
 
      
 prompt = "Fill in the prompt. Theodore Roosevelet was born in the year <mask>."
