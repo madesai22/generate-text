@@ -28,6 +28,7 @@ def flant5_text_to_text(prompt):
     input_ids = tokenizer(prompt, return_tensors="pt").input_ids.to("cuda")
     outputs = model.generate(input_ids)
     print(outputs)
+    print(outputs[0])
     return(tokenizer.decode(outputs[0]))
 
      
