@@ -27,11 +27,13 @@ def flant5_text_to_text(prompt):
     model = T5ForConditionalGeneration.from_pretrained("google/flan-t5-base", device_map="auto")
     input_ids = tokenizer(prompt, return_tensors="pt").input_ids.to("cuda")
     outputs = model.generate(input_ids,return_dict_in_generate=True,output_scores=True)
-    print(input_ids.shape[1])
     input_length = input_ids.shape[1]
     transition_scores = model.compute_transition_scores(outputs.sequences, outputs.scores, normalize_logits=True)
     generated_tokens = outputs.sequences[:, input_length:]
-    print(outputs.sequences)
+    print("input ids: {}".format(input_ids))
+    print("output.sequences: {}".format(outputs.sequences))
+    print("transition scores: {}".format(transition_scores))
+
     for tok, score in zip(generated_tokens[0], transition_scores[0]):
         # | token | token string | logits | probability
         print(f"| {tok:5d} | {tokenizer.decode(tok):8s} | {score.numpy():.4f} | {np.exp(score.numpy()):.2%}")
