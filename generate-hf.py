@@ -31,9 +31,10 @@ def flan_tokenize(prompt):
 
 def flant5_text_to_text(prompt):
     set_seed(42)
-    device = torch.device('cuda:0')
-    tokenizer = T5Tokenizer.from_pretrained("google/flan-t5-base")
-    model = T5ForConditionalGeneration.from_pretrained("google/flan-t5-base", device_map="auto").to(device)
+    tokenizer = T5Tokenizer.from_pretrained("google/flan-t5-xxl")
+    model = T5ForConditionalGeneration.from_pretrained("google/flan-t5-xxl", device_map="auto")
+    # tokenizer = T5Tokenizer.from_pretrained("google/flan-t5-base")
+    # model = T5ForConditionalGeneration.from_pretrained("google/flan-t5-base", device_map="auto")
     input_ids = tokenizer(prompt, return_tensors="pt").input_ids.to("cuda")
     outputs = model.generate(input_ids,return_dict_in_generate=True,output_scores=True)
     input_length = input_ids.shape[1]
