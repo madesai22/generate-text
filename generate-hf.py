@@ -1,6 +1,6 @@
 from transformers import pipeline, set_seed
 from transformers import T5Tokenizer, T5ForConditionalGeneration
-
+import numpy as np
 
 
 #prompt = "Theodore Roosevelet was born in the year [MASK]." # BERT uses these kinds of mask tokens
@@ -44,7 +44,7 @@ def flant5_text_to_text(prompt):
 
     for tok, score in zip(generated_tokens[0], transition_scores[0]):
         # | token | token string | logits | probability
-        print(f"| {tok:5d} | {tokenizer.decode(tok):8s} | {score.numpy():.4f} | {np.exp(score.numpy()):.2%}")
+        print(f"| {tok:5d} | {tokenizer.decode(tok):8s} | {score:.4f} | {np.exp(score):.2%}")
     return "done"
 
      
@@ -63,20 +63,20 @@ prompt = "What year was Theodore Roosevelt born?"
 #prompt = "translate English to German: How old are you?"
 flan_tokenize(prompt)
 
-#response = flant5_text_to_text(prompt)
+response = flant5_text_to_text(prompt)
 #print(response)
 
-prompt = "What year was Theodore"
-flan_tokenize(prompt)
+# prompt = "What year was Theodore"
+# flan_tokenize(prompt)
 
-prompt = "What year"
-flan_tokenize(prompt)
+# prompt = "What year"
+# flan_tokenize(prompt)
 
-prompt = "Theodore"
-flan_tokenize(prompt)
+# prompt = "Theodore"
+# flan_tokenize(prompt)
 
-prompt = "Roosevelt"
-flan_tokenize(prompt)
+# prompt = "Roosevelt"
+# flan_tokenize(prompt)
 
 # prompt = "What is 9 times 30?"
 # response = flant5_text_to_text(prompt)
