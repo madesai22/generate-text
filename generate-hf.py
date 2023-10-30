@@ -22,6 +22,14 @@ def gpt_2_generate(prompt):
     return response
 
 
+def flant5_text_to_text(prompt):
+    tokenizer = T5Tokenizer.from_pretrained("google/flan-t5-base")
+    model = T5ForConditionalGeneration.from_pretrained("google/flan-t5-base", device_map="auto")
+    input_ids = tokenizer(prompt, return_tensors="pt").input_ids.to("cuda")
+    outputs = model.generate(input_ids)
+    print(outputs)
+    return(tokenizer.decode(outputs[0]))
+
      
 prompt = "Fill in the prompt. Theodore Roosevelet was born in the year <mask>."
 prompt = """Fill in the prompt. Example: 
@@ -36,15 +44,7 @@ Output:
 
 prompt = "What year was Theodore Roosevelt born?"
 #prompt = "translate English to German: How old are you?"
-def flant5_text_to_text(prompt):
-    # text2text_generator = pipeline("text2text-generation",model ="google/flan-t5-base")
-    # response = text2text_generator(prompt)
 
-    tokenizer = T5Tokenizer.from_pretrained("google/flan-t5-base")
-    model = T5ForConditionalGeneration.from_pretrained("google/flan-t5-base", device_map="auto")
-    input_ids = tokenizer(prompt, return_tensors="pt").input_ids.to("cuda")
-    outputs = model.generate(input_ids)
-    return(tokenizer.decode(outputs[0]))
 
 response = flant5_text_to_text(prompt)
 print(response)

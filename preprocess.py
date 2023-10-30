@@ -1,6 +1,7 @@
 import re
 from unidecode import unidecode
 import string
+from nltk.corpus import words
 
 def remove_whitespaces(text,paragraph=False):
     if paragraph:
