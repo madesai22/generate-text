@@ -29,6 +29,7 @@ def flan_tokenize(prompt):
 
 
 def flant5_text_to_text(prompt):
+    set_seed(42)
     tokenizer = T5Tokenizer.from_pretrained("google/flan-t5-base")
     model = T5ForConditionalGeneration.from_pretrained("google/flan-t5-base", device_map="auto")
     input_ids = tokenizer(prompt, return_tensors="pt").input_ids.to("cuda")
