@@ -48,3 +48,7 @@ prompt = "What year was Theodore Roosevelt born?"
 
 response = flant5_text_to_text(prompt)
 print(response)
+
+prompt = "I am interested in [mask]"
+response = flant5_text_to_text(prompt)
+print(response)
