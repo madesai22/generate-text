@@ -33,6 +33,7 @@ def flant5_text_to_text(prompt):
     print("input ids: {}".format(input_ids))
     print("input ids decoded: {}".format(tokenizer.decode(input_ids[0])))
     print("output.sequences: {}".format(outputs.sequences))
+    print("output decoded: {}".format(tokenizer.decode(outputs.sequences[0])))
     print("transition scores: {}".format(transition_scores))
 
     for tok, score in zip(generated_tokens[0], transition_scores[0]):
