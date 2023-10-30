@@ -72,6 +72,6 @@ flan_tokenize(prompt)
 prompt = "What year"
 flan_tokenize(prompt)
 
-prompt = "What is 9 times 30?"
-response = flant5_text_to_text(prompt)
-print(response)
+# prompt = "What is 9 times 30?"
+# response = flant5_text_to_text(prompt)
+# print(response)
