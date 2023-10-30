@@ -44,7 +44,7 @@ def flant5_text_to_text(prompt):
 
     for tok, score in zip(generated_tokens[0], transition_scores[0]):
         # | token | token string | logits | probability
-        print(f"| {tok:5d} | {tokenizer.decode(tok):8s} | {score:.4f} | {np.exp(score):.2%}")
+        print(f"| {tok:5d} | {tokenizer.decode(tok):8s} | {score.cpu().data.numpy():.4f} | {np.exp(score.cpu().data.numpy()):.2%}")
     return "done"
 
      
