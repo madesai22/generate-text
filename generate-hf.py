@@ -29,7 +29,7 @@ def flant5_text_to_text(prompt):
     outputs = model.generate(input_ids,return_dict_in_generate=True,output_scores=True)
     input_length = input_ids.shape[1]
     transition_scores = model.compute_transition_scores(outputs.sequences, outputs.scores, normalize_logits=True)
-    generated_tokens = outputs.sequences[:, input_length:]
+    generated_tokens = outputs.sequences
     print("input ids: {}".format(input_ids))
     print("input ids decoded: {}".format(tokenizer.decode(input_ids[0])))
     print("output.sequences: {}".format(outputs.sequences))
