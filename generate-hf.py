@@ -61,10 +61,10 @@ Output:
 
 prompt = "What year was Theodore Roosevelt born?"
 #prompt = "translate English to German: How old are you?"
+flan_tokenize(prompt)
 
-
-response = flant5_text_to_text(prompt)
-print(response)
+#response = flant5_text_to_text(prompt)
+#print(response)
 
 prompt = "What year was Theodore"
 flan_tokenize(prompt)
