@@ -21,6 +21,12 @@ def gpt_2_generate(prompt):
     response = generator(prompt, max_length=100, num_return_sequences = 3)
     return response
 
+def flan_tokenize(prompt):
+    tokenizer = T5Tokenizer.from_pretrained("google/flan-t5-base")
+    input_ids = tokenizer(prompt, return_tensors="pt").input_ids.to("cuda")
+    print("input ids: {}".format(input_ids))
+    print("input ids decoded: {}".format(tokenizer.decode(input_ids[0])))
+
 
 def flant5_text_to_text(prompt):
     tokenizer = T5Tokenizer.from_pretrained("google/flan-t5-base")
@@ -59,6 +65,12 @@ prompt = "What year was Theodore Roosevelt born?"
 
 response = flant5_text_to_text(prompt)
 print(response)
+
+prompt = "What year was Theodore"
+flan_tokenize(prompt)
+
+prompt = "What year"
+flan_tokenize(prompt)
 
 prompt = "What is 9 times 30?"
 response = flant5_text_to_text(prompt)
