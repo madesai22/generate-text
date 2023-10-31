@@ -9,7 +9,8 @@ wikiurls = []
 for name in species:
     # Spaces to be replaced with underscore for Wiki's API
     name = name.replace(" ", "_")
-    p = api.page(name)
+   # p = api.page(name)
+    p = wiki_wiki.page(name)
     
     # Store the url retrieved and name we called with
     data = {'url': p.fullurl, 'scientific_name': name}
