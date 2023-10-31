@@ -1,7 +1,7 @@
 import wikipediaapi
 # only english language pages
 #api = wikipediaapi.Wikipedia('en')
-
+wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
 species = ["eschrichtius robustus"]
 
 wikiurls = []
