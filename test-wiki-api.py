@@ -7,8 +7,6 @@ def WikiPageView(name):
     # Calling monthly page views of each species 
     address = "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia.org/all-access/user/" + name + "/monthly/2015010100/2020123100"
 
-    headers = CaseInsensitiveDict()
-    headers["Accept"] = "application/json"
     # Personal username for identification for the Wikipedia API
     headers = {'User-Agent': 'GenerateText (madesai@umich.edu)'}
     
