@@ -1,4 +1,5 @@
 import wikipediaapi
+import requests
 # only english language pages
 #api = wikipediaapi.Wikipedia('en')
 
