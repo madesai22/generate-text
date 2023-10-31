@@ -32,6 +32,8 @@ for name in species:
     # Append dictionary to list
     wikiurls.append(data)
 
+print(wikiurls)
+
 for n in range(len(wikiurls)):
     title = wikiurls[n]['url'].removeprefix("https://en.wikipedia.org/wiki/")
     result = WikiPageView(title)
