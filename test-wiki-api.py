@@ -1,6 +1,6 @@
 import wikipediaapi
 # only english language pages
-api = wikipediaapi.Wikipedia('en')
+#api = wikipediaapi.Wikipedia('en')
 
 species = ["eschrichtius robustus"]
 
@@ -11,7 +11,7 @@ for name in species:
     name = name.replace(" ", "_")
    # p = api.page(name)
     p = wiki_wiki.page(name)
-    
+
     # Store the url retrieved and name we called with
     data = {'url': p.fullurl, 'scientific_name': name}
     # Append dictionary to list
