@@ -130,6 +130,7 @@ def main():
          print(category,file_name)
          wiki_cat = wiki_wiki.page(category)
          category_members = get_category_members(wiki_cat.categorymembers)
+         print(len(category_members))
          data = make_dictionary(category_members,category=category.partition(':')[2],clean=True,born_before=born_before)
          print("{} items in {}.".format(len(data), category))
     
