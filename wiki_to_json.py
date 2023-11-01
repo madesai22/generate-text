@@ -127,7 +127,7 @@ def main():
          category = items[0]
          born_before = int(items[1])
          born_after = int(items[2])
-         file_name = category.partition(':')[2].lower().replace(" ","_")
+         file_name = category.partition(':')[2].lower().replace(" ","_")+".json"
          print(category,file_name)
          wiki_cat = wiki_wiki.page(category)
          category_members = get_category_members(wiki_cat.categorymembers)
