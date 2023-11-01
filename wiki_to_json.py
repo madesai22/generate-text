@@ -3,6 +3,8 @@ import re
 import random
 import requests
 import file_handeling as fh
+from numba import jit, cuda
+
 
 
 # category functions: 
@@ -56,6 +58,16 @@ def get_sample_dict_by_category(category, sample_size):
 def YEAR_NOT_FOUND():
     return -1999
 
+def get_birth_death_year(page):
+    birth_year = YEAR_NOT_FOUND()
+    death_year = YEAR_NOT_FOUND()
+    categories = page.categories
+    for title in sorted(categories.keys()):
+        if re.findall("Category:\d{4}\sbirths",title): birth_year = int(re.findall("\d{4}", title)[0])
+        if re.findall("Category:\d{4}\sdeaths",title): death_year = int(re.findall("\d{4}", title)[0])
+
+    return birth_year, death_year
+
 def get_birth_year(page):
     birth_year = YEAR_NOT_FOUND()
     categories = page.categories
@@ -98,24 +110,24 @@ def get_page_views(page):
          return None
     
 # organizing data:
+@jit(target_backend='cuda')   
 def make_dictionary(group, death_year=None, birth_year=None, category=None, clean = True, born_before = 2023):
     # takes a set of strings (wikipedia names)
     # returns a dictionary of {name: {birth_year, death_year, summary, category, page_views}, ...}
     sample_dict = {}
     for item in group:
         item_page = wiki_wiki.page(item)
-        birth_year = get_birth_year(item_page)
+        birth_year, death_year = get_birth_death_year(item_page)
         if birth_year < born_before: 
             if (not clean) or ( not re.findall("^(Category|List|Template)",item) and (get_birth_year(item_page) != YEAR_NOT_FOUND())):
                 item_page = wiki_wiki.page(item)
                 summary = get_summary(item_page)
-                
-                death_year = get_death_year(item_page)
                 page_views = get_page_views(item_page)
                 sample_dict[item] = {"birth_year": birth_year, "death_year": death_year, "summary": summary, "category":category, "page_views": page_views}
                 print(len(sample_dict))
     return sample_dict
 
+@jit(target_backend='cuda')   
 def main():
      global wiki_wiki
      wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
