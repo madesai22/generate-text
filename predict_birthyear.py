@@ -37,6 +37,7 @@ def main():
          data = fh.read_json(file)
          for name in data:
               print(name)
+              print(data[name]['birth_year'])
              #prompt = make_prompt(prompt_form, name, clean=True)
              #response = flant5_text_to_text(prompt,model,tokenizer)
              
