@@ -143,5 +143,5 @@ def main():
      category_csv.close()
 
 
-
-
+if __name__ == "__main__":
+    main()
