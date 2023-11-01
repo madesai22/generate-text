@@ -131,7 +131,8 @@ def main():
          dictionary_list = []
          for c in categories:
              print(c)
-             wiki_cat = wiki_wiki.page(c.partition(':')[2])
+             wiki_cat = wiki_wiki.page(c)
+            # wiki_cat = wiki_wiki.page(c.partition(':')[2])
              category_members = get_category_members(wiki_cat.categorymembers)
              category_dictionary = make_dictionary(category_members,category=c.partition(':')[2],clean=True,born_before=born_before)
              dictionary_list.append(category_dictionary)
