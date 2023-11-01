@@ -119,32 +119,40 @@ def make_dictionary(group, death_year=None, birth_year=None, category=None, clea
 def main():
      global wiki_wiki
      wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
+     out_path = "/data/madesai/history-llm-data/wikipedia-json-files/"
+
      category_csv = open("./make_categories.csv","r")
      for line in category_csv.readlines()[1:]:
          items = line.split(";")
-         categories = items[0].split(",")
+         category = items[0]
          born_before = int(items[1])
          born_after = int(items[2])
-         file_name = items[3]
-         print(categories,file_name)
+         file_name = category.partition(':')[2].lower().replace(" ","_")
+         print(category,file_name)
+         wiki_cat = wiki_wiki.page(c)
+         category_members = get_category_members(wiki_cat.categorymembers)
+         data = make_dictionary(category_members,category=category.partition(':')[2],clean=True,born_before=born_before)
+         print("{} items in {}.".format(len(data), category))
+    
+         fh.write_to_json(data,out_path+file_name)
+     category_csv.close()
+
 
      
-         dictionary_list = []
-         for c in categories:
-             print(c)
-             wiki_cat = wiki_wiki.page(c)
-            # wiki_cat = wiki_wiki.page(c.partition(':')[2])
-             category_members = get_category_members(wiki_cat.categorymembers)
-             category_dictionary = make_dictionary(category_members,category=c.partition(':')[2],clean=True,born_before=born_before)
-             dictionary_list.append(category_dictionary)
-             print("{} items in {}.".format(len(category_dictionary), c))
-         data = dict()
-         for d in dictionary_list:
-             data.update(d)
+        #  dictionary_list = []
+        #  for c in categories:
+        #      print(c)
+        #      wiki_cat = wiki_wiki.page(c)
+        #     # wiki_cat = wiki_wiki.page(c.partition(':')[2])
+        #      category_members = get_category_members(wiki_cat.categorymembers)
+        #      category_dictionary = make_dictionary(category_members,category=c.partition(':')[2],clean=True,born_before=born_before)
+        #      dictionary_list.append(category_dictionary)
+        #      print("{} items in {}.".format(len(category_dictionary), c))
+        #  data = dict()
+        #  for d in dictionary_list:
+        #      data.update(d)
 
-         path = "/data/madesai/history-llm-data/wikipedia-json-files/"
-         fh.write_to_json(data,path+file_name)
-     category_csv.close()
+         
 
 
 if __name__ == "__main__":
