@@ -135,7 +135,7 @@ def main():
 
      category_csv = open("./make_categories.csv","r")
      for line in category_csv.readlines()[1:]:
-         items = line.split(";")
+         items = line.split(";").strip()
          category = items[0]
          born_before = int(items[1])
          born_after = int(items[2])
