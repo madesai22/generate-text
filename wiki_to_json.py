@@ -99,7 +99,7 @@ def get_page_views(page):
     address = "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia.org/all-access/user/" + name + "/monthly/2015010100/2023083100"
     headers = {'User-Agent': 'GenerateText (madesai@umich.edu)'}
 
-    resp = requests.get(address, headers=headers)
+    resp = requests.get(address, headers=headers, timeout=20.0)
     if resp.ok:
         details = resp.json()
         total_views = 0
@@ -124,7 +124,8 @@ def make_dictionary(group, death_year=None, birth_year=None, category=None, clea
                 summary = get_summary(item_page)
                 page_views = get_page_views(item_page)
                 sample_dict[item] = {"birth_year": birth_year, "death_year": death_year, "summary": summary, "category":category, "page_views": page_views}
-                print(len(sample_dict))
+                i = len(sample_dict)
+                if i%25 == 0: print(i)
     return sample_dict
 
 def main():
