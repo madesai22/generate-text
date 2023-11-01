@@ -29,6 +29,22 @@ def flan_tokenize(prompt):
     print("input ids decoded: {}".format(tokenizer.decode(input_ids[0])))
 
 
+def print_probabilities(outputs,tokenizer,model):
+    # requires generation called with 
+    # outputs = model.generate(input_ids,return_dict_in_generate=True,output_scores=True)
+    transition_scores = model.compute_transition_scores(outputs.sequences, outputs.scores, normalize_logits=True)
+    generated_tokens = outputs.sequences
+    print("output.sequences: {}".format(outputs.sequences))
+    print("output decoded: {}".format(tokenizer.decode(outputs.sequences[0])))
+    print("transition scores: {}".format(transition_scores))
+
+    for tok, score in zip(generated_tokens[0], transition_scores[0]):
+        # | token | token string | logits | probability
+        print(f"| {tok:5d} | {tokenizer.decode(tok):8s} | {score.cpu().data.numpy():.4f} | {np.exp(score.cpu().data.numpy()):.2%}")
+    return "done"
+
+
+
 def flant5_text_to_text(prompt):
     set_seed(42)
     tokenizer = T5Tokenizer.from_pretrained("google/flan-t5-xxl")
