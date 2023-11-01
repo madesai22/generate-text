@@ -107,7 +107,6 @@ def make_dictionary(group, death_year=None, birth_year=None, category=None, clea
         birth_year = get_birth_year(item_page)
         if birth_year < born_before: 
             if (not clean) or ( not re.findall("^(Category|List|Template)",item) and (get_birth_year(item_page) != YEAR_NOT_FOUND())):
-                print(item)
                 item_page = wiki_wiki.page(item)
                 summary = get_summary(item_page)
                 
