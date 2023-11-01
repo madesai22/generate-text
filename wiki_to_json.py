@@ -119,7 +119,7 @@ def main():
      global wiki_wiki
      wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
      category_csv = open("./make_categories.csv","r")
-     for line in category_csv.readlines[1:]:
+     for line in category_csv.readlines()[1:]:
          items = line.split(";")
          categories = items[0].split(",")
          born_before = items[1]
