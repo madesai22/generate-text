@@ -113,6 +113,7 @@ def make_dictionary(group, death_year=None, birth_year=None, category=None, clea
                 death_year = get_death_year(item_page)
                 page_views = get_page_views(item_page)
                 sample_dict[item] = {"birth_year": birth_year, "death_year": death_year, "summary": summary, "category":category, "page_views": page_views}
+                print(len(sample_dict))
     return sample_dict
 
 def main():
