@@ -106,6 +106,7 @@ def make_dictionary(group, death_year=None, birth_year=None, category=None, clea
         birth_year = get_birth_year(item_page)
         if birth_year < born_before: 
             if (not clean) or ( not re.findall("^(Category|List|Template)",item) and (get_birth_year(item_page) != YEAR_NOT_FOUND())):
+                print(item)
                 item_page = wiki_wiki.page(item)
                 summary = get_summary(item_page)
                 
@@ -117,8 +118,8 @@ def make_dictionary(group, death_year=None, birth_year=None, category=None, clea
 def main():
      global wiki_wiki
      wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
-     category_csv = open("./categories.csv","r")
-     for line in category_csv:
+     category_csv = open("./make_categories.csv","r")
+     for line in category_csv.readlines[1:]:
          items = line.split(";")
          categories = items[0].split(",")
          born_before = items[1]
@@ -127,19 +128,20 @@ def main():
          print(categories,file_name)
 
      
-        #  dictionary_list = []
-        #  for c in categories:
-        #      wiki_cat = wiki_wiki.page(c.partition(':')[2])
-        #      category_members = get_category_members(wiki_cat.categorymembers)
-        #      category_dictionary = make_dictionary(category_members,category=c.partition(':')[2],clean=True,born_before=born_before)
-        #      dictionary_list.append(category_dictionary)
-        #      print("{} items in {}.".format(len(category_dictionary), c))
-        #  data = dict()
-        #  for d in dictionary_list:
-        #      data.update(d)
+         dictionary_list = []
+         for c in categories:
+             print(c)
+             wiki_cat = wiki_wiki.page(c.partition(':')[2])
+             category_members = get_category_members(wiki_cat.categorymembers)
+             category_dictionary = make_dictionary(category_members,category=c.partition(':')[2],clean=True,born_before=born_before)
+             dictionary_list.append(category_dictionary)
+             print("{} items in {}.".format(len(category_dictionary), c))
+         data = dict()
+         for d in dictionary_list:
+             data.update(d)
 
-        #  path = "/data/madesai/history-llm-data/"
-        #  fh.write_to_json(data,path+file_name)
+         path = "/data/madesai/history-llm-data/"
+         fh.write_to_json(data,path+file_name)
      category_csv.close()
 
 
