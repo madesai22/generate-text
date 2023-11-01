@@ -110,7 +110,7 @@ def get_page_views(page):
          return None
     
 # organizing data:
-@jit(target_backend='cuda')   
+@jit(target_backend='cuda')  
 def make_dictionary(group, death_year=None, birth_year=None, category=None, clean = True, born_before = 2023):
     # takes a set of strings (wikipedia names)
     # returns a dictionary of {name: {birth_year, death_year, summary, category, page_views}, ...}
@@ -127,7 +127,6 @@ def make_dictionary(group, death_year=None, birth_year=None, category=None, clea
                 print(len(sample_dict))
     return sample_dict
 
-@jit(target_backend='cuda')   
 def main():
      global wiki_wiki
      wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
