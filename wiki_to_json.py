@@ -123,8 +123,8 @@ def main():
      for line in category_csv.readlines()[1:]:
          items = line.split(";")
          categories = items[0].split(",")
-         born_before = items[1]
-         born_after = items[2]
+         born_before = int(items[1])
+         born_after = int(items[2])
          file_name = items[3]
          print(categories,file_name)
 
@@ -142,7 +142,7 @@ def main():
          for d in dictionary_list:
              data.update(d)
 
-         path = "/data/madesai/history-llm-data/"
+         path = "/data/madesai/history-llm-data/wikipedia-json-files/"
          fh.write_to_json(data,path+file_name)
      category_csv.close()
 
