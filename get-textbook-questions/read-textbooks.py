@@ -21,7 +21,11 @@ def find_questions(text):
         # split questions:
         question_list = re.split("\s?[0-9]+\.\s", question_area)
         question_list = list(filter(None, question_list)) # remove empty items
-        return question_list
+        question_mark = []
+        for i in question_list:
+            if i.endswith("?"): question_mark.append(i)
+
+        return question_mark
     else:
         return None
     
@@ -30,7 +34,7 @@ path = "/data/madesai/history-llm-data/mi-open-textbooks/"
 files = ["HSUSFull.pdf","HSWorld.pdf"]
 for f in files:
     reader = PdfReader(path+f)
-    out_file = open(f[:-4]+".csv","w")
+    out_file = open(f[:-4]+".txt","w")
     file_questions = set()
     for page in reader.pages:
         raw_text = page.extract_text()
