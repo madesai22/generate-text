@@ -27,7 +27,7 @@ def main():
 
     test = 0 
     for qf in question_fname:
-        outfile = open(qf[:-4]+"-flant5-response.csv")
+        outfile = open(qf[:-4]+"-flant5-response.csv","w")
         question_file = open(qf+path_to_questions,"r")
         for prompt in question_file:
             
