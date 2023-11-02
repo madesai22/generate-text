@@ -11,7 +11,7 @@ def remove_whitespaces(text,paragraph=False):
     
 def find_questions(text):
     # find question area:
-    test = re.findall("QUESTIONS TO GUIDE INQUIRY",text)
+    test = re.findall("QUESTIONS TO GUIDE INQUIRY\s*.*[0-9]\.\s.*\?",text)
     if test:
         print("test!!:{}".format(test))
         print("text:{}".format(text))
@@ -36,7 +36,6 @@ for f in files:
         raw_text = page.extract_text()
         clean_text = remove_whitespaces(raw_text)
         questions = find_questions(clean_text)
-        print(questions)
         
         if questions: 
             for q in questions:
