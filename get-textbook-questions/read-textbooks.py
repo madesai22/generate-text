@@ -30,7 +30,7 @@ path = "/data/madesai/history-llm-data/mi-open-textbooks/"
 files = ["HSUSFull.pdf","HSWorld.pdf"]
 for f in files:
     reader = PdfReader(path+f)
-    out_file = f[:-4]+".csv"
+    out_file = open(f[:-4]+".csv","w")
     file_questions = set()
     for page in reader.pages:
         raw_text = page.extract_text()
