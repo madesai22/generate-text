@@ -30,12 +30,17 @@ def main():
         outfile = open(question_fname[:-4]+"-flant5-response.csv")
         question_file = open(qf+path_to_questions,"r")
         for prompt in question_file:
-            if test > 9:
-                break
+            
             response = flant5_text_to_text(prompt,model,tokenizer)
             response_dict["Question"].append(prompt)
             response_dict["Response"].append(response)
+        
+            if test > 9:
+                response_dict.to_csv(outfile,sep=";")
+                break
             test += 1
+        response_dict.to_csv(outfile,sep=";")
+
 
 
 if __name__ == "__main__":
