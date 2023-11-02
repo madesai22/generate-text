@@ -21,13 +21,13 @@ def flant5_text_to_text(prompt, model,tokenizer):
 def main():
     question_fname = ["HSUSFull_clean.txt","HSWorld_clean.txt"]
     path_to_questions = "/Users/madesai/Documents/github/generate-text/get-textbook-questions/"
-    model,tokenizer = initiate_flan5_text_to_text()
+    model,tokenizer = initiate_flan5_text_to_text(xxl=True)
 
     response_dict = {"Question":[],"Response":[]}
 
     test = 0 
     for qf in question_fname:
-        outfile = open(question_fname[:-4]+"-flant5-response.csv")
+        outfile = open(qf[:-4]+"-flant5-response.csv")
         question_file = open(qf+path_to_questions,"r")
         for prompt in question_file:
             
