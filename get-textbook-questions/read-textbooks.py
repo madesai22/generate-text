@@ -6,7 +6,8 @@ def remove_whitespaces(text,paragraph=False):
     if paragraph:
        return re.sub(' +|\t+', ' ', text)
     else:
-       end_chars = re.sub('\n','',text)
+       end_chars = re.sub('\n ',' ',text)
+       end_chars = re.sub('\n',' ',end_chars) 
        return re.sub(' +|\t+', ' ', end_chars)
     
 def find_questions(text):
