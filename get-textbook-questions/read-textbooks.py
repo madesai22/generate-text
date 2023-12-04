@@ -44,6 +44,7 @@ for f in files:
         
         if questions: 
             for q in questions:
+                print(q)
                 file_questions.add(q)
     for q in file_questions:
         out_file.write(q+"\n")
