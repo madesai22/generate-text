@@ -21,6 +21,7 @@ def flant5_text_to_text(prompt, model,tokenizer):
 
 def initiate_gpt2(medium = False):
     tokenizer = AutoTokenizer.from_pretrained("gpt2")
+    tokenizer.enable_padding()
     model = AutoModelForCausalLM.from_pretrained("gpt2", device_map="auto")
     if medium: 
         tokenizer = AutoTokenizer.from_pretrained("gpt2-medium")
@@ -68,14 +69,9 @@ def main():
             #response = raw_response[0]["generated_text"]
             response = gpt2_text_to_text(prompt,model,tokenizer)
             #response = flant5_text_to_text(prompt,model,tokenizer)
-            # response = strip_repsonse(response)
-            # response_dict["Question"].append(prompt)
-            # response_dict["Response"].append(response)
-            
-            if test < 9:
-                print(prompt)
-                print(response)
-                break
+            response = strip_repsonse(response)
+            response_dict["Question"].append(prompt)
+            response_dict["Response"].append(response)
            
             df = pd.DataFrame(response_dict)
              
