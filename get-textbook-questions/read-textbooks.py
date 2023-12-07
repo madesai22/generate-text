@@ -43,6 +43,11 @@ def find_questions(text):
     questions = re.findall(pattern,clean_text)
     return questions
 
+def find_questions_by_number(text):
+    pattern = "(?<=[1-9]\.\s).*\?"
+    question = re.findall(pattern,text)
+    return question
+
 path = "/data/madesai/history-llm-data/mi-open-textbooks/"
     
 files = ["HSUSFull.pdf","HSWorld.pdf"]
@@ -53,7 +58,7 @@ for f in files:
     for page in reader.pages:
         raw_text = page.extract_text()
         clean_text = remove_whitespaces(raw_text)
-        questions = find_questions(clean_text)
+        questions = find_questions_by_number(clean_text)
         if questions: 
             for q in questions:
                 print(q.strip())
