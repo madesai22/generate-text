@@ -21,7 +21,6 @@ def flant5_text_to_text(prompt, model,tokenizer):
 
 def initiate_gpt2(medium = False):
     tokenizer = AutoTokenizer.from_pretrained("gpt2")
-    tokenizer.enable_padding()
     model = AutoModelForCausalLM.from_pretrained("gpt2", device_map="auto")
     if medium: 
         tokenizer = AutoTokenizer.from_pretrained("gpt2-medium")
