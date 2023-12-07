@@ -19,10 +19,13 @@ def flant5_text_to_text(prompt, model,tokenizer):
     outputs = model.generate(input_ids)
     return(tokenizer.decode(outputs[0]))
 
-def initiate_gpt2(medium = False):
+def initiate_gpt2(medium = False, large = False):
     if medium: 
         model = GPT2LMHeadModel.from_pretrained("gpt2-medium",device_map="auto")
         tokenizer = GPT2Tokenizer.from_pretrained("gpt2-medium")
+    elif large:
+        model = GPT2LMHeadModel.from_pretrained("gpt2-large",device_map="auto")
+        tokenizer = GPT2Tokenizer.from_pretrained("gpt2-large")
     else:
        tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
        model = GPT2LMHeadModel.from_pretrained("gpt2",device_map="auto")    
@@ -55,7 +58,7 @@ def main():
     question_fname = ["HSUS.txt","HSWorld_clean.txt"]
     path_to_questions = "/home/madesai/generate-text/get-textbook-questions/"
     #model,tokenizer = initiate_flan5_text_to_text(xxl=True)
-    model, tokenizer = initiate_gpt2(medium=True)
+    model, tokenizer = initiate_gpt2(large=True)
     set_seed(42)
 
     response_dict = {"Question":[],"Response":[]}
