@@ -46,7 +46,7 @@ def main():
         outfile = open(qf[:-4]+"-gpt2-response.csv","w")
         question_file = open(path_to_questions+qf,"r")
         for prompt in question_file:
-            gpt_2_generate(prompt)
+            response = gpt_2_generate(prompt)
             #response = flant5_text_to_text(prompt,model,tokenizer)
             response = strip_repsonse(response)
             response_dict["Question"].append(prompt)
