@@ -50,13 +50,11 @@ def strip_repsonse(text):
     text = re.sub("</s>","",text)
     return text
 
-
-
 def main():
-    question_fname = ["HSUSFull.txt","HSWorld_clean.txt"]
+    question_fname = ["HSUS.txt","HSWorld_clean.txt"]
     path_to_questions = "/home/madesai/generate-text/get-textbook-questions/"
     #model,tokenizer = initiate_flan5_text_to_text(xxl=True)
-   # model, tokenizer = initiate_gpt2()
+    model, tokenizer = initiate_gpt2()
     
 
     response_dict = {"Question":[],"Response":[]}
@@ -66,13 +64,17 @@ def main():
         outfile = open(qf[:-4]+"-gpt2-response.csv","w")
         question_file = open(path_to_questions+qf,"r")
         for prompt in question_file:
-            raw_response = gpt_2_generate(prompt)
-            response = raw_response[0]["generated_text"]
-            #response = gpt2_text_to_text(prompt,model,tokenizer)
+            #response = gpt_2_generate(prompt)[0]["generated_text"]
+      
+            response = gpt2_text_to_text(prompt,model,tokenizer)
             #response = flant5_text_to_text(prompt,model,tokenizer)
             response = strip_repsonse(response)
             response_dict["Question"].append(prompt)
             response_dict["Response"].append(response)
+
+            if test < 9:
+                print(prompt)
+                print(response)
            
             df = pd.DataFrame(response_dict)
              
