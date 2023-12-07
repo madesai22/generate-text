@@ -39,8 +39,9 @@ def main():
             print(prompt)
             print(response)
             if test > 9:
-                print(response_dict)
-                response_dict.to_csv(outfile,sep=";")
+                df = pd.DataFrame(response_dict)
+                print(df)
+                #df.to_csv(outfile,sep=";")
                 break
             test += 1
         df = pd.DataFrame(response_dict)
