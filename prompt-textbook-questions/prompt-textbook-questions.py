@@ -21,7 +21,7 @@ def flant5_text_to_text(prompt, model,tokenizer):
 
 def initiate_gpt2(medium = False):
     if medium: 
-        model = GPT2LMHeadModel.from_pretrained("gpt2-medium")
+        model = GPT2LMHeadModel.from_pretrained("gpt2-medium",device_map="auto")
         tokenizer = GPT2Tokenizer.from_pretrained("gpt2-medium")
     else:
        tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
