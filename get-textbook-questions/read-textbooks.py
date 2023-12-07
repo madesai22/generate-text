@@ -23,9 +23,9 @@ def pre_process_sentence(text, stopwords=None):
     for i in range(len(text)):
        sentence = text[i]
        if sentence is not None:
-          sentence = strip_punctuation(sentence)
+          #sentence = strip_punctuation(sentence)
           sentence = remove_whitespaces(sentence)
-          sentence = strip_punctuation(sentence).lower().strip()
+          #sentence = strip_punctuation(sentence).lower().strip()
           new_text.append(sentence)
     return new_text
     
