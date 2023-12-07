@@ -21,6 +21,8 @@ def flant5_text_to_text(prompt, model,tokenizer):
 
 def initiate_gpt2(medium = False):
     tokenizer = AutoTokenizer.from_pretrained("gpt2")
+    if tokenizer.pad_token is None:
+            tokenizer.pad_token = tokenizer.eos_token
     model = AutoModelForCausalLM.from_pretrained("gpt2", device_map="auto")
     if medium: 
         tokenizer = AutoTokenizer.from_pretrained("gpt2-medium")
@@ -29,7 +31,7 @@ def initiate_gpt2(medium = False):
 
 def gpt2_text_to_text(prompt, model, tokenizer):
     input_ids = tokenizer(prompt, return_tensors='pt').input_ids.to("cuda")
-    outputs = model.generate(input_ids, max_new_tokens=300)
+    outputs = model.generate(input_ids, pad_token_id=tokenizer.pad_token_id, max_new_tokens=300)
     return (tokenizer.decode(outputs[0], skip_special_tokens=True))
 
 
