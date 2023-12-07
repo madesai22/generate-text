@@ -18,6 +18,13 @@ def flant5_text_to_text(prompt, model,tokenizer):
     outputs = model.generate(input_ids)
     return(tokenizer.decode(outputs[0]))
 
+def strip_repsonse(text):
+    text = "<pad> a way to help people</s>"
+    text = re.sub("<pad> ","",text)
+    text = re.sub("</s>","",text)
+    return text
+
+
 
 def main():
     question_fname = ["HSUSFull.txt","HSWorld_clean.txt"]
@@ -34,8 +41,10 @@ def main():
             print(prompt)
             
             response = flant5_text_to_text(prompt,model,tokenizer)
+            reponse = strip_repsonse(response)
             response_dict["Question"].append(prompt)
             response_dict["Response"].append(response)
+            
             print(prompt)
             print(response)
             if test > 9:
