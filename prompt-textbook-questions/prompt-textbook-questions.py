@@ -38,10 +38,8 @@ def main():
         outfile = open(qf[:-4]+"-flant5-response.csv","w")
         question_file = open(path_to_questions+qf,"r")
         for prompt in question_file:
-            print(prompt)
-            
             response = flant5_text_to_text(prompt,model,tokenizer)
-            reponse = strip_repsonse(response)
+            response = strip_repsonse(response)
             response_dict["Question"].append(prompt)
             response_dict["Response"].append(response)
             
