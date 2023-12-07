@@ -53,10 +53,10 @@ def main():
             # response_dict["Question"].append(prompt)
             # response_dict["Response"].append(response)
             
-            if test < 9:
-                print(prompt)
-                print(response)
-                break
+            # if test < 9:
+            #     print(prompt)
+            #     print(response)
+            #     break
            
             df = pd.DataFrame(response_dict)
              
