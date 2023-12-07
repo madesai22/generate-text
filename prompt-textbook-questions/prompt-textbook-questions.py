@@ -48,9 +48,9 @@ def main():
         for prompt in question_file:
             response = gpt_2_generate(prompt)
             #response = flant5_text_to_text(prompt,model,tokenizer)
-            response = strip_repsonse(response)
-            response_dict["Question"].append(prompt)
-            response_dict["Response"].append(response)
+            # response = strip_repsonse(response)
+            # response_dict["Question"].append(prompt)
+            # response_dict["Response"].append(response)
             
             if test < 9:
                 print(prompt)
