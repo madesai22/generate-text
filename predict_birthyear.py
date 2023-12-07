@@ -46,7 +46,7 @@ def main():
      df_dict = {'Name':[],'Summary':[],'Category':[],'True birth year': [], 'Pageviews':[],'Predicted birth year':[], "Years off": [], "Full response": []}
 
      prompt_form = "What year was {} born?"
-     model,tokenizer = initiate_flan5_text_to_text()
+     model,tokenizer = initiate_flan5_text_to_text(xxl=True)
 
      for fname in data_files:
          file = data_path + fname
