@@ -75,22 +75,12 @@ def main():
             response = strip_repsonse(response)
             response_dict["Question"].append(prompt)
             response_dict["Response"].append(response)
-
-            if test < 25:
-                print(prompt)
-                print(response)
-                
-                
-            if test == 24:
-                df = pd.DataFrame(response_dict)
-             
-                df.to_csv(outfile,sep=";")
-                break
+            
             test += 1
             if test %10 == 0:
                 print(test, prompt, response)
-    df = pd.DataFrame(response_dict)
-    df.to_csv(outfile,sep=";")
+        df = pd.DataFrame(response_dict)
+        df.to_csv(outfile,sep=";")
 
 
 
