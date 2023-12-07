@@ -7,13 +7,13 @@ import string
 def remove_whitespaces(text,paragraph=False):
     if paragraph:
        end_chars = re.sub('\s+',' ',text)
-       end_chars = re.sub("http://.*\?"," ",end_chars)
+       end_chars = re.sub("http(s?)://\S*\s"," ",end_chars)
        return re.sub(' +|\t+', ' ', end_chars)
     else:
        end_chars = re.sub('\n ',' ',text)
        end_chars = re.sub('\n',' ',end_chars) 
        end_chars = re.sub('\s+',' ',end_chars)
-       end_chars = re.sub("http://.*\?"," ",end_chars)
+       end_chars = re.sub("http(s?)://\S*\s"," ",end_chars)
        return re.sub(' +|\t+', ' ', end_chars)
 
 def remove_urls(text):
