@@ -73,10 +73,12 @@ def main():
             if test < 25:
                 print(prompt)
                 print(response)
+                
                 break
-            df = pd.DataFrame(response_dict)
+            if test == 24:
+                df = pd.DataFrame(response_dict)
              
-            df.to_csv(outfile,sep=";")
+                df.to_csv(outfile,sep=";")
             test += 1
             if test %10 == 0:
                 print(test, prompt, response)
