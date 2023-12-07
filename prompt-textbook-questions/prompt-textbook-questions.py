@@ -1,6 +1,6 @@
 from transformers import pipeline, set_seed
 from transformers import T5Tokenizer, T5ForConditionalGeneration
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import GPT2LMHeadModel, GPT2Tokenizer
 import pandas as pd
 import re
 
@@ -21,13 +21,15 @@ def flant5_text_to_text(prompt, model,tokenizer):
 
 def initiate_gpt2(medium = False):
     if medium: 
-        tokenizer = AutoTokenizer.from_pretrained("gpt2-medium")
-        model = AutoModelForCausalLM.from_pretrained("gpt2-medium", pad_token_id=tokenizer.eos_token_id, device_map="auto")
+        model = GPT2LMHeadModel.from_pretrained("gpt2-medium")
+        tokenizer = GPT2Tokenizer.from_pretrained("gpt2-medium")
+        # tokenizer = AutoTokenizer.from_pretrained("gpt2-medium")
+        # model = AutoModelForCausalLM.from_pretrained("gpt2-medium", pad_token_id=tokenizer.eos_token_id, device_map="auto")
     else:
-        tokenizer = AutoTokenizer.from_pretrained("gpt2")
-        model = AutoModelForCausalLM.from_pretrained("gpt2", pad_token_id=tokenizer.eos_token_id, device_map="auto")
-    if tokenizer.pad_token is None:
-            tokenizer.pad_token = tokenizer.eos_token
+       model = GPT2LMHeadModel.from_pretrained("gpt2",device_map="auto")
+       tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
+    # if tokenizer.pad_token is None:
+    #         tokenizer.pad_token = tokenizer.eos_token
     return model, tokenizer
 
 def gpt2_text_to_text(prompt, model, tokenizer):
@@ -40,6 +42,7 @@ def gpt2_text_to_text(prompt, model, tokenizer):
 
 def gpt_2_generate(prompt):
     generator = pipeline('text-generation', model='gpt2')
+    generator = pipeline('question-answering', model='gpt2')
     set_seed(42)
     response = generator(prompt, max_length=300, num_return_sequences = 1)
     return response
