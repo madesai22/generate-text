@@ -23,18 +23,12 @@ def initiate_gpt2(medium = False):
     if medium: 
         model = GPT2LMHeadModel.from_pretrained("gpt2-medium")
         tokenizer = GPT2Tokenizer.from_pretrained("gpt2-medium")
-        # tokenizer = AutoTokenizer.from_pretrained("gpt2-medium")
-        # model = AutoModelForCausalLM.from_pretrained("gpt2-medium", pad_token_id=tokenizer.eos_token_id, device_map="auto")
     else:
-       model = GPT2LMHeadModel.from_pretrained("gpt2",device_map="auto")
        tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
-    # if tokenizer.pad_token is None:
-    #         tokenizer.pad_token = tokenizer.eos_token
+       model = GPT2LMHeadModel.from_pretrained("gpt2",device_map="auto")    
     return model, tokenizer
 
 def gpt2_text_to_text(prompt, model, tokenizer):
-    
-    #         # Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
     input_ids = tokenizer(prompt, return_tensors='pt').input_ids.to("cuda")
     outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, max_new_tokens=300)
     return (tokenizer.decode(outputs[0], skip_special_tokens=True))
@@ -42,7 +36,7 @@ def gpt2_text_to_text(prompt, model, tokenizer):
 
 def gpt_2_generate(prompt):
     generator = pipeline('text-generation', model='gpt2')
-    generator = pipeline('question-answering', model='gpt2')
+  #  generator = pipeline('question-answering', model='gpt2')
     set_seed(42)
     response = generator(prompt, max_length=300, num_return_sequences = 1)
     return response
@@ -59,7 +53,7 @@ def main():
     path_to_questions = "/home/madesai/generate-text/get-textbook-questions/"
     #model,tokenizer = initiate_flan5_text_to_text(xxl=True)
     model, tokenizer = initiate_gpt2()
-    
+    set_seed(42)
 
     response_dict = {"Question":[],"Response":[]}
 
