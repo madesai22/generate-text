@@ -21,7 +21,7 @@ def flant5_text_to_text(prompt, model,tokenizer):
 def gpt_2_generate(prompt):
     generator = pipeline('text-generation', model='gpt2')
     set_seed(42)
-    response = generator(prompt, max_length=300, num_return_sequences = 3)
+    response = generator(prompt, max_length=300, num_return_sequences = 1)
     return response
 
 
@@ -46,7 +46,8 @@ def main():
         outfile = open(qf[:-4]+"-gpt2-response.csv","w")
         question_file = open(path_to_questions+qf,"r")
         for prompt in question_file:
-            response = gpt_2_generate(prompt)
+            raw_response = gpt_2_generate(prompt)
+            response = raw_response[0]["generated_text"]
             #response = flant5_text_to_text(prompt,model,tokenizer)
             # response = strip_repsonse(response)
             # response_dict["Question"].append(prompt)
