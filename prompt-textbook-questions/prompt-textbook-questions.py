@@ -1,5 +1,6 @@
 from transformers import pipeline, set_seed
 from transformers import T5Tokenizer, T5ForConditionalGeneration
+import pandas as pd
 import re
 
 # load models
@@ -30,16 +31,18 @@ def main():
         outfile = open(qf[:-4]+"-flant5-response.csv","w")
         question_file = open(path_to_questions+qf,"r")
         for prompt in question_file:
+            print(prompt)
             
-            response = flant5_text_to_text(prompt,model,tokenizer)
-            response_dict["Question"].append(prompt)
-            response_dict["Response"].append(response)
+            # response = flant5_text_to_text(prompt,model,tokenizer)
+            # response_dict["Question"].append(prompt)
+            # response_dict["Response"].append(response)
         
-            if test > 9:
-                response_dict.to_csv(outfile,sep=";")
-                break
+            # if test > 9:
+            #     response_dict.to_csv(outfile,sep=";")
+            #     break
             test += 1
-        response_dict.to_csv(outfile,sep=";")
+        df = pd.DataFrame(response_dict)
+        df.to_csv(outfile,sep=";")
 
 
 
