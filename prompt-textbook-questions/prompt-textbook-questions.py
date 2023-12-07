@@ -44,12 +44,13 @@ def main():
             
             print(prompt)
             print(response)
-            if test > 9:
-                df = pd.DataFrame(response_dict)
+           # if test > 9:
+            df = pd.DataFrame(response_dict)
                 #print(df)
-                df.to_csv(outfile,sep=";")
-                break
+            df.to_csv(outfile,sep=";")
             test += 1
+            if test %10 == 0:
+                print(test, prompt, response)
         df = pd.DataFrame(response_dict)
         df.to_csv(outfile,sep=";")
 
