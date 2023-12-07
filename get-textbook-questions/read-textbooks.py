@@ -6,14 +6,19 @@ import string
 
 def remove_whitespaces(text,paragraph=False):
     if paragraph:
-       return re.sub(' +|\t+', ' ', text)
+       end_chars = re.sub('\s+',' ',text)
+       end_chars = re.sub("http://.*\?"," ",end_chars)
+       return re.sub(' +|\t+', ' ', end_chars)
     else:
        end_chars = re.sub('\n ',' ',text)
        end_chars = re.sub('\n',' ',end_chars) 
        end_chars = re.sub('\s+',' ',end_chars)
+       end_chars = re.sub("http://.*\?"," ",end_chars)
        return re.sub(' +|\t+', ' ', end_chars)
 
-    
+def remove_urls(text):
+    return re.sub("http://.*\?"," ",text)
+
 def find_inquiry_questions(text):
     # find question area:
     test = re.findall("QUESTIONS TO GUIDE INQUIRY\s*.*[0-9]\.\s.*\?",text)
