@@ -11,23 +11,7 @@ def remove_whitespaces(text,paragraph=False):
        end_chars = re.sub('\n ',' ',text)
        end_chars = re.sub('\n',' ',end_chars) 
        return re.sub(' +|\t+', ' ', end_chars)
-    
-def strip_punctuation(text):
-    text =  unidecode(text)
-    return text.translate(str.maketrans('', '', string.punctuation))
 
-def pre_process_sentence(text, stopwords=None):
-    pattern = pattern = "\.(\n|\s)+"
-    text = re.split(pattern, text)
-    new_text = []
-    for i in range(len(text)):
-       sentence = text[i]
-       if sentence is not None:
-          #sentence = strip_punctuation(sentence)
-          sentence = remove_whitespaces(sentence)
-          #sentence = strip_punctuation(sentence).lower().strip()
-          new_text.append(sentence)
-    return new_text
     
 def find_inquiry_questions(text):
     # find question area:
@@ -52,7 +36,7 @@ def find_questions(text):
     pattern = "(?<=[?|\.|!|:]).*\?"
     questions = re.findall(pattern,clean_text)
     return questions
-    
+
 path = "/data/madesai/history-llm-data/mi-open-textbooks/"
     
 files = ["HSUSFull.pdf","HSWorld.pdf"]
@@ -63,17 +47,10 @@ for f in files:
     for page in reader.pages:
         raw_text = page.extract_text()
         clean_text = remove_whitespaces(raw_text)
-        #questions = find_questions(clean_text)
-        t = pre_process_sentence(clean_text)
-        if t:
-            for q in t:
-                print(q)
-        
-
-        
-        # if questions: 
-        #     for q in questions:
-        #         print(q.strip())
+        questions = find_questions(clean_text)
+        if questions: 
+            for q in questions:
+                print(q.strip())
     #             file_questions.add(q)
     # for q in file_questions:
     #     out_file.write(q+"\n")
