@@ -65,7 +65,8 @@ for f in files:
         raw_text = page.extract_text()
         clean_text = remove_whitespaces(raw_text)
         questions = find_questions_after_bullet(clean_text)
-        print(questions)
+        if questions:
+            print(questions)
         # questions = find_questions_by_number(clean_text)
         # if questions: 
         #     for q in questions:
