@@ -10,7 +10,7 @@ def remove_whitespaces(text,paragraph=False):
        end_chars = re.sub('\n',' ',end_chars) 
        return re.sub(' +|\t+', ' ', end_chars)
     
-def find_questions(text):
+def find_inquiry_questions(text):
     # find question area:
     test = re.findall("QUESTIONS TO GUIDE INQUIRY\s*.*[0-9]\.\s.*\?",text)
     if test:
@@ -25,10 +25,15 @@ def find_questions(text):
         question_mark = []
         for i in question_list:
             if i.endswith("?"): question_mark.append(i)
-
         return question_mark
     else:
         return None
+    
+def find_questions(text):
+    clean_text = remove_whitespaces(text)
+    pattern = "(?<=[?|\.|!]\s).*\?"
+    questions = re.findall(pattern,clean_text)
+    return questions
     
 path = "/data/madesai/history-llm-data/mi-open-textbooks/"
     
@@ -45,10 +50,10 @@ for f in files:
         if questions: 
             for q in questions:
                 print(q)
-                file_questions.add(q)
-    for q in file_questions:
-        out_file.write(q+"\n")
-    out_file.close()
+    #             file_questions.add(q)
+    # for q in file_questions:
+    #     out_file.write(q+"\n")
+    # out_file.close()
 
 
 
