@@ -59,7 +59,7 @@ def main():
 
     test = 0 
     for qf in question_fname:
-        outfile = open(qf[:-4]+"-gpt2-response.csv","w")
+        outfile = open(qf[:-4]+"-gpt2-custom-response.csv","w")
         question_file = open(path_to_questions+qf,"r")
         for prompt in question_file:
             #response = gpt_2_generate(prompt)[0]["generated_text"]
@@ -70,10 +70,10 @@ def main():
             response_dict["Question"].append(prompt)
             response_dict["Response"].append(response)
 
-            if test < 9:
+            if test < 25:
                 print(prompt)
                 print(response)
-           
+                break
             df = pd.DataFrame(response_dict)
              
             df.to_csv(outfile,sep=";")
