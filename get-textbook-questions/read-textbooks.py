@@ -44,13 +44,18 @@ def find_questions(text):
     return questions
 
 def find_questions_by_number(text):
-    pattern = "(?<=[1-9]\.\s).*?\?"
+    pattern = "(?<=[1-9][\.|\)]\s).*?\?"
     question = re.findall(pattern,text)
     return question
 
+def find_questions_after_bullet(text):
+    pattern = "(?<=\u2022).*?\?"
+    t = re.findall(pattern,text)
+    return t
+
 path = "/data/madesai/history-llm-data/mi-open-textbooks/"
     
-files = ["HSUSFull.pdf","HSWorld.pdf"]
+files = ["HSUSFull.pdf"]#,"HSWorld.pdf"]
 for f in files:
     reader = PdfReader(path+f)
     out_file = open(f[:-4]+".txt","w")
@@ -59,13 +64,15 @@ for f in files:
     for page in reader.pages:
         raw_text = page.extract_text()
         clean_text = remove_whitespaces(raw_text)
-        questions = find_questions_by_number(clean_text)
-        if questions: 
-            for q in questions:
-                q = q.strip()
-                if q not in seen_questions:
-                    file_questions.append(q)
-                    seen_questions.add(q)
+        questions = find_questions_after_bullet(clean_text)
+        print(questions)
+        # questions = find_questions_by_number(clean_text)
+        # if questions: 
+        #     for q in questions:
+        #         q = q.strip()
+        #         if q not in seen_questions:
+        #             file_questions.append(q)
+        #             seen_questions.add(q)
     for q in file_questions:
         out_file.write(q+"\n")
     out_file.close()
