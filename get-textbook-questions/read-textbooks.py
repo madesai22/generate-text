@@ -31,7 +31,7 @@ def find_inquiry_questions(text):
     
 def find_questions(text):
     clean_text = remove_whitespaces(text)
-    pattern = "(?<=[?|\.|!]\s).*\?"
+    pattern = "(?<=[?|\.|!|:]).*\?"
     questions = re.findall(pattern,clean_text)
     return questions
     
@@ -49,7 +49,7 @@ for f in files:
         
         if questions: 
             for q in questions:
-                print(q)
+                print(q.strip())
     #             file_questions.add(q)
     # for q in file_questions:
     #     out_file.write(q+"\n")
