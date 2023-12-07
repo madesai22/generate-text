@@ -30,7 +30,7 @@ def initiate_gpt2(medium = False):
 
 def gpt2_text_to_text(prompt, model, tokenizer):
     input_ids = tokenizer(prompt, return_tensors='pt').input_ids.to("cuda")
-    outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, max_new_tokens=200, do_sample = True, top_k=50)
+    outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, max_new_tokens=200) # do_sample = True, top_k=50)
     #outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, penalty_alpha=0.6, top_k=4, max_new_tokens=200)
     return (tokenizer.decode(outputs[0], skip_special_tokens=True))
 
