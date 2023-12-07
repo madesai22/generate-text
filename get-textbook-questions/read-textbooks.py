@@ -64,16 +64,14 @@ for f in files:
     for page in reader.pages:
         raw_text = page.extract_text()
         clean_text = remove_whitespaces(raw_text)
-        questions = find_questions_after_bullet(clean_text)
-        if questions:
-            print(questions)
-        # questions = find_questions_by_number(clean_text)
-        # if questions: 
-        #     for q in questions:
-        #         q = q.strip()
-        #         if q not in seen_questions:
-        #             file_questions.append(q)
-        #             seen_questions.add(q)
+
+        questions = find_questions_by_number(clean_text)
+        if questions: 
+            for q in questions:
+                q = q.strip()
+                if q not in seen_questions:
+                    file_questions.append(q)
+                    seen_questions.add(q)
     for q in file_questions:
         out_file.write(q+"\n")
     out_file.close()
