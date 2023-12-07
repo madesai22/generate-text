@@ -39,7 +39,7 @@ def find_inquiry_questions(text):
         return None
     
 def find_questions(text):
-    pattern = "(?<=[?|\.|!|:]).*\?"
+    pattern = "(?<=[?|\.|!|:]).*?\?"
     questions = re.findall(pattern,clean_text)
     return questions
 
