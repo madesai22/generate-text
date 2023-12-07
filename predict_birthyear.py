@@ -54,7 +54,6 @@ def main():
          random.shuffle(data)
          
          for name in data:
-            birth_year = data[name]['birth_year']
             summary = data[name]['summary']
             category = data[name]['category']
             true_birth_year = data[name]['birth_year']
