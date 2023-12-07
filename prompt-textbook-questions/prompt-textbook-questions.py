@@ -30,6 +30,8 @@ def initiate_gpt2(medium = False):
 def gpt2_text_to_text(prompt, model, tokenizer):
     if tokenizer.pad_token is None:
             tokenizer.pad_token = tokenizer.eos_token
+            tokenizer.pad_token_id = tokenizer.eos_token_id
+            # Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
     input_ids = tokenizer(prompt, return_tensors='pt').input_ids.to("cuda")
     outputs = model.generate(input_ids, pad_token_id=tokenizer.pad_token_id, max_new_tokens=300)
     return (tokenizer.decode(outputs[0], skip_special_tokens=True))
@@ -54,7 +56,7 @@ def main():
     question_fname = ["HSUSFull.txt","HSWorld_clean.txt"]
     path_to_questions = "/home/madesai/generate-text/get-textbook-questions/"
     #model,tokenizer = initiate_flan5_text_to_text(xxl=True)
-    model, tokenizer = initiate_gpt2()
+   # model, tokenizer = initiate_gpt2()
     
 
     response_dict = {"Question":[],"Response":[]}
@@ -66,7 +68,7 @@ def main():
         for prompt in question_file:
             raw_response = gpt_2_generate(prompt)
             response = raw_response[0]["generated_text"]
-            response = gpt2_text_to_text(prompt,model,tokenizer)
+            #response = gpt2_text_to_text(prompt,model,tokenizer)
             #response = flant5_text_to_text(prompt,model,tokenizer)
             response = strip_repsonse(response)
             response_dict["Question"].append(prompt)
