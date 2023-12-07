@@ -64,7 +64,7 @@ def main():
         for prompt in question_file:
             #response = gpt_2_generate(prompt)[0]["generated_text"]
       
-            #response = gpt2_text_to_text(prompt,model,tokenizer)
+            response = gpt2_text_to_text(prompt,model,tokenizer)
             #response = flant5_text_to_text(prompt,model,tokenizer)
             response = strip_repsonse(response)
             response_dict["Question"].append(prompt)
