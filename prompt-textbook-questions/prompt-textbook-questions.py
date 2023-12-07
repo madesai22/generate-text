@@ -19,7 +19,6 @@ def flant5_text_to_text(prompt, model,tokenizer):
     return(tokenizer.decode(outputs[0]))
 
 def strip_repsonse(text):
-    text = "<pad> a way to help people</s>"
     text = re.sub("<pad> ","",text)
     text = re.sub("</s>","",text)
     return text
