@@ -62,10 +62,10 @@ for f in files:
         if questions: 
             for q in questions:
                 print(q.strip())
-    #             file_questions.add(q)
-    # for q in file_questions:
-    #     out_file.write(q+"\n")
-    # out_file.close()
+                file_questions.add(q.strip())
+    for q in file_questions:
+        out_file.write(q+"\n")
+    out_file.close()
 
 
 
