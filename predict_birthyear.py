@@ -4,6 +4,7 @@ import file_handeling as fh
 import re
 import numpy as np
 import random
+import pandas as pd
 
 
 # load models
@@ -38,9 +39,10 @@ def bin_data_by_pageview(data):
 
 
 def main():
+     outfile = "birth_year_predict.csv"
     # load data from json files
      data_path = "/data/madesai/history-llm-data/wikipedia-json-files/"
-     data_files = ["confederate_states_army_officers.json"]
+     data_files = ["confederate_states_army_officers.json","american_civil_war_nurses.json","african_americans_in_the_american_civil_war.json"]
      df_dict = {'Name':[],'Summary':[],'Category':[],'True birth year': [], 'Pageviews':[],'Predicted birth year':[], "Years off": [], "Full response": []}
 
      prompt_form = "What year was {} born?"
@@ -77,6 +79,9 @@ def main():
             df_dict['Predicted birth year'].append(response_year)
             df_dict['Years off'].append(difference)
             df_dict['Full response'].append(response)
+            
+     df = pd.DataFrame(df_dict)
+     df.to_csv(outfile,sep=";")
 
 
 
