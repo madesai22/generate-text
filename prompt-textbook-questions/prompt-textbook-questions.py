@@ -33,13 +33,15 @@ def main():
         for prompt in question_file:
             print(prompt)
             
-            # response = flant5_text_to_text(prompt,model,tokenizer)
-            # response_dict["Question"].append(prompt)
-            # response_dict["Response"].append(response)
-        
-            # if test > 9:
-            #     response_dict.to_csv(outfile,sep=";")
-            #     break
+            response = flant5_text_to_text(prompt,model,tokenizer)
+            response_dict["Question"].append(prompt)
+            response_dict["Response"].append(response)
+            print(prompt)
+            print(response)
+            if test > 9:
+                print(response_dict)
+                response_dict.to_csv(outfile,sep=";")
+                break
             test += 1
         df = pd.DataFrame(response_dict)
         df.to_csv(outfile,sep=";")
