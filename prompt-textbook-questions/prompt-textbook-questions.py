@@ -20,18 +20,18 @@ def flant5_text_to_text(prompt, model,tokenizer):
     return(tokenizer.decode(outputs[0]))
 
 def initiate_gpt2(medium = False):
-    tokenizer = AutoTokenizer.from_pretrained("gpt2")
-    model = AutoModelForCausalLM.from_pretrained("gpt2", device_map="auto")
     if medium: 
         tokenizer = AutoTokenizer.from_pretrained("gpt2-medium")
-        model = AutoModelForCausalLM.from_pretrained("gpt2-medium", device_map="auto")
+        model = AutoModelForCausalLM.from_pretrained("gpt2-medium", pad_token_id=tokenizer.eos_token_id, device_map="auto")
+    else:
+        tokenizer = AutoTokenizer.from_pretrained("gpt2")
+        model = AutoModelForCausalLM.from_pretrained("gpt2", pad_token_id=tokenizer.eos_token_id, device_map="auto")
     return model, tokenizer
 
 def gpt2_text_to_text(prompt, model, tokenizer):
-    if tokenizer.pad_token is None:
-            tokenizer.pad_token = tokenizer.eos_token
-            tokenizer.pad_token_id = tokenizer.eos_token_id
-            # Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+    # if tokenizer.pad_token is None:
+    #         tokenizer.pad_token = tokenizer.eos_token
+    #         # Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
     input_ids = tokenizer(prompt, return_tensors='pt').input_ids.to("cuda")
     outputs = model.generate(input_ids, pad_token_id=tokenizer.pad_token_id, max_new_tokens=300)
     return (tokenizer.decode(outputs[0], skip_special_tokens=True))
