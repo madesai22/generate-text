@@ -44,7 +44,7 @@ def find_questions(text):
     return questions
 
 def find_questions_by_number(text):
-    pattern = "(?<=[1-9][\.|\)]\s).*?\?"
+    pattern = "(?<=[1-9][\.|\)]).*?\?"
     question = re.findall(pattern,text)
     return question
 
