@@ -40,7 +40,7 @@ def main():
             print(response)
             if test > 9:
                 df = pd.DataFrame(response_dict)
-                print(df)
+                #print(df)
                 df.to_csv(outfile,sep=";")
                 break
             test += 1

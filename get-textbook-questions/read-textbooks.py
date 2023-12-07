@@ -54,15 +54,18 @@ files = ["HSUSFull.pdf","HSWorld.pdf"]
 for f in files:
     reader = PdfReader(path+f)
     out_file = open(f[:-4]+".txt","w")
-    file_questions = set()
+    file_questions = []
+    seen_questions = set()
     for page in reader.pages:
         raw_text = page.extract_text()
         clean_text = remove_whitespaces(raw_text)
         questions = find_questions_by_number(clean_text)
         if questions: 
             for q in questions:
-                print(q.strip())
-                file_questions.add(q.strip())
+                q = q.strip()
+                if q not in seen_questions:
+                    file_questions.append(q)
+                    seen_questions.add(q)
     for q in file_questions:
         out_file.write(q+"\n")
     out_file.close()
