@@ -10,6 +10,7 @@ def remove_whitespaces(text,paragraph=False):
     else:
        end_chars = re.sub('\n ',' ',text)
        end_chars = re.sub('\n',' ',end_chars) 
+       end_chars = re.sub('\s+',' ',end_chars)
        return re.sub(' +|\t+', ' ', end_chars)
 
     
