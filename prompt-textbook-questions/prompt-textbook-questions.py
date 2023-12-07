@@ -1,5 +1,6 @@
 from transformers import pipeline, set_seed
 from transformers import T5Tokenizer, T5ForConditionalGeneration
+from transformers import AutoModelForCausalLM, AutoTokenizer
 import pandas as pd
 import re
 
@@ -17,6 +18,20 @@ def flant5_text_to_text(prompt, model,tokenizer):
     input_ids = tokenizer(prompt, return_tensors="pt").input_ids.to("cuda")
     outputs = model.generate(input_ids)
     return(tokenizer.decode(outputs[0]))
+
+def initiate_gpt2(medium = False):
+    tokenizer = AutoTokenizer.from_pretrained("gpt2")
+    model = AutoModelForCausalLM.from_pretrained("gpt2", device_map="auto")
+    if medium: 
+        tokenizer = AutoTokenizer.from_pretrained("gpt2-medium")
+        model = AutoModelForCausalLM.from_pretrained("gpt2-medium", device_map="auto")
+    return model, tokenizer
+
+def gpt2_text_to_text(prompt, model, tokenizer):
+    input_ids = tokenizer(prompt, return_tensors='pt').input_ids.to("cuda")
+    outputs = model.generate(input_ids, max_new_tokens=40)
+    return (tokenizer.decode(outputs[0], skip_special_tokens=True))
+
 
 def gpt_2_generate(prompt):
     generator = pipeline('text-generation', model='gpt2')
@@ -37,6 +52,7 @@ def main():
     question_fname = ["HSUSFull.txt","HSWorld_clean.txt"]
     path_to_questions = "/home/madesai/generate-text/get-textbook-questions/"
     #model,tokenizer = initiate_flan5_text_to_text(xxl=True)
+    model, tokenizer = initiate_gpt2()
     
 
     response_dict = {"Question":[],"Response":[]}
@@ -46,17 +62,18 @@ def main():
         outfile = open(qf[:-4]+"-gpt2-response.csv","w")
         question_file = open(path_to_questions+qf,"r")
         for prompt in question_file:
-            raw_response = gpt_2_generate(prompt)
-            response = raw_response[0]["generated_text"]
+            #raw_response = gpt_2_generate(prompt)
+            #response = raw_response[0]["generated_text"]
+            response = gpt2_text_to_text(prompt,model,tokenizer)
             #response = flant5_text_to_text(prompt,model,tokenizer)
             # response = strip_repsonse(response)
             # response_dict["Question"].append(prompt)
             # response_dict["Response"].append(response)
             
-            # if test < 9:
-            #     print(prompt)
-            #     print(response)
-            #     break
+            if test < 9:
+                print(prompt)
+                print(response)
+                break
            
             df = pd.DataFrame(response_dict)
              
