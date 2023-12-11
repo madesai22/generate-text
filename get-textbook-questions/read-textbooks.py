@@ -83,8 +83,9 @@ for f in files:
         if find_section_questions(clean_text):
             print(path+f)
             question_section = section_questions(clean_text)
+
             find_questions_by_number(question_section)
-            print(find_questions_by_number(question_section))
+            print(find_questions_by_number(question_section[0]))
 
             print("***")
 
