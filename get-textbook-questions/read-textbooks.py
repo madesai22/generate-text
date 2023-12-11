@@ -65,8 +65,7 @@ def section_questions(text):
     pattern = "Checking for Understanding.*?Write.*?\."
     return re.findall(pattern,text)
 
-def split_section_questions(text)
-    pattern = 
+
 
 
 path = "/data/madesai/history-llm-data/Glencoe-US/"
