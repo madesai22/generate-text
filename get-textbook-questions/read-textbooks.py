@@ -53,28 +53,37 @@ def find_questions_after_bullet(text):
     t = re.findall(pattern,text)
     return t
 
-path = "/data/madesai/history-llm-data/mi-open-textbooks/"
+def get_chapters(path):
+    files = os.listdir(path)
+    return sorted(files)
+
+def get_
+
+path = "/data/madesai/history-llm-data/mi-open-textbooks/Glencoe-US/"
     
-files = ["HSUSFull.pdf"]#,"HSWorld.pdf"]
+#files = ["HSUSFull.pdf"]#,"HSWorld.pdf"]
+files = get_chapters(path) # sample first 4 chapters 
 for f in files:
     reader = PdfReader(path+f)
-    out_file = open(f[:-4]+".txt","w")
+    #out_file = open(f[:-4]+".txt","w")
     file_questions = []
     seen_questions = set()
-    for page in reader.pages:
-        raw_text = page.extract_text()
-        clean_text = remove_whitespaces(raw_text)
+    pages = reader.pages[:-2]
+    for page in pages:
+        print(page)
+    #     raw_text = page.extract_text()
+    #     clean_text = remove_whitespaces(raw_text)
 
-        questions = find_questions_by_number(clean_text)
-        if questions: 
-            for q in questions:
-                q = q.strip()
-                if q not in seen_questions:
-                    file_questions.append(q)
-                    seen_questions.add(q)
-    for q in file_questions:
-        out_file.write(q+"\n")
-    out_file.close()
+    #     questions = find_questions_by_number(clean_text)
+    #     if questions: 
+    #         for q in questions:
+    #             q = q.strip()
+    #             if q not in seen_questions:
+    #                 file_questions.append(q)
+    #                 seen_questions.add(q)
+    # for q in file_questions:
+    #     out_file.write(q+"\n")
+    #out_file.close()
 
 
 
