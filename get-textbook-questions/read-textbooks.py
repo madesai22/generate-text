@@ -68,7 +68,7 @@ for f in files:
     #out_file = open(f[:-4]+".txt","w")
     file_questions = []
     seen_questions = set()
-    pages = reader.pages[:-2]
+    pages = reader.pages[-2:]
     for page in pages:
         raw_text = page.extract_text()
         clean_text = remove_whitespaces(raw_text)
