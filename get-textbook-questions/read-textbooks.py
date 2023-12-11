@@ -70,9 +70,9 @@ for f in files:
     seen_questions = set()
     pages = reader.pages[:-2]
     for page in pages:
-        print(page.extract_text())
-    #     raw_text = page.extract_text()
-    #     clean_text = remove_whitespaces(raw_text)
+        raw_text = page.extract_text()
+        clean_text = remove_whitespaces(raw_text)
+        print(clean_text)
 
     #     questions = find_questions_by_number(clean_text)
     #     if questions: 
