@@ -102,7 +102,7 @@ for f in files:
 
           #  find_questions_by_number(question_section)
             pattern = "[1-9]\.\s+"
-            print(questions)
+            print(questions[1:])
            # print(question_section[0])
             #q = re.split(pattern, question_section[0])
             #print(q)
