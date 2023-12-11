@@ -61,6 +61,10 @@ def find_section_questions(text):
     pattern = "Checking for Understanding"
     return re.findall(pattern,text)
 
+def section_questions(text):
+    pattern = "Checking for Understanding.*?Write.*?\."
+    return re.findall(pattern,text)
+
 
 path = "/data/madesai/history-llm-data/Glencoe-US/"
     
@@ -78,7 +82,7 @@ for f in files:
         clean_text = remove_whitespaces(raw_text)
         if find_section_questions(clean_text):
             print(path+f)
-            print(raw_text)
+            print(section_questions(text))
             print("***")
 
     #     questions = find_questions_by_number(clean_text)
