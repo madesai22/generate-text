@@ -88,8 +88,9 @@ for f in files:
 
           #  find_questions_by_number(question_section)
             pattern = "[1-9]\.\s+"
-            q = re.split(pattern, question_section[0])
-            print(q)
+            print(question_section[0])
+            #q = re.split(pattern, question_section[0])
+            #print(q)
             print("***")
 
     #     questions = find_questions_by_number(clean_text)
