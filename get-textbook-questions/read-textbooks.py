@@ -73,6 +73,7 @@ for f in files:
         raw_text = page.extract_text()
         clean_text = remove_whitespaces(raw_text)
         print(clean_text)
+        print("***")
 
     #     questions = find_questions_by_number(clean_text)
     #     if questions: 
