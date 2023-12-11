@@ -97,12 +97,12 @@ for f in files:
         clean_text = remove_whitespaces(raw_text)
         if find_section_questions(clean_text):
             print(path+f)
-            questions = split_section_questions(clean_text)
-            #question_section = section_questions(clean_text)
+           # questions = split_section_questions(clean_text)
+            question_section = section_questions(clean_text)
 
           #  find_questions_by_number(question_section)
             pattern = "[1-9]\.\s+"
-            print(questions)
+            print(question_section[0])
             #q = re.split(pattern, question_section[0])
             #print(q)
             print("***")
