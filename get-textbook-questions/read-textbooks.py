@@ -78,7 +78,7 @@ for f in files:
         clean_text = remove_whitespaces(raw_text)
         if find_section_questions(clean_text):
             print(path+f)
-            print(clean_text)
+            print(raw_text)
             print("***")
 
     #     questions = find_questions_by_number(clean_text)
