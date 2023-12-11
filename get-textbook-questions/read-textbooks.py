@@ -57,6 +57,9 @@ def get_chapters(path):
     files = os.listdir(path)
     return sorted(files)
 
+def find_section_questions(text):
+    pattern = "Checking for Understanding"
+    return re.findall(pattern,text)
 
 
 path = "/data/madesai/history-llm-data/Glencoe-US/"
@@ -68,13 +71,15 @@ for f in files:
     #out_file = open(f[:-4]+".txt","w")
     file_questions = []
     seen_questions = set()
-    pages = reader.pages[-2:]
+    pages = reader.pages#[-2:]
     for page in pages:
+        
         raw_text = page.extract_text()
         clean_text = remove_whitespaces(raw_text)
-        print(path+f)
-        print(raw_text)
-        print("***")
+        if find_section_questions(clean_text):
+            print(path+f)
+            print(clean_text)
+            print("***")
 
     #     questions = find_questions_by_number(clean_text)
     #     if questions: 
