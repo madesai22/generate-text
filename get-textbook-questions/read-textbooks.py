@@ -65,6 +65,9 @@ def section_questions(text):
     pattern = "Checking for Understanding.*?Write.*?\."
     return re.findall(pattern,text)
 
+def split_section_questions(text)
+    pattern = 
+
 
 path = "/data/madesai/history-llm-data/Glencoe-US/"
     
@@ -85,8 +88,9 @@ for f in files:
             question_section = section_questions(clean_text)
 
           #  find_questions_by_number(question_section)
-            print(find_questions_by_number(question_section[0]))
-
+            pattern = "[1-9]\.\s+"
+            q = re.split(pattern, question_section[0])
+            print(q)
             print("***")
 
     #     questions = find_questions_by_number(clean_text)
