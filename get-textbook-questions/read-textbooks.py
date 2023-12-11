@@ -59,7 +59,7 @@ def get_chapters(path):
 
 
 
-path = "/data/madesai/history-llm-data/mi-open-textbooks/Glencoe-US/"
+path = "/data/madesai/history-llm-data/Glencoe-US/"
     
 #files = ["HSUSFull.pdf"]#,"HSWorld.pdf"]
 files = get_chapters(path) # sample first 4 chapters 
