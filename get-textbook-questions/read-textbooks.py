@@ -72,6 +72,7 @@ for f in files:
     for page in pages:
         raw_text = page.extract_text()
         clean_text = remove_whitespaces(raw_text)
+        print(path+f)
         print(raw_text)
         print("***")
 
