@@ -57,7 +57,7 @@ def get_chapters(path):
     files = os.listdir(path)
     return sorted(files)
 
-def get_
+
 
 path = "/data/madesai/history-llm-data/mi-open-textbooks/Glencoe-US/"
     
