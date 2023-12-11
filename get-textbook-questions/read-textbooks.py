@@ -70,7 +70,7 @@ for f in files:
     seen_questions = set()
     pages = reader.pages[:-2]
     for page in pages:
-        print(page)
+        print(page.extract_text())
     #     raw_text = page.extract_text()
     #     clean_text = remove_whitespaces(raw_text)
 
