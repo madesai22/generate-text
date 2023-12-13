@@ -1,9 +1,11 @@
 from string import punctuation
 # removes duplicates and formats list questions 
 
-path_to_questions = "/home/madesai/generate-text/get-textbook-questions/Glencoe-US-section-questions-clean-test.txt"
-question_file = open(path_to_questions+qf,"r")
+path_to_questions = "/home/madesai/generate-text/get-textbook-questions/"
+qf = "Glencoe-US-section-questions-clean-test.txt"
 outfile = open(qf[:-4]+"-prompts","w")
+question_file = open(path_to_questions+qf,"r")
+
 seen_prompts = set()
 for prompt in question_file:
     check_list_prompt = prompt.split(": ")
