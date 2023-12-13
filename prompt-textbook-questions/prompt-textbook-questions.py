@@ -79,8 +79,6 @@ def main():
         response = remove_prompt_from_response(prompt,response)
         response_dict["Question"].append(prompt)
         response_dict["Response"].append(response)
-        print(prompt)
-        print(response)
         if count %10 == 0:
             print(prompt)
             print(response)
