@@ -62,7 +62,7 @@ def find_section_questions(text):
     pattern = "Checking for Understanding"
     return re.findall(pattern,text)
 
-def split_section_questions(text):
+def section_questions(text,removed):
     pattern = "Checking for Understanding.*?Write.*?\."
     questions = []
     return_questions = []
@@ -75,9 +75,9 @@ def split_section_questions(text):
             questions += (re.split("[1-9]\.\s+", i))
             for q in questions:
                 q = q.strip()
-                if q and not re.findall("graphic organizer|above|below|page",q): 
+                if q and not re.findall(removed,q): 
                     return_questions.append(q)
-    return return_questions
+    return return_questions[1:] # first question is always "Checking for Understanding"
 
 
 def update_readme(path_to_readme, filename,path_to_data,removed):
@@ -91,36 +91,31 @@ def update_readme(path_to_readme, filename,path_to_data,removed):
 path_to_data = "/data/madesai/history-llm-data/Glencoe-US/"
 path_to_readme = "./readme.txt"
 removed = "graphic organizer|above|below|page"
-outfile = "Glencoe-US-section-questions.txt"
+out_file = "Glencoe-US-section-questions.txt"
+update_readme(path_to_readme,out_file,out_file,path_to_data,removed)
 #files = ["HSUSFull.pdf"]#,"HSWorld.pdf"]
+
+file_questions = [] # use to keep order of questions 
+seen_questions = set() # to remove duplicates 
 files = get_chapters(path_to_data)
+
 for f in files:
     reader = PdfReader(path_to_data+f)
-    file_questions = [] # use to keep order of questions 
-    seen_questions = set() # to remove duplicates 
     pages = reader.pages
     for page in pages:
         raw_text = page.extract_text()
         clean_text = remove_whitespaces(raw_text)
 
         if find_section_questions(clean_text):
-            questions = split_section_questions(clean_text)
+            questions = section_questions(clean_text,removed)
             print(questions)
-           # print(question_section[0])
-            #q = re.split(pattern, question_section[0])
-            #print(q)
-            #print("***")
-
-    #     questions = find_questions_by_number(clean_text)
-    #     if questions: 
-    #         for q in questions:
-    #             q = q.strip()
-    #             if q not in seen_questions:
-    #                 file_questions.append(q)
-    #                 seen_questions.add(q)
-    # for q in file_questions:
-    #     out_file.write(q+"\n")
-    #out_file.close()
+            for q in questions:
+                if q not in seen_questions:
+                    file_questions.append(q)
+                    seen_questions.add(q)
+for q in file_questions:
+    out_file.write(q+"\n")
+out_file.close()
 
 
 
