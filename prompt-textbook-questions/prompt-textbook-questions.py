@@ -3,6 +3,8 @@ from transformers import T5Tokenizer, T5ForConditionalGeneration
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 import pandas as pd
 import re
+from string import punctuation
+
 
 # load models
 def initiate_flan5_text_to_text(xxl = False):
@@ -46,7 +48,11 @@ def gpt_2_generate(prompt):
     response = generator(prompt, max_new_tokens=300, num_return_sequences = 1)
     return response
 
-
+def remove_prompt_from_response(prompt, response):
+    len_prompt = len(prompt.split())
+    if response.split()[:len_prompt] == prompt.split():
+        response =  " ".join(response.split()[len_prompt:])
+    return response
 
 def strip_repsonse(text):
     text = re.sub("<pad> ","",text)
@@ -65,7 +71,7 @@ def main():
 
     test = 0 
     for qf in question_fname:
-        outfile = open(qf[:-4]+"-gpt2-contrastive","w")
+        outfile = open(qf[:-4]+"-gpt2-contrastive.csv","w")
         question_file = open(path_to_questions+qf,"r")
         for prompt in question_file:
             check_list_prompt = prompt.split(": ")
@@ -74,15 +80,18 @@ def main():
             #         prompt = "{} is".format(item)
             if check_list_prompt[0] == "Identify":
                 for item in check_list_prompt[1].split(", "):
+                    item.strip().strip(punctuation)
                     prompt = "{} was ".format(item)
                     response = gpt2_text_to_text(prompt,model,tokenizer)
                     #response = flant5_text_to_text(prompt,model,tokenizer)
                     response = strip_repsonse(response)
+                    response = remove_prompt_from_response(prompt,response)
                     response_dict["Question"].append(prompt)
                     response_dict["Response"].append(response)
-            else:
+            elif check_list_prompt[0] != "Define" :
                 response = gpt2_text_to_text(prompt,model,tokenizer)
                 response = strip_repsonse(response)
+                response = remove_prompt_from_response(prompt,response)
                 response_dict["Question"].append(prompt)
                 response_dict["Response"].append(response)
             
