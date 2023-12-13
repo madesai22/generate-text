@@ -85,6 +85,10 @@ def remove_question_type_words(q):
     q_list = q.split()
     if len(q_list)>50:
         return None
+
+    if len(q_list[0])>4 and q_list[0][-3:] == "ing":
+        q = " ".join(q_list[1:])
+
     for count, word in enumerate(q_list[:5]):
         if word == "What" or word == "How" or word == "Which" or word =="Were" or word =="Identify:" or word == "Define:":
             split_point = count
@@ -92,8 +96,7 @@ def remove_question_type_words(q):
             split_point = count + 1
     q = " ".join(q_list[split_point:])
 
-    if q_list[0][-3:] == "ing":
-        q = " ".join(q_list[1:])
+    
     return q
 
 
