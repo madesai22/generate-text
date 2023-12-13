@@ -75,6 +75,12 @@ def split_section_questions(text):
         q = re.split(pattern, question_area)
         for i in q:
             questions += (re.split("[1-9]\.\s+", i))
+            return_questions = []
+            for q in questions:
+                if not q.isspace() and not re.findall("graphic organizer",q): 
+                    # if re.findall("above|below",q):
+                    #     print(q)
+                    return_questions.append(q)
     return questions
 
 
