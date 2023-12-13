@@ -83,13 +83,18 @@ def section_questions(text,removed):
 
 def remove_question_type_words(q):
     split_point = 0
-    for count, word in enumerate(q.split()[:5]):
-        if word == "What" or word == "How" or word == "Which" or word =="Were":
+    q_list = q.split()
+    if len(q_list>50):
+        print(" ".join(q_list))
+    for count, word in enumerate(q_list[:5]):
+        if word == "What" or word == "How" or word == "Which" or word =="Were" or word =="Identify:" or word == "Define:":
             split_point = count
-    q = " ".join(q.split()[split_point:])
+        elif word == "Writing":
+            split_point = count + 1
+    q = " ".join(q_list[split_point:])
 
-    if q.split()[0][-3:] == "ing":
-        q = " ".join(q.split()[1:])
+    if q_list[0][-3:] == "ing":
+        q = " ".join(q_list[1:])
     return q
 
 
