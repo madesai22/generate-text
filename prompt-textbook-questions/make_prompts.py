@@ -2,7 +2,7 @@ from string import punctuation
 # removes duplicates and formats list questions 
 
 path_to_questions = "/home/madesai/generate-text/get-textbook-questions/"
-qf = "Glencoe-US-section-questions-clean-test.txt"
+qf = "Glencoe-US-section-questions-clean.txt"
 outfile = open(qf[:-4]+"-prompts.txt","w")
 question_file = open(path_to_questions+qf,"r")
 
@@ -20,7 +20,7 @@ for prompt in question_file:
             
             
     elif check_list_prompt[0] != "Define" and prompt not in seen_prompts:
-        outfile.write(prompt+"\n")
+        outfile.write(prompt)
         seen_prompts.add(prompt)
 outfile.close()
 
