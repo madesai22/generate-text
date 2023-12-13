@@ -68,12 +68,12 @@ def section_questions(text):
 def split_section_questions(text):
     pattern = "Checking for Understanding.*?Write.*?\."
     questions = []
+    return_questions = []
     question_area = re.findall(pattern,text)
     if question_area:
         question_area = question_area[0] 
         pattern = "Reviewing Themes|Critical Thinking|Analyzing Visuals"
         q = re.split(pattern, question_area)
-        return_questions = []
         for i in q:
             questions += (re.split("[1-9]\.\s+", i))
             for q in questions:
