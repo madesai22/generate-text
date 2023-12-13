@@ -80,7 +80,7 @@ def main():
             #         prompt = "{} is".format(item)
             if check_list_prompt[0] == "Identify":
                 for item in check_list_prompt[1].split(", "):
-                    item.strip().strip(punctuation)
+                    item = item.strip(punctuation)
                     prompt = "{} was ".format(item)
                     response = gpt2_text_to_text(prompt,model,tokenizer)
                     #response = flant5_text_to_text(prompt,model,tokenizer)
