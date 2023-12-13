@@ -3,7 +3,7 @@ from string import punctuation
 
 path_to_questions = "/home/madesai/generate-text/get-textbook-questions/"
 qf = "Glencoe-US-section-questions-clean-test.txt"
-outfile = open(qf[:-4]+"-prompts","w")
+outfile = open(qf[:-4]+"-prompts.txt","w")
 question_file = open(path_to_questions+qf,"r")
 
 seen_prompts = set()
