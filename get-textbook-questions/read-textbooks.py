@@ -111,7 +111,7 @@ def update_readme(path_to_readme, filename,path_to_data,removed):
 
 path_to_data = "/data/madesai/history-llm-data/Glencoe-US/"
 path_to_readme = "./readme.txt"
-removed = "graphic organizer|above|below|page"
+removed = "graphic organizer|above|below|page|picture|photo"
 out_file = "Glencoe-US-section-questions.txt"
 update_readme(path_to_readme,out_file,path_to_data,removed)
 #files = ["HSUSFull.pdf"]#,"HSWorld.pdf"]

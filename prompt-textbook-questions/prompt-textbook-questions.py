@@ -55,7 +55,7 @@ def strip_repsonse(text):
 
 def main():
 
-    question_fname = ["HSUS.txt","HSWorld_clean.txt"]
+    question_fname = ["Glencoe-US-section-questions-clean.txt"]
     path_to_questions = "/home/madesai/generate-text/get-textbook-questions/"
     #model,tokenizer = initiate_flan5_text_to_text(xxl=True)
     model, tokenizer = initiate_gpt2(large=True)
@@ -65,16 +65,26 @@ def main():
 
     test = 0 
     for qf in question_fname:
-        outfile = open(qf[:-4]+"-gpt2-contrastive-response.csv","w")
+        outfile = open(qf[:-4]+"-gpt2-mcgraw-hill","w")
         question_file = open(path_to_questions+qf,"r")
-        for prompt in question_file:
-        #    response = gpt_2_generate(prompt)[0]["generated_text"]
-      
-            response = gpt2_text_to_text(prompt,model,tokenizer)
-            #response = flant5_text_to_text(prompt,model,tokenizer)
-            response = strip_repsonse(response)
-            response_dict["Question"].append(prompt)
-            response_dict["Response"].append(response)
+        for prompt in question_file[10]:
+            check_list_prompt = prompt.split(": ")
+            # if check_list_prompt[0] == "Define":
+            #     for item in check_list_prompt[1].split(", "): 
+            #         prompt = "{} is".format(item)
+            if check_list_prompt[0] == "Identify":
+                for item in check_list_prompt[1].split(", "):
+                    prompt = "{} was ".format(item)
+                    response = gpt2_text_to_text(prompt,model,tokenizer)
+                    #response = flant5_text_to_text(prompt,model,tokenizer)
+                    response = strip_repsonse(response)
+                    response_dict["Question"].append(prompt)
+                    response_dict["Response"].append(response)
+            else:
+                response = gpt2_text_to_text(prompt,model,tokenizer)
+                response = strip_repsonse(response)
+                response_dict["Question"].append(prompt)
+                response_dict["Response"].append(response)
             
             test += 1
             if test %10 == 0:
