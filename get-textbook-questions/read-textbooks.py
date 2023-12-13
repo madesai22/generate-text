@@ -92,7 +92,7 @@ path_to_data = "/data/madesai/history-llm-data/Glencoe-US/"
 path_to_readme = "./readme.txt"
 removed = "graphic organizer|above|below|page"
 out_file = "Glencoe-US-section-questions.txt"
-update_readme(path_to_readme,out_file,out_file,path_to_data,removed)
+update_readme(path_to_readme,out_file,path_to_data,removed)
 #files = ["HSUSFull.pdf"]#,"HSWorld.pdf"]
 
 file_questions = [] # use to keep order of questions 
