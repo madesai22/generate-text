@@ -76,6 +76,7 @@ def section_questions(text,removed):
             for q in questions:
                 q = q.strip()
                 if q and not re.findall(removed,q): 
+                    print(q.split()[:2])
                     return_questions.append(q)
     return return_questions[1:] # first question is always "Checking for Understanding"
 
