@@ -79,8 +79,8 @@ def split_section_questions(text):
             for q in questions:
                 q = q.strip()
                 if q and not re.findall("graphic organizer",q): 
-                    # if re.findall("above|below",q):
-                    #     print(q)
+                    if re.findall("above|below",q):
+                        print(q)
                     return_questions.append(q)
     return return_questions
 
@@ -109,11 +109,11 @@ for f in files:
 
           #  find_questions_by_number(question_section)
             pattern = "[1-9]\.\s+"
-            print(questions[1:])
+            #print(questions[1:])
            # print(question_section[0])
             #q = re.split(pattern, question_section[0])
             #print(q)
-            print("***")
+            #print("***")
 
     #     questions = find_questions_by_number(clean_text)
     #     if questions: 
