@@ -60,6 +60,7 @@ def strip_repsonse(text):
     return text
 
 def main():
+    
     prompt_fname = "Glencoe-US-section-questions-clean-prompts.txt"
     path_to_prompts = "/home/madesai/generate-text/prompt-textbook-questions/prompts/"
     prompt_file = open(path_to_prompts+prompt_fname, "r")
@@ -70,13 +71,17 @@ def main():
     set_seed(42)
 
     response_dict = {"Question":[],"Response":[]}
- 
+    count = 0 
     for prompt in prompt_file:
         response = gpt2_text_to_text(prompt,model,tokenizer)
         response = strip_repsonse(response)
         response = remove_prompt_from_response(prompt,response)
         response_dict["Question"].append(prompt)
         response_dict["Response"].append(response)
+        if count %10 == 0:
+            print(prompt)
+            print(response)
+        count +=1
     
     df = pd.DataFrame(response_dict)
     df.to_csv(outfile,sep=";")
