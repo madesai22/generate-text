@@ -108,13 +108,13 @@ for f in files:
 
         if find_section_questions(clean_text):
             questions = section_questions(clean_text,removed)
-            print(questions)
             for q in questions:
                 if q not in seen_questions:
                     file_questions.append(q)
                     seen_questions.add(q)
+of = open(out_file)
 for q in file_questions:
-    out_file.write(q+"\n")
+    of.write(q+"\n")
 out_file.close()
 
 
