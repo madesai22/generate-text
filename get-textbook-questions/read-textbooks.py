@@ -3,6 +3,7 @@ import os
 import re
 from unidecode import unidecode
 import string
+from datetime import date
 
 def remove_whitespaces(text,paragraph=False):
     if paragraph:
@@ -61,10 +62,6 @@ def find_section_questions(text):
     pattern = "Checking for Understanding"
     return re.findall(pattern,text)
 
-def section_questions(text):
-    pattern = "Checking for Understanding.*?Write.*?\."
-    return re.findall(pattern,text)
-
 def split_section_questions(text):
     pattern = "Checking for Understanding.*?Write.*?\."
     questions = []
@@ -83,31 +80,32 @@ def split_section_questions(text):
     return return_questions
 
 
+def update_readme(path_to_readme, filename,path_to_data,removed):
+    f = open(path_to_readme,"a")
+    today = str(date.today())
+    out_string = "{};{};{};{}".format(filename,today,path_to_data,removed)
+    f.write(out_string)
+    f.close()
 
 
-
-path = "/data/madesai/history-llm-data/Glencoe-US/"
-    
+path_to_data = "/data/madesai/history-llm-data/Glencoe-US/"
+path_to_readme = "./readme.txt"
+removed = "graphic organizer|above|below|page"
+outfile = "Glencoe-US-section-questions.txt"
 #files = ["HSUSFull.pdf"]#,"HSWorld.pdf"]
-files = get_chapters(path) # sample first 4 chapters 
+files = get_chapters(path_to_data)
 for f in files:
-    reader = PdfReader(path+f)
-    #out_file = open(f[:-4]+".txt","w")
-    file_questions = []
-    seen_questions = set()
-    pages = reader.pages#[-2:]
+    reader = PdfReader(path_to_data+f)
+    file_questions = [] # use to keep order of questions 
+    seen_questions = set() # to remove duplicates 
+    pages = reader.pages
     for page in pages:
-        
         raw_text = page.extract_text()
         clean_text = remove_whitespaces(raw_text)
-        if find_section_questions(clean_text):
-            print(path+f)
-            questions = split_section_questions(clean_text)
-            #question_section = section_questions(clean_text)
 
-          #  find_questions_by_number(question_section)
-            pattern = "[1-9]\.\s+"
-            print(questions[1:])
+        if find_section_questions(clean_text):
+            questions = split_section_questions(clean_text)
+            print(questions)
            # print(question_section[0])
             #q = re.split(pattern, question_section[0])
             #print(q)
