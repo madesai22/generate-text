@@ -11,7 +11,7 @@ for prompt in question_file:
     check_list_prompt = prompt.split(": ")
     if check_list_prompt[0] == "Identify":
         for item in check_list_prompt[1].split(", "):
-            item = item.strip(punctuation)
+            item = item.strip().strip(punctuation)
             if item not in seen_prompts:
                 prompt = "{} was ".format(item)
                 outfile.write(prompt+"\n")
