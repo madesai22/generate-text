@@ -75,8 +75,8 @@ def section_questions(text,removed):
             questions += (re.split("[1-9]\.\s+", i))
             for q in questions:
                 q = q.strip()
-                q = remove_question_type_words(q)
                 if q and not re.findall(removed,q):
+                    q = remove_question_type_words(q)
                     return_questions.append(q)
     return return_questions[1:] # first question is always "Checking for Understanding"
 
@@ -84,7 +84,7 @@ def remove_question_type_words(q):
     split_point = 0
     q_list = q.split()
     if len(q_list)>50:
-        return None
+        return " "
 
     if len(q_list[0])>4 and q_list[0][-3:] == "ing":
         q = " ".join(q_list[1:])
