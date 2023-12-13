@@ -82,14 +82,14 @@ def section_questions(text,removed):
     return return_questions[1:] # first question is always "Checking for Understanding"
 
 def remove_question_type_words(q):
+    split_point = 0
+    for count, word in enumerate(q.split()[:5]):
+        if word == "What" or word == "How" or word == "Which" or word =="Were":
+            split_point = count
+    q = " ".join(q.split()[split_point:])
+
     if q.split()[0][-3:] == "ing":
         q = " ".join(q.split()[1:])
-    else:
-        split_point = 0
-        for count, word in enumerate(q.split()[:5]):
-            if word == "What" or word == "How":
-                split_point = count
-        q = " ".join(q.split()[split_point:])
     return q
 
 
@@ -97,7 +97,7 @@ def remove_question_type_words(q):
 def update_readme(path_to_readme, filename,path_to_data,removed):
     f = open(path_to_readme,"a")
     today = str(date.today())
-    out_string = "{};{};{};{}".format(filename,today,path_to_data,removed)
+    out_string = "{};{};{};{}\n".format(filename,today,path_to_data,removed)
     f.write(out_string)
     f.close()
 
