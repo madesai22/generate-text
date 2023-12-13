@@ -79,7 +79,7 @@ def split_section_questions(text):
             for q in questions:
                 q = q.strip()
                 if q and not re.findall("graphic organizer",q): 
-                    if re.findall("above|below",q):
+                    if re.findall("above|below|page",q):
                         print(q)
                     return_questions.append(q)
     return return_questions
