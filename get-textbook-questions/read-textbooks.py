@@ -75,10 +75,23 @@ def section_questions(text,removed):
             questions += (re.split("[1-9]\.\s+", i))
             for q in questions:
                 q = q.strip()
-                if q and not re.findall(removed,q): 
-                    print(q.split()[:2])
+                
+                if q and not re.findall(removed,q):
+                    q = remove_question_type_words(q)
                     return_questions.append(q)
     return return_questions[1:] # first question is always "Checking for Understanding"
+
+def remove_question_type_words(q):
+    if q.split()[0][-3:] == "ing":
+        q = " ".join(q.split()[1:])
+    else:
+        split_point = 0
+        for count, word in enumerate(q.split()[:5]):
+            if word == "What" or word == "How":
+                split_point = count
+        q = " ".join(q.split()[split_point:])
+    return q
+
 
 
 def update_readme(path_to_readme, filename,path_to_data,removed):
@@ -116,7 +129,7 @@ for f in files:
 of = open(out_file,"w")
 for q in file_questions:
     of.write(q+"\n")
-out_file.close()
+of.close()
 
 
 
