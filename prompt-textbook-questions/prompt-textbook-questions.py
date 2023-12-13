@@ -73,11 +73,14 @@ def main():
     response_dict = {"Question":[],"Response":[]}
     count = 0 
     for prompt in prompt_file:
+        prompt = prompt.strip()
         response = gpt2_text_to_text(prompt,model,tokenizer)
         response = strip_repsonse(response)
         response = remove_prompt_from_response(prompt,response)
         response_dict["Question"].append(prompt)
         response_dict["Response"].append(response)
+        print(prompt)
+        print(response)
         if count %10 == 0:
             print(prompt)
             print(response)
