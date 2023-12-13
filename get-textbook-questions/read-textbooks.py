@@ -112,7 +112,7 @@ for f in files:
                 if q not in seen_questions:
                     file_questions.append(q)
                     seen_questions.add(q)
-of = open(out_file)
+of = open(out_file,"w")
 for q in file_questions:
     of.write(q+"\n")
 out_file.close()
