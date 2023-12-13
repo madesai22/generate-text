@@ -81,7 +81,7 @@ def split_section_questions(text):
                     # if re.findall("above|below",q):
                     #     print(q)
                     return_questions.append(q)
-    return questions
+    return return_questions
 
 
 
