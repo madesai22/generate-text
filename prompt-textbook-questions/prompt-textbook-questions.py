@@ -60,48 +60,26 @@ def strip_repsonse(text):
     return text
 
 def main():
+    prompt_fname = "Glencoe-US-section-questions-clean-prompts.txt"
+    path_to_prompts = "/home/madesai/generate-text/prompt-textbook-questions/prompts/"
+    prompt_file = open(path_to_prompts+prompt_fname, "r")
+    outfile = open(prompt_fname[:-4]+"-gpt2-contrastive.csv","w")
 
-    question_fname = ["Glencoe-US-section-questions-clean-test.txt"]
-    path_to_questions = "/home/madesai/generate-text/get-textbook-questions/"
     #model,tokenizer = initiate_flan5_text_to_text(xxl=True)
     model, tokenizer = initiate_gpt2(large=True)
     set_seed(42)
 
     response_dict = {"Question":[],"Response":[]}
-
-    test = 0 
-    for qf in question_fname:
-        outfile = open(qf[:-4]+"-gpt2-contrastive.csv","w")
-        question_file = open(path_to_questions+qf,"r")
-        for prompt in question_file:
-            check_list_prompt = prompt.split(": ")
-            # if check_list_prompt[0] == "Define":
-            #     for item in check_list_prompt[1].split(", "): 
-            #         prompt = "{} is".format(item)
-            if check_list_prompt[0] == "Identify":
-                for item in check_list_prompt[1].split(", "):
-                    item = item.strip(punctuation)
-                    prompt = "{} was ".format(item)
-                    response = gpt2_text_to_text(prompt,model,tokenizer)
-                    #response = flant5_text_to_text(prompt,model,tokenizer)
-                    response = strip_repsonse(response)
-                    response = remove_prompt_from_response(prompt,response)
-                    response_dict["Question"].append(prompt)
-                    response_dict["Response"].append(response)
-                    print(prompt)
-                    print(response)
-            elif check_list_prompt[0] != "Define" :
-                response = gpt2_text_to_text(prompt,model,tokenizer)
-                response = strip_repsonse(response)
-                response = remove_prompt_from_response(prompt,response)
-                response_dict["Question"].append(prompt)
-                response_dict["Response"].append(response)
-            
-            test += 1
-            if test %10 == 0:
-                print(test, prompt, response)
-        df = pd.DataFrame(response_dict)
-        df.to_csv(outfile,sep=";")
+ 
+    for prompt in prompt_file:
+        response = gpt2_text_to_text(prompt,model,tokenizer)
+        response = strip_repsonse(response)
+        response = remove_prompt_from_response(prompt,response)
+        response_dict["Question"].append(prompt)
+        response_dict["Response"].append(response)
+    
+    df = pd.DataFrame(response_dict)
+    df.to_csv(outfile,sep=";")
 
 
 
