@@ -73,9 +73,9 @@ def split_section_questions(text):
         question_area = question_area[0] 
         pattern = "Reviewing Themes|Critical Thinking|Analyzing Visuals"
         q = re.split(pattern, question_area)
+        return_questions = []
         for i in q:
             questions += (re.split("[1-9]\.\s+", i))
-            return_questions = []
             for q in questions:
                 q = q.strip()
                 if q and not re.findall("graphic organizer",q): 
