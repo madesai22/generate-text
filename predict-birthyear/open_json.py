@@ -5,12 +5,12 @@ from numba import jit, cuda
 
 #@jit(target_backend='cuda')
 def open_files():
-    directory = "/data/madesai/history-llm-data/wikipedia-json-files"
-
-    for filename in os.listdir(directory):
-        f = os.path.join(directory, filename)
-        data = fh.read_json(f)
-        print(random.sample(dict.items,10))
+    directory = "/data/madesai/history-llm-data/wikipedia-json-files/"
+    filename = "309_bc_births.json"
+    #for filename in os.listdir(directory):
+    f = os.path.join(directory, filename)
+    data = fh.read_json(f)
+    print(random.sample(data.items,10))
 
 if __name__=="__main__":
     open_files()
