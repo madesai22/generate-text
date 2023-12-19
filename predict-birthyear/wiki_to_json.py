@@ -150,12 +150,6 @@ def main():
      out_path = "/data/madesai/history-llm-data/wikipedia-json-files/"
      
      for year in range(1,100):
-     #category_csv = open("./make_categories.csv","r")
-     #for line in category_csv.readlines()[1:]:
-         #items = line.split(";")
-         #category = items[0].strip()
-         #born_before = int(items[1])
-         #born_after = int(items[2])
          category = "Category:{} births".format(year)
          birth_year = year
          file_name = category.partition(':')[2].lower().replace(" ","_")+".json"
@@ -165,12 +159,16 @@ def main():
          
          print(len(category_members))
          data = make_dictionary(category_members,birth_year=birth_year)
-         #data = make_dictionary(category_members,category=category.partition(':')[2],clean=True,born_before=born_before)
          print("{} items in {}.".format(len(data), category))
     
          fh.write_to_json(data,out_path+file_name)
 
-
+         #category_csv = open("./make_categories.csv","r")
+     #for line in category_csv.readlines()[1:]:
+         #items = line.split(";")
+         #category = items[0].strip()
+         #born_before = int(items[1])
+         #born_after = int(items[2])
      
         #  dictionary_list = []
         #  for c in categories:
