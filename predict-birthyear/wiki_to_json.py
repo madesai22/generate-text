@@ -150,22 +150,24 @@ def make_year_categories(start_year = 1600, end_year = 2000):
 def main():
      global wiki_wiki
      wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
-     out_path = "/data/madesai/history-llm-data/wikipedia-json-files/"
+     out_path = "/data/madesai/history-llm-data/wikipedia-json-files/all_wiki.json"
      meta_data = open("file_counts.txt","w")
-     
+     all_data = {}
      for year in range(1,2020):
         category = "Category:{} births".format(year)
         birth_year = year
-        file_name = category.partition(':')[2].lower().replace(" ","_")+".json"
-        print(category,file_name)
+        #file_name = category.partition(':')[2].lower().replace(" ","_")+".json"
+
         wiki_cat = wiki_wiki.page(category)
         category_members = get_category_members(wiki_cat.categorymembers)
         data = make_dictionary(category_members,birth_year=birth_year)
         print("{} items in {}.".format(len(data), category))
         meta_data.write("{};{}\n".format(len(data),category))
-        fh.write_to_json(data,out_path+file_name)
+        #fh.write_to_json(data,out_path+file_name)
+        all_data.update(data)
         category_members.clear()
-     meta_data.close()         
+     meta_data.close()
+     fh.write_to_json(all_data, out_path)     
 
 if __name__ == "__main__":
-    fh.merge_jsonfiles("/data/madesai/history-llm-data/wikipedia-json-files/","all_wiki.json")
+    main()
