@@ -11,6 +11,7 @@ from numba import jit, cuda
 def get_category_members(categorymembers, level = 0, max_level = 1, category_set = set()):
     for c in categorymembers.values():
             category_set.add(c.title)
+            print(c.title)
             if c.ns == wikipediaapi.Namespace.CATEGORY and level < max_level:
                 get_category_members(c.categorymembers, level=level + 1, max_level=max_level,category_set=category_set)
     return category_set
@@ -155,7 +156,6 @@ def main():
          file_name = category.partition(':')[2].lower().replace(" ","_")+".json"
          print(category,file_name)
          wiki_cat = wiki_wiki.page(category)
-         category_members = set()
          category_members = get_category_members(wiki_cat.categorymembers)
          
          print(len(category_members))
