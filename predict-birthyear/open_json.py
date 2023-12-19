@@ -10,7 +10,7 @@ def open_files():
     #for filename in os.listdir(directory):
     f = os.path.join(directory, filename)
     data = fh.read_json(f)
-    print(random.sample(data.items,10))
+    print(data)
 
 if __name__=="__main__":
     open_files()
