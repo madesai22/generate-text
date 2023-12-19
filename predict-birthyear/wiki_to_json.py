@@ -159,6 +159,7 @@ def main():
          category_members = get_category_members(wiki_cat.categorymembers)
          
          print(len(category_members))
+         print(category_members)
          data = make_dictionary(category_members,birth_year=birth_year)
          print("{} items in {}.".format(len(data), category))
     
