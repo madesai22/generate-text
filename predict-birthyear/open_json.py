@@ -7,9 +7,9 @@ from numba import jit, cuda
 def open_files():
     directory = "/data/madesai/history-llm-data/wikipedia-json-files/"
     filename = "all_wiki.json"
-    #for filename in os.listdir(directory):
-    #f = os.path.join(directory, filename)
-    data = fh.read_json(filename)
+    for filename in os.listdir(directory):
+    f = os.path.join(directory, filename)
+    data = fh.read_json(f)
     print(len(data))
 
 if __name__=="__main__":
