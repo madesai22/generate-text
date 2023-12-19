@@ -124,8 +124,7 @@ def make_dictionary(group, death_year=None, birth_year=None, category=None, clea
                 summary = get_summary(item_page)
                 page_views = get_page_views(item_page)
                 sample_dict[item] = {"birth_year": birth_year, "death_year": death_year, "summary": summary, "category":category, "page_views": page_views}
-                i = len(sample_dict)
-                if i%25 == 0: print(i)
+                print(sample_dict)
     return sample_dict
 
 # get sample here: 
