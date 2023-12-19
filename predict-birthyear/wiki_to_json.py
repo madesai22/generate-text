@@ -142,6 +142,7 @@ def get_random_sample(start_year = 1600, end_year = 2000):
 
 
 def main():
+     print("test!!")
      global wiki_wiki
      wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
      out_path = "/data/madesai/history-llm-data/wikipedia-json-files/"
