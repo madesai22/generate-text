@@ -11,7 +11,6 @@ from numba import jit, cuda
 def get_category_members(categorymembers, level = 0, max_level = 1, category_set = set()):
     for c in categorymembers.values():
             category_set.add(c.title)
-            print(c.title)
             if c.ns == wikipediaapi.Namespace.CATEGORY and level < max_level:
                 get_category_members(c.categorymembers, level=level + 1, max_level=max_level,category_set=category_set)
     return category_set
@@ -150,7 +149,7 @@ def main():
      wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
      out_path = "/data/madesai/history-llm-data/wikipedia-json-files/"
      
-     for year in range(1,100):
+     for year in range(1,2020):
         category = "Category:{} births".format(year)
         birth_year = year
         file_name = category.partition(':')[2].lower().replace(" ","_")+".json"
@@ -158,7 +157,6 @@ def main():
         wiki_cat = wiki_wiki.page(category)
         category_members = get_category_members(wiki_cat.categorymembers)
         print(len(category_members))
-        print(category_members)
         data = make_dictionary(category_members,birth_year=birth_year)
         print("{} items in {}.".format(len(data), category))
     
