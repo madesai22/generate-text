@@ -72,7 +72,7 @@ def merge_jsonfiles(path,outfile):
         print(f1)
         infile_dict = read_json(f1)
         result.update(infile_dict)
-    write_to_json(result, outfile)
+    write_to_json(result, path+outfile)
     
 
 def pickle_data(data, output_filename):
