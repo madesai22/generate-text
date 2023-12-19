@@ -148,6 +148,7 @@ def main():
      global wiki_wiki
      wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
      out_path = "/data/madesai/history-llm-data/wikipedia-json-files/"
+     meta_data = open("file_counts.txt",w)
      
      for year in range(1,2020):
         category = "Category:{} births".format(year)
@@ -156,13 +157,12 @@ def main():
         print(category,file_name)
         wiki_cat = wiki_wiki.page(category)
         category_members = get_category_members(wiki_cat.categorymembers)
-        print(len(category_members))
         data = make_dictionary(category_members,birth_year=birth_year)
         print("{} items in {}.".format(len(data), category))
-    
+        meta_data.write("{};{}\n".format(len(data),file_name))
         fh.write_to_json(data,out_path+file_name)
         category_members.clear()
-
+     meta_data.close()
          #category_csv = open("./make_categories.csv","r")
      #for line in category_csv.readlines()[1:]:
          #items = line.split(";")
