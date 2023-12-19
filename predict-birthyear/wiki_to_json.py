@@ -149,7 +149,7 @@ def main():
      wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
      out_path = "/data/madesai/history-llm-data/wikipedia-json-files/"
      
-     for year in range(100,150):
+     for year in range(150,2000):
      #category_csv = open("./make_categories.csv","r")
      #for line in category_csv.readlines()[1:]:
          #items = line.split(";")
