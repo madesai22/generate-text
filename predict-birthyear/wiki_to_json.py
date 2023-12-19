@@ -83,7 +83,10 @@ def get_death_year(page):
     return death_year
 
 def get_summary(page):
-     first_sentence = page.summary.partition('.')[0] + '.'
+     if len(page.summary.partition('.')[0]) > 5: 
+        first_sentence = page.summary.partition('.')[0] + '.'
+     else: 
+        first_sentence = page.summary.partition('.')[1] + '.'
      bio_pattern = re.findall("was an?.*\.",first_sentence)
      if bio_pattern:
           # take first sentence after "was an"
@@ -110,7 +113,7 @@ def get_page_views(page):
          return None
     
 # organizing data:
-#@jit(target_backend='cuda',nopython=True)  
+@jit(target_backend='cuda',nopython=True)  
 def make_dictionary(group, death_year=None, birth_year=None, category=None, clean = True, born_before = 2023):
     # takes a set of strings (wikipedia names)
     # returns a dictionary of {name: {birth_year, death_year, summary, category, page_views}, ...}
@@ -124,45 +127,41 @@ def make_dictionary(group, death_year=None, birth_year=None, category=None, clea
                 summary = get_summary(item_page)
                 page_views = get_page_views(item_page)
                 sample_dict[item] = {"birth_year": birth_year, "death_year": death_year, "summary": summary, "category":category, "page_views": page_views}
-                print(sample_dict)
     return sample_dict
 
 # get sample here: 
-def get_random_sample(start_year = 1600, end_year = 2000):
-    all_wiki_people = set()
+def make_year_categories(start_year = 1600, end_year = 2000):
+    year_cat_list = []
     for year in range(start_year,end_year+1):
-        cat = "Category:{} births".format(year)
-        bpp = wiki_wiki.page(cat)
-        category_members = get_category_members(bpp.categorymembers)
-        all_wiki_people.add(category_members)
-    
+        year_cat_list.append("Category:{} births".format(year))
+    return year_cat_list
+
     # then need to get page views and save in JSON format 
 
-    
-
-
 def main():
-     print("test!!")
      global wiki_wiki
      wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
      out_path = "/data/madesai/history-llm-data/wikipedia-json-files/"
-
-     category_csv = open("./make_categories.csv","r")
-     for line in category_csv.readlines()[1:]:
-         items = line.split(";")
-         category = items[0].strip()
-         born_before = int(items[1])
-         born_after = int(items[2])
+     
+     for year in range(100,150):
+     #category_csv = open("./make_categories.csv","r")
+     #for line in category_csv.readlines()[1:]:
+         #items = line.split(";")
+         #category = items[0].strip()
+         #born_before = int(items[1])
+         #born_after = int(items[2])
+         category = "Category:{} births".format(year)
+         birth_year = year
          file_name = category.partition(':')[2].lower().replace(" ","_")+".json"
          print(category,file_name)
          wiki_cat = wiki_wiki.page(category)
-         category_members = get_category_members(wiki_cat.categorymembers,max_level=3)
+         category_members = get_category_members(wiki_cat.categorymembers,birth_year=birth_year,max_level=5)
+         
          print(len(category_members))
          data = make_dictionary(category_members,category=category.partition(':')[2],clean=True,born_before=born_before)
          print("{} items in {}.".format(len(data), category))
     
          fh.write_to_json(data,out_path+file_name)
-     category_csv.close()
 
 
      
