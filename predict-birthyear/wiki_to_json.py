@@ -161,7 +161,7 @@ def main():
          file_name = category.partition(':')[2].lower().replace(" ","_")+".json"
          print(category,file_name)
          wiki_cat = wiki_wiki.page(category)
-         category_members = get_category_members(wiki_cat.categorymembers,max_level=5)
+         category_members = get_category_members(wiki_cat.categorymembers,max_level=1)
          
          print(len(category_members))
          data = make_dictionary(category_members,birth_year=birth_year)
