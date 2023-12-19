@@ -69,9 +69,7 @@ def merge_jsonfiles(path,outfile):
     result = dict()
     for f in file_list:
         f1 = os.path.join(path, f)
-        print(f1)
-        
-        infile_dict = read_json(infile)
+        infile_dict = read_json(f1)
         result = result.update(infile_dict)
     with open(outfile, 'w') as output_file:
         write_to_json(result, output_file)
