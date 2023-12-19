@@ -66,11 +66,11 @@ def write_to_jsonlist(list_of_objects, output_filename, sort_keys=True, do_gzip=
 
 def merge_jsonfiles(path,outfile):
     file_list = sorted(os.listdir(path))
-    result = dict()
+    result = {}
     for f in file_list:
         f1 = os.path.join(path, f)
         infile_dict = read_json(f1)
-        result = result.update(infile_dict)
+        result.update(infile_dict)
     with open(outfile, 'w') as output_file:
         write_to_json(result, output_file)
     
