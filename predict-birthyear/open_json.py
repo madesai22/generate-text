@@ -6,7 +6,7 @@ from numba import jit, cuda
 #@jit(target_backend='cuda')
 def open_files():
     directory = "/data/madesai/history-llm-data/wikipedia-json-files/"
-    filename = "940_bc_births.json"
+    filename = "579_births.json"
     #for filename in os.listdir(directory):
     f = os.path.join(directory, filename)
     data = fh.read_json(f)
