@@ -148,7 +148,7 @@ def main():
      global wiki_wiki
      wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
      out_path = "/data/madesai/history-llm-data/wikipedia-json-files/"
-     meta_data = open("file_counts.txt",w)
+     meta_data = open("file_counts.txt","w")
      
      for year in range(1,2020):
         category = "Category:{} births".format(year)
