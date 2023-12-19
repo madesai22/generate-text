@@ -149,8 +149,8 @@ def main():
 
      category_csv = open("./make_categories.csv","r")
      for line in category_csv.readlines()[1:]:
-         items = line.split(";").strip()
-         category = items[0]
+         items = line.split(";")
+         category = items[0].strip()
          born_before = int(items[1])
          born_after = int(items[2])
          file_name = category.partition(':')[2].lower().replace(" ","_")+".json"
