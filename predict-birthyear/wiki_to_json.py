@@ -156,14 +156,13 @@ def main():
         file_name = category.partition(':')[2].lower().replace(" ","_")+".json"
         print(category,file_name)
         wiki_cat = wiki_wiki.page(category)
-        category_members = None
-        category_members = get_category_members(wiki_cat.categorymembers)
-        print(len(category_members))
-        print(category_members)
-        data = make_dictionary(category_members,birth_year=birth_year)
-        print("{} items in {}.".format(len(data), category))
+        c = get_category_members(wiki_cat.categorymembers)
+        print(len(c))
+        print(c)
+     #   data = make_dictionary(category_members,birth_year=birth_year)
+     #   print("{} items in {}.".format(len(data), category))
     
-        fh.write_to_json(data,out_path+file_name)
+      #  fh.write_to_json(data,out_path+file_name)
 
          #category_csv = open("./make_categories.csv","r")
      #for line in category_csv.readlines()[1:]:
