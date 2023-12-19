@@ -156,6 +156,7 @@ def main():
         file_name = category.partition(':')[2].lower().replace(" ","_")+".json"
         print(category,file_name)
         wiki_cat = wiki_wiki.page(category)
+        category_members = None
         category_members = get_category_members(wiki_cat.categorymembers)
         print(len(category_members))
         print(category_members)
