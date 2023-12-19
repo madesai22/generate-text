@@ -114,7 +114,7 @@ def get_page_views(page):
     
 # organizing data:
 @jit(target_backend='cuda',nopython=True)  
-def make_dictionary(group, death_year=None, birth_year=None, category=None, clean = True, born_before = 2023):
+def make_dictionary_long(group, death_year=None, birth_year=None, category=None, clean = True, born_before = 2023):
     # takes a set of strings (wikipedia names)
     # returns a dictionary of {name: {birth_year, death_year, summary, category, page_views}, ...}
     sample_dict = {}
@@ -127,6 +127,12 @@ def make_dictionary(group, death_year=None, birth_year=None, category=None, clea
                 summary = get_summary(item_page)
                 page_views = get_page_views(item_page)
                 sample_dict[item] = {"birth_year": birth_year, "death_year": death_year, "summary": summary, "category":category, "page_views": page_views}
+    return sample_dict
+
+def make_dictionary(group, birth_year):
+    sample_dict = {}
+    for item in group:
+        sample_dict[item] = {"birth_year": birth_year}
     return sample_dict
 
 # get sample here: 
@@ -155,10 +161,11 @@ def main():
          file_name = category.partition(':')[2].lower().replace(" ","_")+".json"
          print(category,file_name)
          wiki_cat = wiki_wiki.page(category)
-         category_members = get_category_members(wiki_cat.categorymembers,birth_year=birth_year,max_level=5)
+         category_members = get_category_members(wiki_cat.categorymembers,max_level=5)
          
          print(len(category_members))
-         data = make_dictionary(category_members,category=category.partition(':')[2],clean=True,born_before=born_before)
+         data = make_dictionary(category_members,birth_year=birth_year)
+         #data = make_dictionary(category_members,category=category.partition(':')[2],clean=True,born_before=born_before)
          print("{} items in {}.".format(len(data), category))
     
          fh.write_to_json(data,out_path+file_name)
