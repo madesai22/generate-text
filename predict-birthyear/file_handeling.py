@@ -64,6 +64,15 @@ def write_to_jsonlist(list_of_objects, output_filename, sort_keys=True, do_gzip=
             for obj in list_of_objects:
                 output_file.write(json.dumps(obj, sort_keys=sort_keys) + '\n')
 
+def merge_jsonfiles(path,outfile):
+    file_list = sorted(os.listdir(path))
+    result = dict()
+    for f1 in file_list:
+        with open(f1, 'r') as infile:
+            result.extend(read_json(infile))
+    with open(outfile, 'w') as output_file:
+        write_to_json(result, output_file)
+    
 
 def pickle_data(data, output_filename):
     with open(output_filename, 'wb') as outfile:
@@ -118,3 +127,4 @@ def write_documentation(documentation, filename):
     f = open(filename,"w")
     f.write(documentation)
     f.close()
+

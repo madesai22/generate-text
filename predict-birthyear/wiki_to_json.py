@@ -4,7 +4,7 @@ import random
 import requests
 import file_handeling as fh
 from numba import jit, cuda
-
+import os
 
 
 # category functions: 
@@ -144,6 +144,9 @@ def make_year_categories(start_year = 1600, end_year = 2000):
 
     # then need to get page views and save in JSON format 
 
+
+
+
 def main():
      global wiki_wiki
      wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
@@ -159,31 +162,10 @@ def main():
         category_members = get_category_members(wiki_cat.categorymembers)
         data = make_dictionary(category_members,birth_year=birth_year)
         print("{} items in {}.".format(len(data), category))
-        meta_data.write("{};{}\n".format(len(data),file_name))
+        meta_data.write("{};{}\n".format(len(data),category))
         fh.write_to_json(data,out_path+file_name)
         category_members.clear()
-     meta_data.close()
-         #category_csv = open("./make_categories.csv","r")
-     #for line in category_csv.readlines()[1:]:
-         #items = line.split(";")
-         #category = items[0].strip()
-         #born_before = int(items[1])
-         #born_after = int(items[2])
-     
-        #  dictionary_list = []
-        #  for c in categories:
-        #      print(c)
-        #      wiki_cat = wiki_wiki.page(c)
-        #     # wiki_cat = wiki_wiki.page(c.partition(':')[2])
-        #      category_members = get_category_members(wiki_cat.categorymembers)
-        #      category_dictionary = make_dictionary(category_members,category=c.partition(':')[2],clean=True,born_before=born_before)
-        #      dictionary_list.append(category_dictionary)
-        #      print("{} items in {}.".format(len(category_dictionary), c))
-        #  data = dict()
-        #  for d in dictionary_list:
-        #      data.update(d)
-
-         
+     meta_data.close()         
 
 if __name__ == "__main__":
-    main()
+    fh.merge_jsonfiles("/data/madesai/history-llm-data/wikipedia-json-files/","all_wiki.json")
