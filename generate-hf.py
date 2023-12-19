@@ -1,7 +1,9 @@
+# general script for messing around with generations - what I started with
 from transformers import pipeline, set_seed
 from transformers import T5Tokenizer, T5ForConditionalGeneration
 import numpy as np
 import torch
+
 
 
 #prompt = "Theodore Roosevelet was born in the year [MASK]." # BERT uses these kinds of mask tokens

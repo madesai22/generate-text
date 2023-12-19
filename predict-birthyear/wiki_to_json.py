@@ -128,6 +128,20 @@ def make_dictionary(group, death_year=None, birth_year=None, category=None, clea
                 if i%25 == 0: print(i)
     return sample_dict
 
+# get sample here: 
+def get_random_sample(start_year = 1600, end_year = 2000):
+    all_wiki_people = set()
+    for year in range(start_year,end_year+1):
+        cat = "Category:{} births".format(year)
+        bpp = wiki_wiki.page(cat)
+        category_members = get_category_members(bpp.categorymembers)
+        all_wiki_people.add(category_members)
+    
+    # then need to get page views and save in JSON format 
+
+    
+
+
 def main():
      global wiki_wiki
      wiki_wiki = wikipediaapi.Wikipedia('GenerateText (madesai@umich.edu)', 'en')
