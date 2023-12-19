@@ -110,7 +110,7 @@ def get_page_views(page):
          return None
     
 # organizing data:
-@jit(target_backend='cuda',nopython=True)  
+#@jit(target_backend='cuda',nopython=True)  
 def make_dictionary(group, death_year=None, birth_year=None, category=None, clean = True, born_before = 2023):
     # takes a set of strings (wikipedia names)
     # returns a dictionary of {name: {birth_year, death_year, summary, category, page_views}, ...}
