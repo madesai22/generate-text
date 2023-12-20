@@ -82,6 +82,12 @@ def strip_repsonse(text):
     text = re.sub("</s>","",text)
     return text
 
+def remove_prompt_from_response(prompt, response):
+    len_prompt = len(prompt.split())
+    if response.split()[:len_prompt] == prompt.split():
+        response =  " ".join(response.split()[len_prompt:])
+    return response
+
 # data function
 def prep_random_sample(data_path,wiki_wiki,size,percent=False):
     #random_keys = fh.read_json_random_sample(data_path,size=.2,percent=True,return_keys= True)
@@ -107,6 +113,7 @@ def prep_random_sample(data_path,wiki_wiki,size,percent=False):
 # prediction 
 def predict_birth_year(data, model, tokenizer, prompt_form):
     df_dict = {'Name':[],'True birth year': [], 'Pageviews':[],'Predicted birth year':[], "Years off": [], "Full response": []}
+    count = 0
     for name in data.keys():
         true_birth_year = data[name]['birth_year']
         page_views = data[name]['page_views']
@@ -114,7 +121,11 @@ def predict_birth_year(data, model, tokenizer, prompt_form):
         prompt = make_prompt(prompt_form, name, clean=True)
         #response = flant5_text_to_text(prompt,model,tokenizer)
         response = gpt2_text_to_text(prompt,model,tokenizer,contrastive=True)
-
+        response = remove_prompt_from_response(response)
+        if count < 10:
+            print(prompt)
+            print(response)
+        count += 1
         prediction_year = re.findall("\d{4}",response)
         if prediction_year:
             response_year = int(prediction_year[0])
