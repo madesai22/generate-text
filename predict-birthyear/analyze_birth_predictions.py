@@ -2,8 +2,9 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-def make_hist(data,x,title,binwidth=None,bins=None,kde=False):
+def make_hist(data,x,title,binwidth=None,bins=None,kde=False)
     return sns.displot(data,x=x,binwidth=binwidth,bins=bins,kde=kde).set(title=title)
+
 
 
 def main ():
@@ -11,6 +12,9 @@ def main ():
     data = pd.read_csv(path,sep=";")
     save_path = "./plots/"
     print(data["Years off"])
+
+    years_off = data["Years off"] != "n/a"
+    print(years_off)
 
     # accuracy distribution 
     ax = sns.displot(data,x="Years off")
