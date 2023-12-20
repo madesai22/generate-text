@@ -156,7 +156,7 @@ def main(): # parameters are: data_path, size, model + model parameters, prompt_
    # log_base = "/data/madesai/history-llm-data/logs/predict_birth_year/"
     log_base = "/home/madesai/generate-text/predict-birthyear/log/"
    # prompt_form = "What year was {} born?"
-    prompt_form = "The year {} was born is "
+    prompt_form = "{} was born in the year  "
     sample = 10
     percent = False
     #sample = 0.001
