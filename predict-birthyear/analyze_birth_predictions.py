@@ -17,9 +17,9 @@ def main ():
     plt.close()
 
     # distribution of responses 
-    g = sns.displot(data,x="Predicted birth year").set(title="flan t5 response distribution")
-    g.set_xticks(range(0,2020,100))
-    g.set_xticklabels(range(0,2020,100))
+    ax = sns.displot(data,x="Predicted birth year").set(title="flan t5 response distribution")
+    ax.set(xticks=(range(0,2020,100)))
+    ax.set_xticklabels(range(0,2020,100))
     plt.savefig(save_path+"response_distribution.jpg")
     plt.close()
 
