@@ -1,0 +1,1689 @@
+;Name;True birth year;Pageviews;Predicted birth year;Years off;Full response
+0;Rob Barrie;1912;108.0;1961;49;<pad> 1961</s>
+1;Carlo Favre;1949;282.0;1931;18;<pad> 1931</s>
+2;Alexander Jeans;1849;1902.0;1881;32;<pad> 1881</s>
+3;Tony Millington;1943;18893.0;1939;4;<pad> 1939</s>
+4;Gord Hannigan;1929;6547.0;1939;10;<pad> 1939</s>
+5;Frederick Snow;1899;4311.0;1812;87;<pad> 1812</s>
+6;Fabienne Schlumpf;1990;24249.0;1954;36;<pad> 1954</s>
+7;Claudine Toleafoa;1970;3630.0;1962;8;<pad> 1962</s>
+8;Tom Dolezel;1984;3509.0;1939;45;<pad> 1939</s>
+9;Bronisław Komorowski;1952;575969.0;1939;13;<pad> 1939</s>
+10;Scott Dill;1966;6538.0;1962;4;<pad> 1962</s>
+11;Tonny van der Linden;1932;7025.0;1962;30;<pad> 1962</s>
+12;Moise Soulam;1890;96.0;1954;64;<pad> 1954</s>
+13;Bhavesh Baria;1990;2299.0;1939;51;<pad> 1939</s>
+14;Paul Burn;1963;2603.0;1939;24;<pad> 1939</s>
+15;Kaiden Guhle;2002;86813.0;1984;18;<pad> 1984</s>
+16;Alice Palmer (politician);1939;165009.0;1939;0;<pad> 1939</s>
+17;Alfred Steux;1892;1588.0;1887;5;<pad> 1887</s>
+18;Bob Jones (ice hockey);1945;5402.0;1908;37;<pad> 1908</s>
+19;Ethan Allen Andrews (lexicographer);1787;5304.0;1808;21;<pad> 1808</s>
+20;Francesco Caio;1957;20360.0;1599;358;<pad> 1599</s>
+21;Mark Williams (South African soccer);1966;13803.0;1963;3;<pad> 1963</s>
+22;Peter Jørgen Frydendahl;1766;607.0;1903;137;<pad> 1903</s>
+23;Alexandra Gilbreath;1969;112326.0;1887;82;<pad> 1887</s>
+24;Newton D. Baker;1871;128538.0;1880;9;<pad> 1880</s>
+25;Edwin Manners;1855;2847.0;1895;40;<pad> 1895</s>
+26;Takashi Asano;1937;3160.0;1954;17;<pad> 1954</s>
+27;Rodrigo Bogarín;1997;7630.0;1931;66;<pad> 1931</s>
+28;Stefano Chiodaroli;1964;3564.0;1939;25;<pad> 1939</s>
+29;Mohammed Sulemana;2002;1709.0;1931;71;<pad> 1931</s>
+30;Jérémy Bécasseau;1991;1440.0;1984;7;<pad> 1984</s>
+31;Eustace Headlam;1892;1052.0;1895;3;<pad> 1895</s>
+32;L.V. Hull;1942;1310.0;1887;55;<pad> 1887</s>
+33;Patrick Ryan (wheelchair rugby);1981;1469.0;1939;42;<pad> 1939</s>
+34;Greg Mankiw;1958;579818.0;1963;5;<pad> 1963</s>
+35;Adam Marczyński;1908;3336.0;1939;31;<pad> 1939</s>
+36;Vinnie Yablonski;1923;4953.0;1939;16;<pad> 1939</s>
+37;Dave Edwards (baseball);1954;5424.0;1962;8;<pad> 1962</s>
+38;Spencer Antle;1969;12349.0;1939;30;<pad> 1939</s>
+39;Kalyan Kumar Chakravarty;1947;5706.0;1939;8;<pad> 1939</s>
+40;Jalil Farjad;1951;6294.0;1963;12;<pad> 1963</s>
+41;Greg Byrne;1960;6680.0;1966;6;<pad> 1966</s>
+42;Daniel Soulage;1942;2449.0;1969;27;<pad> 1969</s>
+43;Ernest Buckmaster;1897;10924.0;1880;17;<pad> 1880</s>
+44;Víctor Manuel Lizárraga Peraza;1955;936.0;1931;24;<pad> 1931</s>
+45;Jacob Grandison;1998;29195.0;1895;103;<pad> 1895</s>
+46;Brito (footballer, born 1987);1987;1549.0;1939;48;<pad> 1939</s>
+47;Bo Thidé;1948;7986.0;1924;24;<pad> 1924</s>
+48;John Bermingham;1923;2038.0;1887;36;<pad> 1887</s>
+49;Boris Kok;1991;38330.0;1931;60;<pad> 1931</s>
+50;Jean-Paul Bonnaire;1943;14929.0;1912;31;<pad> 1912</s>
+51;James Hobrecht;1825;8419.0;1895;70;<pad> 1895</s>
+52;Peter Spearwater;1790;605.0;1939;149;<pad> 1939</s>
+53;Georgy Safarov;1891;18193.0;1924;33;<pad> 1924</s>
+54;Andrew J. McShane;1865;6672.0;1939;74;<pad> 1939</s>
+55;Thomas Rawls;1993;727188.0;1854;139;<pad> 1854</s>
+56;Leo Taylor (baseball);1901;2203.0;1939;38;<pad> 1939</s>
+57;Mike Lesser;1943;16357.0;1954;11;<pad> 1954</s>
+58;Charles Thring;1861;420.0;1887;26;<pad> 1887</s>
+59;John A. Long;1957;14143.0;1822;135;<pad> 1822</s>
+60;Beatriz Segall;1926;32302.0;1939;13;<pad> 1939</s>
+61;Máire Ní Chathasaigh;1956;15736.0;1887;69;<pad> 1887</s>
+62;Harry Elfont;1968;87832.0;1908;60;<pad> 1908</s>
+63;Reina Bonta;1999;59991.0;1939;60;<pad> 1939</s>
+64;Rafael Grovas Felix;1905;1382.0;1931;26;<pad> 1931</s>
+65;Jence Ann Rhoads;1988;2627.0;1954;34;<pad> 1954</s>
+66;Olivier Delbosc;1968;1157.0;1954;14;<pad> 1954</s>
+67;Edgar Grospiron;1969;17096.0;1895;74;<pad> 1895</s>
+68;Steve Ellis (musician);1950;357737.0;1960;10;<pad> 1960</s>
+69;Aubrey Gibson;1901;4347.0;1939;38;<pad> 1939</s>
+70;André Duchesne (musician);1949;4062.0;1908;41;<pad> 1908</s>
+71;Russell Okung;1988;699376.0;1970;18;<pad> 1970</s>
+72;Feride Çetin;1980;70644.0;1908;72;<pad> 1908</s>
+73;Will Wheaton;1972;248123.0;1976;4;<pad> 1976</s>
+74;Hans Nimmerfall;1872;1373.0;1887;15;<pad> 1887</s>
+75;Ben Dolic;1997;76421.0;1963;34;<pad> 1963</s>
+76;Francesco Filippini;1853;8932.0;1599;254;<pad> 1599</s>
+77;Brian Lee (soccer);1971;5154.0;1966;5;<pad> 1966</s>
+78;John Blankenchip;1919;1075.0;1895;24;<pad> 1895</s>
+79;Greg Feek;1975;24666.0;1967;8;<pad> 1967</s>
+80;Laura Thielen;1961;11743.0;1939;22;<pad> 1939</s>
+81;Richard Odada;2000;36100.0;1967;33;<pad> 1967</s>
+82;Jerzy Kowalski (rower);1988;454.0;1924;64;<pad> 1924</s>
+83;David Fletcher (baseball);1994;200388.0;1939;55;<pad> 1939</s>
+84;Jimmy Seal;1950;6493.0;1939;11;<pad> 1939</s>
+85;Jay Ruderman;1966;28568.0;1954;12;<pad> 1954</s>
+86;Emmanuel Agassi;1930;509123.0;1973;43;<pad> 1973</s>
+87;Samuel F. Hersey;1812;5347.0;1822;10;<pad> 1822</s>
+88;Gertrude Alice Kay;1884;1108.0;1887;3;<pad> 1887</s>
+89;Stella Leach;1918;2870.0;1908;10;<pad> 1908</s>
+90;Shamanuru Shivashankarappa;1931;150417.0;1880;51;<pad> 1880</s>
+91;Roberto Soldà;1959;3110.0;1881;78;<pad> 1881</s>
+92;Austin Deasy;1936;18798.0;1976;40;<pad> 1976</s>
+93;Pierre Baruzy;1897;2432.0;1881;16;<pad> 1881</s>
+94;Richard Krejčí;1970;509.0;1939;31;<pad> 1939</s>
+95;Denis Price;1908;6451.0;1939;31;<pad> 1939</s>
+96;Miguel Ramos Arizpe;1775;16762.0;1931;156;<pad> 1931</s>
+97;Thomas Montgomery (American politician);1779;3656.0;1797;18;<pad> 1797</s>
+98;Frederick Robertson (politician);1909;2472.0;1824;85;<pad> 1824</s>
+99;David Herrero;1979;4333.0;1954;25;<pad> 1954</s>
+100;Leslie Koo;1954;58313.0;1962;8;<pad> 1962</s>
+101;John Baillie of Leys;1772;5961.0;1580;192;<pad> 1580</s>
+102;Gina Palerme;1885;6610.0;1963;78;<pad> 1963</s>
+103;Robbie Cooke;1957;21729.0;1954;3;<pad> 1954</s>
+104;Shonica Wharton;1996;1473.0;1984;12;<pad> 1984</s>
+105;Nataša Ljubišić;1990;353.0;1939;51;<pad> 1939</s>
+106;Eugene P. Smith;1871;3082.0;1880;9;<pad> 1880</s>
+107;Sharon Cheslow;1961;15063.0;1954;7;<pad> 1954</s>
+108;Ioannis Lambrou;1921;1849.0;1924;3;<pad> 1924</s>
+109;Wang Yaonan;1957;657.0;1949;8;<pad> 1949</s>
+110;William Dorsey;1813;1958.0;1808;5;<pad> 1808</s>
+111;Anton Hegarty;1892;3781.0;1939;47;<pad> 1939</s>
+112;Fielding Clarke;1851;3635.0;1854;3;<pad> 1854</s>
+113;Alicja Zając;1953;335.0;1939;14;<pad> 1939</s>
+114;Željko Sušec;1977;1193.0;1939;38;<pad> 1939</s>
+115;Hugo Bruckmann;1863;14155.0;1887;24;<pad> 1887</s>
+116;Jorge Vilda;1981;295747.0;1931;50;<pad> 1931</s>
+117;Gia Pergolini;2004;23460.0;1939;65;<pad> 1939</s>
+118;Arttu Wiskari;1984;31208.0;1939;45;<pad> 1939</s>
+119;Enrico Gotti;1867;13828.0;1887;20;<pad> 1887</s>
+120;Nikolai Kultashev;1874;319.0;1887;13;<pad> 1887</s>
+121;Tanner Cochran;1984;1758.0;1984;0;<pad> 1984</s>
+122;Hugh Edwin Young;1917;834.0;1887;30;<pad> 1887</s>
+123;Eric Gugler;1889;15400.0;1954;65;<pad> 1954</s>
+124;Ronny Santos;1995;159.0;1954;41;<pad> 1954</s>
+125;Marie Engström;1953;1391.0;1912;41;<pad> 1912</s>
+126;John Willard (judge);1792;1677.0;1822;30;<pad> 1822</s>
+127;Robert Groves;1948;45365.0;1899;49;<pad> 1899</s>
+128;Lenny Martinez (cyclist);2003;13636.0;1954;49;<pad> 1954</s>
+129;Colleen V. Chien;1973;16006.0;1962;11;<pad> 1962</s>
+130;Gerald Kilmartin;1927;2382.0;1939;12;<pad> 1939</s>
+131;Claudio Elórtegui Raffo;1951;339.0;1931;20;<pad> 1931</s>
+132;Frits de Graaf;1926;168.0;1904;22;<pad> 1904</s>
+133;Trygve Berge;1932;3962.0;1897;35;<pad> 1897</s>
+134;Ng Yi Sheng;1980;13664.0;1949;31;<pad> 1949</s>
+135;Miles Justice Knowlton;1825;1511.0;1939;114;<pad> 1939</s>
+136;George Washington Bright;1874;3861.0;1797;77;<pad> 1797</s>
+137;Tõnu Juul;1958;226.0;1939;19;<pad> 1939</s>
+138;Panagiotis Efstratiadis;1815;735.0;1963;148;<pad> 1963</s>
+139;Katherine Sauerbrey;1997;3692.0;1939;58;<pad> 1939</s>
+140;Pablo Soler Frost;1965;5977.0;1939;26;<pad> 1939</s>
+141;Jonathon Green;1948;37008.0;1971;23;<pad> 1971</s>
+142;Jennifer Haigh;1968;39152.0;1963;5;<pad> 1963</s>
+143;Eugene Ansah;1994;25278.0;1967;27;<pad> 1967</s>
+144;Clarence V. Monin;1941;971.0;1903;38;<pad> 1903</s>
+145;Martinus Putuhena;1901;3720.0;1760;141;<pad> 1760</s>
+146;Marco Arrigoni;1988;3362.0;1954;34;<pad> 1954</s>
+147;Billy Twomey;1977;9611.0;1939;38;<pad> 1939</s>
+148;Victor Perowne;1897;2883.0;1908;11;<pad> 1908</s>
+149;Andy King (American politician);1962;34367.0;1963;1;<pad> 1963</s>
+150;Carl Christian Bonnevie;1849;1038.0;1854;5;<pad> 1854</s>
+151;Dana Jones (politician);1976;3187.0;1963;13;<pad> 1963</s>
+152;Reece Dinsdale;1959;768124.0;1984;25;<pad> 1984</s>
+153;Dave Madsen;1987;1326.0;1954;33;<pad> 1954</s>
+154;Yohan Goonasekera;1957;3792.0;1977;20;<pad> 1977</s>
+155;Sergei Kushov;1977;1251.0;1924;53;<pad> 1924</s>
+156;Kajal Ahmad;1967;10027.0;1962;5;<pad> 1962</s>
+157;Peder Hjermann;1754;1171.0;1939;185;<pad> 1939</s>
+158;Artem Miroyevskiy;1999;305.0;1984;15;<pad> 1984</s>
+159;John Giannini;1962;52011.0;1939;23;<pad> 1939</s>
+160;John Clarke (sailor);1934;869.0;1887;47;<pad> 1887</s>
+161;Pavle Popara;1987;10557.0;1963;24;<pad> 1963</s>
+162;Lisa LaFlamme;1964;994867.0;1963;1;<pad> 1963</s>
+163;Michael McGarry;1965;18128.0;1954;11;<pad> 1954</s>
+164;Garry Roggenburk;1940;10442.0;1954;14;<pad> 1954</s>
+165;Nadezhda Obukhova;1886;11439.0;1887;1;<pad> 1887</s>
+166;Ahmad Zia Massoud;1956;207265.0;1963;7;<pad> 1963</s>
+167;Serge Vinçon;1949;1843.0;1924;25;<pad> 1924</s>
+168;Tej Pratap Yadav;1988;1104498.0;1984;4;<pad> 1984</s>
+169;Caroline Vasicek;1974;39947.0;1963;11;<pad> 1963</s>
+170;Sergiu Balan;1987;1499.0;1967;20;<pad> 1967</s>
+171;Mike Sorber;1971;40708.0;1954;17;<pad> 1954</s>
+172;Valeria Palacios;1991;586.0;1976;15;<pad> 1976</s>
+173;Gerson Rodrigues (footballer, born 1995);1995;291390.0;1962;33;<pad> 1962</s>
+174;Warner T. Koiter;1914;6295.0;1908;6;<pad> 1908</s>
+175;Robert Brank Vance;1793;6023.0;1899;106;<pad> 1899</s>
+176;Jalal al-Din Davani;1462;6113.0;1880;418;<pad> 1880</s>
+177;Carlo Salsa;1893;1938.0;1931;38;<pad> 1931</s>
+178;Harry Hess Reichard;1878;2618.0;1895;17;<pad> 1895</s>
+179;Kenneth S. Davis;1912;10848.0;1931;19;<pad> 1931</s>
+180;Darizavyn Losol;1890;13314.0;1939;49;<pad> 1939</s>
+181;Lauren Patten;1992;286693.0;1976;16;<pad> 1976</s>
+182;Abdul'aziz Abubakar Yari;1968;104708.0;1924;44;<pad> 1924</s>
+183;Terry Deary;1946;242797.0;1954;8;<pad> 1954</s>
+184;Taylor Yarkosky;1977;839.0;1984;7;<pad> 1984</s>
+185;Georges Dupont;1903;1347.0;1831;72;<pad> 1831</s>
+186;Marina Bravo;1989;4444.0;1963;26;<pad> 1963</s>
+187;Vladimír Suchánek;1933;1794.0;1924;9;<pad> 1924</s>
+188;Dirk de Graeff;1601;140.0;1931;330;<pad> 1931</s>
+189;Martin Cauchi Inglott;1967;2176.0;1899;68;<pad> 1899</s>
+190;Børge Havn;1902;122.0;1899;3;<pad> 1899</s>
+191;Ray Parker (footballer);1925;1911.0;1939;14;<pad> 1939</s>
+192;Helen Conway-Ottenheimer;1964;4550.0;1908;56;<pad> 1908</s>
+193;Rita Boley Bolaffio;1898;5017.0;1931;33;<pad> 1931</s>
+194;Martin C. Lueck;1888;2406.0;1931;43;<pad> 1931</s>
+195;Piero Cappuccilli;1926;46404.0;1887;39;<pad> 1887</s>
+196;Edwin Percy Baker;1895;2017.0;1887;8;<pad> 1887</s>
+197;Dana Jennings;1957;11468.0;1963;6;<pad> 1963</s>
+198;Joe Genewich;1897;1856.0;1939;42;<pad> 1939</s>
+199;Volkert van der Graaf;1969;397302.0;1931;38;<pad> 1931</s>
+200;David C. Cloud;1817;2074.0;1908;91;<pad> 1908</s>
+201;Milorad Živković;1963;1328.0;1963;0;<pad> 1963</s>
+202;William Hurton;1825;3921.0;1821;4;<pad> 1821</s>
+203;Michael Strange (boxer);1970;17512.0;1912;58;<pad> 1912</s>
+204;A. Maitland Emmet;1908;2898.0;1880;28;<pad> 1880</s>
+205;Perivaldo;1953;859.0;1887;66;<pad> 1887</s>
+206;Ioan Lloyd;2001;52795.0;1939;62;<pad> 1939</s>
+207;Malo (saint);520;77000.0;1895;1375;<pad> 1895</s>
+208;Alcante;1970;6419.0;1895;75;<pad> 1895</s>
+209;Carlos Brosas;1955;2555.0;1939;16;<pad> 1939</s>
+210;Jeppe Tverskov;1993;15952.0;1931;62;<pad> 1931</s>
+211;Hermann Arthur Jahn;1907;23519.0;1895;12;<pad> 1895</s>
+212;Frank Zappa;1940;13145709.0;1942;2;<pad> 1942</s>
+213;Antonio de la Rúa;1973;3206418.0;1887;86;<pad> 1887</s>
+214;Franziska Kessel;1906;5000.0;1939;33;<pad> 1939</s>
+215;Nikolai Tretyakov;1854;8030.0;1862;8;<pad> 1862</s>
+216;Beatriz Doumerc;1929;65.0;1939;10;<pad> 1939</s>
+217;Beryl D. Roberts;1958;1793.0;1908;50;<pad> 1908</s>
+218;Tibi (footballer);1951;8024.0;1939;12;<pad> 1939</s>
+219;Maha Ali Kazmi;1992;8600.0;1924;68;<pad> 1924</s>
+220;Atsumi Yashima;1975;243.0;1887;88;<pad> 1887</s>
+221;Vivica A. Fox;1964;6885069.0;1967;3;<pad> 1967</s>
+222;Michelle Perry;1979;23825.0;1971;8;<pad> 1971</s>
+223;Walter Currie (footballer);1895;297.0;1887;8;<pad> 1887</s>
+224;Charley Taylor;1941;224538.0;1939;2;<pad> 1939</s>
+225;Cheryl Axley;1959;1806.0;1963;4;<pad> 1963</s>
+226;Rudolph Bierwirth;1899;4218.0;1895;4;<pad> 1895</s>
+227;Luc Marquet;1970;2327.0;1954;16;<pad> 1954</s>
+228;Muideen Ganiyu;1979;3113.0;1931;48;<pad> 1931</s>
+229;David Morris (footballer, born 1957);1957;2546.0;1939;18;<pad> 1939</s>
+230;Gerald Smith (Canadian politician);1943;2464.0;1924;19;<pad> 1924</s>
+231;Michael Friedrich von Althann;1680;2873.0;1780;100;<pad> 1780</s>
+232;Philip Henry Stanhope, 4th Earl Stanhope;1781;29176.0;1794;13;<pad> 1794</s>
+233;Kan Ishii;1921;6524.0;1954;33;<pad> 1954</s>
+234;Eqab bin Mohaya;1903;13570.0;1844;59;<pad> 1844</s>
+235;Milo Calhoun;1940;3505.0;1895;45;<pad> 1895</s>
+236;Victor Chandler;1951;78635.0;1908;43;<pad> 1908</s>
+237;Thomas S. Drew;1802;442.0;1835;33;<pad> 1835</s>
+238;Sierra Romero;1994;129477.0;1984;10;<pad> 1984</s>
+239;Eleanor Antin;1935;60336.0;1897;38;<pad> 1897</s>
+240;Syed Hasanur Rahman;1974;34944.0;1931;43;<pad> 1931</s>
+241;Horace B. Willard;1825;1968.0;1805;20;<pad> 1805</s>
+242;Jonathan Moreira;1986;126813.0;1976;10;<pad> 1976</s>
+243;Sancha of Portugal (born 1264);1264;11124.0;1521;257;<pad> 1521</s>
+244;Rodrigo Basto Junior;1919;205.0;1954;35;<pad> 1954</s>
+245;Joe Brial;2002;;1939;63;<pad> 1939</s>
+246;Khalil Thompson;1997;1575.0;1984;13;<pad> 1984</s>
+247;Matthew Tumilty;1993;3933.0;1939;54;<pad> 1939</s>
+248;Larry Christiansen;1956;55580.0;1954;2;<pad> 1954</s>
+249;Charles Ebbets;1859;73401.0;1889;30;<pad> 1889</s>
+250;Fyodor Chalov;1998;230889.0;1887;111;<pad> 1887</s>
+251;Fareed Majeed;1986;4715.0;1971;15;<pad> 1971</s>
+252;Arthur Chresby;1908;3199.0;1904;4;<pad> 1904</s>
+253;Jacques Rousseau (diplomat);1683;1971.0;1744;61;<pad> 1744</s>
+254;Aleksandr Grammatin;1931;1384.0;1844;87;<pad> 1844</s>
+255;Patrick Cormack;1939;73453.0;1939;0;<pad> 1939</s>
+256;Naive John;1962;5726.0;1895;67;<pad> 1895</s>
+257;Five for Fighting;1965;905380.0;1984;19;<pad> 1984</s>
+258;Patrick Edmonstone Craigie;1794;1254.0;1887;93;<pad> 1887</s>
+259;Eugénie Rocherolle;1939;15425.0;1821;118;<pad> 1821</s>
+260;Adel Al-Hammadi;1991;2432.0;1967;24;<pad> 1967</s>
+261;Aukusti Hiltula;1854;264.0;1939;85;<pad> 1939</s>
+262;Stéphane Michaud;1944;4678.0;1967;23;<pad> 1967</s>
+263;Reynolds Price;1933;98074.0;1931;2;<pad> 1931</s>
+264;Anzaur Ardanov;1991;179.0;1939;52;<pad> 1939</s>
+265;Feyyaz Duman;1982;56634.0;1939;43;<pad> 1939</s>
+266;Asen Donchev;2001;6147.0;1963;38;<pad> 1963</s>
+267;Alice Barrett;1956;61331.0;1830;126;<pad> 1830</s>
+268;Ivar Aavatsmark (forester);1916;1936.0;1897;19;<pad> 1897</s>
+269;Augustus George Vernon Harcourt;1834;10454.0;1854;20;<pad> 1854</s>
+270;Massimo Margiotta;1977;19134.0;1939;38;<pad> 1939</s>
+271;Frank Lascelles (diplomat);1841;32502.0;1908;67;<pad> 1908</s>
+272;Greg Zito;1953;3685.0;1971;18;<pad> 1971</s>
+273;Sameer Bandekar;1964;8080.0;1967;3;<pad> 1967</s>
+274;Magdalena Dávalos y Maldonado;1725;2079.0;1887;162;<pad> 1887</s>
+275;Erik Martin;1936;6047.0;1939;3;<pad> 1939</s>
+276;Millie Bailey;1918;94674.0;1908;10;<pad> 1908</s>
+277;Chris Yule;1975;8909.0;1963;12;<pad> 1963</s>
+278;Thanasis Tegousis;1986;2620.0;1939;47;<pad> 1939</s>
+279;Noreldin Waisy;1974;4117.0;1924;50;<pad> 1924</s>
+280;Olga Maturana;1906;2265.0;1908;2;<pad> 1908</s>
+281;Louis Ducreux;1911;11241.0;1887;24;<pad> 1887</s>
+282;Fred Schreiner (footballer);1961;173.0;1904;57;<pad> 1904</s>
+283;Willy Brokamp;1946;15449.0;1931;15;<pad> 1931</s>
+284;Louis I, Count of Blois;1172;47481.0;1521;349;<pad> 1521</s>
+285;Joshua Bond;1831;772.0;1895;64;<pad> 1895</s>
+286;Ebony Salmon;2001;106815.0;1984;17;<pad> 1984</s>
+287;Bob Sayers;1917;2025.0;1931;14;<pad> 1931</s>
+288;Boris Sokolovsky;1953;2787.0;1903;50;<pad> 1903</s>
+289;Rubén Falcón;1977;3351.0;1931;46;<pad> 1931</s>
+290;Keido Fukushima;1933;15041.0;1954;21;<pad> 1954</s>
+291;Jasurbek Jaloliddinov;2002;21451.0;1939;63;<pad> 1939</s>
+292;Kanti Madia;1931;5655.0;1939;8;<pad> 1939</s>
+293;João Gilberto Noll;1946;13005.0;1887;59;<pad> 1887</s>
+294;Lindsay Armaou;1978;534488.0;1984;6;<pad> 1984</s>
+295;Thomas Middleton;1580;255007.0;1672;92;<pad> 1672</s>
+296;Anthony Daly (cricketer);1969;1994.0;1939;30;<pad> 1939</s>
+297;Sanya Lopez;1996;1052257.0;1984;12;<pad> 1984</s>
+298;Romāns Apsītis;1939;1437.0;1939;0;<pad> 1939</s>
+299;Robert Smigel;1960;1730817.0;1954;6;<pad> 1954</s>
+300;Brandon Allen (soccer);1993;62715.0;1984;9;<pad> 1984</s>
+301;Arie de Geus;1930;36581.0;1931;1;<pad> 1931</s>
+302;Joseph B. Wirthlin;1917;98241.0;1854;63;<pad> 1854</s>
+303;Thomas Jackson (architect);1807;3249.0;1789;18;<pad> 1789</s>
+304;Jaka Corn;1995;1800.0;1984;11;<pad> 1984</s>
+305;Zoran Nikolić (handballer);1991;3773.0;1963;28;<pad> 1963</s>
+306;Carel van Savoyen;1619;5916.0;1924;305;<pad> 1924</s>
+307;G.D. Jones;1986;2244.0;1887;99;<pad> 1887</s>
+308;Eddie Izzard;1962;11986482.0;1963;1;<pad> 1963</s>
+309;Eben Kurtz;1995;1385.0;1924;71;<pad> 1924</s>
+310;Mike Magario;1991;2485.0;1962;29;<pad> 1962</s>
+311;Károly Hadaly;1743;3250.0;1895;152;<pad> 1895</s>
+312;Clem Windsor;1923;3805.0;1908;15;<pad> 1908</s>
+313;Kai Sasaki;1998;486.0;1963;35;<pad> 1963</s>
+314;Donna Dickenson;1946;9369.0;1954;8;<pad> 1954</s>
+315;Gregg Sulkin;1992;4276678.0;1984;8;<pad> 1984</s>
+316;Leszek Miller;1946;144378.0;1904;42;<pad> 1904</s>
+317;Gabrielle Scollay;1989;39495.0;1984;5;<pad> 1984</s>
+318;Barbara Baehr;1953;4447.0;1939;14;<pad> 1939</s>
+319;Koen Barbé;1981;2580.0;1954;27;<pad> 1954</s>
+320;Murdah Bongz;1987;11354.0;1967;20;<pad> 1967</s>
+321;Brad Sherwood;1964;590480.0;1966;2;<pad> 1966</s>
+322;Anna Janoušková;1965;358.0;1939;26;<pad> 1939</s>
+323;Rolando Sarraff Trujillo;1963;50029.0;1931;32;<pad> 1931</s>
+324;Miquel Brown;1945;254391.0;1939;6;<pad> 1939</s>
+325;Ala Paredes;1983;41094.0;1939;44;<pad> 1939</s>
+326;Bob Dillinger;1918;12505.0;1924;6;<pad> 1924</s>
+327;Vera Csapody;1890;922.0;1904;14;<pad> 1904</s>
+328;Franjo Krajčar;1914;503.0;1908;6;<pad> 1908</s>
+329;David Sarnoff;1891;695033.0;1926;35;<pad> 1926</s>
+330;Josh Bauer (soccer);1998;14333.0;1984;14;<pad> 1984</s>
+331;Maggie Rizer;1978;79290.0;1939;39;<pad> 1939</s>
+332;Lydia Moisés;1983;2338.0;1931;52;<pad> 1931</s>
+333;Erich Mix;1898;20443.0;1931;33;<pad> 1931</s>
+334;Jorge Rodríguez-Novelo;1955;7508.0;1939;16;<pad> 1939</s>
+335;Anudeep Dev;1989;90249.0;1962;27;<pad> 1962</s>
+336;David Machado;1978;8913.0;1967;11;<pad> 1967</s>
+337;John Anderson (footballer, born 1881);1881;407.0;1887;6;<pad> 1887</s>
+338;Abdel Aziz Boulehia;1970;563.0;1939;31;<pad> 1939</s>
+339;John Nelson Battenberg;1931;5059.0;1887;44;<pad> 1887</s>
+340;Geraldine Quinn;1975;24576.0;1939;36;<pad> 1939</s>
+341;Willie Cooper;1909;5729.0;1908;1;<pad> 1908</s>
+342;Wim Turkenburg;1947;9333.0;1931;16;<pad> 1931</s>
+343;Lawrence Lamm;1896;895.0;1939;43;<pad> 1939</s>
+344;H. W. Griffiths;1916;2359.0;1895;21;<pad> 1895</s>
+345;Kamila Vokoun Hájková;1987;1090.0;1939;48;<pad> 1939</s>
+346;Song Dan (javelin thrower);1990;151.0;1949;41;<pad> 1949</s>
+347;Thomas Trumble;1872;2520.0;1887;15;<pad> 1887</s>
+348;William Wallen Jr. (architect and surveyor);1817;161.0;1887;70;<pad> 1887</s>
+349;Narong Boonfuang;1957;532.0;1931;26;<pad> 1931</s>
+350;Ruth McCartney;1960;34356796.0;1939;21;<pad> 1939</s>
+351;Tarek Ghoul;1975;3917.0;1967;8;<pad> 1967</s>
+352;Mai Charoenpura;1969;81256.0;1939;30;<pad> 1939</s>
+353;Daniel McDonald (actor);1960;646378.0;1887;73;<pad> 1887</s>
+354;Earl Klapstein;1922;256.0;1904;18;<pad> 1904</s>
+355;Heather Newsham;1977;196.0;1963;14;<pad> 1963</s>
+356;Esa Saarinen;1953;28203.0;1950;3;<pad> 1950</s>
+357;António Silva (footballer);2003;218694.0;1939;64;<pad> 1939</s>
+358;Orlando Cáceres;1961;1411.0;1931;30;<pad> 1931</s>
+359;Toks Olagundoye;1975;1167725.0;1954;21;<pad> 1954</s>
+360;Mitchell Lund;1996;28451.0;1971;25;<pad> 1971</s>
+361;Aristide Cavallini;1899;187.0;1887;12;<pad> 1887</s>
+362;Ulrik Anton Motzfeldt;1807;1444.0;1899;92;<pad> 1899</s>
+363;Hsia Yi-Ting;1878;;1949;71;<pad> 1949</s>
+364;Antonio Frixione;1843;1813.0;1887;44;<pad> 1887</s>
+365;Anna Astvatsaturian Turcotte;1978;16696.0;1924;54;<pad> 1924</s>
+366;Palle Christiansen;1973;4636.0;1939;34;<pad> 1939</s>
+367;Lucio Muñoz;1929;7942.0;1931;2;<pad> 1931</s>
+368;Marjorie Shuler;1888;420.0;1908;20;<pad> 1908</s>
+369;Michal Horňák;1970;17834.0;1968;2;<pad> 1968</s>
+370;Danutė Budreikaitė;1953;2069.0;1939;14;<pad> 1939</s>
+371;Antonio Bey Figari;1804;2058.0;1887;83;<pad> 1887</s>
+372;Martin Duncan;1948;1375.0;1895;53;<pad> 1895</s>
+373;Ben King (footballer);2000;83499.0;1963;37;<pad> 1963</s>
+374;Douglas Haldane;1926;3072.0;1895;31;<pad> 1895</s>
+375;Assetou Bamba;1980;791.0;1954;26;<pad> 1954</s>
+376;Pauline Yeung;1967;91385.0;1967;0;<pad> 1967</s>
+377;Ashok Kumar (field hockey);1950;100387.0;1939;11;<pad> 1939</s>
+378;Saskia Hippe;1991;19053.0;1939;52;<pad> 1939</s>
+379;Francisco Gamborena;1901;5426.0;1887;14;<pad> 1887</s>
+380;Joseph Gwilt;1784;6469.0;1844;60;<pad> 1844</s>
+381;Charles Berg (rabbi);1911;922.0;1904;7;<pad> 1904</s>
+382;Noah Kibet;2004;4119.0;1931;73;<pad> 1931</s>
+383;Friedrich Ludwig (musicologist);1872;3430.0;1780;92;<pad> 1780</s>
+384;Orest Levytsky;1848;2812.0;1939;91;<pad> 1939</s>
+385;Paula Buscher;1963;5286.0;1939;24;<pad> 1939</s>
+386;Anatoly Kovler;1948;5848.0;1908;40;<pad> 1908</s>
+387;Rahel Friederich;1986;1139.0;1939;47;<pad> 1939</s>
+388;Benjamin S. Grossberg;1971;1062.0;1924;47;<pad> 1924</s>
+389;Jyrki Jokipakka;1991;57803.0;1939;52;<pad> 1939</s>
+390;Roulland Le Roux;1465;2667.0;1895;430;<pad> 1895</s>
+391;Padam Sundas;1945;4051.0;1887;58;<pad> 1887</s>
+392;Nicoleta Albu;1988;1972.0;1977;11;<pad> 1977</s>
+393;Meena Shah;1937;6252.0;1962;25;<pad> 1962</s>
+394;Hurley Haywood;1948;177745.0;1939;9;<pad> 1939</s>
+395;George Niemann;1841;2652.0;1887;46;<pad> 1887</s>
+396;Elizabeth Kay;1949;14256.0;1939;10;<pad> 1939</s>
+397;Samuel Atherton;1815;1879.0;1797;18;<pad> 1797</s>
+398;Takayoshi Toda;1979;1724.0;1889;90;<pad> 1889</s>
+399;Hubert Higgs;1911;2257.0;1912;1;<pad> 1912</s>
+400;Frank Punčec;1951;2141.0;1939;12;<pad> 1939</s>
+401;Gerardus Siderius;1914;1307.0;1611;303;<pad> 1611</s>
+402;John Willie Kofi Harlley;1919;17368.0;1939;20;<pad> 1939</s>
+403;Chris Ernst (cyclist);1999;58.0;1971;28;<pad> 1971</s>
+404;Sanchez (singer);1964;131947.0;1962;2;<pad> 1962</s>
+405;Robert Porter (economist);1955;1946.0;1811;144;<pad> 1811</s>
+406;Hend bint Faisal Al-Qasimi;1984;71962.0;1939;45;<pad> 1939</s>
+407;Lee Soon-ja;1939;37640.0;1950;11;<pad> 1950</s>
+408;Humphrey McQueen;1942;16711.0;1908;34;<pad> 1908</s>
+409;Vanessa Porto;1984;118999.0;1962;22;<pad> 1962</s>
+410;Ayaz Guliyev;1996;37302.0;1954;42;<pad> 1954</s>
+411;Adrian Virginius;1663;231.0;1593;70;<pad> 1593</s>
+412;Len Cottrell;1936;2896.0;1939;3;<pad> 1939</s>
+413;Ralph Lyman;1883;208.0;1908;25;<pad> 1908</s>
+414;Nick Faldo;1957;2726988.0;1962;5;<pad> 1962</s>
+415;Brett McGavin;1999;16451.0;1962;37;<pad> 1962</s>
+416;Azlina Arshad;1981;2880.0;1963;18;<pad> 1963</s>
+417;Mikhail Markosov;1985;4052.0;1897;88;<pad> 1897</s>
+418;Eric Quayle;1921;5251.0;1939;18;<pad> 1939</s>
+419;Markus Grübl;1989;424.0;1984;5;<pad> 1984</s>
+420;Geraldine Peten;1947;4860.0;1939;8;<pad> 1939</s>
+421;Christelle Mol;1972;321.0;1954;18;<pad> 1954</s>
+422;Jan Durka;1903;207.0;1939;36;<pad> 1939</s>
+423;Atanas Atanasov (wrestler);1963;608.0;1887;76;<pad> 1887</s>
+424;Frederick H. Teese;1823;892.0;1880;57;<pad> 1880</s>
+425;Jimmy Carmichael (rugby union);1900;126.0;1939;39;<pad> 1939</s>
+426;H. F. B. Lynch;1862;20477.0;1887;25;<pad> 1887</s>
+427;Dareen Abughaida;1984;125913.0;1967;17;<pad> 1967</s>
+428;Khanindra Chandra Chowdhury;1948;15554.0;1924;24;<pad> 1924</s>
+429;Mohamed Al-Fararjeh;1977;63.0;1939;38;<pad> 1939</s>
+430;Stephen Park Turner;1951;13345.0;1887;64;<pad> 1887</s>
+431;Henry Crofts;1590;3858.0;1887;297;<pad> 1887</s>
+432;Pipat Singsanee;1939;777.0;1939;0;<pad> 1939</s>
+433;Ron McDonald;1933;4514.0;1939;6;<pad> 1939</s>
+434;Michael López-Alegría;1958;185088.0;1962;4;<pad> 1962</s>
+435;Adis Jašić;2003;1981.0;1931;72;<pad> 1931</s>
+436;Sam Davis (rugby league);1998;3621.0;1808;190;<pad> 1808</s>
+437;Nancy Harkness Love;1914;110583.0;1931;17;<pad> 1931</s>
+438;Helge Engelke;1961;19695.0;1931;30;<pad> 1931</s>
+439;Ryszard Ochyra;1949;1229.0;1939;10;<pad> 1939</s>
+440;Brunild Pepa;1990;5446.0;1939;51;<pad> 1939</s>
+441;Christine Hart;1950;6796.0;1963;13;<pad> 1963</s>
+442;Georgy Burdzhalov;1869;1269.0;1924;55;<pad> 1924</s>
+443;Caspar Schoppe;1576;13713.0;1887;311;<pad> 1887</s>
+444;C. V. K. Abdul Rehim;1958;2401.0;1931;27;<pad> 1931</s>
+445;Torgeir Andersen;1916;1500.0;1939;23;<pad> 1939</s>
+446;Nadezhda Muravyova;1980;2417.0;1887;93;<pad> 1887</s>
+447;Daniel Singer (actor);1959;14089.0;1939;20;<pad> 1939</s>
+448;Giuseppe Delfino;1921;7842.0;1887;34;<pad> 1887</s>
+449;Gus W. Dorsey;1839;10295.0;1887;48;<pad> 1887</s>
+450;Petra Massey;1966;24064.0;1939;27;<pad> 1939</s>
+451;Enid Balint;1903;9645.0;1908;5;<pad> 1908</s>
+452;Taner Üstündağ;1971;651.0;1963;8;<pad> 1963</s>
+453;James Fahey (painter);1804;3579.0;1939;135;<pad> 1939</s>
+454;Eliza A. Pittsinger;1837;2339.0;1822;15;<pad> 1822</s>
+455;Shirley Hazzard;1931;180348.0;1939;8;<pad> 1939</s>
+456;Richard Graves MacDonnell;1814;32284.0;1895;81;<pad> 1895</s>
+457;Georgia Coleman;1912;8786.0;1908;4;<pad> 1908</s>
+458;Mark Yale Harris;1936;1049.0;1954;18;<pad> 1954</s>
+459;Malini Wickramasinghe;1964;1507.0;1939;25;<pad> 1939</s>
+460;Garima Vikrant Singh;1987;180267.0;1984;3;<pad> 1984</s>
+461;Anna Mae Hays;1920;124799.0;1880;40;<pad> 1880</s>
+462;Blanca Ibáñez;1947;8848.0;1939;8;<pad> 1939</s>
+463;Richard Grove;1955;37455.0;1924;31;<pad> 1924</s>
+464;Kanti Baa;1979;7458.0;1939;40;<pad> 1939</s>
+465;Graeme Kelling;1957;88531.0;1962;5;<pad> 1962</s>
+466;Andrew Purcell;1971;5764.0;1665;306;<pad> 1665</s>
+467;Abdullah Hawsawi;1996;1004.0;1939;57;<pad> 1939</s>
+468;Jack Brierley (footballer);1904;364.0;1939;35;<pad> 1939</s>
+469;Whang Youn Dai;1938;1908.0;1939;1;<pad> 1939</s>
+470;Chris Douglas (cricketer);1989;2173.0;1962;27;<pad> 1962</s>
+471;Richarlison;1997;5618048.0;1939;58;<pad> 1939</s>
+472;George Stanley;1907;156397.0;1824;83;<pad> 1824</s>
+473;David C. Rowe;1949;10041.0;1939;10;<pad> 1939</s>
+474;Tony Hall-Matthews;1940;1702.0;1962;22;<pad> 1962</s>
+475;Kittirat Kerdlaphee;1999;349.0;1939;60;<pad> 1939</s>
+476;Myles McRae;1845;1367.0;1967;122;<pad> 1967</s>
+477;Steve Verelst;1987;1217.0;1962;25;<pad> 1962</s>
+478;Kate Green;1960;313417.0;1887;73;<pad> 1887</s>
+479;Nestoras Mytidis;1991;6079.0;1908;83;<pad> 1908</s>
+480;Adrien de Gasparin;1783;5733.0;1660;123;<pad> 1660</s>
+481;Carlos Busqued;1970;16724.0;1939;31;<pad> 1939</s>
+482;Bao Shanju;1997;6201.0;1949;48;<pad> 1949</s>
+483;Simeon Dyankov;1970;23252.0;1908;62;<pad> 1908</s>
+484;César Campodónico;1929;1248.0;1887;42;<pad> 1887</s>
+485;Molly Carnes;1951;215.0;1897;54;<pad> 1897</s>
+486;Amanda Polk;1986;15044.0;1887;99;<pad> 1887</s>
+487;Jim Waring;1967;16628.0;1939;28;<pad> 1939</s>
+488;Owen Seaman;1861;13648.0;1939;78;<pad> 1939</s>
+489;Mónika Remsei;1972;680.0;1956;16;<pad> 1956</s>
+490;Cynthia Akuetteh;1948;12428.0;1954;6;<pad> 1954</s>
+491;Kavindra Tirtha;1333;4836.0;1931;598;<pad> 1931</s>
+492;Chayut Triyachart;1989;14492.0;1962;27;<pad> 1962</s>
+493;Andreas Scherhaufer;1970;1253.0;1939;31;<pad> 1939</s>
+494;Herold J. Weiler;1886;3087.0;1904;18;<pad> 1904</s>
+495;Jerry Thibedi;1954;130.0;1963;9;<pad> 1963</s>
+496;Yves-Joseph de Kerguelen-Trémarec;1734;41017.0;1887;153;<pad> 1887</s>
+497;Anchal Sahu;2005;124813.0;1984;21;<pad> 1984</s>
+498;Jean-Baptiste-Charles Chabroud;1750;993.0;1780;30;<pad> 1780</s>
+499;Emosi Tuqiri;2000;768.0;1939;61;<pad> 1939</s>
+500;Servílio de Jesús;1914;640.0;1854;60;<pad> 1854</s>
+501;Gabriela Perianu;1994;19333.0;1931;63;<pad> 1931</s>
+502;Sally Boazman;1957;308106.0;1939;18;<pad> 1939</s>
+503;Bruce Anderson (footballer, born 1998);1998;69572.0;1939;59;<pad> 1939</s>
+504;Jason Hotchkin;1978;3318.0;1984;6;<pad> 1984</s>
+505;William Mark Simmons;1953;8012.0;1939;14;<pad> 1939</s>
+506;"Neilliadh ""Nelly"" Campbell";1769;89.0;1887;118;<pad> 1887</s>
+507;Joseíto González;1940;1611.0;1887;53;<pad> 1887</s>
+508;Ralph A. Lewin;1921;5489.0;1904;17;<pad> 1904</s>
+509;V. Joy;1965;17923.0;1931;34;<pad> 1931</s>
+510;Daniel Kuzemka;1998;926.0;1939;59;<pad> 1939</s>
+511;Frank Broome;1915;9747.0;1895;20;<pad> 1895</s>
+512;David Evans (RAAF officer);1925;31998.0;1939;14;<pad> 1939</s>
+513;Zina Aita;1900;1009.0;1963;63;<pad> 1963</s>
+514;Dilara Bedia Kızılsu;1965;183.0;1939;26;<pad> 1939</s>
+515;Juan Ignacio Cerra;1976;3096.0;1824;152;<pad> 1824</s>
+516;Alexander Graham (Lord Mayor);1938;55977.0;1812;126;<pad> 1812</s>
+517;Dmitry Ilyin;1984;1330.0;1891;93;<pad> 1891</s>
+518;Tom Evenson;1910;3837.0;1939;29;<pad> 1939</s>
+519;J. Lewis Bonhote;1875;4878.0;1931;56;<pad> 1931</s>
+520;William Smith (loyalist);1954;47932.0;1797;157;<pad> 1797</s>
+521;Juan Bigas Moulins;1863;2876.0;1887;24;<pad> 1887</s>
+522;Ådne Nissestad;1995;810.0;1908;87;<pad> 1908</s>
+523;Samuel Butts;1777;15569.0;1797;20;<pad> 1797</s>
+524;Tobias de Boer;1930;3102.0;1895;35;<pad> 1895</s>
+525;Félix Girard;1994;11458.0;1889;105;<pad> 1889</s>
+526;Gershon Winkler;1949;16252.0;1967;18;<pad> 1967</s>
+527;Darío Lopilato;1981;138424.0;1931;50;<pad> 1931</s>
+528;Xavi Moreno;2003;2085.0;1984;19;<pad> 1984</s>
+529;Stefano Amadei;1580;2714.0;1939;359;<pad> 1939</s>
+530;Cam Spencer;2000;10506.0;1962;38;<pad> 1962</s>
+531;John Davis (sculptor);1936;9897.0;1881;55;<pad> 1881</s>
+532;Ana María Fernández Planas;1968;100.0;1939;29;<pad> 1939</s>
+533;Lord Edward Gleichen;1863;40394.0;1830;33;<pad> 1830</s>
+534;Eyerusalem Kelil;1992;1157.0;1939;53;<pad> 1939</s>
+535;Egisto Lancerotto;1847;2353.0;1931;84;<pad> 1931</s>
+536;Leonard P. Stark;1969;61911.0;1904;65;<pad> 1904</s>
+537;Jan Nicklasson;1954;698.0;1939;15;<pad> 1939</s>
+538;Henry Torrens;1833;5475.0;1824;9;<pad> 1824</s>
+539;Yury Astravukh;1988;4047.0;1939;49;<pad> 1939</s>
+540;Ferdinando I de' Medici, Grand Duke of Tuscany;1549;294425.0;1519;30;<pad> 1519</s>
+541;F. W. Forbes Ross;1867;856.0;1881;14;<pad> 1881</s>
+542;Alex Richter;1972;;1961;11;<pad> 1961</s>
+543;Rufe Persful;1906;111626.0;1908;2;<pad> 1908</s>
+544;Edivaldo (footballer, born 1974);1974;243.0;1599;375;<pad> 1599</s>
+545;Jonathan Ceredig Davies;1859;1096.0;1939;80;<pad> 1939</s>
+546;Israel Abanikanda;2002;76853.0;1931;71;<pad> 1931</s>
+547;Gregor Mendel;1822;4890708.0;1822;0;<pad> 1822</s>
+548;Attilio Brugnoli;1880;233.0;1908;28;<pad> 1908</s>
+549;Willem Schelfhout;1874;1234.0;1895;21;<pad> 1895</s>
+550;Grete Berget;1954;7837.0;1912;42;<pad> 1912</s>
+551;Jane Tanner;1946;9608.0;1895;51;<pad> 1895</s>
+552;Robert Colquhoun (bowls);1882;1262.0;1887;5;<pad> 1887</s>
+553;Martina Stamm-Fibich;1965;1221.0;1939;26;<pad> 1939</s>
+554;Joo Yea-na;1990;686.0;1950;40;<pad> 1950</s>
+555;Semavi Özgür;1982;1727.0;1931;51;<pad> 1931</s>
+556;Mike Leclerc;1976;15213.0;1962;14;<pad> 1962</s>
+557;Iwao Akiyama;1921;7330.0;1931;10;<pad> 1931</s>
+558;Alexey Verstovsky;1799;13727.0;1924;125;<pad> 1924</s>
+559;Casimir Dankerque;1904;7228.0;1887;17;<pad> 1887</s>
+560;George Pryme;1781;2521.0;1895;114;<pad> 1895</s>
+561;Dirk Jacoby;1962;924.0;1939;23;<pad> 1939</s>
+562;Ossian Edmund Borg;1812;267.0;1895;83;<pad> 1895</s>
+563;Gerard Veldkamp;1921;3759.0;1971;50;<pad> 1971</s>
+564;Amy Watkins;1973;32185.0;1963;10;<pad> 1963</s>
+565;Camila Musante;1990;1275.0;1976;14;<pad> 1976</s>
+566;Pedro Buchardo;1916;1799.0;1931;15;<pad> 1931</s>
+567;Kenneth Lewis Anderson;1805;31354.0;1908;103;<pad> 1908</s>
+568;James Murray (physician);1788;16810.0;1887;99;<pad> 1887</s>
+569;Thomas L. Fisher;1941;9414.0;1908;33;<pad> 1908</s>
+570;Wong Ching-po;1973;10000.0;1939;34;<pad> 1939</s>
+571;Hsu Shin;1932;1966.0;1924;8;<pad> 1924</s>
+572;Kevin Dearden;1970;29003.0;1962;8;<pad> 1962</s>
+573;Philip Baker Hall;1931;2742778.0;1880;51;<pad> 1880</s>
+574;Mary Jo Tiampo;1962;1037.0;1954;8;<pad> 1954</s>
+575;Catalina Pérez (footballer, born 1989);1989;1742.0;1939;50;<pad> 1939</s>
+576;John Grimes (baseball);1869;2737.0;1895;26;<pad> 1895</s>
+577;Olive, Lady Baillie;1899;114532.0;1887;12;<pad> 1887</s>
+578;Earle Rafuse;1930;2562.0;1904;26;<pad> 1904</s>
+579;Geoff Cope;1947;22188.0;1962;15;<pad> 1962</s>
+580;Andrew Tiedemann;1988;7593.0;1939;49;<pad> 1939</s>
+581;Sukeshiro Terata;1940;2657.0;1868;72;<pad> 1868</s>
+582;Kev Lingard;1942;6087.0;1966;24;<pad> 1966</s>
+583;Aasmund Sandland;1949;351.0;1931;18;<pad> 1931</s>
+584;Mauro (footballer, born May 1984);1984;156.0;1939;45;<pad> 1939</s>
+585;Milan Ilić (footballer, born 2000);2000;2071.0;1931;69;<pad> 1931</s>
+586;Shim Min-ji;1983;2733.0;1939;44;<pad> 1939</s>
+587;Taxiarchis Fountas;1995;208176.0;1924;71;<pad> 1924</s>
+588;Tony Tyler;1943;20900.0;1949;6;<pad> 1949</s>
+589;Tom Jordan (baseball);1919;49902.0;1939;20;<pad> 1939</s>
+590;Samuel Kolega;1999;13360.0;1931;68;<pad> 1931</s>
+591;Edward Laurillard;1870;4343.0;1887;17;<pad> 1887</s>
+592;Jerry Crawford (lawyer);1949;22341.0;1939;10;<pad> 1939</s>
+593;Keita Yoshioka;1997;386.0;1963;34;<pad> 1963</s>
+594;August H. Vogel;1862;4303.0;1880;18;<pad> 1880</s>
+595;S. K. Wankhede;1914;224505.0;1908;6;<pad> 1908</s>
+596;Ivan Vuković;1987;27857.0;1939;48;<pad> 1939</s>
+597;Randy Parton;1953;820881.0;1954;1;<pad> 1954</s>
+598;Huang Jun (author);1890;2534.0;1949;59;<pad> 1949</s>
+599;Ryszard Nowak;1962;3188.0;1939;23;<pad> 1939</s>
+600;Charles Stewart (British Army officer);1775;2665.0;1887;112;<pad> 1887</s>
+601;Te Heuheu Tūkino IV;1821;9147.0;1868;47;<pad> 1868</s>
+602;Henk van der Vliet;1928;2469.0;1931;3;<pad> 1931</s>
+603;Martha Hackett;1961;287887.0;1887;74;<pad> 1887</s>
+604;Hilda Paredes;1957;12100.0;1931;26;<pad> 1931</s>
+605;Sallie F. Chapin;1830;1911.0;1880;50;<pad> 1880</s>
+606;José David Mosquera;1983;2633.0;1931;52;<pad> 1931</s>
+607;Isa Hoes;1967;38681.0;1931;36;<pad> 1931</s>
+608;Joseph A. Scanlon;1901;2275.0;1887;14;<pad> 1887</s>
+609;Sophia Chang;1965;29868.0;1962;3;<pad> 1962</s>
+610;Hassan Hamza;1994;5897.0;1967;27;<pad> 1967</s>
+611;Nanbu Hironobu;1704;6766.0;1584;120;<pad> 1584</s>
+612;Chatur Lal;1925;31005.0;1924;1;<pad> 1924</s>
+613;Eddie Shaw;1937;63620.0;1939;2;<pad> 1939</s>
+614;Júlio Santos (athlete);1936;461.0;1924;12;<pad> 1924</s>
+615;Sabra Loomis;1938;2715.0;1967;29;<pad> 1967</s>
+616;John Arthur (boxer);1929;8520.0;1895;34;<pad> 1895</s>
+617;Scott Sellars;1965;106127.0;1966;1;<pad> 1966</s>
+618;Um Won-sang;1999;31723.0;1950;49;<pad> 1950</s>
+619;Devon Sproule;1982;28615.0;1971;11;<pad> 1971</s>
+620;Pádraig MacKernan;1940;4590.0;1889;51;<pad> 1889</s>
+621;Nirmal Baba;1952;590600.0;1924;28;<pad> 1924</s>
+622;Henri Picard;1916;11703.0;1867;49;<pad> 1867</s>
+623;Joseph-Bernard Rosier;1804;2112.0;1844;40;<pad> 1844</s>
+624;Moses Kacoul Machar;1945;6599.0;1887;58;<pad> 1887</s>
+625;A. J. Lockhart;1898;359.0;1887;11;<pad> 1887</s>
+626;Henry Leavens;1836;1268.0;1854;18;<pad> 1854</s>
+627;Hamid Raza Gilani;1936;11397.0;1939;3;<pad> 1939</s>
+628;Emperor Yuan of Liang;508;40387.0;no prediction;n/a;<pad> 521</s>
+629;Kay Curley Bennett;1922;546.0;1908;14;<pad> 1908</s>
+630;Wojciech Frykowski;1936;6685288.0;1924;12;<pad> 1924</s>
+631;Oscar Morris;1876;1275.0;1887;11;<pad> 1887</s>
+632;Philip II, Marquis of Namur;1195;14500.0;1521;326;<pad> 1521</s>
+633;Ronald Leung;1934;2431.0;1962;28;<pad> 1962</s>
+634;Ilya Knyazhuk;2000;1809.0;1903;97;<pad> 1903</s>
+635;Libby Morris;1930;37195.0;1963;33;<pad> 1963</s>
+636;Kitamura Tokoku;1868;14771.0;1584;284;<pad> 1584</s>
+637;Kjetil Bang-Hansen;1940;5577.0;1939;1;<pad> 1939</s>
+638;Saud bin Faisal Al Saud;1940;9678.0;1931;9;<pad> 1931</s>
+639;Erich Jahn;1907;2535.0;1912;5;<pad> 1912</s>
+640;Mary Gideon;1989;106.0;1887;102;<pad> 1887</s>
+641;Louis Longequeue;1914;412.0;1844;70;<pad> 1844</s>
+642;Yu Kosuge;1983;8269.0;1954;29;<pad> 1954</s>
+643;Yves Jacques;1956;35331.0;1939;17;<pad> 1939</s>
+644;Tom Barnett (footballer);1936;11014.0;1895;41;<pad> 1895</s>
+645;Deep Sengupta;1988;22217.0;1971;17;<pad> 1971</s>
+646;Ruby Bute;1943;3541.0;1908;35;<pad> 1908</s>
+647;Bert Baker (Illinois politician);1923;;1904;19;<pad> 1904</s>
+648;Gyula Szapáry;1832;18036.0;1881;49;<pad> 1881</s>
+649;Matsudaira Katasada;1724;727.0;1868;144;<pad> 1868</s>
+650;Róbert Pukalovič;1960;1837.0;1939;21;<pad> 1939</s>
+651;Richard Bellamy (politician);1825;1862.0;1960;135;<pad> 1960</s>
+652;Ragnar Lundberg;1924;3301.0;1931;7;<pad> 1931</s>
+653;Jack Pyc;1972;1953.0;1939;33;<pad> 1939</s>
+654;Bob Friedlund;1920;1513.0;1939;19;<pad> 1939</s>
+655;Valerius Andreas;1588;1228.0;1887;299;<pad> 1887</s>
+656;Francis de Winton;1835;17793.0;1795;40;<pad> 1795</s>
+657;Sanjeev Bagai;1965;20338.0;1962;3;<pad> 1962</s>
+658;Hirotoshi Masui;1984;7867.0;1954;30;<pad> 1954</s>
+659;Farah Jefry;2003;4763.0;1971;32;<pad> 1971</s>
+660;Edymar Martínez;1995;102366.0;1962;33;<pad> 1962</s>
+661;Crow Dog;1833;71069.0;1895;62;<pad> 1895</s>
+662;Alexander Clutterbuck;1897;6124.0;1887;10;<pad> 1887</s>
+663;André Ribeiro (racing driver);1966;32717.0;1931;35;<pad> 1931</s>
+664;Frederick Salomon;1826;15724.0;1880;54;<pad> 1880</s>
+665;Luasa Batungile;1967;848.0;1931;36;<pad> 1931</s>
+666;Pill-Soon Song;1936;3040.0;1954;18;<pad> 1954</s>
+667;War Machine (mixed martial artist);1981;4595404.0;1931;50;<pad> 1931</s>
+668;Ayoub El-Idrissi;1994;976.0;1939;55;<pad> 1939</s>
+669;Lazar Marin;1994;19823.0;1931;63;<pad> 1931</s>
+670;Jules Mary;1851;4847.0;1908;57;<pad> 1908</s>
+671;Reno (comedian);1956;14274.0;1931;25;<pad> 1931</s>
+672;Oleksandr Onyshchenko;1969;59456.0;1939;30;<pad> 1939</s>
+673;Eduard Lorenz;1921;42629.0;1895;26;<pad> 1895</s>
+674;Taras Kozyra;1941;2934.0;1939;2;<pad> 1939</s>
+675;Somalatha Subasinghe;1936;41655.0;1931;5;<pad> 1931</s>
+676;John Fidler (politician);1891;;1895;4;<pad> 1895</s>
+677;Marcus D'Amico;1965;275940.0;1967;2;<pad> 1967</s>
+678;Jonychand Singh;1993;;1887;106;<pad> 1887</s>
+679;Frederick Chapman (sportsman);1901;1562.0;1854;47;<pad> 1854</s>
+680;Cully Simon;1918;3033.0;1939;21;<pad> 1939</s>
+681;Rosan Bosch;1969;6253.0;1931;38;<pad> 1931</s>
+682;Shirzat Halil;1997;430.0;1931;66;<pad> 1931</s>
+683;Achmad Faris;1993;90.0;1963;30;<pad> 1963</s>
+684;Valerie Flint;1936;7329.0;1939;3;<pad> 1939</s>
+685;Wenceslao Salgado;1900;870.0;1887;13;<pad> 1887</s>
+686;C. C. van Asch van Wijck;1900;9307.0;1892;8;<pad> 1892</s>
+687;William Hoapili Kaʻauwai;1835;13539.0;1887;52;<pad> 1887</s>
+688;Karl August Krebs;1804;422.0;1844;40;<pad> 1844</s>
+689;Ethel Merker;1923;1307.0;1899;24;<pad> 1899</s>
+690;Dickie David;1879;3134.0;1939;60;<pad> 1939</s>
+691;Þóra Kristín Jónsdóttir;1997;1522.0;1924;73;<pad> 1924</s>
+692;Sojin (actor);1884;10899.0;1892;8;<pad> 1892</s>
+693;Matthías Kristjánsson;1924;935.0;1939;15;<pad> 1939</s>
+694;Liam Aiken;1990;1526624.0;1984;6;<pad> 1984</s>
+695;Anna Book;1970;46582.0;1939;31;<pad> 1939</s>
+696;Nathan Fong;1959;7259.0;1984;25;<pad> 1984</s>
+697;Gabriel Monod;1844;10865.0;1912;68;<pad> 1912</s>
+698;Charles Fleming (American football);1877;5303.0;1881;4;<pad> 1881</s>
+699;Lee Hae-man;1972;897.0;1967;5;<pad> 1967</s>
+700;Christian Mendy;1984;3982.0;1984;0;<pad> 1984</s>
+701;Zé Pedro (footballer, born June 1997);1997;;1931;66;<pad> 1931</s>
+702;Liam Hamilton;1928;12164.0;1984;56;<pad> 1984</s>
+703;Salvatore Sabella;1891;176806.0;1939;48;<pad> 1939</s>
+704;Michal Iwanowski;1977;1087.0;1976;1;<pad> 1976</s>
+705;Necmiye Alpay;1946;1074.0;1931;15;<pad> 1931</s>
+706;Pavel Coruț;1949;24017.0;1924;25;<pad> 1924</s>
+707;Hélène Arpels;1907;7970.0;1908;1;<pad> 1908</s>
+708;Victor Calvo;1924;2831.0;1931;7;<pad> 1931</s>
+709;Klaus-Peter Hildenbrand;1952;6940.0;1939;13;<pad> 1939</s>
+710;Pornsawan Plungwech;1973;1048.0;1962;11;<pad> 1962</s>
+711;Tatyana Ustinova;1913;12656.0;1939;26;<pad> 1939</s>
+712;Mark Riebling;1963;28065.0;1939;24;<pad> 1939</s>
+713;Karol J. Bobko;1937;99504.0;1939;2;<pad> 1939</s>
+714;Moses Chan;1971;577575.0;1962;9;<pad> 1962</s>
+715;Kristiyan Peshov;1997;3244.0;1939;58;<pad> 1939</s>
+716;Daryll Jones;1962;5602.0;1939;23;<pad> 1939</s>
+717;Tre Boston;1992;378877.0;1984;8;<pad> 1984</s>
+718;Loulou Lamotte;1981;56119.0;1924;57;<pad> 1924</s>
+719;Lajos Batthyány (governor);1860;5825.0;1887;27;<pad> 1887</s>
+720;George Hibberd;1845;941.0;1854;9;<pad> 1854</s>
+721;Vanessa Cootes;1969;2365.0;1967;2;<pad> 1967</s>
+722;Frédéric François;1950;87585.0;1764;186;<pad> 1764</s>
+723;Rick Sellers;1980;1386.0;1962;18;<pad> 1962</s>
+724;Grand Duke Michael Nikolaevich of Russia;1832;432216.0;1887;55;<pad> 1887</s>
+725;Walter Coulston;1912;864.0;1887;25;<pad> 1887</s>
+726;William H. Proctor;1827;1690.0;1822;5;<pad> 1822</s>
+727;Maxim Kurdyukov;1990;3470.0;1924;66;<pad> 1924</s>
+728;Madan Patil;1958;24699.0;1939;19;<pad> 1939</s>
+729;Rd Ariffien;1902;20158.0;1924;22;<pad> 1924</s>
+730;Frank Vosper;1899;28609.0;1904;5;<pad> 1904</s>
+731;Gonzalo Casazza;1999;659.0;1931;68;<pad> 1931</s>
+732;Kim Kuk-thae;1924;12208.0;1950;26;<pad> 1950</s>
+733;Bartolomé Pérez;1634;6047.0;1887;253;<pad> 1887</s>
+734;Sylwia Zyzańska;1997;2560.0;1939;58;<pad> 1939</s>
+735;Hagigat Rzayeva;1907;7646.0;1924;17;<pad> 1924</s>
+736;Francis R. Smith;1911;3871.0;1880;31;<pad> 1880</s>
+737;Gisela Anton;1955;4153.0;1931;24;<pad> 1931</s>
+738;Jacki Clérico;1929;14599.0;1962;33;<pad> 1962</s>
+739;Ida Kadlec;1929;509.0;1903;26;<pad> 1903</s>
+740;Minamoto no Yoshikuni;1082;11581.0;1536;454;<pad> 1536</s>
+741;Ben Twell;1903;684.0;1966;63;<pad> 1966</s>
+742;Clarice Beckett;1887;85908.0;1908;21;<pad> 1908</s>
+743;Dale Oehler;1941;5353.0;1939;2;<pad> 1939</s>
+744;Floyd Brown (athlete);1957;2359.0;1908;49;<pad> 1908</s>
+745;John Duncan King;1789;238.0;1887;98;<pad> 1887</s>
+746;Sir Thomas Barrett-Lennard, 2nd Baronet;1826;13062.0;1821;5;<pad> 1821</s>
+747;Dana Dobbie;1984;9226.0;1976;8;<pad> 1976</s>
+748;Steven Ungerleider;1949;15868.0;1963;14;<pad> 1963</s>
+749;Erik Andersson (ice hockey, born 1982);1982;2589.0;1931;51;<pad> 1931</s>
+750;Arthur Dummett;1900;759.0;1887;13;<pad> 1887</s>
+751;Julia Lynn;1957;8450.0;1939;18;<pad> 1939</s>
+752;Josimar Vargas;1990;5553.0;1931;59;<pad> 1931</s>
+753;Ivor Raymonde;1926;57087.0;1908;18;<pad> 1908</s>
+754;Mizuki Fukumura;1996;88790.0;1963;33;<pad> 1963</s>
+755;Lilou Graciet;2004;251.0;1939;65;<pad> 1939</s>
+756;Julie Hosch;1939;2082.0;1963;24;<pad> 1963</s>
+757;Arne Sejersted;1877;1154.0;1931;54;<pad> 1931</s>
+758;Elwood Plummer;1944;673.0;1899;45;<pad> 1899</s>
+759;Jörg Emmerich;1974;2234.0;1954;20;<pad> 1954</s>
+760;John McGovern (VC);1825;3169.0;1954;129;<pad> 1954</s>
+761;Wei Chuanzhong;1954;285.0;1949;5;<pad> 1949</s>
+762;Pak Tong-chun;1942;3240.0;1939;3;<pad> 1939</s>
+763;Soffy Walleen;1861;370.0;1908;47;<pad> 1908</s>
+764;Aldace F. Walker;1842;3905.0;1895;53;<pad> 1895</s>
+765;Walter Blackwell;1890;142.0;1854;36;<pad> 1854</s>
+766;Oleksandr Prokudin;1983;6234.0;1908;75;<pad> 1908</s>
+767;John Brallier;1876;15718.0;1887;11;<pad> 1887</s>
+768;Lucy Burle;1955;1627.0;1887;68;<pad> 1887</s>
+769;Adam Barta;1979;206425.0;1967;12;<pad> 1967</s>
+770;Jani Kaçi;1952;5586.0;1963;11;<pad> 1963</s>
+771;Helen Howard;1903;3242.0;1908;5;<pad> 1908</s>
+772;Venna Vallabha Rao;1956;1267.0;1931;25;<pad> 1931</s>
+773;John Monckton (swimmer);1938;8816.0;1854;84;<pad> 1854</s>
+774;Justus Velsius;1510;13647.0;1632;122;<pad> 1632</s>
+775;Miklós Temesvári;1938;648.0;1887;51;<pad> 1887</s>
+776;Uisenma Borchu;1984;10976.0;1924;60;<pad> 1924</s>
+777;Tito Auger;1968;25021.0;1924;44;<pad> 1924</s>
+778;Monico Puentevella;1946;23841.0;1939;7;<pad> 1939</s>
+779;Zild Benitez;1997;221808.0;1931;66;<pad> 1931</s>
+780;Peter R. de Vries;1956;556680.0;1931;25;<pad> 1931</s>
+781;Eva Bowring;1892;22526.0;1887;5;<pad> 1887</s>
+782;Malcolm Troup;1930;786.0;1939;9;<pad> 1939</s>
+783;Eugene F. Pigott Jr.;1946;7103.0;1908;38;<pad> 1908</s>
+784;Gjorgji Todorovski;1955;2037.0;1897;58;<pad> 1897</s>
+785;Kershawl Sykes-Martin;1999;2204.0;1939;60;<pad> 1939</s>
+786;Maggie Rodriguez;1969;69289.0;1954;15;<pad> 1954</s>
+787;Alfred Geddes;1871;3220.0;1854;17;<pad> 1854</s>
+788;John MacDonald (rugby union, born 1890);1890;217.0;1867;23;<pad> 1867</s>
+789;Jackson A. Rigney;1913;1512.0;1887;26;<pad> 1887</s>
+790;Samantha Sheehan;1986;7249.0;1976;10;<pad> 1976</s>
+791;Seitlhamo Motsapi;1966;4445.0;1924;42;<pad> 1924</s>
+792;Zeca Amaral;1967;9545.0;1931;36;<pad> 1931</s>
+793;Joseph L. Rosefield;1882;24795.0;1895;13;<pad> 1895</s>
+794;Theodor von Lüpke;1873;1710.0;1844;29;<pad> 1844</s>
+795;David Mitchell (footballer, born 1945);1945;1523.0;1960;15;<pad> 1960</s>
+796;Linsley Thorpe;1923;71.0;1939;16;<pad> 1939</s>
+797;Chelsea Lenarduzzi;1995;4067.0;1984;11;<pad> 1984</s>
+798;Ramona M. Valdez;1984;25541.0;1939;45;<pad> 1939</s>
+799;Miguel Pourier;1938;1858.0;1931;7;<pad> 1931</s>
+800;Alexandre Remi;1809;2200.0;1892;83;<pad> 1892</s>
+801;John T. Johnson (Oklahoma judge);1856;288.0;1854;2;<pad> 1854</s>
+802;Paul Hull;1968;14375.0;1961;7;<pad> 1961</s>
+803;Nicolai Brock-Madsen;1993;99261.0;1887;106;<pad> 1887</s>
+804;Ryan Tyler;1973;12090.0;1984;11;<pad> 1984</s>
+805;Alexandros Kranis;1897;1237.0;1924;27;<pad> 1924</s>
+806;Bernardas Fridmanas;1859;1392.0;1903;44;<pad> 1903</s>
+807;Robert Goodnough;1917;17963.0;1887;30;<pad> 1887</s>
+808;Kathleen King von Alvensleben;1969;6729.0;1908;61;<pad> 1908</s>
+809;Christopher Newman Hall;1816;9189.0;1887;71;<pad> 1887</s>
+810;Les Ford;1917;2088.0;1939;22;<pad> 1939</s>
+811;Don McCormick;1945;431.0;1931;14;<pad> 1931</s>
+812;Anna Chappell;1925;9761.0;1939;14;<pad> 1939</s>
+813;George M. O'Brien;1917;11629.0;1887;30;<pad> 1887</s>
+814;John Ariss;1725;5571.0;1895;170;<pad> 1895</s>
+815;Isahar Akilov;1914;;1939;25;<pad> 1939</s>
+816;Epaminonda Lucaciu;1877;376.0;1887;10;<pad> 1887</s>
+817;Lavrentia Herasymiv;1911;489.0;1939;28;<pad> 1939</s>
+818;Isabel Briggs Myers;1897;402878.0;1908;11;<pad> 1908</s>
+819;Jacques Auxiette;1940;4881.0;1780;160;<pad> 1780</s>
+820;Vladimir Kovin;1954;4401.0;1924;30;<pad> 1924</s>
+821;John Armstrong Drexel;1891;27110.0;1822;69;<pad> 1822</s>
+822;Greg Novak;1950;4108.0;1962;12;<pad> 1962</s>
+823;Vanna Rosenberg;1973;26076.0;1939;34;<pad> 1939</s>
+824;Kacper Tatara;1988;3093.0;1976;12;<pad> 1976</s>
+825;Gary Reed (comics);1956;24230.0;1962;6;<pad> 1962</s>
+826;Benjamin Parth;1988;2625.0;1824;164;<pad> 1824</s>
+827;Lola Anglada;1896;6870.0;1931;35;<pad> 1931</s>
+828;Albrecht Aschoff;1899;350.0;1797;102;<pad> 1797</s>
+829;User:Chariotsacha/sandbox;1707;;1984;277;<pad> 1984</s>
+830;Miloslav Verner;1948;448.0;1931;17;<pad> 1931</s>
+831;Anne La Berge;1955;7701.0;1844;111;<pad> 1844</s>
+832;Jan Stehlík (basketball);1986;1596.0;1924;62;<pad> 1924</s>
+833;Falguni Pathak;1964;1862614.0;1961;3;<pad> 1961</s>
+834;Rodwell Williams;1956;5275.0;1939;17;<pad> 1939</s>
+835;Astrid Bodin;1903;3686.0;1931;28;<pad> 1931</s>
+836;William Perrin (convict);1831;2297.0;1854;23;<pad> 1854</s>
+837;Roland Courteau;1943;4173.0;1924;19;<pad> 1924</s>
+838;Anderson (footballer, born 1982);1982;295.0;1939;43;<pad> 1939</s>
+839;Veronica Vdovicenco;1985;1376.0;1967;18;<pad> 1967</s>
+840;Ali Musse;1996;21147.0;1931;65;<pad> 1931</s>
+841;Frédéric Macler;1869;12.0;1775;94;<pad> 1775</s>
+842;Efraín Cepeda;1950;29.0;1931;19;<pad> 1931</s>
+843;Alejandro Velázquez Lara;1974;1291.0;1931;43;<pad> 1931</s>
+844;Ralph Salisbury;1926;3228.0;1887;39;<pad> 1887</s>
+845;Dan Mooney;1999;21573.0;1967;32;<pad> 1967</s>
+846;Frank P. Brooks;1850;191.0;1895;45;<pad> 1895</s>
+847;Charlie Lee (football coach);1945;765.0;1939;6;<pad> 1939</s>
+848;Louis Schwabe;1798;241.0;1887;89;<pad> 1887</s>
+849;Sammy Yatim;1994;25876.0;1967;27;<pad> 1967</s>
+850;Caroline Kirkland;1801;13637.0;1939;138;<pad> 1939</s>
+851;Nicola Agnozzi;1911;2450.0;1939;28;<pad> 1939</s>
+852;Esper Beloselsky;1870;5023.0;1924;54;<pad> 1924</s>
+853;Libor Hrdlička;1986;8386.0;1939;47;<pad> 1939</s>
+854;Stanislav Krakov;1895;17191.0;1939;44;<pad> 1939</s>
+855;George Allen Mansfield;1834;5289.0;1895;61;<pad> 1895</s>
+856;Walter Petzel;1883;15086.0;1904;21;<pad> 1904</s>
+857;Jim Rossignol;1978;24034.0;1954;24;<pad> 1954</s>
+858;Davide Ruiu;2001;2402.0;1984;17;<pad> 1984</s>
+859;Phil Parsons;1957;134054.0;1954;3;<pad> 1954</s>
+860;Philip Waruinge;1945;13690.0;1931;14;<pad> 1931</s>
+861;Ulrich Rülein von Calw;1465;4435.0;1780;315;<pad> 1780</s>
+862;Taras Senkiv (bishop);1960;1347.0;1939;21;<pad> 1939</s>
+863;Caroline Stuart, Countess of Seafield;1830;4540.0;1768;62;<pad> 1768</s>
+864;William Hall Gage;1777;15231.0;1812;35;<pad> 1812</s>
+865;David Jamison (politician);1660;1247.0;1939;279;<pad> 1939</s>
+866;Holger Pohland;1963;1346.0;1939;24;<pad> 1939</s>
+867;Cam Theaker;1912;1557.0;1971;59;<pad> 1971</s>
+868;Onyekachi Apam;1986;63224.0;1939;47;<pad> 1939</s>
+869;Alexander Plisetski;1931;11538.0;1924;7;<pad> 1924</s>
+870;Horace Vere, 1st Baron Vere of Tilbury;1565;44195.0;1811;246;<pad> 1811</s>
+871;Oleksii Dniprov;1982;565.0;1939;43;<pad> 1939</s>
+872;Scott Skiles;1964;870258.0;1962;2;<pad> 1962</s>
+873;Joel Biggie Matiza;1960;1405.0;1931;29;<pad> 1931</s>
+874;Johnny Hill (footballer);1884;813.0;1939;55;<pad> 1939</s>
+875;Tad Crawford;1984;5222.0;1939;45;<pad> 1939</s>
+876;Edward Wilmot Blyden;1832;202935.0;1854;22;<pad> 1854</s>
+877;Barbara Smith (activist);1946;119.0;1939;7;<pad> 1939</s>
+878;Paul Kagan;1943;1587.0;1954;11;<pad> 1954</s>
+879;Silvia Bertolaccini;1950;12623.0;1939;11;<pad> 1939</s>
+880;Red Cavaney;1943;3670.0;1908;35;<pad> 1908</s>
+881;Fred Paine;1925;2998.0;1809;116;<pad> 1809</s>
+882;Bridget Smith;1966;7206.0;1962;4;<pad> 1962</s>
+883;Sophia Alekseyevna of Russia;1657;181554.0;1887;230;<pad> 1887</s>
+884;Wilhelm Vischer (botanist);1890;1301.0;1854;36;<pad> 1854</s>
+885;Henrik Sørensen (athlete);1897;403.0;1899;2;<pad> 1899</s>
+886;Shannon Stephen;1994;2762.0;1984;10;<pad> 1984</s>
+887;Peter Bärtschi;1935;713.0;1939;4;<pad> 1939</s>
+888;Charles Edward Moss;1870;4065.0;1887;17;<pad> 1887</s>
+889;Yvonne Barrett;1946;25092.0;1954;8;<pad> 1954</s>
+890;Nigel Laughton;1965;1251.0;1939;26;<pad> 1939</s>
+891;William Stuart Messer;1882;103.0;1881;1;<pad> 1881</s>
+892;Andrea Meroni;1997;5707.0;1939;58;<pad> 1939</s>
+893;James T. Stewart;1921;1795.0;1899;22;<pad> 1899</s>
+894;Michelle Sol;1972;18464.0;1971;1;<pad> 1971</s>
+895;Katherine MacGregor;1925;1257017.0;1939;14;<pad> 1939</s>
+896;Rutger Gunnarsson;1946;141272.0;1939;7;<pad> 1939</s>
+897;Jinu;1971;105656.0;no prediction;n/a;<pad> c. 900</s>
+898;Athar Shah Khan Jaidi;1943;22358.0;1924;19;<pad> 1924</s>
+899;Markus Mehr;1965;2243.0;1971;6;<pad> 1971</s>
+900;Roberto Boscaglia;1968;25751.0;1931;37;<pad> 1931</s>
+901;James Bickford (racing driver);1998;21181.0;1854;144;<pad> 1854</s>
+902;Aiman Napoli;1989;33058.0;1967;22;<pad> 1967</s>
+903;József Rippl-Rónai;1861;36734.0;1887;26;<pad> 1887</s>
+904;Mantorras;1982;75903.0;1895;87;<pad> 1895</s>
+905;Burhan Qurbani;1980;31353.0;1924;56;<pad> 1924</s>
+906;Ken Schaphorst;1960;4062.0;1954;6;<pad> 1954</s>
+907;Jennifer Sey;1969;163569.0;1976;7;<pad> 1976</s>
+908;Richard Nagy (swimmer);1993;7542.0;1949;44;<pad> 1949</s>
+909;Leon Lavington;1889;995.0;1939;50;<pad> 1939</s>
+910;Stuart Evers;1976;9717.0;1924;52;<pad> 1924</s>
+911;Dane Sampson;1986;5625.0;1984;2;<pad> 1984</s>
+912;Kenyon Peard;1902;596.0;1931;29;<pad> 1931</s>
+913;Diedrich Willers Jr.;1833;1056.0;1899;66;<pad> 1899</s>
+914;Timothy Corcoran II;1973;1868.0;1892;81;<pad> 1892</s>
+915;Maxine Hong Kingston;1940;321241.0;1939;1;<pad> 1939</s>
+916;Roger Clark (actor, born 1908);1908;1425.0;1939;31;<pad> 1939</s>
+917;Gino Frittelli;1879;1112.0;1939;60;<pad> 1939</s>
+918;Qaiser Ahmed Sheikh;1946;16850.0;1931;15;<pad> 1931</s>
+919;Miklós Gimes;1917;44169.0;1924;7;<pad> 1924</s>
+920;William Bostock;1892;76479.0;1824;68;<pad> 1824</s>
+921;M. P. Moller;1854;42015.0;1854;0;<pad> 1854</s>
+922;Liang Jincai;1927;694.0;1949;22;<pad> 1949</s>
+923;Keren Barratt;1946;10950.0;1976;30;<pad> 1976</s>
+924;Thomas Z. Morrow;1835;5683.0;1854;19;<pad> 1854</s>
+925;Paul M. English;1963;118358.0;1939;24;<pad> 1939</s>
+926;Gianni Di Lorenzo;1948;715.0;1939;9;<pad> 1939</s>
+927;Ilya Schor;1904;13284.0;1924;20;<pad> 1924</s>
+928;Fredrik Magnus Cronberg;1668;1288.0;1899;231;<pad> 1899</s>
+929;Beverly Prosser Gelwick;1932;;1931;1;<pad> 1931</s>
+930;Gregory S. Aldrete;1966;29807.0;1954;12;<pad> 1954</s>
+931;Lance Haggith;1960;6540.0;1962;2;<pad> 1962</s>
+932;Frederick Barter;1891;12825.0;1821;70;<pad> 1821</s>
+933;Valentina Cortese;1923;555655.0;1939;16;<pad> 1939</s>
+934;Liam McIntyre;1982;2557837.0;1984;2;<pad> 1984</s>
+935;Nobuaki Yanagida;1970;1821.0;1954;16;<pad> 1954</s>
+936;Pierre-Elzéar Taschereau;1805;1812.0;1824;19;<pad> 1824</s>
+937;Sam Lewis (trade unionist);1901;2561.0;1963;62;<pad> 1963</s>
+938;John Anderson Gilfillan;1821;1057.0;1854;33;<pad> 1854</s>
+939;Jacob Beser;1921;150894.0;1895;26;<pad> 1895</s>
+940;Alfred Brauer;1894;9307.0;1895;1;<pad> 1895</s>
+941;Marcus Ball;1987;66758.0;1939;48;<pad> 1939</s>
+942;Irena Kwiatkowska;1912;29312.0;1931;19;<pad> 1931</s>
+943;Don Orehek;1928;4430.0;1939;11;<pad> 1939</s>
+944;Maksim Lukashevich;1992;2001.0;1939;53;<pad> 1939</s>
+945;Eri Nobuchika;1985;15553.0;1963;22;<pad> 1963</s>
+946;Javito (footballer, born 1998);1998;1268.0;1939;59;<pad> 1939</s>
+947;Zbigniew Preisner;1955;305807.0;1939;16;<pad> 1939</s>
+948;George Francis Chase;1848;1113.0;1815;33;<pad> 1815</s>
+949;Jamal Baptiste;2003;64627.0;1984;19;<pad> 1984</s>
+950;Grzegorz Sołogub;1918;1477.0;1939;21;<pad> 1939</s>
+951;Paweł Skórzewski;1744;1177.0;1908;164;<pad> 1908</s>
+952;Stefani Hid;1985;3380.0;1967;18;<pad> 1967</s>
+953;Grace Dangmei;1996;19038.0;1984;12;<pad> 1984</s>
+954;Nartey Polo;1995;946.0;1895;100;<pad> 1895</s>
+955;Afroditi Kosma;1983;2448.0;1963;20;<pad> 1963</s>
+956;Matteo Gigante;2002;5747.0;1967;35;<pad> 1967</s>
+957;Ed Pien;1958;5706.0;1931;27;<pad> 1931</s>
+958;Bertrand Zadoc-Kahn;1901;826.0;1924;23;<pad> 1924</s>
+959;François Ovide;1952;5046.0;1711;241;<pad> 1711</s>
+960;Ted Hinton;1904;567320.0;1931;27;<pad> 1931</s>
+961;Josh Bidwell;1976;41607.0;1984;8;<pad> 1984</s>
+962;Mallika Chopra;1971;316005.0;1984;13;<pad> 1984</s>
+963;Naoko Nozawa;1963;10170.0;1963;0;<pad> 1963</s>
+964;Vincent Hadleŭski;1898;15939.0;1939;41;<pad> 1939</s>
+965;Franz Frurip;1883;772.0;1887;4;<pad> 1887</s>
+966;Silvia Azzoni;1973;12984.0;1939;34;<pad> 1939</s>
+967;Lucian Croitoru;1957;8429.0;1924;33;<pad> 1924</s>
+968;Robert S. Richardson;1902;8559.0;1854;48;<pad> 1854</s>
+969;Sven Scholander;1860;5207.0;1931;71;<pad> 1931</s>
+970;Manuel Panguilef;1887;;1931;44;<pad> 1931</s>
+971;Kyle Reifers;1983;37976.0;1984;1;<pad> 1984</s>
+972;Yoshimi Niizeki;1954;2290.0;1939;15;<pad> 1939</s>
+973;Albert Cramond;1881;501.0;1887;6;<pad> 1887</s>
+974;Bob Burns (drummer);1950;944092.0;1924;26;<pad> 1924</s>
+975;Harry Ruskin;1894;6482.0;1852;42;<pad> 1852</s>
+976;Evelyn Morrison;1902;5354.0;1908;6;<pad> 1908</s>
+977;Joseph Leon Lignières;1868;5849.0;1844;24;<pad> 1844</s>
+978;Simon Mrashani;1964;1369.0;1967;3;<pad> 1967</s>
+979;Freda Huson;1964;203.0;1908;56;<pad> 1908</s>
+980;Herbert Ehrenberg;1926;4979.0;1903;23;<pad> 1903</s>
+981;Rúnar Júlíusson;1945;11756.0;1939;6;<pad> 1939</s>
+982;Otto Kitzler;1834;7371.0;1887;53;<pad> 1887</s>
+983;Jim Souness;1928;6866.0;1939;11;<pad> 1939</s>
+984;Louis Maxson;1855;2641.0;1899;44;<pad> 1899</s>
+985;Nadir Lamyaghri;1976;12923.0;1939;37;<pad> 1939</s>
+986;Michael Zerbes;1944;584.0;1939;5;<pad> 1939</s>
+987;James Hartigan;1975;21192.0;1887;88;<pad> 1887</s>
+988;Karl Gottlob Zumpt;1792;3594.0;1812;20;<pad> 1812</s>
+989;Tunka Manin;1010;49116.0;1939;929;<pad> 1939</s>
+990;Murder of Pınar Gültekin;1993;78675.0;1931;62;<pad> 1931</s>
+991;Ivo Žďárek;1960;10118.0;1924;36;<pad> 1924</s>
+992;Janice Holt Giles;1905;22241.0;1939;34;<pad> 1939</s>
+993;Stephen Evans (diplomat);1950;11475.0;1939;11;<pad> 1939</s>
+994;Lauren Silva;1987;2791.0;1976;11;<pad> 1976</s>
+995;Giovanni Battista Scaramelli;1687;6939.0;1708;21;<pad> 1708</s>
+996;Herbert Niel Randle;1880;1019.0;1887;7;<pad> 1887</s>
+997;Garry Parker;1965;128686.0;1939;26;<pad> 1939</s>
+998;Florence Carpenter Dieudonné;1850;2355.0;1887;37;<pad> 1887</s>
+999;Charles Darling Parks;1869;3603.0;1854;15;<pad> 1854</s>
+1000;Terence Anderson (sport shooter);1946;1629.0;1949;3;<pad> 1949</s>
+1001;Edgard Varèse;1883;720338.0;1887;4;<pad> 1887</s>
+1002;Hugo Girard;1971;105223.0;1895;76;<pad> 1895</s>
+1003;Charles Amos;1945;3438.0;1854;91;<pad> 1854</s>
+1004;Toshio Suzuki (producer);1948;528665.0;1954;6;<pad> 1954</s>
+1005;Mike Griffin (basketball);1943;2187.0;1962;19;<pad> 1962</s>
+1006;Vladyslav Atroshenko;1968;12419.0;1939;29;<pad> 1939</s>
+1007;Sigurd Grytten;1972;1264.0;1897;75;<pad> 1897</s>
+1008;Doug Davis (infielder);1962;16823.0;1954;8;<pad> 1954</s>
+1009;Eddie Grant (footballer);1928;1305.0;1931;3;<pad> 1931</s>
+1010;Ernie Field;1943;6133.0;1908;35;<pad> 1908</s>
+1011;Tomasz Stolpa;1983;3907.0;1939;44;<pad> 1939</s>
+1012;Mac Ruth;1967;8881.0;1924;43;<pad> 1924</s>
+1013;Grace Zia Chu;1899;6554.0;1984;85;<pad> 1984</s>
+1014;Theodoros Degiannis;1926;2712.0;1897;29;<pad> 1897</s>
+1015;Patrik Koch;1996;8985.0;1967;29;<pad> 1967</s>
+1016;Vittore Gambello;1460;2143.0;1908;448;<pad> 1908</s>
+1017;Melvin Penney;1946;1247.0;1939;7;<pad> 1939</s>
+1018;Pedro Jiménez Galán;1920;3116.0;1895;25;<pad> 1895</s>
+1019;Guy Hibbert;1950;91219.0;1939;11;<pad> 1939</s>
+1020;Brian Dux;1981;12404.0;1954;27;<pad> 1954</s>
+1021;Edoardo Zardini (alpine skier);1976;1234.0;1899;77;<pad> 1899</s>
+1022;Hayley Price;1966;6972.0;1984;18;<pad> 1984</s>
+1023;Ferdinand Schulze;1840;1296.0;1887;47;<pad> 1887</s>
+1024;Jeff Wincott;1956;493921.0;1962;6;<pad> 1962</s>
+1025;Dmitry Mikhailovich Golitsyn the Elder;1665;3767.0;1697;32;<pad> 1697</s>
+1026;Henry C. Weir;1840;167.0;1895;55;<pad> 1895</s>
+1027;Al Bernardin;1928;39891.0;1931;3;<pad> 1931</s>
+1028;Su-Shu Huang;1915;9415.0;1949;34;<pad> 1949</s>
+1029;Miguel Pérez Carreño;1904;2869.0;1895;9;<pad> 1895</s>
+1030;Charlie White (footballer);1889;2989.0;1904;15;<pad> 1904</s>
+1031;Godwin Johnson;2003;1946.0;1844;159;<pad> 1844</s>
+1032;András Bíró;1925;4277.0;1924;1;<pad> 1924</s>
+1033;Anthony Joseph Drexel Biddle Jr.;1897;78022.0;1895;2;<pad> 1895</s>
+1034;Nadia Valentin;1987;209.0;1939;48;<pad> 1939</s>
+1035;Haroobhai Mehta;1933;2041.0;1924;9;<pad> 1924</s>
+1036;Sophie Gray;1843;175716.0;1939;96;<pad> 1939</s>
+1037;Charlie McInnes;1916;1634.0;1939;23;<pad> 1939</s>
+1038;Ricky Jackson (rugby union);1998;4971.0;1955;43;<pad> 1955</s>
+1039;Vassilis Koukalani;1969;55635.0;1939;30;<pad> 1939</s>
+1040;Manuel Quintano Bonifaz;1699;2489.0;1908;209;<pad> 1908</s>
+1041;Brooke Anderson (actress);1981;3109.0;1984;3;<pad> 1984</s>
+1042;Ahn Young-mi;1983;335133.0;1950;33;<pad> 1950</s>
+1043;Ofer Sela;1972;5271.0;1967;5;<pad> 1967</s>
+1044;Géza Pauer;1976;2573.0;1931;45;<pad> 1931</s>
+1045;Lizzy Lind af Hageby;1878;37520.0;1897;19;<pad> 1897</s>
+1046;Luis Dubuc;1985;106784.0;1887;98;<pad> 1887</s>
+1047;Kim Yeon-ji;1986;106782.0;1950;36;<pad> 1950</s>
+1048;James Alcorn Glover;1866;102.0;1844;22;<pad> 1844</s>
+1049;Dorota Krzysztofek;1980;14191.0;1939;41;<pad> 1939</s>
+1050;Anna Wing;1914;305166.0;1931;17;<pad> 1931</s>
+1051;Gary Webb (racing driver);1949;6725.0;1962;13;<pad> 1962</s>
+1052;Ludwig Leichhardt;1813;251887.0;1806;7;<pad> 1806</s>
+1053;Carolina Darias;1965;26556.0;1976;11;<pad> 1976</s>
+1054;Arthur Papas;1980;69932.0;1924;56;<pad> 1924</s>
+1055;Jorge García (footballer, born 1984);1984;653.0;1939;45;<pad> 1939</s>
+1056;Marc Honegger;1926;2007.0;1969;43;<pad> 1969</s>
+1057;Badal Muradyan;1915;526.0;1924;9;<pad> 1924</s>
+1058;Oliver Setzinger;1983;10435.0;1939;44;<pad> 1939</s>
+1059;Renato César;1993;5892.0;1931;62;<pad> 1931</s>
+1060;Sherwood Cheney;1873;1022.0;1908;35;<pad> 1908</s>
+1061;Anson Goodyear;1877;66287.0;1822;55;<pad> 1822</s>
+1062;Dan Adkins;1937;31837.0;1954;17;<pad> 1954</s>
+1063;César Silvera;1971;206.0;1931;40;<pad> 1931</s>
+1064;Nick Brimble;1944;673927.0;1962;18;<pad> 1962</s>
+1065;Henry Lane Wilson;1857;88492.0;1908;51;<pad> 1908</s>
+1066;Bertalan Zakany;1984;1203.0;1931;53;<pad> 1931</s>
+1067;Félix Le Dantec;1869;9608.0;1889;20;<pad> 1889</s>
+1068;Chamod Dilshan;1997;1650.0;1931;66;<pad> 1931</s>
+1069;Natsuki Mizu;1972;9951.0;1963;9;<pad> 1963</s>
+1070;Wagner da Silva (basketball);1961;1086.0;1931;30;<pad> 1931</s>
+1071;Julien d'Ortoli;1983;1086.0;1895;88;<pad> 1895</s>
+1072;Philip Cecil Crampton;1783;2413.0;1908;125;<pad> 1908</s>
+1073;Paweł Machcewicz;1966;6944.0;1924;42;<pad> 1924</s>
+1074;Yelena Burukhina;1977;1501.0;1939;38;<pad> 1939</s>
+1075;Rafael Caroca;1989;9146.0;1931;58;<pad> 1931</s>
+1076;Fayez Al-Malki;1969;9731.0;1931;38;<pad> 1931</s>
+1077;William D. Bond;1931;3358.0;1895;36;<pad> 1895</s>
+1078;Md Jubayer Salehin;1970;2683.0;1963;7;<pad> 1963</s>
+1079;John Braithwaite (soldier);1885;4716.0;1880;5;<pad> 1880</s>
+1080;Lamartine Griffin Hardman;1856;23482.0;1895;39;<pad> 1895</s>
+1081;Kléber Pereira;1975;52114.0;1984;9;<pad> 1984</s>
+1082;Heiko Vogel;1975;78042.0;1954;21;<pad> 1954</s>
+1083;Patrick Gallagher (politician);1946;4627.0;1939;7;<pad> 1939</s>
+1084;Kathryn Hereford;1910;1084.0;1939;29;<pad> 1939</s>
+1085;Henry Ward, 5th Viscount Bangor;1828;12407.0;1808;20;<pad> 1808</s>
+1086;Nina Gabrielyan;1953;616.0;1924;29;<pad> 1924</s>
+1087;Ralph Hodgson;1871;30767.0;1908;37;<pad> 1908</s>
+1088;Arden Cho;1985;3002238.0;1986;1;<pad> 1986</s>
+1089;Pierre Jalbert;1925;178250.0;1887;38;<pad> 1887</s>
+1090;Tomás Vilanova;1925;1474.0;1887;38;<pad> 1887</s>
+1091;Brenda K. Starr;1966;909440.0;1954;12;<pad> 1954</s>
+1092;Vonda Ward;1973;298838.0;1939;34;<pad> 1939</s>
+1093;Emil Kriewitz;1822;7660.0;1903;81;<pad> 1903</s>
+1094;Ray Walker (footballer, born 1963);1963;16461.0;1939;24;<pad> 1939</s>
+1095;Enrico Papi;1965;34178.0;1887;78;<pad> 1887</s>
+1096;Gerald Beech;1921;1275.0;1939;18;<pad> 1939</s>
+1097;Rune Elmqvist;1906;39477.0;1939;33;<pad> 1939</s>
+1098;Benjamin Abalos Jr.;1962;179983.0;1971;9;<pad> 1971</s>
+1099;Danny McRorie;1906;1686.0;1954;48;<pad> 1954</s>
+1100;Frans Hens;1856;3425.0;1892;36;<pad> 1892</s>
+1101;Devan Nair;1923;563581.0;1983;60;<pad> 1983</s>
+1102;Mysterious Walker;1884;25860.0;1939;55;<pad> 1939</s>
+1103;Bambang Santoso;1969;910.0;1963;6;<pad> 1963</s>
+1104;Danilo Pejović;1928;2545.0;1963;35;<pad> 1963</s>
+1105;Abdoul-Aziz Nikiema;1985;7543.0;1931;54;<pad> 1931</s>
+1106;José Ferraz de Almeida Júnior;1850;71468.0;1895;45;<pad> 1895</s>
+1107;Lamar Sternad;1977;2640.0;1939;38;<pad> 1939</s>
+1108;Sidney Badgley;1850;7469.0;1924;74;<pad> 1924</s>
+1109;Paul Suttell;1949;12682.0;1939;10;<pad> 1939</s>
+1110;Lo Yi Ting;1987;9540.0;1949;38;<pad> 1949</s>
+1111;Harold C. McGugin;1893;3498.0;1904;11;<pad> 1904</s>
+1112;Alison Marsden;1976;6623.0;1963;13;<pad> 1963</s>
+1113;Folke Bengtsson;1944;1922.0;1904;40;<pad> 1904</s>
+1114;Hannah Kersey;1983;1006057.0;1897;86;<pad> 1897</s>
+1115;Stoja;1972;126191.0;1912;60;<pad> 1912</s>
+1116;Gusztáv Szerémi;1877;2125.0;1904;27;<pad> 1904</s>
+1117;Stephen Grindlay;1982;6319.0;1887;95;<pad> 1887</s>
+1118;Laurens Serpe;2001;6504.0;1967;34;<pad> 1967</s>
+1119;Aurelio Robotti;1913;2208.0;1931;18;<pad> 1931</s>
+1120;Shireen Sapiro;1991;6121.0;1967;24;<pad> 1967</s>
+1121;Francis Beaver;1824;2826.0;1854;30;<pad> 1854</s>
+1122;Geovanna Tominaga;1980;9771.0;1963;17;<pad> 1963</s>
+1123;Xie Qianni;1968;844.0;1949;19;<pad> 1949</s>
+1124;Yevgeny Belousov;1962;1167.0;1939;23;<pad> 1939</s>
+1125;Ray Hatton;1932;7753.0;1939;7;<pad> 1939</s>
+1126;Patsy Pulitzer;1928;23777.0;1904;24;<pad> 1904</s>
+1127;Russell Jan Pinney;1946;2683.0;1939;7;<pad> 1939</s>
+1128;Özlem Cekic;1976;49705.0;1963;13;<pad> 1963</s>
+1129;Edward Sayers (politician);1818;882.0;1881;63;<pad> 1881</s>
+1130;Karl Auer (footballer);1903;4131.0;1887;16;<pad> 1887</s>
+1131;Carolynne Poole;1980;173531.0;1939;41;<pad> 1939</s>
+1132;Mohammadreza Abbasi;1996;9633.0;1963;33;<pad> 1963</s>
+1133;Farid Chaâl;1994;7717.0;1931;63;<pad> 1931</s>
+1134;Roberto Córdova;1899;794.0;1931;32;<pad> 1931</s>
+1135;Céline Herbin;1982;4800.0;1976;6;<pad> 1976</s>
+1136;Gerben Last;1985;879.0;1931;54;<pad> 1931</s>
+1137;Colin Campbell (British priest);1863;174.0;1962;99;<pad> 1962</s>
+1138;Austin E. Cofrin;1883;5516.0;1895;12;<pad> 1895</s>
+1139;Archana Pandey;1960;57972.0;1984;24;<pad> 1984</s>
+1140;David Ramírez (footballer, born 1995);1995;5774.0;1967;28;<pad> 1967</s>
+1141;Yordi;1974;35473.0;1895;79;<pad> 1895</s>
+1142;Hermann Fleissner;1865;1303.0;1887;22;<pad> 1887</s>
+1143;Pauline von Hügel;1858;1248.0;1880;22;<pad> 1880</s>
+1144;Ursule Molinaro;1916;8289.0;1931;15;<pad> 1931</s>
+1145;Nishi Amane;1829;30862.0;1954;125;<pad> 1954</s>
+1146;Hans Bontemantel;1613;1040.0;1899;286;<pad> 1899</s>
+1147;Kim Beck;1970;4018.0;1963;7;<pad> 1963</s>
+1148;Charles S. Whiting;1863;638.0;1854;9;<pad> 1854</s>
+1149;Liu Kezhuang;1187;3993.0;1949;762;<pad> 1949</s>
+1150;Shuntaro Hida;1917;33279.0;1584;333;<pad> 1584</s>
+1151;Henry Martínez (songwriter);1950;4710.0;1931;19;<pad> 1931</s>
+1152;Stanisław Piosik;1946;1034.0;1889;57;<pad> 1889</s>
+1153;Joseph Amyrauld;1644;480.0;1824;180;<pad> 1824</s>
+1154;Giuseppe Bozzelli;1841;1008.0;1887;46;<pad> 1887</s>
+1155;Marilyn Singer;1948;20390.0;1939;9;<pad> 1939</s>
+1156;Mimma Zavoli;1963;28298.0;1939;24;<pad> 1939</s>
+1157;Marco Lo Muscio;1971;15147.0;1967;4;<pad> 1967</s>
+1158;Khalaf Al-Salamah;1979;4006.0;1939;40;<pad> 1939</s>
+1159;Ben Selvin;1898;54050.0;1939;41;<pad> 1939</s>
+1160;Pepper Jay;1949;6835.0;1967;18;<pad> 1967</s>
+1161;Anaïs Caradeux;1990;4154.0;1939;51;<pad> 1939</s>
+1162;Keith W. Piper;1921;5744.0;1954;33;<pad> 1954</s>
+1163;Tirame Walker;1975;4408.0;1939;36;<pad> 1939</s>
+1164;Ilya Starinov;1900;30790.0;1908;8;<pad> 1908</s>
+1165;Peter Solis Nery;1969;225086.0;1931;38;<pad> 1931</s>
+1166;Galen Young;1975;42535.0;1939;36;<pad> 1939</s>
+1167;Alexander Samuel MacLeod;1888;3510.0;1824;64;<pad> 1824</s>
+1168;Birgit Lavrijssen;1991;1353.0;1939;52;<pad> 1939</s>
+1169;Fetsi Molatedi;1960;11271.0;1924;36;<pad> 1924</s>
+1170;Sarah Khan;1992;1555276.0;1971;21;<pad> 1971</s>
+1171;Oleg Garapuchik;1997;1048.0;1939;58;<pad> 1939</s>
+1172;Pat O'Connell (baseball);1861;1268.0;1939;78;<pad> 1939</s>
+1173;Aleksander Hall;1953;7290.0;1887;66;<pad> 1887</s>
+1174;Waldo V. Howard;1841;1452.0;1887;46;<pad> 1887</s>
+1175;Sandro Foschini;1988;2626.0;1931;57;<pad> 1931</s>
+1176;Giles Rooke;1743;1676.0;1939;196;<pad> 1939</s>
+1177;Olga Orgonista;1901;2819.0;1931;30;<pad> 1931</s>
+1178;Anders Tvegård;1975;1891.0;1939;36;<pad> 1939</s>
+1179;Vytautas Kolesnikovas;1948;3473.0;1908;40;<pad> 1908</s>
+1180;Victoria Stambaugh;1993;4650.0;1939;54;<pad> 1939</s>
+1181;Dick Barry;1926;4345.0;1931;5;<pad> 1931</s>
+1182;Longineu W. Parsons III;1980;232376.0;1887;93;<pad> 1887</s>
+1183;Maurice Chambers;1987;12269.0;1924;63;<pad> 1924</s>
+1184;Rohan Larkin;1969;1631.0;1984;15;<pad> 1984</s>
+1185;Klara Hallik;1933;403.0;1924;9;<pad> 1924</s>
+1186;Greg Legg;1960;16807.0;1967;7;<pad> 1967</s>
+1187;Don Grolnick;1948;113630.0;1939;9;<pad> 1939</s>
+1188;Paolo Vinaccia;1954;17119.0;1939;15;<pad> 1939</s>
+1189;Kerstin Radomski;1974;1433.0;1963;11;<pad> 1963</s>
+1190;Richard Jensen (footballer);1996;24366.0;1939;57;<pad> 1939</s>
+1191;Marc H. Tanenbaum;1925;13879.0;1939;14;<pad> 1939</s>
+1192;Birger Braadland;1879;3970.0;1908;29;<pad> 1908</s>
+1193;Lodovico Gallina;1752;2143.0;1887;135;<pad> 1887</s>
+1194;James Wood (mathematician);1760;9528.0;1895;135;<pad> 1895</s>
+1195;José Cornavaca;1956;384.0;1887;69;<pad> 1887</s>
+1196;Jacinto Guerrero;1895;7071.0;1895;0;<pad> 1895</s>
+1197;Igor Vušurović;1974;7741.0;1939;35;<pad> 1939</s>
+1198;Samuel Echt;1888;1196.0;1797;91;<pad> 1797</s>
+1199;Bryan van Dijk;1981;2036.0;1976;5;<pad> 1976</s>
+1200;David Arellano;1901;39606.0;1968;67;<pad> 1968</s>
+1201;Ivan Neill (priest);1912;3744.0;1924;12;<pad> 1924</s>
+1202;Juan B. Fernandez-Badillo;1912;2613.0;1931;19;<pad> 1931</s>
+1203;Sir John Wray, 2nd Baronet;1586;5583.0;1780;194;<pad> 1780</s>
+1204;Margaret Hubbard;1924;4014.0;1887;37;<pad> 1887</s>
+1205;Hannah Wants;1986;176761.0;1984;2;<pad> 1984</s>
+1206;Ryan James (soccer);1994;15793.0;1984;10;<pad> 1984</s>
+1207;Jorge Alberto Molina;1956;843.0;1939;17;<pad> 1939</s>
+1208;Vivian Kubrick;1960;1234239.0;1908;52;<pad> 1908</s>
+1209;Mungo Law;1606;169.0;1897;291;<pad> 1897</s>
+1210;Amel Khamtache;1981;2499.0;1976;5;<pad> 1976</s>
+1211;Lawrence Coates;1950;4351.0;1939;11;<pad> 1939</s>
+1212;Bill Corbett;1960;254522.0;1924;36;<pad> 1924</s>
+1213;Hugh Binning;1627;10981.0;1899;272;<pad> 1899</s>
+1214;Gary Suter;1964;158201.0;1954;10;<pad> 1954</s>
+1215;Inga Nielsen;1946;28201.0;1931;15;<pad> 1931</s>
+1216;Catherine Chalmers;1957;7497.0;1821;136;<pad> 1821</s>
+1217;Wilhelm von Tegetthoff;1827;131036.0;1844;17;<pad> 1844</s>
+1218;Joseph Kalichstein;1946;21586.0;1881;65;<pad> 1881</s>
+1219;Mateusz Pacewicz;1992;7683.0;1939;53;<pad> 1939</s>
+1220;Aaron Bushkowsky;1957;4083.0;1939;18;<pad> 1939</s>
+1221;Roy Ascott;1934;78608.0;1931;3;<pad> 1931</s>
+1222;Mizna Waqas;1989;175250.0;1984;5;<pad> 1984</s>
+1223;Lesley Griffiths;1960;45012.0;1939;21;<pad> 1939</s>
+1224;Juanita Mitchell White;1929;4849.0;1887;42;<pad> 1887</s>
+1225;Anthony Di Lallo;1988;3175.0;1939;49;<pad> 1939</s>
+1226;Dulce Quental;1960;3520.0;1939;21;<pad> 1939</s>
+1227;Matías Walker;1973;1107.0;1899;74;<pad> 1899</s>
+1228;Jennia Fredrique;1980;29151.0;1984;4;<pad> 1984</s>
+1229;Ran Ichay;1970;1153.0;1967;3;<pad> 1967</s>
+1230;Vidya Prakash Dutt;1925;3735.0;1931;6;<pad> 1931</s>
+1231;Mariana Brochado;1984;2901.0;1939;45;<pad> 1939</s>
+1232;Ray Senkowski;1941;2210.0;1939;2;<pad> 1939</s>
+1233;Kjeld Olesen;1932;4805.0;1939;7;<pad> 1939</s>
+1234;Vitaliy Sobolev;1930;1114.0;1939;9;<pad> 1939</s>
+1235;Annalisa Turci;1976;1438.0;1963;13;<pad> 1963</s>
+1236;Elite (record producer);1983;77975.0;1984;1;<pad> 1984</s>
+1237;Gertrude Martin;1911;3027.0;1887;24;<pad> 1887</s>
+1238;Muhammad Alwi Slamat;1996;14887.0;1924;72;<pad> 1924</s>
+1239;Chris Grayling;1962;993322.0;1963;1;<pad> 1963</s>
+1240;Hannah Claesson;1991;1030.0;1897;94;<pad> 1897</s>
+1241;Khalique Ibrahim Khalique;1926;3796.0;1931;5;<pad> 1931</s>
+1242;Spencer Ponsonby-Fane;1824;12671.0;1924;100;<pad> 1924</s>
+1243;Madeleine Daleng;1986;2440.0;1939;47;<pad> 1939</s>
+1244;Charles Franklin;1880;13866.0;1706;174;<pad> 1706</s>
+1245;Alfred Dompert;1914;6220.0;1895;19;<pad> 1895</s>
+1246;René Deltgen;1909;16620.0;1912;3;<pad> 1912</s>
+1247;Pierangelo Ghezzi;1956;87193.0;1939;17;<pad> 1939</s>
+1248;Zhaoming Wu;1955;14441.0;1949;6;<pad> 1949</s>
+1249;Frank Wansbrough;1919;1906.0;1899;20;<pad> 1899</s>
+1250;Superbon Singha Mawynn;1990;155032.0;1967;23;<pad> 1967</s>
+1251;Darrel Crutchfield;1979;456.0;1939;40;<pad> 1939</s>
+1252;Hjalmar J. Procopé;1889;4455.0;1904;15;<pad> 1904</s>
+1253;Musa Hitam;1934;217998.0;1931;3;<pad> 1931</s>
+1254;Akim Frazer;1995;1305.0;1908;87;<pad> 1908</s>
+1255;Márta Svéd;1910;5013.0;1939;29;<pad> 1939</s>
+1256;José Antonio González (footballer);1995;687.0;1931;64;<pad> 1931</s>
+1257;Bob Dailey;1953;31543.0;1939;14;<pad> 1939</s>
+1258;Fareed Zakaria;1964;3618417.0;1963;1;<pad> 1963</s>
+1259;Carmen Naranjo;1928;14053.0;1939;11;<pad> 1939</s>
+1260;Leotis Boateng;1951;2337.0;1966;15;<pad> 1966</s>
+1261;Celia Correas de Zapata;1933;4731.0;1902;31;<pad> 1902</s>
+1262;Roberto G. Fernández;1951;10589.0;1954;3;<pad> 1954</s>
+1263;Daniel Florea (footballer, born 1975);1975;1112.0;1977;2;<pad> 1977</s>
+1264;Marian M. Hadley;1886;1191.0;1908;22;<pad> 1908</s>
+1265;Takuya Kita;1972;3007.0;1963;9;<pad> 1963</s>
+1266;Harold Preciado;1994;138659.0;1931;63;<pad> 1931</s>
+1267;Martin S. Schwartz;1945;125391.0;1939;6;<pad> 1939</s>
+1268;Steve Roser;1918;2248.0;1962;44;<pad> 1962</s>
+1269;Glenn Brummer;1954;23740.0;1939;15;<pad> 1939</s>
+1270;Julian Wright (historian);1974;2301.0;1939;35;<pad> 1939</s>
+1271;Léandre Grandmoulin;1873;277.0;1939;66;<pad> 1939</s>
+1272;Louie Pounds;1872;6706.0;1924;52;<pad> 1924</s>
+1273;Frederic Wandres;1987;356.0;1887;100;<pad> 1887</s>
+1274;Lee Kang-won;1990;3667.0;1967;23;<pad> 1967</s>
+1275;Mutodi Neshehe;1975;8494.0;1924;51;<pad> 1924</s>
+1276;Corey James;1992;13078.0;1976;16;<pad> 1976</s>
+1277;John Esling;1949;17445.0;1931;18;<pad> 1931</s>
+1278;Ed Brett;1914;1957.0;1908;6;<pad> 1908</s>
+1279;Petar Skok;1881;11178.0;1939;58;<pad> 1939</s>
+1280;Martin Janecký;1980;1352.0;1924;56;<pad> 1924</s>
+1281;Ty Gainey;1960;7823.0;1954;6;<pad> 1954</s>
+1282;Chuck Jaskwhich;1911;4195.0;1954;43;<pad> 1954</s>
+1283;Audronė Vaupšienė;1970;4288.0;1939;31;<pad> 1939</s>
+1284;Grace Caroline Currey;1996;1301325.0;1887;109;<pad> 1887</s>
+1285;Will Bratt;1988;12514.0;1984;4;<pad> 1984</s>
+1286;Yassine Khalifi;2005;820.0;1962;43;<pad> 1962</s>
+1287;Julia Price;1972;32948.0;1939;33;<pad> 1939</s>
+1288;Jakob Salomon Bartholdy;1779;24018.0;1895;116;<pad> 1895</s>
+1289;Xiang Li (activist);1976;5372.0;1976;0;<pad> 1976</s>
+1290;Martin Cross (footballer);1939;3619.0;1939;0;<pad> 1939</s>
+1291;Gerwyn Williams;1924;3516.0;1966;42;<pad> 1966</s>
+1292;Abdilda Tazhibaev;1909;3876.0;1939;30;<pad> 1939</s>
+1293;Guy Buyens;1961;2666.0;1931;30;<pad> 1931</s>
+1294;Thomas Brock;1847;47339.0;1780;67;<pad> 1780</s>
+1295;Helen Gilbert;1922;10439.0;1908;14;<pad> 1908</s>
+1296;Pat Holton;1935;2656.0;1939;4;<pad> 1939</s>
+1297;Oscar Larson;1871;6524.0;1887;16;<pad> 1887</s>
+1298;Rudy Narayan;1938;14212.0;1939;1;<pad> 1939</s>
+1299;Manji Terashima;1898;1739.0;1954;56;<pad> 1954</s>
+1300;Cyrill Gloor;1982;1501.0;1924;58;<pad> 1924</s>
+1301;Kshitish Ranjan Chakravorty;1916;4881.0;1939;23;<pad> 1939</s>
+1302;Milan Puskar;1934;135165.0;1939;5;<pad> 1939</s>
+1303;Maciej Górski (politician);1944;2242.0;1939;5;<pad> 1939</s>
+1304;James Maitland (minister);1797;220.0;1824;27;<pad> 1824</s>
+1305;J. R. West;1822;261.0;1939;117;<pad> 1939</s>
+1306;Myron Shongwe;1981;3548.0;1939;42;<pad> 1939</s>
+1307;Vukile Sofisa;1993;4134.0;1924;69;<pad> 1924</s>
+1308;Mohamed El-Husseini;1982;1700.0;1908;74;<pad> 1908</s>
+1309;Johann Joachim Schwabe;1714;1868.0;1780;66;<pad> 1780</s>
+1310;Layda Sansores;1945;8709.0;1939;6;<pad> 1939</s>
+1311;Ilias Malamas;1966;2090.0;1939;27;<pad> 1939</s>
+1312;Dyfed Wyn-Evans;1969;3916.0;1939;30;<pad> 1939</s>
+1313;Sophie Molholm;1966;418.0;1939;27;<pad> 1939</s>
+1314;Frank Rowland (cricketer);1892;933.0;1899;7;<pad> 1899</s>
+1315;Norman Lear;1922;4802781.0;1926;4;<pad> 1926</s>
+1316;John Drummond (Australian settler);1816;4653.0;1797;19;<pad> 1797</s>
+1317;Francis Chang-Sam;1948;2947.0;1962;14;<pad> 1962</s>
+1318;William Courtenay, 1st Earl of Devon;1475;68158.0;1597;122;<pad> 1597</s>
+1319;Joyce MacKenzie;1925;93576.0;1931;6;<pad> 1931</s>
+1320;Andrew Lees (neurologist);1947;24130.0;1939;8;<pad> 1939</s>
+1321;Ian Galvin;1996;4305.0;1939;57;<pad> 1939</s>
+1322;Troy Brewer;1989;7842.0;1984;5;<pad> 1984</s>
+1323;Louis I, Count of Sayn-Wittgenstein;1532;14780.0;1660;128;<pad> 1660</s>
+1324;Steve O'Dea;1966;1083.0;1954;12;<pad> 1954</s>
+1325;John Carpenter;1948;9212458.0;1955;7;<pad> 1955</s>
+1326;John Henry Overton;1835;3094.0;1822;13;<pad> 1822</s>
+1327;Régine Robin;1939;11903.0;1924;15;<pad> 1924</s>
+1328;Yong'en;1727;838.0;no prediction;n/a;<pad> c.</s>
+1329;Roland Thatcher;1977;10311.0;1908;69;<pad> 1908</s>
+1330;Dan Gronkowski;1985;1214778.0;1970;15;<pad> 1970</s>
+1331;Margaret Fairley;1885;6536.0;1908;23;<pad> 1908</s>
+1332;Amina Agueznay;1963;895.0;1939;24;<pad> 1939</s>
+1333;Charlie Magri;1956;79736.0;1939;17;<pad> 1939</s>
+1334;Marius Cocioran;1983;3513.0;1931;52;<pad> 1931</s>
+1335;Paul Baran;1926;337190.0;1904;22;<pad> 1904</s>
+1336;J. Harrison Ghee;1990;189693.0;1924;66;<pad> 1924</s>
+1337;Brian Christian;1984;51527.0;1963;21;<pad> 1963</s>
+1338;Kim Sun-kee;1960;3144.0;1950;10;<pad> 1950</s>
+1339;Brent Pendergrass;1980;8821.0;1967;13;<pad> 1967</s>
+1340;Mia Dyson;1981;54894.0;1984;3;<pad> 1984</s>
+1341;Lee Min-hyuk (rapper, born 1990);1990;377931.0;1967;23;<pad> 1967</s>
+1342;Alan Buribayev;1979;11328.0;1954;25;<pad> 1954</s>
+1343;Terry Rollock;1969;2606.0;1954;15;<pad> 1954</s>
+1344;Constantin Teașcă;1922;8902.0;1912;10;<pad> 1912</s>
+1345;José Solano (actor);1971;68865.0;1931;40;<pad> 1931</s>
+1346;Ronald Ossory Dunlop;1894;13223.0;1908;14;<pad> 1908</s>
+1347;Daniel J. Crowley;1921;5500.0;1939;18;<pad> 1939</s>
+1348;Baldwyn Torto;1955;891.0;1897;58;<pad> 1897</s>
+1349;Ljubomir Vranjes;1973;115541.0;1908;65;<pad> 1908</s>
+1350;William R. Klesse;1947;14370.0;1895;52;<pad> 1895</s>
+1351;Gerald Robarts;1878;2392.0;1931;53;<pad> 1931</s>
+1352;Jaelen Feeney;1994;20824.0;1984;10;<pad> 1984</s>
+1353;Randy Young;1954;4503.0;1954;0;<pad> 1954</s>
+1354;Sinikka Mönkäre;1947;3194.0;1939;8;<pad> 1939</s>
+1355;Jon Fishman;1965;530379.0;1967;2;<pad> 1967</s>
+1356;Rodolphe-Auguste d'Ornano;1817;2138.0;1808;9;<pad> 1808</s>
+1357;Ben Parkin;1906;9283.0;1966;60;<pad> 1966</s>
+1358;Issy van Randwyck;1963;36882.0;1895;68;<pad> 1895</s>
+1359;Sarah Louise Judd;1802;3993.0;1939;137;<pad> 1939</s>
+1360;Mieczysław Szczurek;1923;135.0;1887;36;<pad> 1887</s>
+1361;John Biggins;1949;33375.0;1939;10;<pad> 1939</s>
+1362;Hwang Chi-fang;1965;358.0;1954;11;<pad> 1954</s>
+1363;Reba Roy;1876;;1926;50;<pad> 1926</s>
+1364;Tashi Tsering (footballer);1973;7172.0;1962;11;<pad> 1962</s>
+1365;Virginia Garner;1915;;1887;28;<pad> 1887</s>
+1366;Malcolm Day;1964;16989.0;1939;25;<pad> 1939</s>
+1367;Miriam Defensor Santiago;1945;1772139.0;1931;14;<pad> 1931</s>
+1368;Amanda Cox;1980;25495.0;1976;4;<pad> 1976</s>
+1369;Rachel Flowers;1993;135307.0;1976;17;<pad> 1976</s>
+1370;Asmir Suljić;1991;42394.0;1963;28;<pad> 1963</s>
+1371;Francis Wilkins;1864;1531.0;1854;10;<pad> 1854</s>
+1372;Reza Mirkarimi;1967;28635.0;1963;4;<pad> 1963</s>
+1373;Shaquille Pinas;1998;46571.0;1971;27;<pad> 1971</s>
+1374;Han Lao Da;1947;5438.0;no prediction;n/a;<pad> c. c. c. c.</s>
+1375;Ferdinand Siegert;1865;1672.0;1844;21;<pad> 1844</s>
+1376;Tyrone Anthony;1962;4444.0;1966;4;<pad> 1966</s>
+1377;Billy Greenhorn;1937;1006.0;1939;2;<pad> 1939</s>
+1378;Kenji Fukui;1953;64046.0;1931;22;<pad> 1931</s>
+1379;Brandon Bernstein;1972;54869.0;1984;12;<pad> 1984</s>
+1380;Viv Huzzey;1876;2745.0;1939;63;<pad> 1939</s>
+1381;Richard Dunn (television executive);1943;7734.0;1899;44;<pad> 1899</s>
+1382;Stephen W. Williams;1837;4117.0;1931;94;<pad> 1931</s>
+1383;Brian Dozier;1987;629718.0;1962;25;<pad> 1962</s>
+1384;Kongsak Vantana;1945;479.0;1939;6;<pad> 1939</s>
+1385;David Schultheis;1940;4935.0;1939;1;<pad> 1939</s>
+1386;Sir Thomas Lyttelton, 1st Baronet;1593;9474.0;1708;115;<pad> 1708</s>
+1387;Heli Susi;1929;4854.0;1939;10;<pad> 1939</s>
+1388;Alfred Eriksen (fencer);1918;2245.0;1868;50;<pad> 1868</s>
+1389;André Kudelski;1960;36284.0;1939;21;<pad> 1939</s>
+1390;Ion C. Cantacuzino (politician);1825;4247.0;1924;99;<pad> 1924</s>
+1391;Yvette Duval;1931;1465.0;1939;8;<pad> 1939</s>
+1392;Anton Mohr;1890;1398.0;1899;9;<pad> 1899</s>
+1393;Harry Graf Kessler;1868;89718.0;1887;19;<pad> 1887</s>
+1394;Jean-Lou Bigot;1966;481.0;1924;42;<pad> 1924</s>
+1395;Joe Rutgens;1939;12120.0;1908;31;<pad> 1908</s>
+1396;Kazuyasu Shiina;1952;1773.0;1931;21;<pad> 1931</s>
+1397;Cosmin Atanase;2001;1805.0;1931;70;<pad> 1931</s>
+1398;Frederick Funston;1865;180842.0;1854;11;<pad> 1854</s>
+1399;Michal Michalík;1980;1958.0;1968;12;<pad> 1968</s>
+1400;Juan Domingo Tolisano;1984;5990.0;1887;97;<pad> 1887</s>
+1401;Nigel Knight;1956;6956.0;1939;17;<pad> 1939</s>
+1402;Serhii Kondratevskyi;1965;;1939;26;<pad> 1939</s>
+1403;Yoon Jin-seo;1983;609512.0;1986;3;<pad> 1986</s>
+1404;Dolphus E. Milligan;1928;2497.0;1880;48;<pad> 1880</s>
+1405;Dejan Zukić;2001;10508.0;1963;38;<pad> 1963</s>
+1406;Dianne Feinstein;1933;9565667.0;1939;6;<pad> 1939</s>
+1407;Becky Jago;1976;152471.0;1963;13;<pad> 1963</s>
+1408;Pierre Fournier;1906;66713.0;1887;19;<pad> 1887</s>
+1409;John Davis (swimmer);1978;2141.0;1881;97;<pad> 1881</s>
+1410;Raimundo, 2nd Duke of Castel Duino;1907;32706.0;1530;377;<pad> 1530</s>
+1411;Shahid Ahmed;1983;11588.0;1971;12;<pad> 1971</s>
+1412;Franz, Count of Erbach-Erbach;1754;5941.0;1780;26;<pad> 1780</s>
+1413;Maria Olaru;1982;54107.0;1939;43;<pad> 1939</s>
+1414;Paatje Phefferkorn;1922;18840.0;1931;9;<pad> 1931</s>
+1415;Con Chellis;1978;5777.0;1939;39;<pad> 1939</s>
+1416;Frances Harmer;1858;1213.0;1939;81;<pad> 1939</s>
+1417;Leonore Annenberg;1918;168950.0;1926;8;<pad> 1926</s>
+1418;Ricky Mendizábal;1997;741.0;1968;29;<pad> 1968</s>
+1419;Gene Crumling;1922;1733.0;1931;9;<pad> 1931</s>
+1420;Leon Brown (rugby union);1996;47994.0;1924;72;<pad> 1924</s>
+1421;Geoffrey Shovelton;1936;7869.0;1887;49;<pad> 1887</s>
+1422;Salima Rockwell;1972;23545.0;1931;41;<pad> 1931</s>
+1423;Adriana Díaz Contreras;1970;2888.0;1968;2;<pad> 1968</s>
+1424;Łukasz Uhma;1954;282.0;1939;15;<pad> 1939</s>
+1425;Lieselotte Thoms-Heinrich;1920;3956.0;1931;11;<pad> 1931</s>
+1426;Hang Yin (scientist);1976;4647.0;1949;27;<pad> 1949</s>
+1427;Seaborn Roddenbery;1870;14743.0;1887;17;<pad> 1887</s>
+1428;Monte Westmore;1902;33931.0;1954;52;<pad> 1954</s>
+1429;Dario Toninelli;1992;7137.0;1954;38;<pad> 1954</s>
+1430;Babar Luck;1970;16954.0;1924;46;<pad> 1924</s>
+1431;Kissi Agyebeng;1978;8989.0;1931;47;<pad> 1931</s>
+1432;James Montgomery (footballer, born 1994);1994;37608.0;1821;173;<pad> 1821</s>
+1433;Patricia Blevins;1954;6521.0;1954;0;<pad> 1954</s>
+1434;Helena Rowland;1999;14317.0;1939;60;<pad> 1939</s>
+1435;Rita Asfour;1933;1661.0;1967;34;<pad> 1967</s>
+1436;Karen Johal;1991;885.0;1967;24;<pad> 1967</s>
+1437;Sikiru Ajibowu Adeyiga;1938;1710.0;1931;7;<pad> 1931</s>
+1438;Gaia Tortolina;1997;1108.0;1963;34;<pad> 1963</s>
+1439;Lee Kyoung-hoon;1991;114647.0;1967;24;<pad> 1967</s>
+1440;Henry Bramley Ellis;1841;1579.0;1881;40;<pad> 1881</s>
+1441;Eero Laine (rower);1933;222.0;1908;25;<pad> 1908</s>
+1442;John Geddes (bishop);1735;6204.0;1854;119;<pad> 1854</s>
+1443;M. Anwar Hossain;1949;26868.0;1924;25;<pad> 1924</s>
+1444;C. F. J. Galloway;1880;2912.0;1899;19;<pad> 1899</s>
+1445;Frank E. Putnam;1857;193.0;1854;3;<pad> 1854</s>
+1446;John Ceretto;1952;9999.0;1939;13;<pad> 1939</s>
+1447;Norman Partridge (cricketer);1900;1997.0;1939;39;<pad> 1939</s>
+1448;Jean-Pascal van Ypersele;1957;18538.0;1895;62;<pad> 1895</s>
+1449;Olav Rasmussen Langeland;1904;1164.0;1864;40;<pad> 1864</s>
+1450;Hatoon al-Fassi;1964;41604.0;1895;69;<pad> 1895</s>
+1451;Stan Williams (baseball);1936;66657.0;1931;5;<pad> 1931</s>
+1452;Harvey Sacks;1935;59870.0;1939;4;<pad> 1939</s>
+1453;Aleksey Semyonov (Uzbekistani footballer);1968;2111.0;1924;44;<pad> 1924</s>
+1454;Roy Redgrave (British Army officer);1925;15603.0;1931;6;<pad> 1931</s>
+1455;John Wilson (1910s pitcher);1890;908.0;1887;3;<pad> 1887</s>
+1456;Golnoush Sebghatollahi;1990;3749.0;1939;51;<pad> 1939</s>
+1457;Adolf Dygasiński;1839;7228.0;1887;48;<pad> 1887</s>
+1458;Nigel Konstam;1932;7725.0;1939;7;<pad> 1939</s>
+1459;Shelby Hearon;1931;5528.0;1954;23;<pad> 1954</s>
+1460;William Henry Watkins;1862;2349.0;1822;40;<pad> 1822</s>
+1461;Trond Pedersen;1951;3266.0;1931;20;<pad> 1931</s>
+1462;Anil Sinha;1956;98939.0;1961;5;<pad> 1961</s>
+1463;Philip Down;1953;3821.0;1939;14;<pad> 1939</s>
+1464;Tsai Hsiao-hu;1962;5661.0;1949;13;<pad> 1949</s>
+1465;Margunn Haugenes;1970;4175.0;1897;73;<pad> 1897</s>
+1466;Hal Hansen;1892;1762.0;1908;16;<pad> 1908</s>
+1467;William D. Mullins;1931;1093.0;1887;44;<pad> 1887</s>
+1468;Zhang Mengjin;1946;1610.0;1949;3;<pad> 1949</s>
+1469;Fiza Ibn-e-Faizi;1923;8600.0;1550;373;<pad> 1550</s>
+1470;Philip S. Cifarelli;1935;4711.0;1939;4;<pad> 1939</s>
+1471;Ángel García (basketball, born 1988);1988;6363.0;1939;49;<pad> 1939</s>
+1472;Janusz Malik;1964;2019.0;1939;25;<pad> 1939</s>
+1473;Etteilla;1738;155060.0;1887;149;<pad> 1887</s>
+1474;Richard Tolkien;1955;2149.0;1892;63;<pad> 1892</s>
+1475;Eaton Stannard;1685;2966.0;1939;254;<pad> 1939</s>
+1476;Ralph Elliott;1921;9793.0;1908;13;<pad> 1908</s>
+1477;Gandra Venkata Ramana Reddy;1964;26870.0;1931;33;<pad> 1931</s>
+1478;Sean Crocker;1996;38172.0;1971;25;<pad> 1971</s>
+1479;Victor Kodelja;1951;5689.0;1924;27;<pad> 1924</s>
+1480;Tenashar;1985;68287.0;no prediction;n/a;<pad> c. 900</s>
+1481;Walter Zimmermann;1949;18705.0;1903;46;<pad> 1903</s>
+1482;Rudi Schumann;1947;2362.0;1854;93;<pad> 1854</s>
+1483;Sergey Glukhov;1993;10853.0;1924;69;<pad> 1924</s>
+1484;Chung Jung-yong;1969;22254.0;1961;8;<pad> 1961</s>
+1485;Reginald McKenna;1863;76546.0;1924;61;<pad> 1924</s>
+1486;Boryslav Brondukov;1938;12994.0;1939;1;<pad> 1939</s>
+1487;Reece Kershaw;1966;23214.0;1984;18;<pad> 1984</s>
+1488;Robert Stiles;1959;697.0;1887;72;<pad> 1887</s>
+1489;Anastasiya Muntyanu;1994;3678.0;1939;55;<pad> 1939</s>
+1490;Hieronymus Harder;1523;2554.0;1611;88;<pad> 1611</s>
+1491;Yakov Fokanov;1899;958.0;1924;25;<pad> 1924</s>
+1492;Kindal Moorehead;1978;16850.0;1939;39;<pad> 1939</s>
+1493;Allan Moses;1881;2019.0;1931;50;<pad> 1931</s>
+1494;Osama Saad;1954;7617.0;1939;15;<pad> 1939</s>
+1495;Jerzy Nowosielski;1923;18593.0;1924;1;<pad> 1924</s>
+1496;Tilda Thamar;1921;10919.0;1939;18;<pad> 1939</s>
+1497;Chris Loudon;1985;3288.0;1966;19;<pad> 1966</s>
+1498;Billy Bluelight;1859;7174.0;1939;80;<pad> 1939</s>
+1499;Harvey Goldschmid;1940;7200.0;1924;16;<pad> 1924</s>
+1500;Isaac Teller;1799;2021.0;1887;88;<pad> 1887</s>
+1501;Ugo Vetere;1924;13337.0;1939;15;<pad> 1939</s>
+1502;Juliana Buhring;1981;159344.0;1939;42;<pad> 1939</s>
+1503;Dick Pabich;1955;20488.0;1939;16;<pad> 1939</s>
+1504;Elaine Barrie;1915;72714.0;1939;24;<pad> 1939</s>
+1505;Chris Via;1992;11528.0;1967;25;<pad> 1967</s>
+1506;Woo Joo-young;1981;2064.0;1967;14;<pad> 1967</s>
+1507;Miloslav Mečíř Jr.;1988;19779.0;1939;49;<pad> 1939</s>
+1508;Jessica Rosencrantz;1987;6204.0;1984;3;<pad> 1984</s>
+1509;Michael Wood (literary scholar);1936;8517.0;1955;19;<pad> 1955</s>
+1510;Marion Charles Bonner;1911;1337.0;1887;24;<pad> 1887</s>
+1511;Giuseppe Martano;1910;2488.0;1887;23;<pad> 1887</s>
+1512;David Lyon (actor);1941;189284.0;1939;2;<pad> 1939</s>
+1513;George Buchanan (physician);1831;5293.0;1824;7;<pad> 1824</s>
+1514;Lynn Myers;1951;7770.0;1939;12;<pad> 1939</s>
+1515;Harvey Jackson III;1943;5565.0;1984;41;<pad> 1984</s>
+1516;Tyler Miller;1993;38024.0;1984;9;<pad> 1984</s>
+1517;Jagmeet Singh Brar;1958;69588.0;1939;19;<pad> 1939</s>
+1518;Đorđe Stojšić (Serbian politician, born 1928);1928;944.0;1924;4;<pad> 1924</s>
+1519;Caryn Davies;1982;32651.0;1939;43;<pad> 1939</s>
+1520;Lise Arricastre;1991;4584.0;1939;52;<pad> 1939</s>
+1521;Baqi Siddiqui;1905;1337.0;1939;34;<pad> 1939</s>
+1522;Clifford Coffin;1870;13813.0;1908;38;<pad> 1908</s>
+1523;Veronica Ann Cross;1950;10969.0;1939;11;<pad> 1939</s>
+1524;Fay Helm;1909;74054.0;1939;30;<pad> 1939</s>
+1525;Scarlett Chorvat;1972;160884.0;1984;12;<pad> 1984</s>
+1526;Theodore A. Farwell;1931;2221.0;1854;77;<pad> 1854</s>
+1527;Sarah McLellan;1982;18556.0;1967;15;<pad> 1967</s>
+1528;Jon Cohen (entrepreneur);1968;38116.0;1967;1;<pad> 1967</s>
+1529;Łukasz Kalinowski;1983;1382.0;1939;44;<pad> 1939</s>
+1530;Nathan Burton;1980;3731.0;1984;4;<pad> 1984</s>
+1531;Jessica Liedberg;1969;24449.0;1984;15;<pad> 1984</s>
+1532;Billy Egan;1886;1488.0;1939;53;<pad> 1939</s>
+1533;Yekaterina Lisina;1987;582566.0;1924;63;<pad> 1924</s>
+1534;John Tumpane;1983;98463.0;1939;44;<pad> 1939</s>
+1535;Akli Yahiatene;1933;4879.0;1939;6;<pad> 1939</s>
+1536;Georgy Baimakov;1894;1243.0;1897;3;<pad> 1897</s>
+1537;Mike O'Donoghue;1987;2219.0;1954;33;<pad> 1954</s>
+1538;Charles Neilson;1889;1135.0;1887;2;<pad> 1887</s>
+1539;Lawrence Blair;1942;31830.0;1931;11;<pad> 1931</s>
+1540;Jim Mooring;1917;2900.0;1939;22;<pad> 1939</s>
+1541;Sanjin Alagić;1977;4718.0;1963;14;<pad> 1963</s>
+1542;Usama Young;1985;57897.0;1880;105;<pad> 1880</s>
+1543;Sandro Wieser;1993;87079.0;1954;39;<pad> 1954</s>
+1544;George Taylforth;1941;4746.0;1854;87;<pad> 1854</s>
+1545;Pan Yaung Chel;1996;12581.0;1924;72;<pad> 1924</s>
+1546;John C. Zimmerman Sr.;1835;2879.0;1887;52;<pad> 1887</s>
+1547;Rimas Álvarez Kairelis;1974;6294.0;1939;35;<pad> 1939</s>
+1548;Joachim von Pfeil;1857;2597.0;1780;77;<pad> 1780</s>
+1549;Cameron Wake;1982;869110.0;1984;2;<pad> 1984</s>
+1550;Sardar Mumtaz Khan;1939;10082.0;1839;100;<pad> 1839</s>
+1551;Francis George (politician);1955;37819.0;1854;101;<pad> 1854</s>
+1552;Loris Reggiani;1959;18179.0;1939;20;<pad> 1939</s>
+1553;Alexander Johnson (mathematician);1830;2576.0;1808;22;<pad> 1808</s>
+1554;Rahul Vaidya;1987;2497697.0;1984;3;<pad> 1984</s>
+1555;Ngeow Sze Chan;1915;5176.0;1939;24;<pad> 1939</s>
+1556;Ismael Shah;1962;5581.0;1924;38;<pad> 1924</s>
+1557;Pierre Solomon Ségalas d'Etchépare;1792;1404.0;1780;12;<pad> 1780</s>
+1558;Eve Kivi;1938;24385.0;1939;1;<pad> 1939</s>
+1559;Roberto Di Mauro;1956;125.0;1939;17;<pad> 1939</s>
+1560;Art Baker (gridiron football);1937;15215.0;1931;6;<pad> 1931</s>
+1561;Richard McCann;1949;31389.0;1939;10;<pad> 1939</s>
+1562;Li Shucai;1965;798.0;1949;16;<pad> 1949</s>
+1563;Stefan Sunajko;1998;138.0;1963;35;<pad> 1963</s>
+1564;Henry Bugbee;1915;2492.0;1824;91;<pad> 1824</s>
+1565;Roda Ali Wais;1984;2992.0;1939;45;<pad> 1939</s>
+1566;José Carvallo;1986;44423.0;1931;55;<pad> 1931</s>
+1567;Cecelia Antoinette;1949;4032.0;1887;62;<pad> 1887</s>
+1568;Claudio Zin;1945;3931.0;1954;9;<pad> 1954</s>
+1569;Andrzej Krzeptowski (born 1902);1902;1469.0;1924;22;<pad> 1924</s>
+1570;Amir Hamza (cricketer);1991;4817.0;1971;20;<pad> 1971</s>
+1571;Henry O. Lampe;1927;1210.0;1880;47;<pad> 1880</s>
+1572;Marcel Sîrba;1957;461.0;1931;26;<pad> 1931</s>
+1573;Catherine Leutenegger;1983;1544.0;1939;44;<pad> 1939</s>
+1574;Bosse Hansson;1933;16958.0;1931;2;<pad> 1931</s>
+1575;Francis Winnington (Droitwich MP);1704;1518.0;1887;183;<pad> 1887</s>
+1576;Mikhail Kennedy;1996;30081.0;1924;72;<pad> 1924</s>
+1577;Christopher Mitchum;1943;1829655.0;1926;17;<pad> 1926</s>
+1578;John Lyon (cricketer);1951;4961.0;1844;107;<pad> 1844</s>
+1579;Lauren Fowlkes;1988;7667.0;1984;4;<pad> 1984</s>
+1580;Jo Chamberlain;1969;6123.0;1963;6;<pad> 1963</s>
+1581;Samuel Igun;1938;2340.0;1887;51;<pad> 1887</s>
+1582;Tozawa Masamori;1585;3350.0;1931;346;<pad> 1931</s>
+1583;Son Woo-hyeon;1989;71352.0;1986;3;<pad> 1986</s>
+1584;Mindaugas Stašys;1986;2114.0;1939;47;<pad> 1939</s>
+1585;Juvenal P. Marchisio;1902;2640.0;1903;1;<pad> 1903</s>
+1586;Paterson Clarence Hughes;1917;73810.0;1908;9;<pad> 1908</s>
+1587;Torben Chris;1977;5505.0;1954;23;<pad> 1954</s>
+1588;Thomas D. Terry;1816;2476.0;1880;64;<pad> 1880</s>
+1589;Daniel Knudsen;1988;20225.0;1904;84;<pad> 1904</s>
+1590;Julia Mavrogordato;1903;867.0;1939;36;<pad> 1939</s>
+1591;Ronald Turney Williams;1943;;1908;35;<pad> 1908</s>
+1592;Braulio Godínez;1984;2646.0;1931;53;<pad> 1931</s>
+1593;Manfred Kizito;1980;2651.0;1931;49;<pad> 1931</s>
+1594;Pål Hausken;1980;2206.0;1931;49;<pad> 1931</s>
+1595;José Asensio Torrado;1892;10856.0;1931;39;<pad> 1931</s>
+1596;Grégory Malicki;1973;5556.0;1954;19;<pad> 1954</s>
+1597;Alison Wearing;1967;9123.0;1963;4;<pad> 1963</s>
+1598;Siim Troost;1999;616.0;1924;75;<pad> 1924</s>
+1599;Jing Liu (architect);1980;20173.0;1984;4;<pad> 1984</s>
+1600;Erra Fazira;1974;349379.0;1939;35;<pad> 1939</s>
+1601;Koji Okamoto;1976;2589.0;1954;22;<pad> 1954</s>
+1602;Kosuke Takahashi;1968;5849.0;1963;5;<pad> 1963</s>
+1603;Franco Committeri;1924;2517.0;1939;15;<pad> 1939</s>
+1604;Jens Orback;1959;7097.0;1967;8;<pad> 1967</s>
+1605;Brendan Fennelly;1956;5189.0;1966;10;<pad> 1966</s>
+1606;Sheila McKechnie;1948;13065.0;1962;14;<pad> 1962</s>
+1607;Jim Beaver;1950;2178625.0;1939;11;<pad> 1939</s>
+1608;Mohammad Sozib;1999;14193.0;1924;75;<pad> 1924</s>
+1609;Robert Michael White;1924;124966.0;1954;30;<pad> 1954</s>
+1610;Jean-Marc Bustamante;1952;55366.0;1967;15;<pad> 1967</s>
+1611;Arianna Hunsicker;2003;541.0;1984;19;<pad> 1984</s>
+1612;Jonas Kjellgren;1977;54379.0;1967;10;<pad> 1967</s>
+1613;Gorm Jensen;1886;1022.0;1908;22;<pad> 1908</s>
+1614;Earl Derr Biggers;1884;193872.0;1887;3;<pad> 1887</s>
+1615;Charles Herrold;1875;27771.0;1854;21;<pad> 1854</s>
+1616;Lawa Pyakurel;1973;346.0;1939;34;<pad> 1939</s>
+1617;Bjarte Engeset;1958;5586.0;1939;19;<pad> 1939</s>
+1618;Ryan Neiswender;1994;897.0;1984;10;<pad> 1984</s>
+1619;Erhart Aten;1932;4927.0;1931;1;<pad> 1931</s>
+1620;Robert Dalrymple-Horn-Elphinstone;1718;;1881;163;<pad> 1881</s>
+1621;Rob Cowan (urbanist);1950;4290.0;1962;12;<pad> 1962</s>
+1622;Pedro Vicente Fonseca;1935;2938.0;1887;48;<pad> 1887</s>
+1623;Aleksandr Severov;1889;12398.0;1830;59;<pad> 1830</s>
+1624;Anna Ivanova (volleyball, born 1987);1987;2060.0;1924;63;<pad> 1924</s>
+1625;Wu Jin-yun;1938;2747.0;1984;46;<pad> 1984</s>
+1626;Jack Bloomfield (baseball);1932;8361.0;1939;7;<pad> 1939</s>
+1627;Frederic Alderson;1867;3541.0;1822;45;<pad> 1822</s>
+1628;Charlie Chignell;1866;1237.0;1939;73;<pad> 1939</s>
+1629;Wun-Chang Shih;1986;2647.0;1949;37;<pad> 1949</s>
+1630;Nicolas Durand de Villegaignon;1510;36730.0;1660;150;<pad> 1660</s>
+1631;Ellen Hayes;1851;16216.0;1939;88;<pad> 1939</s>
+1632;Astrid Aagesen;1883;1904.0;1931;48;<pad> 1931</s>
+1633;Wally Holborow;1913;1396.0;1908;5;<pad> 1908</s>
+1634;Namhi Kim Wagner;1923;;1954;31;<pad> 1954</s>
+1635;Emanuel Libman;1872;434.0;1904;32;<pad> 1904</s>
+1636;Pascal Pompey Pirone;1907;426.0;1954;47;<pad> 1954</s>
+1637;Ernest Thompson;1949;87417.0;1874;75;<pad> 1874</s>
+1638;Francesco Panigarola;1548;4014.0;1585;37;<pad> 1585</s>
+1639;Issoumaila Lingane;1991;14302.0;1960;31;<pad> 1960</s>
+1640;William Baynard;1892;333.0;1795;97;<pad> 1795</s>
+1641;Culbert Olson;1876;107945.0;1904;28;<pad> 1904</s>
+1642;Yakov Stefanovich;1854;2433.0;1887;33;<pad> 1887</s>
+1643;Pavlos Prosalentis (the Younger);1857;504.0;1939;82;<pad> 1939</s>
+1644;Abdul Gaddy;1992;81159.0;1931;61;<pad> 1931</s>
+1645;Grainger Hines;1948;527926.0;1939;9;<pad> 1939</s>
+1646;Corey Raymond;1969;83729.0;1971;2;<pad> 1971</s>
+1647;Choi Gwang-hyeon;1986;3009.0;1967;19;<pad> 1967</s>
+1648;Mine Kawakami;1969;11456.0;1963;6;<pad> 1963</s>
+1649;Ganesh Singh Thagunna;1968;3222.0;1931;37;<pad> 1931</s>
+1650;Zerita Stepteau;1908;202.0;1931;23;<pad> 1931</s>
+1651;Diadié Diarra;1993;12057.0;1954;39;<pad> 1954</s>
+1652;Carl Gioia;1985;536.0;1939;46;<pad> 1939</s>
+1653;Russell Canouse;1995;82346.0;1939;56;<pad> 1939</s>
+1654;Alexander Rives;1806;5495.0;1895;89;<pad> 1895</s>
+1655;Chris Rankin;1983;392793.0;1963;20;<pad> 1963</s>
+1656;Alain Besançon;1932;18292.0;1939;7;<pad> 1939</s>
+1657;Jean-François Sénécal;1961;613.0;1881;80;<pad> 1881</s>
+1658;Yassin Maouche;1997;8690.0;1976;21;<pad> 1976</s>
+1659;Yael Pineda;1992;1800.0;1967;25;<pad> 1967</s>
+1660;Frank Kofsky;1935;11355.0;1904;31;<pad> 1904</s>
+1661;Patrick Lee Hammond;1947;5164.0;1954;7;<pad> 1954</s>
+1662;Ingrid Øvre Wiik;1918;179.0;1931;13;<pad> 1931</s>
+1663;Alan Hume;1924;62142.0;1931;7;<pad> 1931</s>
+1664;Dezső Szabó (athlete);1967;3421.0;1924;43;<pad> 1924</s>
+1665;Gerard Lagos;1968;6273.0;1931;37;<pad> 1931</s>
+1666;Anne Sullivan;1866;2498875.0;1854;12;<pad> 1854</s>
+1667;Charlotte Emerson Brown;1838;4104.0;1821;17;<pad> 1821</s>
+1668;Tony Ray Amati;1976;41489.0;1954;22;<pad> 1954</s>
+1669;K. G. Kenye;1960;21079.0;1924;36;<pad> 1924</s>
+1670;Micael Priest;1951;1914.0;1887;64;<pad> 1887</s>
+1671;Carol Bergé;1928;4738.0;1939;11;<pad> 1939</s>
+1672;Tucker West;1995;43296.0;1955;40;<pad> 1955</s>
+1673;Artem Syomka;1998;257.0;1966;32;<pad> 1966</s>
+1674;Luciano Leandro;1966;3879.0;1939;27;<pad> 1939</s>
+1675;Kyler Phillips;1995;225148.0;1984;11;<pad> 1984</s>
+1676;William Hayward Jr.;1787;2097.0;1895;108;<pad> 1895</s>
+1677;Jennifer Kanis;1970;11768.0;1976;6;<pad> 1976</s>
+1678;Masaaki Noiri;1993;71416.0;1954;39;<pad> 1954</s>
+1679;Paul Slabolepszy;1948;27251.0;1939;9;<pad> 1939</s>
+1680;Canute Anderson;1830;3786.0;1887;57;<pad> 1887</s>
+1681;Larry Shue;1946;45586.0;1954;8;<pad> 1954</s>
+1682;Mark Handelsman;1961;3870.0;1962;1;<pad> 1962</s>
+1683;Evelyn Hellicar;1862;3365.0;1908;46;<pad> 1908</s>
+1684;Pukhraj Bafna;1946;12162.0;1931;15;<pad> 1931</s>
+1685;Andrew Himes;1950;7631.0;1971;21;<pad> 1971</s>
+1686;Thomas Frazer (stonemason);1821;703.0;1812;9;<pad> 1812</s>
+1687;William W. Crapo;1830;14838.0;1854;24;<pad> 1854</s>
