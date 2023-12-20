@@ -64,6 +64,9 @@ def gpt_2_generate(prompt):
 
 # prompt functions
 def make_prompt(prompt_form, name, clean = False):
+     if re.search(r'\((.*?)\)',name):
+         inside_text = re.search(r'\((.*?)\)',name).group(1)
+         name = "{}, {},".format(name,inside_text)
      if clean:
           name = re.sub(r'\([^)]*\)', '', name)
      return prompt_form.format(name)
@@ -108,7 +111,7 @@ def predict_birth_year(data, model, tokenizer, prompt_form):
         true_birth_year = data[name]['birth_year']
         page_views = data[name]['page_views']
 
-        prompt = make_prompt(prompt_form, name, clean=True)
+        prompt = make_prompt(prompt_form, name, clean=False)
         #response = flant5_text_to_text(prompt,model,tokenizer)
         response = gpt2_text_to_text(prompt,model,tokenizer,contrastive=False)
 
