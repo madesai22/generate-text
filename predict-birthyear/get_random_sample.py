@@ -122,7 +122,7 @@ def record_seen_keys(keys, outfile):
 
 def main(): # parameters are: data_path, size, model + model parameters, prompt_form, outpath, csv outpath, seed 
     set_seed(42)
-    wiki_wiki = wf.initiate_request
+    wiki_wiki = wf.initiate_request()
     data_path = "/data/madesai/history-llm-data/wikipedia-json-files/all_wiki.json"
     csv_out = "temp.csv"
     keys_out = "seen_keys.pkl"
