@@ -48,7 +48,7 @@ def gpt2_text_to_text(prompt, model, tokenizer):
     input_ids = tokenizer(prompt, return_tensors='pt').input_ids.to("cuda")
    # outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, max_new_tokens=200, do_sample = True) # do_sample = True, top_k=50)
     # contrastive search
-    outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, penalty_alpha=0.6, top_k=4, max_new_tokens=200)
+    outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, penalty_alpha=0.6, top_k=4, max_new_tokens=4)
     return (tokenizer.decode(outputs[0], skip_special_tokens=True))
 
 
@@ -142,7 +142,7 @@ def begin_log(log_base,model_string,sample_size,prompt_form):
     f = open(log_file_path,"w")
     f.write("model:{}\n".format(model_string))
     f.write("sample size: {}\n".format(sample_size))
-    f.write("prompt form:{}\n".format(prompt_form))
+    f.write("prompt form: {}\n".format(prompt_form))
 
     return result_path
 
@@ -155,11 +155,13 @@ def main(): # parameters are: data_path, size, model + model parameters, prompt_
    # log_base = "/data/madesai/history-llm-data/logs/predict_birth_year/"
     log_base = "/home/madesai/generate-text/predict-birthyear/log/"
     prompt_form = "What year was {} born?"
-    sample = 0.001
-    percent = True
+    sample = 10
+    #sample = 0.001
+    #percent = True
 
     wiki_wiki = wf.initiate_request()
-    model,tokenizer, model_string = initiate_flan5_text_to_text(xxl=True)
+    #model,tokenizer, model_string = initiate_flan5_text_to_text(xxl=True)
+    model, tokenizer, model_string = initiate_gpt2(large=True)
     keys, data = prep_random_sample(data_path,wiki_wiki,size=sample,percent=percent)
     keys_out = "/data/madesai/history-llm-data/seen_keys.pkl"
     record_seen_keys(keys, keys_out)
@@ -171,14 +173,10 @@ def main(): # parameters are: data_path, size, model + model parameters, prompt_
     csv_out_name = "{}_{}samp.csv".format(model_string,len(keys))
     csv_out = os.path.join(log_path,csv_out_name)
     
-    
-    
-    
-    
 
-    # pred_dict = predict_birth_year(data,model,tokenizer,prompt_form)
-    # df = pd.DataFrame(pred_dict)
-    # df.to_csv(csv_out,sep=";")
+    pred_dict = predict_birth_year(data,model,tokenizer,prompt_form)
+    df = pd.DataFrame(pred_dict)
+    df.to_csv(csv_out,sep=";")
 
 if __name__ == "__main__":
     main()
