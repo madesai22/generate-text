@@ -123,7 +123,7 @@ def predict_birth_year(data, model, tokenizer, prompt_form):
         df_dict['Full response'].append(response)
     return df_dict
 
-# organizaiton 
+# organization 
 def record_seen_keys(keys, outfile):
     if os.path.exists(outfile):
         seen_keys = fh.unpickle_data(outfile)
@@ -155,7 +155,8 @@ def main(): # parameters are: data_path, size, model + model parameters, prompt_
     data_path = "/data/madesai/history-llm-data/wikipedia-json-files/all_wiki.json"
    # log_base = "/data/madesai/history-llm-data/logs/predict_birth_year/"
     log_base = "/home/madesai/generate-text/predict-birthyear/log/"
-    prompt_form = "What year was {} born?"
+   # prompt_form = "What year was {} born?"
+    prompt_form = "{} was born in "
     sample = 10
     percent = False
     #sample = 0.001
