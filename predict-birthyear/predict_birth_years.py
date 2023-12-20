@@ -172,7 +172,7 @@ def main(): # parameters are: data_path, size, model + model parameters, prompt_
    # prompt_form = "What year was {} born?"
     prompt_form = "{} was born in the year"
     sample = 0.005
-    percent = False
+    percent = True
     #sample = 0.001
     #percent = True
 
