@@ -110,7 +110,7 @@ def predict_birth_year(data, model, tokenizer, prompt_form):
 
         prompt = make_prompt(prompt_form, name, clean=True)
         #response = flant5_text_to_text(prompt,model,tokenizer)
-        response = gpt2_text_to_text(prompt,model,tokenizer,contrastive=True)
+        response = gpt2_text_to_text(prompt,model,tokenizer,contrastive=False)
 
         prediction_year = re.findall("\d{4}",response)
         if prediction_year:
