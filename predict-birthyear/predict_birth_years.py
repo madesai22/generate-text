@@ -50,9 +50,9 @@ def gpt2_text_to_text(prompt, model, tokenizer, contrastive=True):
    # outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, max_new_tokens=200, do_sample = True) # do_sample = True, top_k=50)
     # contrastive search
     if contrastive:
-        outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, penalty_alpha=0.6, top_k=4, max_new_tokens=2)
+        outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, penalty_alpha=0.6, top_k=4, max_new_tokens=1)
     else:
-        outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, do_sample=True, top_k=0, temperature = 0.6, max_new_tokens=2)
+        outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, do_sample=True, top_k=0, temperature = 0.6, max_new_tokens=1)
 
     return (tokenizer.decode(outputs[0], skip_special_tokens=True))
 
