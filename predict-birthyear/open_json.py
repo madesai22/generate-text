@@ -12,5 +12,11 @@ def open_files():
     data = fh.read_json(f)
     print(len(data))
 
+def open_seen_keys():
+    dir = "/data/madesai/history-llm-data/seen_keys.pkl"
+    key_list = fh.unpickle_data(dir)
+    print(len(key_list))
+    print(key_list[:30])
+
 if __name__=="__main__":
-    open_files()
+    open_seen_keys()
