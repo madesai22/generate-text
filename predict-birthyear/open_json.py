@@ -15,11 +15,7 @@ def open_files():
 def open_seen_keys():
     dir = "/data/madesai/history-llm-data/seen_keys.pkl"
     key_list = fh.unpickle_data(dir)
-    print("list n: {}".format(len(key_list)))
-
-    key_set = list(set(key_list))
-    print("set n: {}".format(len(key_set)))
-    fh.pickle_data(set(key_list),dir)
+    print(len(key_list))
 
 if __name__=="__main__":
     open_seen_keys()
