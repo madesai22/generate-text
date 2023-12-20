@@ -133,3 +133,6 @@ def main(): # parameters are: data_path, size, model + model parameters, prompt_
     pred_dict = predict_birth_year(data,model,tokenizer,prompt_form)
     df = pd.DataFrame(pred_dict)
     df.to_csv(csv_out,sep=";")
+
+if __name__ == "__main__":
+    main()
