@@ -11,14 +11,12 @@ def main ():
     path = "temp.csv"
     data = pd.read_csv(path,sep=";")
     save_path = "./plots/"
-    print(data["Years off"])
 
-    years_off = data["Years off"] != "n/a"
-    years_off = data.drop(data[data['Years off'] == 'n/a'].index)['Years off']
-    print(years_off)
+    data = data.drop(data[data['Years off'] == 'n/a'].index)
+   # predicted_birth_year = data.drop(data[data['Predicted birth year'=="no prediction"]])
 
     # accuracy distribution 
-    ax = sns.displot(data,x="Years off")
+    ax = sns.displot(data,x="Years off") 
     ax.fig.subplots_adjust(top=.95)
     ax.set(title = "flan t5 xxl accuracy")
     plt.savefig(save_path+"accuracy_hist.jpg")
