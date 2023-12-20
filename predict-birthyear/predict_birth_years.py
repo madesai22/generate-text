@@ -132,9 +132,9 @@ def predict_birth_year(data, model, tokenizer, prompt_form):
 def record_seen_keys(keys, outfile):
     if os.path.exists(outfile):
         seen_keys = fh.unpickle_data(outfile)
-        fh.pickle_data(seen_keys + keys,outfile)
+        fh.pickle_data(seen_keys.union(set(keys)),outfile)
     else:
-        fh.pickle_data(keys,outfile)
+        fh.pickle_data(set(keys),outfile)
 
 def begin_log(log_base,model_string,sample_size,prompt_form):
     date = '{}'.format( datetime.datetime.now().strftime('%Y-%m-%d-%H-%M') )
@@ -159,7 +159,7 @@ def main(): # parameters are: data_path, size, model + model parameters, prompt_
     # parser.add_argument('--data_path',default="/data/madesai/history-llm-data/wikipedia-json-files/all_wiki.json")
     # parser.add_argument('--new_sample',default=True)
     # parser.add_argument('--sample_size')
-    set_seed(42)
+
     
     data_path = "/data/madesai/history-llm-data/wikipedia-json-files/all_wiki.json"
    # log_base = "/data/madesai/history-llm-data/logs/predict_birth_year/"
@@ -172,13 +172,16 @@ def main(): # parameters are: data_path, size, model + model parameters, prompt_
     #percent = True
 
     wiki_wiki = wf.initiate_request()
-    #model,tokenizer, model_string = initiate_flan5_text_to_text(xxl=True)
-    model, tokenizer, model_string = initiate_gpt2(large=True)
     keys, data = prep_random_sample(data_path,wiki_wiki,size=sample,percent=percent)
     keys_out = "/data/madesai/history-llm-data/seen_keys.pkl"
     record_seen_keys(keys, keys_out)
     
     sample_size = len(keys)
+    
+    #model,tokenizer, model_string = initiate_flan5_text_to_text(xxl=True)
+    set_seed(42)
+    model, tokenizer, model_string = initiate_gpt2(large=True)
+    
     
     log_path = begin_log(log_base, model_string, sample_size, prompt_form)
 
