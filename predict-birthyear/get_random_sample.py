@@ -138,7 +138,8 @@ def begin_log(log_base,model_string,sample_size,prompt_form):
 
     # log parameters 
     log_file_name = "{}_{}samp_log.csv".format(model_string,sample_size)
-    f = open(result_path+log_file_name,"w")
+    log_file_path = os.path.join(result_path,log_file_name)
+    f = open(log_file_path,"w")
     f.write("model:{}\n".format(model_string))
     f.write("sample size: {}\n".format(sample_size))
     f.write("prompt form:{}\n".format(prompt_form))
