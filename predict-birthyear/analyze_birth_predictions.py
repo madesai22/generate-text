@@ -8,14 +8,14 @@ def make_hist(data,x,title,binwidth=None,bins=None,kde=False):
 
 def main ():
     path = "temp.csv"
-    data = pd.read_csv(path)
+    data = pd.read_csv(path,sep=";")
     save_path = "./plots/"
 
     # accuracy distribution 
 
     sns.displot(data,"Years off")
     plt.savefig(save_path+"accuracy_hist.jpg")
-    
+
 if __name__ == "__main__":
     main()
 
