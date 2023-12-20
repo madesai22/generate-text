@@ -23,6 +23,21 @@ def read_json(input_filename):
         data = json.load(input_file)
     return data
 
+def read_json_random_sample(input_filename, size, percent = False, return_keys = False): #if percent = False, return size number of random articles 
+    all_data = read_json(input_filename)
+    data = {}
+    
+    if percent: 
+        nsamples = size * len(all_data)
+    else: 
+        nsamples = size
+    keys = random.sample(list(all_data),nsamples)
+    if return_keys: 
+        return keys
+    else: 
+        data = [all_data[k] for k in keys]
+        return data
+
 
 def read_jsonlist(input_filename):
     data = []
