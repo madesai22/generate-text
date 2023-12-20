@@ -10,9 +10,12 @@ def main ():
     path = "temp.csv"
     data = pd.read_csv(path,sep=";")
     save_path = "./plots/"
+    print(data["Years off"])
 
     # accuracy distribution 
-    sns.displot(data,x="Years off").set(title = "flan t5 xxl accuracy")
+    ax = sns.displot(data,x="Years off")
+    ax.fig.subplots_adjust(top=.95)
+    ax.set(title = "flan t5 xxl accuracy")
     plt.savefig(save_path+"accuracy_hist.jpg")
     plt.close()
 
@@ -26,6 +29,7 @@ def main ():
     plt.close()
 
     # accuracy vs pageviews
+    sns.set_theme(style="darkgrid")
     ax = sns.relplot(data, x="Years off", y="Pageviews")
     ax.fig.subplots_adjust(top=.95)
     ax.set(title="flan t5 accuracy vs page views")
@@ -33,7 +37,9 @@ def main ():
     plt.close()
 
     # accuracy vs true birth year 
-    sns.relplot(data, x="Years off", y="True birth year").set(title="flan t5 accuracy vs true birth year")
+    ax = sns.relplot(data, x="Years off", y="True birth year")
+    ax.fig.subplots_adjust(top=.95)
+    ax.set(title="flan t5 accuracy vs true birth year")
     plt.savefig(save_path+"acc_v_true_by.jpg")
     plt.close()
 
