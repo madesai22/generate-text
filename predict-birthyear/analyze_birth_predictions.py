@@ -12,9 +12,12 @@ def main ():
     save_path = "./plots/"
 
     # accuracy distribution 
-    sns.set(style=darkgrid)
-    ax = sns.displot(data,"Years off")
+
+    sns.displot(data,"Years off")
     plt.savefig(save_path+"accuracy_hist.jpg")
+    
+if __name__ == "__main__":
+    main()
 
     
     
