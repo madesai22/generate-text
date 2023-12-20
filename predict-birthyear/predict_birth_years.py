@@ -52,7 +52,7 @@ def gpt2_text_to_text(prompt, model, tokenizer, contrastive=True):
     if contrastive:
         outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, penalty_alpha=0.6, top_k=4, max_new_tokens=4)
     else:
-        outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, do_sample=True, top_k=0, temperature = 0.6, max_new_tokens=2)
+        outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, do_sample=True, top_k=0, temperature = 0.6, max_new_tokens=4)
 
     return (tokenizer.decode(outputs[0], skip_special_tokens=True))
 
@@ -110,7 +110,7 @@ def predict_birth_year(data, model, tokenizer, prompt_form):
 
         prompt = make_prompt(prompt_form, name, clean=True)
         #response = flant5_text_to_text(prompt,model,tokenizer)
-        response = gpt2_text_to_text(prompt,model,tokenizer,contrastive=False)
+        response = gpt2_text_to_text(prompt,model,tokenizer,contrastive=True)
 
         prediction_year = re.findall("\d{4}",response)
         if prediction_year:
@@ -165,7 +165,7 @@ def main(): # parameters are: data_path, size, model + model parameters, prompt_
    # log_base = "/data/madesai/history-llm-data/logs/predict_birth_year/"
     log_base = "/home/madesai/generate-text/predict-birthyear/log/"
    # prompt_form = "What year was {} born?"
-    prompt_form = "{} was born in the year "
+    prompt_form = "{} was born in the year"
     sample = 10
     percent = False
     #sample = 0.001
