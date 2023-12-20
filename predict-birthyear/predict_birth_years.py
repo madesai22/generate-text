@@ -50,9 +50,9 @@ def gpt2_text_to_text(prompt, model, tokenizer, contrastive=True):
    # outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, max_new_tokens=200, do_sample = True) # do_sample = True, top_k=50)
     # contrastive search
     if contrastive:
-        outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, penalty_alpha=0.6, top_k=4, max_new_tokens=4)
+        outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, penalty_alpha=0.6, top_k=4, max_new_tokens=2)
     else:
-        outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, do_sample=True, top_k=0, temperature = 0.6, max_new_tokens=4)
+        outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, do_sample=True, top_k=0, temperature = 0.6, max_new_tokens=2)
 
     return (tokenizer.decode(outputs[0], skip_special_tokens=True))
 
@@ -177,7 +177,7 @@ def main(): # parameters are: data_path, size, model + model parameters, prompt_
     record_seen_keys(keys, keys_out)
     
     sample_size = len(keys)
-    
+
     #model,tokenizer, model_string = initiate_flan5_text_to_text(xxl=True)
     set_seed(42)
     model, tokenizer, model_string = initiate_gpt2(large=True)
