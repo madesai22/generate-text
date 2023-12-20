@@ -50,9 +50,9 @@ def gpt2_text_to_text(prompt, model, tokenizer, contrastive=True):
    # outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, max_new_tokens=200, do_sample = True) # do_sample = True, top_k=50)
     # contrastive search
     if contrastive:
-        outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, penalty_alpha=0.6, top_k=4, max_new_tokens=1)
+        outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, penalty_alpha=0.6, top_k=4, max_new_tokens=2)
     else:
-        outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, do_sample=True, top_k=0, temperature = 0.6, max_new_tokens=1)
+        outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, do_sample=True, top_k=0, temperature = 0.6, max_new_tokens=2)
 
     return (tokenizer.decode(outputs[0], skip_special_tokens=True))
 
@@ -64,9 +64,9 @@ def gpt_2_generate(prompt):
 
 # prompt functions
 def make_prompt(prompt_form, name, clean = False):
-     if re.search(r'\((.*?)\)',name):
-         inside_text = re.search(r'\((.*?)\)',name).group(1)
-         name = "{}, {},".format(name,inside_text)
+    #  if re.search(r'\((.*?)\)',name):
+    #      inside_text = re.search(r'\((.*?)\)',name).group(1)
+    #      name = "{}, {},".format(name,inside_text)
      if clean:
           name = re.sub(r'\([^)]*\)', '', name)
      return prompt_form.format(name)
@@ -113,7 +113,7 @@ def predict_birth_year(data, model, tokenizer, prompt_form):
 
         prompt = make_prompt(prompt_form, name, clean=True)
         #response = flant5_text_to_text(prompt,model,tokenizer)
-        response = gpt2_text_to_text(prompt,model,tokenizer,contrastive=False)
+        response = gpt2_text_to_text(prompt,model,tokenizer,contrastive=True)
 
         prediction_year = re.findall("\d{4}",response)
         if prediction_year:
@@ -139,7 +139,7 @@ def record_seen_keys(keys, outfile):
     else:
         fh.pickle_data(set(keys),outfile)
 
-def begin_log(log_base,model_string,sample_size,prompt_form):
+def begin_log(log_base,model_string,sample_size,prompt_form, other=None):
     date = '{}'.format( datetime.datetime.now().strftime('%Y-%m-%d-%H-%M') )
     suffix = "{}_{}_{}".format(model_string,sample_size, date)
     result_path = os.path.join(log_base, suffix)
@@ -152,6 +152,8 @@ def begin_log(log_base,model_string,sample_size,prompt_form):
     f.write("model:{}\n".format(model_string))
     f.write("sample size: {}\n".format(sample_size))
     f.write("prompt form: {}\n".format(prompt_form))
+    if other:
+        f.write("other: {}".format(other))
 
     return result_path
 
@@ -169,14 +171,14 @@ def main(): # parameters are: data_path, size, model + model parameters, prompt_
     log_base = "/home/madesai/generate-text/predict-birthyear/log/"
    # prompt_form = "What year was {} born?"
     prompt_form = "{} was born in the year"
-    sample = 10
+    sample = 0.005
     percent = False
     #sample = 0.001
     #percent = True
 
     wiki_wiki = wf.initiate_request()
     keys, data = prep_random_sample(data_path,wiki_wiki,size=sample,percent=percent)
-    keys_out = "/data/madesai/history-llm-data/seen_keys.pkl"
+    keys_out = "/data/madesai/history-llm-data/experiment_keys.pkl"
     record_seen_keys(keys, keys_out)
     
     sample_size = len(keys)
@@ -186,7 +188,7 @@ def main(): # parameters are: data_path, size, model + model parameters, prompt_
     model, tokenizer, model_string = initiate_gpt2(large=True)
     
     
-    log_path = begin_log(log_base, model_string, sample_size, prompt_form)
+    log_path = begin_log(log_base, model_string, sample_size, prompt_form,"contrastive search")
 
     csv_out_name = "{}_{}samp.csv".format(model_string,len(keys))
     csv_out = os.path.join(log_path,csv_out_name)
