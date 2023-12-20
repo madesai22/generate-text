@@ -52,7 +52,7 @@ def gpt2_text_to_text(prompt, model, tokenizer, contrastive=True):
     if contrastive:
         outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, penalty_alpha=0.6, top_k=4, max_new_tokens=4)
     else:
-        outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, do_sample=True, top_k=0, temperature = 0.6, max_new_tokens=4)
+        outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, do_sample=True, top_k=0, temperature = 0.6, max_new_tokens=2)
 
     return (tokenizer.decode(outputs[0], skip_special_tokens=True))
 
