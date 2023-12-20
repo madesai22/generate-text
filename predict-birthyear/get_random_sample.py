@@ -128,7 +128,7 @@ def main(): # parameters are: data_path, size, model + model parameters, prompt_
     keys_out = "seen_keys.pkl"
     prompt_form = "What year was {} born?"
     model,tokenizer = initiate_flan5_text_to_text(xxl=True)
-    keys, data = prep_random_sample(data_path,wiki_wiki,size=5,percent=False)
+    keys, data = prep_random_sample(data_path,wiki_wiki,size=.001,percent=True)
     record_seen_keys(keys, keys_out)
     pred_dict = predict_birth_year(data,model,tokenizer,prompt_form)
     df = pd.DataFrame(pred_dict)
