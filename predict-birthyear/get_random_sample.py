@@ -130,34 +130,50 @@ def record_seen_keys(keys, outfile):
     else:
         fh.pickle_data(keys,outfile)
 
-def get_save_path(args, HEAD):
+def begin_log(log_base,model_string,sample_size,prompt_form):
     date = '{}'.format( datetime.datetime.now().strftime('%Y-%m-%d-%H-%M') )
-    seedstr = str(args.seed).zfill(3)
-    suffix = "{}_{}_{}_{}".format(args.alg, date, seedstr)
-    result_path = os.path.join(HEAD, suffix)
+    suffix = "{}_{}_{}".format(model_string,sample_size, date)
+    result_path = os.path.join(log_base, suffix)
+    os.mkdir(result_path)
+
+    # log parameters 
+    log_file_name = "{}_{}samp_log.csv".format(model_string,sample_size)
+    f = open(log_base+log_file_name,"w")
+    f.write("model:{}\n".format(model_string))
+    f.write("sample size: {}\n".format(sample_size))
+    f.write("prompt form:{}\n".format(prompt_form))
+
     return result_path
+
 
 
 def main(): # parameters are: data_path, size, model + model parameters, prompt_form, outpath, csv outpath, seed 
     set_seed(42)
-    wiki_wiki = wf.initiate_request()
-    data_path = "/data/madesai/history-llm-data/wikipedia-json-files/all_wiki.json"
-    csv_out = "temp.csv"
-    keys_out = "seen_keys.pkl"
-    prompt_form = "What year was {} born?"
-    model,tokenizer, model_string = initiate_flan5_text_to_text(xxl=True)
     
-    sample_size = 0.001
+    data_path = "/data/madesai/history-llm-data/wikipedia-json-files/all_wiki.json"
+   # log_base = "/data/madesai/history-llm-data/logs/predict_birth_year/"
+    log_base = "/home/madesai/generate-text/predict-birthyear/"
+    prompt_form = "What year was {} born?"
+    sample = 0.001
     percent = True
-    keys, data = prep_random_sample(data_path,wiki_wiki,size=sample_size,percent=percent)
-    # save parameters
-    f = open("temp_log.csv","w")
-    f.write("model:{}\n".format(model_string))
-    f.write("sample size: {}\n".format(str(sample_size)))
-    f.write("percent: {}\n".format(str(percent)))
-    f.write("prompt form:{}\n".format(prompt_form))
 
-    # record_seen_keys(keys, keys_out)
+    wiki_wiki = wf.initiate_request()
+    model,tokenizer, model_string = initiate_flan5_text_to_text(xxl=True)
+    keys, data = prep_random_sample(data_path,wiki_wiki,size=sample,percent=percent)
+    record_seen_keys(keys, keys_out)
+    sample_size = len(keys)
+
+    keys_out = "/data/madesai/history-llm-data/seen_keys.pkl"
+    log_path = begin_log(log_base, model_string, sample_size, prompt_form)
+
+    csv_out_name = "{}_{}samp.csv".format(model_string,len(keys))
+    csv_out = os.path.join(log_path,csv_out_name)
+    
+    
+    
+    
+    
+
     # pred_dict = predict_birth_year(data,model,tokenizer,prompt_form)
     # df = pd.DataFrame(pred_dict)
     # df.to_csv(csv_out,sep=";")
