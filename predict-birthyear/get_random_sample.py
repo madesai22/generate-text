@@ -160,10 +160,11 @@ def main(): # parameters are: data_path, size, model + model parameters, prompt_
     wiki_wiki = wf.initiate_request()
     model,tokenizer, model_string = initiate_flan5_text_to_text(xxl=True)
     keys, data = prep_random_sample(data_path,wiki_wiki,size=sample,percent=percent)
-    record_seen_keys(keys, keys_out)
-    sample_size = len(keys)
-
     keys_out = "/data/madesai/history-llm-data/seen_keys.pkl"
+    record_seen_keys(keys, keys_out)
+    
+    sample_size = len(keys)
+    
     log_path = begin_log(log_base, model_string, sample_size, prompt_form)
 
     csv_out_name = "{}_{}samp.csv".format(model_string,len(keys))
