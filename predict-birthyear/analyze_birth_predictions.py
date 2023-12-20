@@ -12,9 +12,21 @@ def main ():
     save_path = "./plots/"
 
     # accuracy distribution 
-
-    sns.displot(data,x="Years off")
+    sns.displot(data,x="Years off").set(title = "flan t5 xxl accuracy")
     plt.savefig(save_path+"accuracy_hist.jpg")
+
+    # distribution of responses 
+    sns.displot(data,x="Predicted birth year").set(title="flan t5 response distribution")
+    plt.savefig(save_path+"response_distribution.jpg")
+
+    # accuracy vs pageviews
+    sns.relplot(data, x="Years off", y="Pageviews", kind="line").set(title="flan t5 accuracy vs page views")
+    plt.savefig(save_path+"acc_v_page_views.jpg")
+
+    # accuracy vs true birth year 
+    sns.relplot(data, x="Years off", y="True birth year", kind="line").set(title="flan t5 accuracy vs true birth year")
+    plt.savefig(save_path+"acc_v_true_by.jpg")
+
 
 if __name__ == "__main__":
     main()
