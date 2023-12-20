@@ -12,7 +12,7 @@ def main ():
     save_path = "./plots/"
 
     # accuracy distribution 
-    sns.displot(data,"Years off")
+    ax = sns.displot(data,"Years off")
     plt.savefig(save_path+"accuracy_hist.jpg")
 
     
