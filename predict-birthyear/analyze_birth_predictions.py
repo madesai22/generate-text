@@ -13,7 +13,7 @@ def main ():
 
     # accuracy distribution 
 
-    sns.displot(data,"Years off")
+    sns.displot(data,x="Years off")
     plt.savefig(save_path+"accuracy_hist.jpg")
 
 if __name__ == "__main__":
