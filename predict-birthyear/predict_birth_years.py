@@ -90,28 +90,28 @@ def remove_prompt_from_response(prompt, response):
     return response
 
 # data function
-@jit(target_backend='cuda',nopython=True)  
+#@jit(target_backend='cuda',nopython=True)  
 def prep_random_sample(data_path,wiki_wiki,size,percent=False):
     #random_keys = fh.read_json_random_sample(data_path,size=.2,percent=True,return_keys= True)
     random_sample_dict = {}
-    all_data = fh.read_json(data_path)
-   # with codecs.open(data_path) as input_file:
-    all_data = json.load(input_file)
-    if percent: 
-        nsamples = int(size * len(all_data))
-    else: 
-        nsamples = size
-    keys = random.sample(list(all_data), nsamples)
+    with codecs.open(data_path) as input_file:
+        all_data = json.load(input_file)
+        if percent: 
+            nsamples = int(size * len(all_data))
+        else: 
+            nsamples = size
+        keys = random.sample(list(all_data), nsamples)
 
-    for k in keys:
-        if not 'page_views' in all_data[k].keys():
-            item_page = wiki_wiki.page(k)
-            page_views = wf.get_page_views(item_page)
-            all_data[k]['page_views'] = page_views
+        for k in keys:
+            print(k)
+            if not 'page_views' in all_data[k].keys():
+                item_page = wiki_wiki.page(k)
+                page_views = wf.get_page_views(item_page)
+                all_data[k]['page_views'] = page_views
 
-        random_sample_dict.update({k:all_data[k]})
-    fh.write_to_json(all_data,data_path)
-    return keys, random_sample_dict
+            random_sample_dict.update({k:all_data[k]})
+        fh.write_to_json(all_data,data_path)
+        return keys, random_sample_dict
 
 # prediction 
 def predict_birth_year(data, model, tokenizer, prompt_form):
