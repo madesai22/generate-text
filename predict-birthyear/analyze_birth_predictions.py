@@ -2,7 +2,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-def make_hist(data,x,title,binwidth=None,bins=None,kde=False)
+def make_hist(data,x,title,binwidth=None,bins=None,kde=False):
     return sns.displot(data,x=x,binwidth=binwidth,bins=bins,kde=kde).set(title=title)
 
 
