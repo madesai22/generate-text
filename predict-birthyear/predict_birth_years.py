@@ -12,6 +12,7 @@ from transformers import T5Tokenizer, T5ForConditionalGeneration
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 import pandas as pd
 import datetime
+import argparse
 
 def initiate_flan5_text_to_text(xxl = False):
     if xxl: 
@@ -44,11 +45,15 @@ def initiate_gpt2(medium = False, large = False):
        model_string = "gpt2"  
     return model, tokenizer, model_string
 
-def gpt2_text_to_text(prompt, model, tokenizer):
+def gpt2_text_to_text(prompt, model, tokenizer, contrastive=True):
     input_ids = tokenizer(prompt, return_tensors='pt').input_ids.to("cuda")
    # outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, max_new_tokens=200, do_sample = True) # do_sample = True, top_k=50)
     # contrastive search
-    outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, penalty_alpha=0.6, top_k=4, max_new_tokens=4)
+    if contrastive:
+        outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, penalty_alpha=0.6, top_k=4, max_new_tokens=4)
+    else:
+        outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, top_k=0, temperature = 0.6, max_new_tokens=4)
+
     return (tokenizer.decode(outputs[0], skip_special_tokens=True))
 
 
@@ -105,7 +110,7 @@ def predict_birth_year(data, model, tokenizer, prompt_form):
 
         prompt = make_prompt(prompt_form, name, clean=True)
         #response = flant5_text_to_text(prompt,model,tokenizer)
-        response = gpt2_text_to_text(prompt,model,tokenizer)
+        response = gpt2_text_to_text(prompt,model,tokenizer,contrastive=False)
 
         prediction_year = re.findall("\d{4}",response)
         if prediction_year:
@@ -150,13 +155,17 @@ def begin_log(log_base,model_string,sample_size,prompt_form):
 
 
 def main(): # parameters are: data_path, size, model + model parameters, prompt_form, outpath, csv outpath, seed 
+    # parser = argparse.ArgumentParser()
+    # parser.add_argument('--data_path',default="/data/madesai/history-llm-data/wikipedia-json-files/all_wiki.json")
+    # parser.add_argument('--new_sample',default=True)
+    # parser.add_argument('--sample_size')
     set_seed(42)
     
     data_path = "/data/madesai/history-llm-data/wikipedia-json-files/all_wiki.json"
    # log_base = "/data/madesai/history-llm-data/logs/predict_birth_year/"
     log_base = "/home/madesai/generate-text/predict-birthyear/log/"
    # prompt_form = "What year was {} born?"
-    prompt_form = "{} was born in the year  "
+    prompt_form = "{} was born in the year "
     sample = 10
     percent = False
     #sample = 0.001
