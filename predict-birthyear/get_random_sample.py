@@ -138,7 +138,7 @@ def begin_log(log_base,model_string,sample_size,prompt_form):
 
     # log parameters 
     log_file_name = "{}_{}samp_log.csv".format(model_string,sample_size)
-    f = open(log_base+log_file_name,"w")
+    f = open(result_path+log_file_name,"w")
     f.write("model:{}\n".format(model_string))
     f.write("sample size: {}\n".format(sample_size))
     f.write("prompt form:{}\n".format(prompt_form))
@@ -152,7 +152,7 @@ def main(): # parameters are: data_path, size, model + model parameters, prompt_
     
     data_path = "/data/madesai/history-llm-data/wikipedia-json-files/all_wiki.json"
    # log_base = "/data/madesai/history-llm-data/logs/predict_birth_year/"
-    log_base = "/home/madesai/generate-text/predict-birthyear/"
+    log_base = "/home/madesai/generate-text/predict-birthyear/log/"
     prompt_form = "What year was {} born?"
     sample = 0.001
     percent = True
