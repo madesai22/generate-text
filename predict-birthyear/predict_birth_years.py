@@ -13,6 +13,7 @@ from transformers import GPT2LMHeadModel, GPT2Tokenizer
 import pandas as pd
 import datetime
 import argparse
+from numba import jit, cuda
 
 def initiate_flan5_text_to_text(xxl = False):
     if xxl: 
@@ -89,6 +90,7 @@ def remove_prompt_from_response(prompt, response):
     return response
 
 # data function
+@jit(target_backend='cuda',nopython=True)  
 def prep_random_sample(data_path,wiki_wiki,size,percent=False):
     #random_keys = fh.read_json_random_sample(data_path,size=.2,percent=True,return_keys= True)
     random_sample_dict = {}
