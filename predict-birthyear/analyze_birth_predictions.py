@@ -14,6 +14,7 @@ def main ():
     print(data["Years off"])
 
     years_off = data["Years off"] != "n/a"
+    years_off = data.drop(data[data['Years off'] == 'n/a'].index)['Years off']
     print(years_off)
 
     # accuracy distribution 
