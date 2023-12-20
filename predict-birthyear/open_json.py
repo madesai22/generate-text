@@ -19,6 +19,7 @@ def open_seen_keys():
 
     key_set = list(set(key_list))
     print("set n: {}".format(len(key_set)))
+    fh.pickle_data(set(key_list),dir)
 
 if __name__=="__main__":
     open_seen_keys()
