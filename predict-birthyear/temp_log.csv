@@ -1,0 +1,4 @@
+model:flant5xxl
+sample size: 0.001
+percent: True
+prompt form:What year was {} born?
