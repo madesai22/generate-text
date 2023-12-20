@@ -17,17 +17,19 @@ def main ():
     plt.close()
 
     # distribution of responses 
-    sns.displot(data,x="Predicted birth year").set(title="flan t5 response distribution")
+    g = sns.displot(data,x="Predicted birth year").set(title="flan t5 response distribution")
+    g.set_xticks(range(0,2020,100))
+    g.set_xticklabels(range(0,2020,100))
     plt.savefig(save_path+"response_distribution.jpg")
     plt.close()
 
     # accuracy vs pageviews
-    sns.relplot(data, x="Years off", y="Pageviews", kind="line").set(title="flan t5 accuracy vs page views")
+    sns.relplot(data, x="Years off", y="Pageviews").set(title="flan t5 accuracy vs page views")
     plt.savefig(save_path+"acc_v_page_views.jpg")
     plt.close()
 
     # accuracy vs true birth year 
-    sns.relplot(data, x="Years off", y="True birth year", kind="line").set(title="flan t5 accuracy vs true birth year")
+    sns.relplot(data, x="Years off", y="True birth year").set(title="flan t5 accuracy vs true birth year")
     plt.savefig(save_path+"acc_v_true_by.jpg")
     plt.close()
 
