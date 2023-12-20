@@ -93,6 +93,7 @@ def remove_prompt_from_response(prompt, response):
 #@jit(target_backend='cuda',nopython=True)  
 def prep_random_sample(data_path,wiki_wiki,size,percent=False):
     #random_keys = fh.read_json_random_sample(data_path,size=.2,percent=True,return_keys= True)
+    count = 0
     random_sample_dict = {}
     with codecs.open(data_path) as input_file:
         all_data = json.load(input_file)
@@ -101,9 +102,10 @@ def prep_random_sample(data_path,wiki_wiki,size,percent=False):
         else: 
             nsamples = size
         keys = random.sample(list(all_data), nsamples)
-
         for k in keys:
-            print(k)
+            if count %100 == 0:
+                print(count)
+            count +=1
             if not 'page_views' in all_data[k].keys():
                 item_page = wiki_wiki.page(k)
                 page_views = wf.get_page_views(item_page)
