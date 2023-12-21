@@ -18,15 +18,19 @@ from numba import jit, cuda
 def initiate_falcon():
     tokenizer = AutoTokenizer.from_pretrained("tiiuae/falcon-7b")
     model = FalconForCausalLM.from_pretrained("tiiuae/falcon-7b",device_map = "auto")
-    model_string = "falcon"
+    model_string = "falcon7b"
+    return model, tokenizer, model_string
+
+def initiate_falcon_instruct():
+    tokenizer = AutoTokenizer.from_pretrained("tiiuae/falcon-7b-instruct")
+    model = FalconForCausalLM.from_pretrained("tiiuae/falcon-7b-instruct",device_map = "auto")
+    model_string = "falcon7b-instruct"
     return model, tokenizer, model_string
 
 def falcon_text_to_text(prompt, model,tokenizer):
     input_ids = tokenizer(prompt, return_tensors="pt").input_ids.to("cuda")
     outputs = model.generate(input_ids)
     return(tokenizer.decode(outputs[0]))
-
-
 
 def initiate_flan5_text_to_text(xxl = False):
     if xxl: 
@@ -214,7 +218,7 @@ def main(): # parameters are: data_path, size, model + model parameters, prompt_
     set_seed(42)
     #model, tokenizer, model_string = initiate_gpt2(large=True)
     #model,tokenizer, model_string = initiate_flan5_text_to_text(xxl=True)
-    model, tokenizer, model_string = initiate_falcon()
+    model, tokenizer, model_string = initiate_falcon_instruct()
     
     
     log_path = begin_log(log_base, model_string, sample_size, prompt_form)
