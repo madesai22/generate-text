@@ -102,7 +102,7 @@ def main ():
         ax = sns.displot(years_off)
        # ax = sns.displot(data,x="Years off") 
         ax.fig.subplots_adjust(top=.95)
-        ax.set(xlabel='Abs(prediction-true) (years)')
+        ax.set(xlabel='Prediction error (years)')
         ax.set(title = model_string+" accuracy")
         plt.savefig(save_path+"_accuracy_hist.jpg")
 
@@ -123,7 +123,7 @@ def main ():
         ax = sns.relplot(data, x="Years off", y="Pageviews")
         ax.fig.subplots_adjust(top=.95)
         ax.set(title=model_string+" accuracy vs page views")
-        ax.set(xlabel='Abs(prediction-true) (years)')
+        ax.set(xlabel='Prediction error (years)')
         plt.savefig(save_path+"_acc_v_page_views.jpg")
         plt.close()
 
@@ -131,7 +131,7 @@ def main ():
         ax = sns.relplot(data, x="Years off", y="True birth year")
         ax.fig.subplots_adjust(top=.95)
         ax.set(title=model_string+" accuracy vs true birth year")
-        ax.set(xlabel='Abs(prediction-true) (years)')
+        ax.set(xlabel='Prediction error (years)')
         plt.savefig(save_path+"_acc_v_true_by.jpg")
         plt.close()
 
