@@ -117,7 +117,7 @@ def main ():
         summary_stats.append(model_summary_stats)
     df =  pd.DataFrame(summary_stats, columns=["Model","N exactly correct","N no predictions","Years off mean","Years off median", "Years off std", "Predicted year mode", "Predicted year mode frequency"])
 
-    print(df)
+    df.to_csv("./plot/summary_stats.csv")
 
 
 if __name__ == "__main__":
