@@ -53,7 +53,7 @@ def main ():
     ax.set(title = "All wiki birth year")
     plt.savefig(save_path+"all_wiki_distribution.jpg")
     plt.close()
-    summary_stats_df = pd.DataFrame(columns=["Model","N exactly correct","N no predictions","Years off mean","Years off median", "Years off std", "Predicted year mode", "Predicted year mode frequency"])
+    summary_stats = []
     for path in dirs:
         full_path = os.path.join(base,path)
         data = pd.read_csv(full_path,sep=";")
@@ -114,8 +114,10 @@ def main ():
         mode_frequency = responses.count(predicted_year_mode)
 
         model_summary_stats = [model_string,n_exactly_correct,n_no_pred,years_off_mean,years_off_median,years_off_std,predicted_year_mode,mode_frequency]
-        summary_stats_df[len(summary_stats_df.index)] = model_summary_stats
-    summary_stats_df.to_csv("./plots/summary_stats.csv")
+        summary_stats.append(model_summary_stats)
+    df =  pd.DataFrame(summary_stats, columns=["Model","N exactly correct","N no predictions","Years off mean","Years off median", "Years off std", "Predicted year mode", "Predicted year mode frequency"])
+
+    print(df)
 
 
 if __name__ == "__main__":
