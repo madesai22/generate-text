@@ -60,7 +60,7 @@ def main ():
         model_string = path.split("_")[0]
         save_path = "./plots/"+model_string
 
-        model_summary_stats = []
+       
 
         data = data.drop(data[data["Predicted birth year"] == "no prediction"].index)
         
@@ -113,7 +113,7 @@ def main ():
         predicted_year_mode = max(set(responses), key=responses.count)
         mode_frequency = responses.count(predicted_year_mode)
 
-        model_summary_stats.append(model_string,n_exactly_correct,n_no_pred,years_off_mean,years_off_median,years_off_std,predicted_year_mode,mode_frequency)
+        model_summary_stats = [model_string,n_exactly_correct,n_no_pred,years_off_mean,years_off_median,years_off_std,predicted_year_mode,mode_frequency]
         summary_stats_df[len(summary_stats_df.index)] = model_summary_stats
     summary_stats_df.to_csv("./plots/summary_stats.csv")
 
