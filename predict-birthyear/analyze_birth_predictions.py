@@ -54,8 +54,8 @@ def main ():
     plt.savefig(save_path+"all_wiki_distribution.jpg")
     plt.close()
     
-
-    single = pd.read_csv(os.path.join(base,dirs[0]))
+    single_path = os.path.join(base,dirs[0])
+    single = pd.read_csv(single_path)
     sample, x = clean_row(single["True birth year"]) 
     ax = sns.displot(sample,x="True birth year")
     ax.fig.subplots_adjust(top=.95)
