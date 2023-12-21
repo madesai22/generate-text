@@ -53,8 +53,8 @@ def main ():
         # accuracy distribution 
         ax = sns.displot(data,x="Years off") 
         ax.fig.subplots_adjust(top=.95)
-        ax.set(title = "flan t5 xxl accuracy")
-        plt.savefig(save_path+"accuracy_hist.jpg")
+        ax.set(title = model_string+" accuracy")
+        plt.savefig(save_path+"_accuracy_hist.jpg")
         plt.close()
 
         # distribution of responses 
@@ -62,23 +62,23 @@ def main ():
         #ax.set(xticks=(range(1500,2000,50)))
         #ax.set_xticklabels(range(1500,2000,50))
         #ax.fig.subplots_adjust(top=.95)
-        ax.set(title="flan t5 response distribution")
-        plt.savefig(save_path+"response_distribution.jpg")
+        ax.set(title=model_string+" response distribution")
+        plt.savefig(save_path+"_response_distribution.jpg")
         plt.close()
 
         # accuracy vs pageviews
         sns.set_theme(style="darkgrid")
         ax = sns.relplot(data, x="Years off", y="Pageviews")
         ax.fig.subplots_adjust(top=.95)
-        ax.set(title="flan t5 accuracy vs page views")
-        plt.savefig(save_path+"acc_v_page_views.jpg")
+        ax.set(title=model_string+" flan t5 accuracy vs page views")
+        plt.savefig(save_path+"_acc_v_page_views.jpg")
         plt.close()
 
         # accuracy vs true birth year 
         ax = sns.relplot(data, x="Years off", y="True birth year")
         ax.fig.subplots_adjust(top=.95)
-        ax.set(title="flan t5 accuracy vs true birth year")
-        plt.savefig(save_path+"acc_v_true_by.jpg")
+        ax.set(title=model_string+" accuracy vs true birth year")
+        plt.savefig(save_path+"_acc_v_true_by.jpg")
         plt.close()
 
 
