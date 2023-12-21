@@ -12,8 +12,8 @@ def main ():
     data = pd.read_csv(path,sep=";")
     save_path = "./plots/"
 
-    #data = data.drop(data[data['Years off'] == 'n/a'].index)
-    data = data['Years off'!= 'n/a']
+    data = data.drop(data[data['Years off'] == 'n/a'].index)
+    
    # predicted_birth_year = data.drop(data[data['Predicted birth year'=="no prediction"]])
     data.astype({"Predicted birth year": 'int32'}).dtypes
     print(data["Predicted birth year"].dtypes)
