@@ -58,9 +58,10 @@ def main ():
     # print(single_path)
     single = pd.read_csv("/home/madesai/generate-text/predict-birthyear/log/falcon7b-instruct_8443_2023-12-21-14-23/falcon7b-instruct_8443samp.csv",sep=";")
     sample, x = clean_row(single["True birth year"]) 
-    ax = sns.displot(sample,x="True birth year")
+    ax = sns.displot(sample)
     ax.fig.subplots_adjust(top=.95)
     ax.set(title = "Random sample birth year")
+    ax.set(xlabel='True birth year')
     plt.savefig(save_path+"sample_wiki_distribution.jpg")
     plt.close()
 
