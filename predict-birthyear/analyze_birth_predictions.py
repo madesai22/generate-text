@@ -11,7 +11,7 @@ def organize_all_data():
     path = "/data/madesai/history-llm-data/wikipedia-json-files/all_wiki.json"
     data = fh.read_json(path)
     for name in data.keys():
-        y = data['name']['birth_year']
+        y = data[name]['birth_year']
         years.append(y)
     return pd.DataFrame(years,columns = ['True birth year'])
 
