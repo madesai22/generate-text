@@ -43,17 +43,16 @@ def main ():
     save_path = "./plots/"
     
     #  # full sample true birth year 
-    # sns.set_theme(style="darkgrid")
-    # full_sample = organize_all_data()
-    # ax = sns.displot(full_sample,x="True birth year")
-    # ax.fig.subplots_adjust(top=.95)
-    # ax.set(title = "All wiki birth year")
-    # plt.savefig(save_path+"all_wiki_distribution.jpg")
-    # plt.close()
+    sns.set_theme(style="darkgrid")
+    full_sample = organize_all_data()
+    ax = sns.displot(full_sample,x="True birth year")
+    ax.fig.subplots_adjust(top=.95)
+    ax.set(title = "All wiki birth year")
+    plt.savefig(save_path+"all_wiki_distribution.jpg")
+    plt.close()
     
     for path in dirs: 
         full_path = os.path.join(base,path)
-    #path = "temp.csv"
         data = pd.read_csv(full_path,sep=";")
         model_string = path.split("_")[0]
         save_path = "./plots/"+model_string
@@ -61,26 +60,28 @@ def main ():
         data = data.drop(data[data["Predicted birth year"] == "no prediction"].index)
         
         
-    # predicted_birth_year = data.drop(data[data['Predicted birth year'=="no prediction"]])
-        data.astype({"Predicted birth year": 'int32'})
-        print(data["Predicted birth year"].dtypes)
+        # predicted_birth_year = data.drop(data[data['Predicted birth year'=="no prediction"]])
+        # data.astype({"Predicted birth year": 'int32'})
+        # print(data["Predicted birth year"].dtypes)
 
         # accuracy distribution 
+        sns.set_theme(style="darkgrid")
         years_off, n_removed = clean_row(data['Years off'])
         ax = sns.displot(years_off)
        # ax = sns.displot(data,x="Years off") 
         ax.fig.subplots_adjust(top=.95)
+        ax.set(xlabel='Years off')
         ax.set(title = model_string+" accuracy")
         plt.savefig(save_path+"_accuracy_hist.jpg")
+
         plt.close()
 
         # distribution of responses 
+        sns.set_theme(style="darkgrid")
         responses, n_removed = clean_row(data['Predicted birth year'])
         ax = sns.displot(responses)
-        #ax = sns.displot(data,x="True birth year")
-        #ax.set(xticks=(range(1500,2000,50)))
-        #ax.set_xticklabels(range(1500,2000,50))
-        #ax.fig.subplots_adjust(top=.95)
+        ax.fig.subplots_adjust(top=.95)
+        ax.set(xlabel='Predicted birth year')
         ax.set(title=model_string+" response distribution")
         plt.savefig(save_path+"_response_distribution.jpg")
         plt.close()
