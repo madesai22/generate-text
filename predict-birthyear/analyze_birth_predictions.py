@@ -23,7 +23,7 @@ def clean_row(row):
     for item in row_list:
         try:
             int(item)
-            clean_row.append(item)
+            clean_row.append(int(item))
         except:
             n_removed += 1
 
