@@ -3,6 +3,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import file_handeling as fh
 import os
+import statistics
 
 def make_hist(data,x,title,binwidth=None,bins=None,kde=False):
     return sns.displot(data,x=x,binwidth=binwidth,bins=bins,kde=kde).set(title=title)
@@ -41,8 +42,10 @@ def main ():
             ]
     base = "/home/madesai/generate-text/predict-birthyear/log/"
     save_path = "./plots/"
+
+
     
-    #  # full sample true birth year 
+    # full sample true birth year 
     sns.set_theme(style="darkgrid")
     full_sample = organize_all_data()
     ax = sns.displot(full_sample,x="True birth year")
@@ -50,12 +53,14 @@ def main ():
     ax.set(title = "All wiki birth year")
     plt.savefig(save_path+"all_wiki_distribution.jpg")
     plt.close()
-    
-    for path in dirs: 
+    summary_stats_df = pd.DataFrame(columns=["Model","N exactly correct","N no predictions","Years off mean","Years off median", "Years off std", "Predicted year mode", "Predicted year mode frequency"])
+    for path in dirs:
         full_path = os.path.join(base,path)
         data = pd.read_csv(full_path,sep=";")
         model_string = path.split("_")[0]
         save_path = "./plots/"+model_string
+
+        model_summary_stats = []
 
         data = data.drop(data[data["Predicted birth year"] == "no prediction"].index)
         
@@ -66,7 +71,7 @@ def main ():
 
         # accuracy distribution 
         sns.set_theme(style="darkgrid")
-        years_off, n_removed = clean_row(data['Years off'])
+        years_off, n_no_pred = clean_row(data['Years off'])
         ax = sns.displot(years_off)
        # ax = sns.displot(data,x="Years off") 
         ax.fig.subplots_adjust(top=.95)
@@ -78,7 +83,7 @@ def main ():
 
         # distribution of responses 
         sns.set_theme(style="darkgrid")
-        responses, n_removed = clean_row(data['Predicted birth year'])
+        responses, n_no_pred = clean_row(data['Predicted birth year'])
         ax = sns.displot(responses)
         ax.fig.subplots_adjust(top=.95)
         ax.set(xlabel='Predicted birth year')
@@ -100,6 +105,17 @@ def main ():
         ax.set(title=model_string+" accuracy vs true birth year")
         plt.savefig(save_path+"_acc_v_true_by.jpg")
         plt.close()
+
+        n_exactly_correct = years_off.count(0)
+        years_off_mean = statistics.mean(years_off)
+        years_off_median = statistics.median(years_off)
+        years_off_std = statistics.stdev(years_off)
+        predicted_year_mode = max(set(responses), key=responses.count)
+        mode_frequency = responses.count(predicted_year_mode)
+
+        model_summary_stats.append(model_string,n_exactly_correct,n_no_pred,years_off_mean,years_off_median,years_off_std,predicted_year_mode,mode_frequency)
+        summary_stats_df[len(summary_stats_df.index)] = model_summary_stats
+    summary_stats_df.to_csv("./plots/summary_stats.csv")
 
 
 if __name__ == "__main__":
