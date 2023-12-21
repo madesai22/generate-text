@@ -53,6 +53,17 @@ def main ():
     ax.set(title = "All wiki birth year")
     plt.savefig(save_path+"all_wiki_distribution.jpg")
     plt.close()
+    
+
+    single = pd.read_csv(os.path.join(base,dirs[0]))
+    sample, x = clean_row(single["True birth year"]) 
+    ax = sns.displot(sample,x="True birth year")
+    ax.fig.subplots_adjust(top=.95)
+    ax.set(title = "Random sample birth year")
+    plt.savefig(save_path+"sample_wiki_distribution.jpg")
+    plt.close()
+
+
     summary_stats = []
     for path in dirs:
         full_path = os.path.join(base,path)
@@ -116,8 +127,15 @@ def main ():
         model_summary_stats = [model_string,n_exactly_correct,n_no_pred,years_off_mean,years_off_median,years_off_std,predicted_year_mode,mode_frequency]
         summary_stats.append(model_summary_stats)
     df =  pd.DataFrame(summary_stats, columns=["Model","N exactly correct","N no predictions","Years off mean","Years off median", "Years off std", "Predicted year mode", "Predicted year mode frequency"])
-
     df.to_csv("./plots/summary_stats.csv")
+    sample_median = statistics.median(sample)
+    sample_mean = statistics.mean(sample)
+    sample_mode = statistics.mode(sample)
+    sample_std = statistics.stdev(sample)
+    print("sample mean: {}".format(sample_mean))
+    print("sample median: {}".format(sample_median))
+    print("sample mode: {}".format(sample_mode))
+
 
 
 if __name__ == "__main__":
