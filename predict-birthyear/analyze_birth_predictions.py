@@ -25,6 +25,7 @@ def main ():
             "gpt2large_8443_2023-12-21-00-09/gpt2large_8443samp.csv"
             ]
     base = "/home/madesai/generate-text/predict-birthyear/log/"
+    save_path = "./plots/"
     
      # full sample true birth year 
     sns.set_theme(style="darkgrid")
