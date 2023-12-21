@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import file_handeling as fh
 import os
 import statistics
+import numpy as np
 
 def make_hist(data,x,title,binwidth=None,bins=None,kde=False):
     return sns.displot(data,x=x,binwidth=binwidth,bins=bins,kde=kde).set(title=title)
@@ -50,7 +51,7 @@ def main ():
     full_sample = organize_all_data()
     ax = sns.displot(full_sample,x="True birth year")
     ax.fig.subplots_adjust(top=.95)
-    ax.set(title = "All wiki birth year")
+    ax.set(title = "All wiki - birth year")
     plt.savefig(save_path+"all_wiki_distribution.jpg")
     plt.close()
     
@@ -60,11 +61,23 @@ def main ():
     sample, x = clean_row(single["True birth year"]) 
     ax = sns.displot(sample)
     ax.fig.subplots_adjust(top=.95)
-    ax.set(title = "Random sample birth year")
+    ax.set(title = "Random sample - birth year")
     ax.set(xlabel='True birth year')
     plt.savefig(save_path+"sample_wiki_distribution.jpg")
     plt.close()
 
+    sns.set_theme(style="darkgrid")
+    both_label = ['Random sample']*len(sample)+["All wiki"]* len(full_sample)
+    both_years = sample + full_sample
+    both_data = list(zip(both_label,both_years))
+    both_df = pd.DataFrame(both_data,
+                  columns=['Sample', 'Years'])
+    sns.displot(both_df,x="Years",hue="Sample", stat="density", common_norm=False)
+    ax.fig.subplots_adjust(top=.95)
+    ax.set(title = "True birth year distribution - all wiki, random sample")
+    plt.savefig(save_path+"both_dist.jpg")
+    plt.close()
+    
 
     summary_stats = []
     for path in dirs:
