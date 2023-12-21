@@ -213,7 +213,8 @@ def main(): # parameters are: data_path, size, model + model parameters, prompt_
 
     set_seed(42)
     #model, tokenizer, model_string = initiate_gpt2(large=True)
-    model,tokenizer, model_string = initiate_flan5_text_to_text(xxl=True)
+    #model,tokenizer, model_string = initiate_flan5_text_to_text(xxl=True)
+    model, tokenizer, model_string = initiate_falcon()
     
     
     log_path = begin_log(log_base, model_string, sample_size, prompt_form)
@@ -227,7 +228,8 @@ def main(): # parameters are: data_path, size, model + model parameters, prompt_
     df.to_csv(csv_out,sep=";")
 
 if __name__ == "__main__":
-    model, tokenizer, model_string = initiate_falcon()
-    prompt = "Paris Hilton was born in the year"
-    response = gpt2_text_to_text(prompt,model,tokenizer,contrastive=True)
-    print(response)
+    main()
+    # model, tokenizer, model_string = initiate_falcon()
+    # prompt = "Paris Hilton was born in the year"
+    # response = gpt2_text_to_text(prompt,model,tokenizer,contrastive=True)
+    # print(response)
