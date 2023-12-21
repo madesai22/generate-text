@@ -119,8 +119,8 @@ def predict_birth_year(data, model, tokenizer, prompt_form):
         page_views = data[name]['page_views']
 
         prompt = make_prompt(prompt_form, name, clean=True)
-        #response = flant5_text_to_text(prompt,model,tokenizer)
-        response = gpt2_text_to_text(prompt,model,tokenizer,contrastive=True)
+        response = flant5_text_to_text(prompt,model,tokenizer)
+        #response = gpt2_text_to_text(prompt,model,tokenizer,contrastive=True)
         response = remove_prompt_from_response(prompt,response)
         if count < 10:
             print(prompt)
@@ -198,12 +198,12 @@ def main(): # parameters are: data_path, size, model + model parameters, prompt_
         data.update({name:all_data[name]})
     sample_size = len(keys)
 
-    #model,tokenizer, model_string = initiate_flan5_text_to_text(xxl=True)
     set_seed(42)
-    model, tokenizer, model_string = initiate_gpt2(large=True)
+    #model, tokenizer, model_string = initiate_gpt2(large=True)
+    model,tokenizer, model_string = initiate_flan5_text_to_text(xxl=True)
     
     
-    log_path = begin_log(log_base, model_string, sample_size, prompt_form,"contrastive search")
+    log_path = begin_log(log_base, model_string, sample_size, prompt_form)
 
     csv_out_name = "{}_{}samp.csv".format(model_string,len(keys))
     csv_out = os.path.join(log_path,csv_out_name)
