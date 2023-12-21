@@ -1,0 +1,9 @@
+,Model,N exactly correct,N no predictions,Years off mean,Years off median,Years off std,Predicted year mode,Predicted year mode frequency,0,8
+0,,,,,,,,,falcon7b-instruct,gpt2large
+1,,,,,,,,,149,23
+2,,,,,,,,,0,0
+3,,,,,,,,,42.54586717630196,83.20905880920492
+4,,,,,,,,,23.0,77
+5,,,,,,,,,82.08356006822083,76.04743665166446
+6,,,,,,,,,1930,1885
+7,,,,,,,,,1571,2393
