@@ -66,7 +66,7 @@ def main ():
     plt.savefig(save_path+"sample_wiki_distribution.jpg")
     plt.close()
 
-    full_sample, x= clean_row(full_sample['birth_year'])
+    full_sample, x= clean_row(full_sample['True birth year'])
     sns.set_theme(style="darkgrid")
     both_label = ['Random sample']*len(sample)+["All wiki"]* len(full_sample)
     both_years = sample + full_sample
