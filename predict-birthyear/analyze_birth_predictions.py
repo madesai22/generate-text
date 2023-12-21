@@ -55,6 +55,7 @@ def main ():
     plt.close()
     
     single_path = os.path.join(base,dirs[0])
+    print(single_path)
     single = pd.read_csv(single_path)
     sample, x = clean_row(single["True birth year"]) 
     ax = sns.displot(sample,x="True birth year")
