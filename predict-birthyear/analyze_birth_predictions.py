@@ -1,9 +1,20 @@
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+import file_handeling as fh
 
 def make_hist(data,x,title,binwidth=None,bins=None,kde=False):
     return sns.displot(data,x=x,binwidth=binwidth,bins=bins,kde=kde).set(title=title)
+
+def organize_all_data():
+    years = []
+    path = "/data/madesai/history-llm-data/wikipedia-json-files/all_wiki.json"
+    data = fh.unpickle_data(path)
+    for name in data.keys():
+        y = data['name']['birth_year']
+        years.append(y)
+    return pd.DataFrame(years,columns = ['True birth year'])
+
 
 
 
@@ -12,7 +23,15 @@ def main ():
     data = pd.read_csv(path,sep=";")
     save_path = "./plots/"
 
-    data = data.drop(data[data['Predicted birth year'] == 'no prediction'].index)
+    data = data.drop(data[data["Predicted birth year"] == "no prediction"].index)
+
+    # full sample true birth year 
+    full_sample = organize_all_data()
+    ax = sns.displot(full_sample,x="True birth year")
+    ax.fig.subplots_adjust(top=.95)
+    ax.set(title = "All wiki birth year distribution")
+    plt.savefig(save_path+"all_wiki_distribution.jpg")
+    
     
    # predicted_birth_year = data.drop(data[data['Predicted birth year'=="no prediction"]])
     data.astype({"Predicted birth year": 'int32'})
