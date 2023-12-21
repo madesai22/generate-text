@@ -83,11 +83,6 @@ def strip_repsonse(text):
     text = re.sub("</s>","",text)
     return text
 
-def remove_prompt_from_response(prompt, response):
-    len_prompt = len(prompt.split())
-    if response.split()[:len_prompt] == prompt.split():
-        response =  " ".join(response.split()[len_prompt:])
-    return response
 
 # data function
 #@jit(target_backend='cuda',nopython=True)  
@@ -126,7 +121,7 @@ def predict_birth_year(data, model, tokenizer, prompt_form):
         prompt = make_prompt(prompt_form, name, clean=True)
         #response = flant5_text_to_text(prompt,model,tokenizer)
         response = gpt2_text_to_text(prompt,model,tokenizer,contrastive=True)
-        response = remove_prompt_from_response(response)
+        response = remove_prompt_from_response(prompt,response)
         if count < 10:
             print(prompt)
             print(response)
