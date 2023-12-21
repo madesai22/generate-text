@@ -103,7 +103,7 @@ def main ():
        # ax = sns.displot(data,x="Years off") 
         ax.fig.subplots_adjust(top=.95)
         ax.set(xlabel='Prediction error (years)')
-        ax.set(title = model_string+" accuracy")
+        ax.set(title = model_string+" prediction error")
         plt.savefig(save_path+"_accuracy_hist.jpg")
 
         plt.close()
@@ -122,7 +122,7 @@ def main ():
         sns.set_theme(style="darkgrid")
         ax = sns.relplot(data, x="Years off", y="Pageviews")
         ax.fig.subplots_adjust(top=.95)
-        ax.set(title=model_string+" accuracy vs page views")
+        ax.set(title=model_string+" prediction error vs page views")
         ax.set(xlabel='Prediction error (years)')
         plt.savefig(save_path+"_acc_v_page_views.jpg")
         plt.close()
@@ -130,7 +130,7 @@ def main ():
         # accuracy vs true birth year 
         ax = sns.relplot(data, x="Years off", y="True birth year")
         ax.fig.subplots_adjust(top=.95)
-        ax.set(title=model_string+" accuracy vs true birth year")
+        ax.set(title=model_string+" prediction error vs true birth year")
         ax.set(xlabel='Prediction error (years)')
         plt.savefig(save_path+"_acc_v_true_by.jpg")
         plt.close()
