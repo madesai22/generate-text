@@ -15,7 +15,12 @@ import pandas as pd
 import datetime
 from numba import jit, cuda
 
-def initiate_falcon():
+def initiate_falcon(fourtyb=False):
+    if fourtyb:
+        tokenizer = AutoTokenizer.from_pretrained("tiiuae/falcon-40b")
+        model = FalconForCausalLM.from_pretrained("tiiuae/falcon-40b",device_map = "auto")
+        model_string = "falcon40b"
+
     tokenizer = AutoTokenizer.from_pretrained("tiiuae/falcon-7b")
     model = FalconForCausalLM.from_pretrained("tiiuae/falcon-7b",device_map = "auto")
     model_string = "falcon7b"
@@ -218,7 +223,7 @@ def main(): # parameters are: data_path, size, model + model parameters, prompt_
     set_seed(42)
     #model, tokenizer, model_string = initiate_gpt2(large=True)
     #model,tokenizer, model_string = initiate_flan5_text_to_text(xxl=True)
-    model, tokenizer, model_string = initiate_falcon_instruct()
+    model, tokenizer, model_string = initiate_falcon(fourtyb=True)
     
     
     log_path = begin_log(log_base, model_string, sample_size, prompt_form)
