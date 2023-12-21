@@ -26,7 +26,7 @@ def main ():
     plt.close()
 
     # distribution of responses 
-    ax = sns.displot(data,x="Predicted birth year", bins = 25)
+    ax = sns.displot(data,x="True birth year")
     #ax.set(xticks=(range(1500,2000,50)))
     #ax.set_xticklabels(range(1500,2000,50))
     #ax.fig.subplots_adjust(top=.95)
