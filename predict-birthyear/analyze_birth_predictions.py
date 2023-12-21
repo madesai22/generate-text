@@ -16,8 +16,16 @@ def organize_all_data():
         years.append(y)
     return pd.DataFrame(years,columns = ['True birth year'])
 
-
-
+def clean_row(row):
+    n_removed = 0
+    row_list = list(row)
+    clean_row = []
+    for item in row_list:
+        if type(item) != str:
+            clean_row.append(item)
+            n_removed += 1
+    return clean_row, n_removed
+    
 
 def main ():
     dirs = ["falcon7b-instruct_8443_2023-12-21-14-23/falcon7b-instruct_8443samp.csv",
@@ -33,8 +41,9 @@ def main ():
     full_sample = organize_all_data()
     ax = sns.displot(full_sample,x="True birth year")
     ax.fig.subplots_adjust(top=.95)
-    ax.set(title = "All wiki birth year distribution")
+    ax.set(title = "All wiki birth year")
     plt.savefig(save_path+"all_wiki_distribution.jpg")
+    plt.close()
     
     for path in dirs: 
         full_path = os.path.join(base,path)
@@ -51,14 +60,18 @@ def main ():
         print(data["Predicted birth year"].dtypes)
 
         # accuracy distribution 
-        ax = sns.displot(data,x="Years off") 
+        years_off, n_removed = clean_row(data['Years off'])
+        ax = sns.displot(years_off)
+       # ax = sns.displot(data,x="Years off") 
         ax.fig.subplots_adjust(top=.95)
         ax.set(title = model_string+" accuracy")
         plt.savefig(save_path+"_accuracy_hist.jpg")
         plt.close()
 
         # distribution of responses 
-        ax = sns.displot(data,x="True birth year")
+        responses, n_removed = clean_row(data['Predicted birth year'])
+        ax = sns.displot(responses)
+        #ax = sns.displot(data,x="True birth year")
         #ax.set(xticks=(range(1500,2000,50)))
         #ax.set_xticklabels(range(1500,2000,50))
         #ax.fig.subplots_adjust(top=.95)
@@ -70,7 +83,7 @@ def main ():
         sns.set_theme(style="darkgrid")
         ax = sns.relplot(data, x="Years off", y="Pageviews")
         ax.fig.subplots_adjust(top=.95)
-        ax.set(title=model_string+" flan t5 accuracy vs page views")
+        ax.set(title=model_string+" accuracy vs page views")
         plt.savefig(save_path+"_acc_v_page_views.jpg")
         plt.close()
 
