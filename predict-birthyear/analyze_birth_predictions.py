@@ -9,7 +9,7 @@ def make_hist(data,x,title,binwidth=None,bins=None,kde=False):
 def organize_all_data():
     years = []
     path = "/data/madesai/history-llm-data/wikipedia-json-files/all_wiki.json"
-    data = fh.unpickle_data(path)
+    data = fh.read_json(path)
     for name in data.keys():
         y = data['name']['birth_year']
         years.append(y)
