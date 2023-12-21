@@ -193,10 +193,14 @@ def main(): # parameters are: data_path, size, model + model parameters, prompt_
     #percent = True
 
     wiki_wiki = wf.initiate_request()
-    keys, data = prep_random_sample(data_path,wiki_wiki,size=sample,percent=percent)
-    keys_out = "/data/madesai/history-llm-data/experiment_keys.pkl"
-    record_seen_keys(keys, keys_out)
-    
+   # keys, data = prep_random_sample(data_path,wiki_wiki,size=sample,percent=percent)
+   # keys_out = "/data/madesai/history-llm-data/experiment_keys.pkl"
+   # record_seen_keys(keys, keys_out)
+    keys = fh.unpickle_data("/data/madesai/history-llm-data/experiment_keys.pkl")
+    all_data = fh.read_json(data_path)
+    data = {}
+    for name in keys:
+        data.update({name:all_data[name]})
     sample_size = len(keys)
 
     #model,tokenizer, model_string = initiate_flan5_text_to_text(xxl=True)
