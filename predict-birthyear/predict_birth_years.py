@@ -64,7 +64,7 @@ def gpt2_text_to_text(prompt, model, tokenizer, contrastive=True):
    # outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, max_new_tokens=200, do_sample = True) # do_sample = True, top_k=50)
     # contrastive search
     if contrastive:
-        outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, penalty_alpha=0.6, top_k=4, max_new_tokens=2)
+        outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, penalty_alpha=0.6, top_k=4, max_new_tokens=3)
     else:
         outputs = model.generate(input_ids, pad_token_id=tokenizer.eos_token_id, do_sample=True, top_k=0, temperature = 0.6, max_new_tokens=2)
 
@@ -229,5 +229,5 @@ def main(): # parameters are: data_path, size, model + model parameters, prompt_
 if __name__ == "__main__":
     model, tokenizer, model_string = initiate_falcon()
     prompt = "Paris Hilton was born in the year"
-    response = gpt2_text_to_text(prompt,model,tokenizer)
+    response = gpt2_text_to_text(prompt,model,tokenizer,contrastive=True)
     print(response)
