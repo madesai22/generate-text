@@ -21,7 +21,7 @@ def organize_all_data():
 
 def main ():
     dirs = ["falcon7b-instruct_8443_2023-12-21-14-23/falcon7b-instruct_8443samp.csv",
-            "falcon_8443_2023-12-21-13-39/falcon_8443samp.csv"
+            "falcon_8443_2023-12-21-13-39/falcon_8443samp.csv",
             "flant5xxl_8443_2023-12-21-03-00/flant5xxl_8443samp.csv",
             "gpt2large_8443_2023-12-21-00-09/gpt2large_8443samp.csv"
             ]
