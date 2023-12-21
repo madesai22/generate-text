@@ -21,9 +21,15 @@ def clean_row(row):
     row_list = list(row)
     clean_row = []
     for item in row_list:
-        if type(item) != str:
+        try:
+            int(item)
             clean_row.append(item)
+        except:
             n_removed += 1
+
+        # if type(item) != str:
+        #     clean_row.append(item)
+        #     n_removed += 1
     return clean_row, n_removed
     
 
@@ -36,14 +42,14 @@ def main ():
     base = "/home/madesai/generate-text/predict-birthyear/log/"
     save_path = "./plots/"
     
-     # full sample true birth year 
-    sns.set_theme(style="darkgrid")
-    full_sample = organize_all_data()
-    ax = sns.displot(full_sample,x="True birth year")
-    ax.fig.subplots_adjust(top=.95)
-    ax.set(title = "All wiki birth year")
-    plt.savefig(save_path+"all_wiki_distribution.jpg")
-    plt.close()
+    #  # full sample true birth year 
+    # sns.set_theme(style="darkgrid")
+    # full_sample = organize_all_data()
+    # ax = sns.displot(full_sample,x="True birth year")
+    # ax.fig.subplots_adjust(top=.95)
+    # ax.set(title = "All wiki birth year")
+    # plt.savefig(save_path+"all_wiki_distribution.jpg")
+    # plt.close()
     
     for path in dirs: 
         full_path = os.path.join(base,path)
