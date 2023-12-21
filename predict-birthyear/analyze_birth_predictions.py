@@ -14,6 +14,7 @@ def main ():
 
     data = data.drop(data[data['Years off'] == 'n/a'].index)
    # predicted_birth_year = data.drop(data[data['Predicted birth year'=="no prediction"]])
+    data.astype({"Predicted birth year": 'int32'}).dtypes
     print(data["Predicted birth year"].dtypes)
 
     # accuracy distribution 
