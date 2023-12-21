@@ -10,10 +10,23 @@ from transformers import set_seed
 from transformers import pipeline, set_seed
 from transformers import T5Tokenizer, T5ForConditionalGeneration
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
+from transformers import AutoTokenizer, FalconModel
 import pandas as pd
 import datetime
-import argparse
 from numba import jit, cuda
+
+def initiate_falcon():
+    tokenizer = AutoTokenizer.from_pretrained("tiiuae/falcon-7b")
+    model = FalconModel.from_pretrained("tiiuae/falcon-7b",device_map = "auto")
+    model_string = "falcon"
+    return model, tokenizer, model_string
+
+def falcon_text_to_text(prompt, model,tokenizer):
+    input_ids = tokenizer(prompt, return_tensors="pt").input_ids.to("cuda")
+    outputs = model.generate(input_ids)
+    return(tokenizer.decode(outputs[0]))
+
+
 
 def initiate_flan5_text_to_text(xxl = False):
     if xxl: 
@@ -214,4 +227,7 @@ def main(): # parameters are: data_path, size, model + model parameters, prompt_
     df.to_csv(csv_out,sep=";")
 
 if __name__ == "__main__":
-    main()
+    model, tokenizer, model_string = initiate_falcon()
+    prompt = "What year was Paris Hilton born?"
+    response = falcon_text_to_text(prompt,model,tokenizer)
+    print(response)
