@@ -229,5 +229,5 @@ def main(): # parameters are: data_path, size, model + model parameters, prompt_
 if __name__ == "__main__":
     model, tokenizer, model_string = initiate_falcon()
     prompt = "What year was Paris Hilton born?"
-    response = falcon_text_to_text(prompt,model,tokenizer)
+    response = gpt2_text_to_text(prompt,model,tokenizer)
     print(response)
