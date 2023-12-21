@@ -14,6 +14,7 @@ def main ():
 
     data = data.drop(data[data['Years off'] == 'n/a'].index)
    # predicted_birth_year = data.drop(data[data['Predicted birth year'=="no prediction"]])
+    print(data["Predicted birth year"])
 
     # accuracy distribution 
     ax = sns.displot(data,x="Years off") 
