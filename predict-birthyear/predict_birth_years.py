@@ -10,14 +10,14 @@ from transformers import set_seed
 from transformers import pipeline, set_seed
 from transformers import T5Tokenizer, T5ForConditionalGeneration
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
-from transformers import AutoTokenizer, FalconModel
+from transformers import AutoTokenizer, FalconForCausalLM
 import pandas as pd
 import datetime
 from numba import jit, cuda
 
 def initiate_falcon():
     tokenizer = AutoTokenizer.from_pretrained("tiiuae/falcon-7b")
-    model = FalconModel.from_pretrained("tiiuae/falcon-7b",device_map = "auto")
+    model = FalconForCausalLM.from_pretrained("tiiuae/falcon-7b",device_map = "auto")
     model_string = "falcon"
     return model, tokenizer, model_string
 
