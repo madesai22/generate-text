@@ -19,54 +19,65 @@ def organize_all_data():
 
 
 def main ():
-    path = "temp.csv"
-    data = pd.read_csv(path,sep=";")
-    save_path = "./plots/"
-
-    data = data.drop(data[data["Predicted birth year"] == "no prediction"].index)
-
-    # full sample true birth year 
+    dirs = ["falcon7b-instruct_8443_2023-12-21-14-23/falcon7b-instruct_8443samp.csv",
+            "falcon_8443_2023-12-21-13-39/falcon_8443samp.csv"
+            "flant5xxl_8443_2023-12-21-03-00/flant5xxl_8443samp.csv",
+            "gpt2large_8443_2023-12-21-00-09/gpt2large_8443samp.csv"
+            ]
+    base = "/home/madesai/generate-text/predict-birthyear/log/"
+    
+     # full sample true birth year 
+    sns.set_theme(style="darkgrid")
     full_sample = organize_all_data()
     ax = sns.displot(full_sample,x="True birth year")
     ax.fig.subplots_adjust(top=.95)
     ax.set(title = "All wiki birth year distribution")
     plt.savefig(save_path+"all_wiki_distribution.jpg")
     
-    
-   # predicted_birth_year = data.drop(data[data['Predicted birth year'=="no prediction"]])
-    data.astype({"Predicted birth year": 'int32'})
-    print(data["Predicted birth year"].dtypes)
+    for path in dirs: 
+        full_path = os.path.join(base,path)
+    #path = "temp.csv"
+        data = pd.read_csv(full_path,sep=";")
+        model_string = path.split("_")[0]
+        save_path = "./plots/"+model_string
 
-    # accuracy distribution 
-    ax = sns.displot(data,x="Years off") 
-    ax.fig.subplots_adjust(top=.95)
-    ax.set(title = "flan t5 xxl accuracy")
-    plt.savefig(save_path+"accuracy_hist.jpg")
-    plt.close()
+        data = data.drop(data[data["Predicted birth year"] == "no prediction"].index)
+        
+        
+    # predicted_birth_year = data.drop(data[data['Predicted birth year'=="no prediction"]])
+        data.astype({"Predicted birth year": 'int32'})
+        print(data["Predicted birth year"].dtypes)
 
-    # distribution of responses 
-    ax = sns.displot(data,x="True birth year")
-    #ax.set(xticks=(range(1500,2000,50)))
-    #ax.set_xticklabels(range(1500,2000,50))
-    #ax.fig.subplots_adjust(top=.95)
-    ax.set(title="flan t5 response distribution")
-    plt.savefig(save_path+"response_distribution.jpg")
-    plt.close()
+        # accuracy distribution 
+        ax = sns.displot(data,x="Years off") 
+        ax.fig.subplots_adjust(top=.95)
+        ax.set(title = "flan t5 xxl accuracy")
+        plt.savefig(save_path+"accuracy_hist.jpg")
+        plt.close()
 
-    # accuracy vs pageviews
-    sns.set_theme(style="darkgrid")
-    ax = sns.relplot(data, x="Years off", y="Pageviews")
-    ax.fig.subplots_adjust(top=.95)
-    ax.set(title="flan t5 accuracy vs page views")
-    plt.savefig(save_path+"acc_v_page_views.jpg")
-    plt.close()
+        # distribution of responses 
+        ax = sns.displot(data,x="True birth year")
+        #ax.set(xticks=(range(1500,2000,50)))
+        #ax.set_xticklabels(range(1500,2000,50))
+        #ax.fig.subplots_adjust(top=.95)
+        ax.set(title="flan t5 response distribution")
+        plt.savefig(save_path+"response_distribution.jpg")
+        plt.close()
 
-    # accuracy vs true birth year 
-    ax = sns.relplot(data, x="Years off", y="True birth year")
-    ax.fig.subplots_adjust(top=.95)
-    ax.set(title="flan t5 accuracy vs true birth year")
-    plt.savefig(save_path+"acc_v_true_by.jpg")
-    plt.close()
+        # accuracy vs pageviews
+        sns.set_theme(style="darkgrid")
+        ax = sns.relplot(data, x="Years off", y="Pageviews")
+        ax.fig.subplots_adjust(top=.95)
+        ax.set(title="flan t5 accuracy vs page views")
+        plt.savefig(save_path+"acc_v_page_views.jpg")
+        plt.close()
+
+        # accuracy vs true birth year 
+        ax = sns.relplot(data, x="Years off", y="True birth year")
+        ax.fig.subplots_adjust(top=.95)
+        ax.set(title="flan t5 accuracy vs true birth year")
+        plt.savefig(save_path+"acc_v_true_by.jpg")
+        plt.close()
 
 
 if __name__ == "__main__":
