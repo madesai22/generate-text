@@ -54,9 +54,9 @@ def main ():
     plt.savefig(save_path+"all_wiki_distribution.jpg")
     plt.close()
     
-    single_path = os.path.join(base,dirs[0])
-    print(single_path)
-    single = pd.read_csv(single_path)
+    # single_path = os.path.join(base,dirs[0])
+    # print(single_path)
+    single = pd.read_csv("/home/madesai/generate-text/predict-birthyear/log/falcon7b-instruct_8443_2023-12-21-14-23/falcon7b-instruct_8443samp.csv")
     sample, x = clean_row(single["True birth year"]) 
     ax = sns.displot(sample,x="True birth year")
     ax.fig.subplots_adjust(top=.95)
